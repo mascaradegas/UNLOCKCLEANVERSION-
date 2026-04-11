@@ -1,0 +1,1413 @@
+import type { Lesson } from '@unlock2026/shared';
+
+export const module3Lessons = [
+  { id: 'have', title: 'HAVE', emoji: '✋📦', description: 'Ter (I/you/we/they)', module: 3, order: 1,    slides: [
+        { type: 'title', emoji: '✋📦', title: 'HAVE', subtitle: 'Ter (posse)' },
+        { type: 'situation', emoji: '🚗', cardClass: 'purple', text: 'Alguém pergunta se você tem carro.<br><br>Como dizer: "Eu <strong>TENHO</strong> um carro"?' },
+        { type: 'sequence-step', stepNumber: 1, totalSteps: 5, emoji: '🚗', english: 'Do you have a car?', portuguese: 'Você tem carro?', breakdown: '<strong>DO YOU HAVE</strong> = você tem? HAVE = ter (posse).' },
+        { type: 'sequence-step', stepNumber: 2, totalSteps: 5, emoji: '👷', english: 'Yeah, I have an old truck. It has 200k miles but it works!', portuguese: 'Tenho uma caminhonete velha. Tem 200 mil milhas mas funciona!', breakdown: '<strong>I HAVE</strong> = eu tenho. <strong>IT HAS</strong> = ele tem (3ª pessoa = HAS).' },
+        { type: 'sequence-step', stepNumber: 3, totalSteps: 5, emoji: '🏠', english: 'Nice. I don\'t have a car yet. I take the bus.', portuguese: 'Legal. Ainda não tenho carro. Pego ônibus.', breakdown: '<strong>DON\'T HAVE</strong> = não tenho. YET = ainda (implica que vai ter).' },
+        { type: 'sequence-step', stepNumber: 4, totalSteps: 5, emoji: '📱', english: 'I have a question — do we have tomorrow off?', portuguese: 'Tenho uma pergunta — a gente tem folga amanhã?', breakdown: 'HAVE A QUESTION = ter uma pergunta. <strong>HAVE OFF</strong> = ter folga.' },
+        { type: 'sequence-step', stepNumber: 5, totalSteps: 5, emoji: '🎉', english: 'Yes! We have a three-day weekend. I have plans with my family.', portuguese: 'Sim! Temos um feriado de 3 dias. Tenho planos com a família.', breakdown: '<strong>WE HAVE</strong> = nós temos. HAVE PLANS = ter planos.' },
+        { type: 'rule', cardClass: 'cyan', text: '<strong>HAVE</strong> = TER (posse, características):', keyword: 'HAVE', keywordAfter: 'Eu tenho / Você tem / Nós temos' },
+        { type: 'tip', cardClass: 'orange', icon: '🗣️', title: 'PRONÚNCIA', text: '<strong>HAVE</strong> soa como "RÉV"<br><br>O H é aspirado, o A é aberto.' },
+        { type: 'example', cardClass: 'cyan', emoji: '🚗', question: 'I <span class="hl-cyan">have</span> a car.', questionTr: 'Eu tenho um carro.', answer: '(posse)', answerTr: 'HAVE para I/you/we/they' },
+        { type: 'example', cardClass: 'cyan', emoji: '⏰', question: 'I <span class="hl-cyan">have</span> time.', questionTr: 'Eu tenho tempo.', answer: '(ter algo)', answerTr: 'Abstrato também' },
+        { type: 'example', cardClass: 'cyan', emoji: '❓', question: 'I <span class="hl-cyan">have</span> a question.', questionTr: 'Eu tenho uma pergunta.', answer: '(ter)', answerTr: 'Muito comum!' },
+        { type: 'examples', cardClass: 'cyan', title: '📦 HAVE - USOS COMUNS', items: [
+          { emoji: '💰', en: 'I <span class="hl-cyan">have</span> money.', pt: 'Eu tenho dinheiro.' },
+          { emoji: '👨‍👩‍👧', en: 'I <span class="hl-cyan">have</span> a family.', pt: 'Eu tenho família.' },
+          { emoji: '💼', en: 'I <span class="hl-cyan">have</span> a job.', pt: 'Eu tenho um emprego.' },
+          { emoji: '🏠', en: 'We <span class="hl-cyan">have</span> a house.', pt: 'Nós temos uma casa.' }
+        ]},
+        { type: 'tip', cardClass: 'green', icon: '💡', title: 'HAVE vs HAS', text: '<strong>I/YOU/WE/THEY</strong> → HAVE<br><strong>HE/SHE/IT</strong> → HAS<br><br>She <strong>has</strong> a car. (não "have")' },
+        { type: 'examples', cardClass: 'purple', title: '🍽️ EXPRESSÕES COM HAVE', items: [
+          { emoji: '🍳', en: 'I <span class="hl-cyan">have</span> breakfast.', pt: 'Eu tomo café da manhã.' },
+          { emoji: '🥗', en: 'I <span class="hl-cyan">have</span> lunch.', pt: 'Eu almoço.' },
+          { emoji: '🍝', en: 'I <span class="hl-cyan">have</span> dinner.', pt: 'Eu janto.' },
+          { emoji: '🎉', en: 'We <span class="hl-cyan">have</span> fun!', pt: 'Nós nos divertimos!' }
+        ]},
+        { type: 'comparison', cardClass: 'cyan', title: '📦 HAVE vs THERE IS', leftClass: 'left-side', rightClass: 'right-side', leftIcon: '👤', rightIcon: '📍', leftLabel: 'HAVE (posse)', rightLabel: 'THERE IS (existe)', left: 'I <span class="hl-cyan">have</span> a car.', leftNote: 'EU possuo', right: '<span class="hl-purple">There is</span> a car.', rightNote: 'Existe um carro', explanation: 'HAVE = posse | THERE IS = existência' },
+        { type: 'comparison', cardClass: 'red', title: '⚠️ ERRO COMUM', leftClass: 'wrong', rightClass: 'right', leftIcon: '❌', rightIcon: '✅', leftLabel: 'ERRADO', rightLabel: 'CERTO', left: 'I has a car.', leftNote: 'HAS com I', right: 'I have a car.', rightNote: 'HAVE com I', explanation: 'Com I/YOU/WE/THEY: sempre <strong>HAVE</strong>' },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 "Eu tenho uma pergunta":', options: ['I has a question', 'I have a question', 'I having a question'], correct: 1 },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 "Você tem carro?":', options: ['Have you a car?', 'Do you have a car?', 'You have a car?'], correct: 1 },
+        { type: 'fill-blank', cardClass: 'cyan', prompt: '✍️ Complete:', sentence: 'We _____ a big family.', correctWord: 'have' },
+        { type: 'list', cardClass: 'gold', title: '📝 RESUMO - HAVE', items: [
+          { emoji: '📦', text: '<strong>HAVE</strong> = ter' },
+          { emoji: '👥', text: 'I/you/we/they HAVE' },
+          { emoji: '👤', text: 'He/she/it HAS' },
+          { emoji: '🍽️', text: 'Have breakfast/lunch/dinner/fun' }
+        ]},
+        { type: 'end' }
+      ],
+      vocabulary: [{ emoji: '🚗', pt: 'Eu tenho um carro', en: 'I have a car' },
+        { emoji: '⏰', pt: 'Eu tenho tempo', en: 'I have time' },
+        { emoji: '❓', pt: 'Eu tenho uma pergunta', en: 'I have a question' },
+        { emoji: '💰', pt: 'Eu tenho dinheiro', en: 'I have money' },
+        { emoji: '👨‍👩‍👧', pt: 'Eu tenho família', en: 'I have a family' },
+        { emoji: '💼', pt: 'Eu tenho trabalho', en: 'I have a job' },
+        { emoji: '🏠', pt: 'Nós temos uma casa', en: 'We have a house' },
+        { emoji: '🐕', pt: 'Você tem cachorro?', en: 'Do you have a dog?' },
+        { emoji: '📱', pt: 'Eu tenho celular', en: 'I have a phone' },
+        { emoji: '🎉', pt: 'Nós temos uma festa', en: 'We have a party' },
+      ]
+    },
+
+  { id: 'make', title: 'MAKE', emoji: '🛠️✨', description: 'Fazer/Criar/Produzir', module: 3, order: 2,    slides: [
+        { type: 'title', emoji: '🛠️✨', title: 'MAKE', subtitle: 'Fazer / Criar / Produzir' },
+        { type: 'situation', emoji: '☕', cardClass: 'purple', text: 'Você quer oferecer café pro colega:<br>"Vou <strong>FAZER</strong> café."<br><br>Qual verbo usar?' },
+        { type: 'sequence-step', stepNumber: 1, totalSteps: 5, emoji: '☕', english: 'Hey, I\'m going to make coffee. Want some?', portuguese: 'Ei, vou fazer café. Quer?', breakdown: '<strong>MAKE COFFEE</strong> = fazer café. MAKE = criar algo do zero.' },
+        { type: 'sequence-step', stepNumber: 2, totalSteps: 5, emoji: '👷', english: 'Sure! My wife makes the best coffee, but yours is good too.', portuguese: 'Claro! Minha esposa faz o melhor café, mas o seu é bom também.', breakdown: '<strong>MAKES</strong> (com S) = 3ª pessoa. MAKE = produzir, criar.' },
+        { type: 'sequence-step', stepNumber: 3, totalSteps: 5, emoji: '💰', english: 'How much do you make a week?', portuguese: 'Quanto você ganha por semana?', breakdown: '<strong>MAKE</strong> = ganhar (dinheiro). HOW MUCH DO YOU MAKE = quanto ganha?' },
+        { type: 'sequence-step', stepNumber: 4, totalSteps: 5, emoji: '😅', english: 'Don\'t make me laugh! The boss is right there.', portuguese: 'Não me faz rir! O chefe tá bem ali.', breakdown: '<strong>MAKE ME LAUGH</strong> = me fazer rir. MAKE + pessoa + verbo = fazer alguém fazer algo.' },
+        { type: 'sequence-step', stepNumber: 5, totalSteps: 5, emoji: '📞', english: 'I need to make a phone call. Can you make a list of what we need?', portuguese: 'Preciso fazer uma ligação. Pode fazer uma lista do que precisa?', breakdown: '<strong>MAKE A CALL</strong> = fazer ligação. <strong>MAKE A LIST</strong> = fazer lista. Expressões fixas com MAKE.' },
+        { type: 'rule', cardClass: 'cyan', text: 'Use <strong>MAKE</strong> quando você <strong>CRIA</strong> ou <strong>PRODUZ</strong> algo:', keyword: 'MAKE', keywordAfter: 'Fazer (criar algo) / Produzir' },
+        { type: 'tip', cardClass: 'orange', icon: '🗣️', title: 'PRONÚNCIA', text: '<strong>MAKE</strong> soa como "MEIK"<br><br>Passado: <strong>MADE</strong> (méid)' },
+        { type: 'example', cardClass: 'cyan', emoji: '☕', question: "I'll <span class='hl-cyan'>make</span> coffee.", questionTr: 'Vou fazer café.', answer: '(criar/preparar)', answerTr: 'Produzir algo' },
+        { type: 'example', cardClass: 'cyan', emoji: '🍽️', question: "She <span class='hl-cyan'>makes</span> dinner every day.", questionTr: 'Ela faz jantar todo dia.', answer: '(preparar comida)', answerTr: 'Criar' },
+        { type: 'example', cardClass: 'cyan', emoji: '💰', question: "He <span class='hl-cyan'>makes</span> good money.", questionTr: 'Ele ganha bom dinheiro.', answer: '(expressão fixa)', answerTr: 'Make money!' },
+        { type: 'examples', cardClass: 'cyan', title: '🛠️ MAKE = CRIAR/PRODUZIR', items: [
+          { emoji: '🍳', en: '<span class="hl-cyan">Make</span> breakfast', pt: 'Fazer café da manhã' },
+          { emoji: '🛏️', en: '<span class="hl-cyan">Make</span> the bed', pt: 'Arrumar a cama' },
+          { emoji: '📞', en: '<span class="hl-cyan">Make</span> a call', pt: 'Fazer uma ligação' },
+          { emoji: '🤝', en: '<span class="hl-cyan">Make</span> a decision', pt: 'Tomar uma decisão' }
+        ]},
+        { type: 'tip', cardClass: 'green', icon: '💡', title: 'EXPRESSÕES COM MAKE', text: '<strong>Make money</strong> - ganhar dinheiro<br><strong>Make a mistake</strong> - cometer um erro<br><strong>Make sense</strong> - fazer sentido<br><strong>Make friends</strong> - fazer amigos' },
+        { type: 'examples', cardClass: 'gold', title: '⚡ EXPRESSÕES ESSENCIAIS', items: [
+          { emoji: '💵', en: '<span class="hl-gold">Make</span> money', pt: 'Ganhar dinheiro' },
+          { emoji: '❌', en: '<span class="hl-gold">Make</span> a mistake', pt: 'Cometer um erro' },
+          { emoji: '🧠', en: 'It <span class="hl-gold">makes</span> sense', pt: 'Faz sentido' },
+          { emoji: '🔊', en: '<span class="hl-gold">Make</span> noise', pt: 'Fazer barulho' }
+        ]},
+        { type: 'comparison', cardClass: 'cyan', title: '🛠️ MAKE vs DO', leftClass: 'left-side', rightClass: 'right-side', leftIcon: '🛠️', rightIcon: '✅', leftLabel: 'MAKE (criar)', rightLabel: 'DO (realizar)', left: '<span class="hl-cyan">Make</span> coffee', leftNote: 'Criar/produzir algo', right: '<span class="hl-green">Do</span> homework', rightNote: 'Realizar tarefa', explanation: '<strong>MAKE</strong> = criar algo novo | <strong>DO</strong> = realizar atividade' },
+        { type: 'comparison', cardClass: 'red', title: '⚠️ ERRO COMUM', leftClass: 'wrong', rightClass: 'right', leftIcon: '❌', rightIcon: '✅', leftLabel: 'ERRADO', rightLabel: 'CERTO', left: 'I need to do coffee.', leftNote: 'DO não funciona aqui', right: 'I need to make coffee.', rightNote: 'MAKE para criar', explanation: 'Café é algo que você CRIA → <strong>MAKE</strong>!' },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 "Fazer café" em inglês:', options: ['Do coffee', 'Make coffee', 'Create coffee'], correct: 1 },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 "Ganhar dinheiro" em inglês:', options: ['Do money', 'Make money', 'Win money'], correct: 1 },
+        { type: 'fill-blank', cardClass: 'cyan', prompt: '✍️ Complete:', sentence: "Can you _____ me a sandwich?", correctWord: 'make' },
+        { type: 'list', cardClass: 'gold', title: '📝 RESUMO - MAKE', items: [
+          { emoji: '🛠️', text: '<strong>MAKE</strong> = criar/produzir algo' },
+          { emoji: '⏪', text: 'Passado: MADE (méid)' },
+          { emoji: '☕', text: 'Make coffee, breakfast, dinner...' },
+          { emoji: '💵', text: 'Make money, mistake, sense...' }
+        ]},
+        { type: 'end' }
+      ],
+      vocabulary: [{ emoji: '☕', pt: 'Fazer café', en: 'Make coffee' },
+        { emoji: '🍳', pt: 'Fazer café da manhã', en: 'Make breakfast' },
+        { emoji: '🛏️', pt: 'Arrumar a cama', en: 'Make the bed' },
+        { emoji: '📞', pt: 'Fazer uma ligação', en: 'Make a call' },
+        { emoji: '💵', pt: 'Ganhar dinheiro', en: 'Make money' },
+        { emoji: '❌', pt: 'Cometer um erro', en: 'Make a mistake' },
+        { emoji: '🧠', pt: 'Faz sentido', en: 'It makes sense' },
+        { emoji: '🤝', pt: 'Tomar uma decisão', en: 'Make a decision' },
+        { emoji: '👋', pt: 'Fazer amigos', en: 'Make friends' },
+        { emoji: '🔊', pt: 'Fazer barulho', en: 'Make noise' },
+      ]
+    },
+
+  { id: 'take', title: 'TAKE', emoji: '✋📦', description: 'Pegar/Levar/Tomar', module: 3, order: 3,    slides: [
+        { type: 'title', emoji: '✋📦', title: 'TAKE', subtitle: 'Pegar / Levar / Tomar' },
+        { type: 'situation', emoji: '🚌', cardClass: 'purple', text: 'Você precisa ir ao centro.<br>Vai <strong>PEGAR</strong> o ônibus.<br><br>Como dizer isso?' },
+        { type: 'sequence-step', stepNumber: 1, totalSteps: 5, emoji: '🚌', english: 'I take the bus every morning. It takes 40 minutes.', portuguese: 'Pego ônibus toda manhã. Demora 40 minutos.', breakdown: '<strong>TAKE THE BUS</strong> = pegar o ônibus. <strong>IT TAKES</strong> = demora/leva (tempo).' },
+        { type: 'sequence-step', stepNumber: 2, totalSteps: 5, emoji: '📸', english: 'Take a look at this! The client wants us to take a picture of the job.', portuguese: 'Dá uma olhada nisso! O cliente quer que a gente tire foto do serviço.', breakdown: '<strong>TAKE A LOOK</strong> = dar uma olhada. <strong>TAKE A PICTURE</strong> = tirar foto.' },
+        { type: 'sequence-step', stepNumber: 3, totalSteps: 5, emoji: '💊', english: 'Take this medicine twice a day. And take it easy — you need rest.', portuguese: 'Toma esse remédio 2 vezes por dia. E pega leve — precisa descansar.', breakdown: '<strong>TAKE MEDICINE</strong> = tomar remédio. <strong>TAKE IT EASY</strong> = pega leve.' },
+        { type: 'sequence-step', stepNumber: 4, totalSteps: 5, emoji: '🏖️', english: 'I\'m going to take a day off. I need to take my kid to the doctor.', portuguese: 'Vou tirar um dia de folga. Preciso levar meu filho no médico.', breakdown: '<strong>TAKE A DAY OFF</strong> = tirar folga. <strong>TAKE (someone) TO</strong> = levar alguém a.' },
+        { type: 'sequence-step', stepNumber: 5, totalSteps: 5, emoji: '⏰', english: 'Take your time. No rush. But take notes — this is important.', portuguese: 'Sem pressa. Mas anota — isso é importante.', breakdown: '<strong>TAKE YOUR TIME</strong> = sem pressa. <strong>TAKE NOTES</strong> = anotar.' },
+        { type: 'rule', cardClass: 'cyan', text: '<strong>TAKE</strong> é um dos verbos mais versáteis do inglês:', keyword: 'TAKE', keywordAfter: 'Pegar / Levar / Tomar / Demorar' },
+        { type: 'tip', cardClass: 'orange', icon: '🗣️', title: 'PRONÚNCIA', text: '<strong>TAKE</strong> soa como "TEIK"<br><br>Passado: <strong>TOOK</strong> (túk)' },
+        { type: 'example', cardClass: 'cyan', emoji: '🚌', question: "I <span class='hl-cyan'>take</span> the bus to work.", questionTr: 'Eu pego o ônibus pro trabalho.', answer: '(transporte)', answerTr: 'Usar transporte' },
+        { type: 'example', cardClass: 'cyan', emoji: '💊', question: "<span class='hl-cyan'>Take</span> this medicine.", questionTr: 'Tome esse remédio.', answer: '(ingerir)', answerTr: 'Tomar' },
+        { type: 'example', cardClass: 'cyan', emoji: '⏱️', question: "It <span class='hl-cyan'>takes</span> 20 minutes.", questionTr: 'Leva 20 minutos.', answer: '(tempo)', answerTr: 'Demorar' },
+        { type: 'examples', cardClass: 'cyan', title: '✋ USOS DE TAKE', items: [
+          { emoji: '🚕', en: '<span class="hl-cyan">Take</span> a táxi', pt: 'Pegar um táxi' },
+          { emoji: '🚿', en: '<span class="hl-cyan">Take</span> a shower', pt: 'Tomar banho' },
+          { emoji: '📸', en: '<span class="hl-cyan">Take</span> a photo', pt: 'Tirar uma foto' },
+          { emoji: '😴', en: '<span class="hl-cyan">Take</span> a nap', pt: 'Tirar um cochilo' }
+        ]},
+        { type: 'tip', cardClass: 'green', icon: '💡', title: 'TAKE = TEMPO', text: 'Para dizer quanto tempo algo <strong>DEMORA</strong>:<br><br><strong>It takes</strong> + tempo<br><br>• It takes 10 minutes.<br>• How long does it take?' },
+        { type: 'examples', cardClass: 'gold', title: '⏱️ TAKE + TEMPO', items: [
+          { emoji: '⏰', en: 'It <span class="hl-gold">takes</span> an hour.', pt: 'Leva uma hora.' },
+          { emoji: '🚗', en: 'It <span class="hl-gold">takes</span> 30 minutes by car.', pt: 'Leva 30 min de carro.' },
+          { emoji: '❓', en: 'How long does it <span class="hl-gold">take</span>?', pt: 'Quanto tempo leva?' }
+        ]},
+        { type: 'comparison', cardClass: 'cyan', title: '✋ TAKE vs BRING', leftClass: 'left-side', rightClass: 'right-side', leftIcon: '➡️', rightIcon: '⬅️', leftLabel: 'TAKE (levar PRA LÁ)', rightLabel: 'BRING (trazer PRA CÁ)', left: '<span class="hl-cyan">Take</span> this to him.', leftNote: 'Leva isso pra ele.', right: '<span class="hl-green">Bring</span> this to me.', rightNote: 'Traz isso pra mim.', explanation: '<strong>TAKE</strong> = afastando de você | <strong>BRING</strong> = aproximando de você' },
+        { type: 'comparison', cardClass: 'red', title: '⚠️ ERRO COMUM', leftClass: 'wrong', rightClass: 'right', leftIcon: '❌', rightIcon: '✅', leftLabel: 'ERRADO', rightLabel: 'CERTO', left: 'I need to make a shower.', leftNote: 'MAKE não funciona', right: 'I need to take a shower.', rightNote: 'TAKE a shower', explanation: 'Banho é TAKE, não MAKE!' },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 "Pegar o ônibus" em inglês:', options: ['Get the bus', 'Take the bus', 'Ambos estão corretos'], correct: 2 },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 "Quanto tempo leva?" em inglês:', options: ['How long it takes?', 'How long does it take?', 'How much time takes?'], correct: 1 },
+        { type: 'fill-blank', cardClass: 'cyan', prompt: '✍️ Complete:', sentence: "It _____ about 15 minutes to get there.", correctWord: 'takes' },
+        { type: 'list', cardClass: 'gold', title: '📝 RESUMO - TAKE', items: [
+          { emoji: '✋', text: '<strong>TAKE</strong> = pegar/levar/tomar' },
+          { emoji: '⏪', text: 'Passado: TOOK (túk)' },
+          { emoji: '⏱️', text: 'It takes + tempo (demora...)' },
+          { emoji: '🚿', text: 'Take a shower/photo/nap/táxi' }
+        ]},
+        { type: 'end' }
+      ],
+      vocabulary: [{ emoji: '🚌', pt: 'Pegar o ônibus', en: 'Take the bus' },
+        { emoji: '🚕', pt: 'Pegar um táxi', en: 'Take a táxi' },
+        { emoji: '🚿', pt: 'Tomar banho', en: 'Take a shower' },
+        { emoji: '📸', pt: 'Tirar uma foto', en: 'Take a photo' },
+        { emoji: '😴', pt: 'Tirar um cochilo', en: 'Take a nap' },
+        { emoji: '💊', pt: 'Tomar remédio', en: 'Take medicine' },
+        { emoji: '⏱️', pt: 'Leva 20 minutos', en: 'It takes 20 minutes' },
+        { emoji: '❓', pt: 'Quanto tempo leva?', en: 'How long does it take?' },
+        { emoji: '😌', pt: 'Calma / Relaxa', en: 'Take it easy' },
+        { emoji: '🪑', pt: 'Sente-se', en: 'Take a seat' },
+      ]
+    },
+
+  { id: 'put', title: 'PUT', emoji: '📍⬇️', description: 'Colocar/Pôr', module: 3, order: 4,    slides: [
+        { type: 'title', emoji: '📍⬇️', title: 'PUT', subtitle: 'Colocar / Pôr' },
+        { type: 'situation', emoji: '📦', cardClass: 'purple', text: 'Seu chefe pede pra você <strong>COLOCAR</strong> as caixas no canto.<br><br>Qual verbo usar?' },
+        { type: 'sequence-step', stepNumber: 1, totalSteps: 5, emoji: '📦', english: 'Put the boxes over there, by the wall.', portuguese: 'Coloca as caixas ali, perto da parede.', breakdown: '<strong>PUT + lugar</strong> = colocar em. OVER THERE = ali.' },
+        { type: 'sequence-step', stepNumber: 2, totalSteps: 5, emoji: '👕', english: 'Wait, let me put on my safety vest. You should put yours on too.', portuguese: 'Espera, deixa eu colocar meu colete. Você devia colocar o seu também.', breakdown: '<strong>PUT ON</strong> = vestir/colocar (roupa, equipamento). Phrasal verb.' },
+        { type: 'sequence-step', stepNumber: 3, totalSteps: 5, emoji: '📱', english: 'Put your phone away! The supervisor is coming.', portuguese: 'Guarda o celular! O supervisor tá vindo.', breakdown: '<strong>PUT AWAY</strong> = guardar. PUT YOUR PHONE AWAY = guarda o celular.' },
+        { type: 'sequence-step', stepNumber: 4, totalSteps: 5, emoji: '✍️', english: 'Put your name here and put your signature at the bottom.', portuguese: 'Coloca seu nome aqui e assina embaixo.', breakdown: '<strong>PUT YOUR NAME</strong> = colocar o nome. AT THE BOTTOM = embaixo.' },
+        { type: 'sequence-step', stepNumber: 5, totalSteps: 5, emoji: '🔥', english: 'Can you put out that cigarette? No smoking here.', portuguese: 'Pode apagar esse cigarro? Proibido fumar aqui.', breakdown: '<strong>PUT OUT</strong> = apagar (fogo, cigarro). NO SMOKING = proibido fumar.' },
+        { type: 'rule', cardClass: 'cyan', text: 'Use <strong>PUT</strong> para colocar algo em um lugar:', keyword: 'PUT', keywordAfter: 'Colocar / Pôr' },
+        { type: 'tip', cardClass: 'orange', icon: '🗣️', title: 'PRONÚNCIA', text: '<strong>PUT</strong> soa como "PÚT"<br><br>⚡ Passado: <strong>PUT</strong> (igual!)' },
+        { type: 'example', cardClass: 'cyan', emoji: '📦', question: "<span class='hl-cyan'>Put</span> the boxes over there.", questionTr: 'Coloca as caixas ali.', answer: '(comando)', answerTr: 'Imperativo' },
+        { type: 'example', cardClass: 'cyan', emoji: '🔑', question: "Where did you <span class='hl-cyan'>put</span> my keys?", questionTr: 'Onde você colocou minhas chaves?', answer: '(passado = PUT)', answerTr: 'Não muda!' },
+        { type: 'example', cardClass: 'cyan', emoji: '👕', question: "I <span class='hl-cyan'>put on</span> my jacket.", questionTr: 'Eu coloquei minha jaqueta.', answer: '(vestir)', answerTr: 'PUT ON = vestir' },
+        { type: 'examples', cardClass: 'cyan', title: '📍 USOS DE PUT', items: [
+          { emoji: '🗑️', en: '<span class="hl-cyan">Put</span> it in the trash.', pt: 'Coloca no lixo.' },
+          { emoji: '🚗', en: '<span class="hl-cyan">Put</span> gas in the car.', pt: 'Coloca gasolina no carro.' },
+          { emoji: '📝', en: '<span class="hl-cyan">Put</span> your name here.', pt: 'Coloca seu nome aqui.' },
+          { emoji: '💰', en: '<span class="hl-cyan">Put</span> money in the bank.', pt: 'Colocar dinheiro no banco.' }
+        ]},
+        { type: 'tip', cardClass: 'green', icon: '💡', title: 'PUT ON vs PUT', text: '<strong>PUT ON</strong> = vestir/colocar (roupa, óculos)<br><strong>PUT</strong> = colocar em lugar<br><br>• Put on your shoes (calça os sapatos)<br>• Put the shoes here (coloca os sapatos aqui)' },
+        { type: 'examples', cardClass: 'gold', title: '👕 PUT ON = VESTIR', items: [
+          { emoji: '👟', en: '<span class="hl-gold">Put on</span> your shoes.', pt: 'Calça os sapatos.' },
+          { emoji: '🧥', en: '<span class="hl-gold">Put on</span> a jacket.', pt: 'Coloca uma jaqueta.' },
+          { emoji: '👓', en: '<span class="hl-gold">Put on</span> your glasses.', pt: 'Coloca os óculos.' },
+          { emoji: '🧤', en: '<span class="hl-gold">Put on</span> gloves.', pt: 'Coloca as luvas.' }
+        ]},
+        { type: 'comparison', cardClass: 'cyan', title: '📍 PUT vs PUT ON vs PUT DOWN', leftClass: 'left-side', rightClass: 'right-side', leftIcon: '⬇️', rightIcon: '👕', leftLabel: 'PUT (colocar em lugar)', rightLabel: 'PUT ON (vestir)', left: '<span class="hl-cyan">Put</span> it on the table.', leftNote: 'Coloca na mesa.', right: '<span class="hl-gold">Put on</span> your coat.', rightNote: 'Veste o casaco.', explanation: 'PUT + lugar | PUT ON = vestir | PUT DOWN = largar' },
+        { type: 'comparison', cardClass: 'red', title: '⚠️ ERRO COMUM', leftClass: 'wrong', rightClass: 'right', leftIcon: '❌', rightIcon: '✅', leftLabel: 'ERRADO', rightLabel: 'CERTO', left: 'I putted it there.', leftNote: 'PUT não muda!', right: 'I put it there.', rightNote: 'Passado = PUT', explanation: 'PUT é igual no presente e passado!' },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 "Coloca no lixo" em inglês:', options: ['Put in the trash', 'Put it in the trash', 'Put on the trash'], correct: 1 },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 "Calça os sapatos" em inglês:', options: ['Put your shoes', 'Put on your shoes', 'Put in your shoes'], correct: 1 },
+        { type: 'fill-blank', cardClass: 'cyan', prompt: '✍️ Complete:', sentence: "Can you _____ this in the fridge?", correctWord: 'put' },
+        { type: 'list', cardClass: 'gold', title: '📝 RESUMO - PUT', items: [
+          { emoji: '📍', text: '<strong>PUT</strong> = colocar em lugar' },
+          { emoji: '⏪', text: 'Passado: PUT (não muda!)' },
+          { emoji: '👕', text: 'PUT ON = vestir' },
+          { emoji: '⬇️', text: 'PUT DOWN = largar/colocar no chão' }
+        ]},
+        { type: 'end' }
+      ],
+      vocabulary: [{ emoji: '📦', pt: 'Coloca ali', en: 'Put it over there' },
+        { emoji: '🗑️', pt: 'Coloca no lixo', en: 'Put it in the trash' },
+        { emoji: '🚗', pt: 'Coloca gasolina', en: 'Put gas in the car' },
+        { emoji: '📝', pt: 'Coloca seu nome', en: 'Put your name here' },
+        { emoji: '👟', pt: 'Calça os sapatos', en: 'Put on your shoes' },
+        { emoji: '🧥', pt: 'Veste o casaco', en: 'Put on your coat' },
+        { emoji: '👓', pt: 'Coloca os óculos', en: 'Put on your glasses' },
+        { emoji: '⬇️', pt: 'Larga isso', en: 'Put it down' },
+        { emoji: '🔑', pt: 'Onde você colocou?', en: 'Where did you put it?' },
+        { emoji: '📱', pt: 'Larga o telefone', en: 'Put down your phone' },
+      ]
+    },
+
+  { id: 'give', title: 'GIVE', emoji: '🎁➡️', description: 'Dar/Entregar', module: 3, order: 5,    slides: [
+        { type: 'title', emoji: '🎁➡️', title: 'GIVE', subtitle: 'Dar / Entregar' },
+        { type: 'situation', emoji: '📄', cardClass: 'purple', text: 'Seu chefe precisa de um documento.<br>Você vai <strong>DAR</strong> pra ele.<br><br>Qual verbo usar?' },
+        { type: 'sequence-step', stepNumber: 1, totalSteps: 5, emoji: '📋', english: 'Give me the report. The boss needs it now.', portuguese: 'Me dá o relatório. O chefe precisa agora.', breakdown: '<strong>GIVE ME</strong> = me dá. GIVE + pessoa + coisa.' },
+        { type: 'sequence-step', stepNumber: 2, totalSteps: 5, emoji: '🤝', english: 'I\'ll give you a ride home. My car is outside.', portuguese: 'Te dou uma carona pra casa. Meu carro tá lá fora.', breakdown: '<strong>GIVE YOU A RIDE</strong> = dar carona. Expressão comum.' },
+        { type: 'sequence-step', stepNumber: 3, totalSteps: 5, emoji: '📞', english: 'Give me a call when you get there. Just so I know you\'re safe.', portuguese: 'Me liga quando chegar. Só pra eu saber que tá bem.', breakdown: '<strong>GIVE ME A CALL</strong> = me liga. WHEN YOU GET THERE = quando chegar.' },
+        { type: 'sequence-step', stepNumber: 4, totalSteps: 5, emoji: '💡', english: 'Can you give me an example? I don\'t understand this form.', portuguese: 'Pode me dar um exemplo? Não entendo esse formulário.', breakdown: '<strong>GIVE AN EXAMPLE</strong> = dar exemplo. Pedir ajuda educadamente.' },
+        { type: 'sequence-step', stepNumber: 5, totalSteps: 5, emoji: '⏰', english: 'Give me a second. I need to give this to the supervisor first.', portuguese: 'Espera um segundo. Preciso entregar isso pro supervisor primeiro.', breakdown: '<strong>GIVE ME A SECOND</strong> = espera um segundo. <strong>GIVE THIS TO</strong> = entregar pra.' },
+        { type: 'rule', cardClass: 'cyan', text: 'Use <strong>GIVE</strong> quando algo vai de você para outra pessoa:', keyword: 'GIVE', keywordAfter: 'Dar / Entregar' },
+        { type: 'tip', cardClass: 'orange', icon: '🗣️', title: 'PRONÚNCIA', text: '<strong>GIVE</strong> soa como "GUÍV"<br><br>Passado: <strong>GAVE</strong> (guêiv)' },
+        { type: 'example', cardClass: 'cyan', emoji: '📄', question: "<span class='hl-cyan'>Give</span> me the document.", questionTr: 'Me dá o documento.', answer: '(comando)', answerTr: 'Imperativo' },
+        { type: 'example', cardClass: 'cyan', emoji: '🎁', question: "I <span class='hl-cyan'>gave</span> her a gift.", questionTr: 'Eu dei um presente pra ela.', answer: '(passado)', answerTr: 'GAVE' },
+        { type: 'example', cardClass: 'cyan', emoji: '📞', question: "<span class='hl-cyan'>Give</span> me a call.", questionTr: 'Me liga.', answer: '(expressão)', answerTr: 'Me telefona' },
+        { type: 'examples', cardClass: 'cyan', title: '🎁 USOS DE GIVE', items: [
+          { emoji: '📝', en: '<span class="hl-cyan">Give</span> me your number.', pt: 'Me dá seu número.' },
+          { emoji: '⏰', en: '<span class="hl-cyan">Give</span> me a minute.', pt: 'Me dá um minuto.' },
+          { emoji: '🤝', en: '<span class="hl-cyan">Give</span> me a hand.', pt: 'Me dá uma mão. (ajuda)' },
+          { emoji: '🚗', en: '<span class="hl-cyan">Give</span> me a ride.', pt: 'Me dá uma carona.' }
+        ]},
+        { type: 'tip', cardClass: 'green', icon: '💡', title: 'ORDEM DAS PALAVRAS', text: 'Duas formas corretas:<br><br>1. Give <strong>me</strong> the book.<br>2. Give the book <strong>to me</strong>.<br><br>A primeira é mais comum!' },
+        { type: 'examples', cardClass: 'gold', title: '⚡ EXPRESSÕES COM GIVE', items: [
+          { emoji: '🤝', en: '<span class="hl-gold">Give</span> me a hand.', pt: 'Me ajuda.' },
+          { emoji: '🚗', en: '<span class="hl-gold">Give</span> me a ride.', pt: 'Me dá uma carona.' },
+          { emoji: '📞', en: '<span class="hl-gold">Give</span> me a call.', pt: 'Me liga.' },
+          { emoji: '⏳', en: '<span class="hl-gold">Give</span> me a break!', pt: 'Me dá um tempo!' }
+        ]},
+        { type: 'comparison', cardClass: 'cyan', title: '🎁 GIVE vs GET', leftClass: 'left-side', rightClass: 'right-side', leftIcon: '➡️', rightIcon: '⬅️', leftLabel: 'GIVE (dar)', rightLabel: 'GET (receber)', left: 'I <span class="hl-cyan">gave</span> him $20.', leftNote: 'Eu dei $20 pra ele.', right: 'I <span class="hl-green">got</span> $20 from him.', rightNote: 'Eu recebi $20 dele.', explanation: '<strong>GIVE</strong> = sai de você | <strong>GET</strong> = vem pra você' },
+        { type: 'comparison', cardClass: 'red', title: '⚠️ ERRO COMUM', leftClass: 'wrong', rightClass: 'right', leftIcon: '❌', rightIcon: '✅', leftLabel: 'ERRADO', rightLabel: 'CERTO', left: 'Give to me the book.', leftNote: 'Ordem errada', right: 'Give me the book.', rightNote: 'Pessoa primeiro', explanation: 'GIVE + pessoa + coisa (sem TO no meio)' },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 "Me dá seu número" em inglês:', options: ['Give to me your number', 'Give me your number', 'Give your number me'], correct: 1 },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 GIVE no passado:', options: ['gived', 'given', 'gave'], correct: 2 },
+        { type: 'fill-blank', cardClass: 'cyan', prompt: '✍️ Complete:', sentence: "Can you _____ me a hand?", correctWord: 'give' },
+        { type: 'list', cardClass: 'gold', title: '📝 RESUMO - GIVE', items: [
+          { emoji: '🎁', text: '<strong>GIVE</strong> = dar/entregar' },
+          { emoji: '⏪', text: 'Passado: GAVE (guêiv)' },
+          { emoji: '📝', text: 'Give + pessoa + coisa' },
+          { emoji: '🤝', text: 'Give me a hand = me ajuda' }
+        ]},
+        { type: 'end' }
+      ],
+      vocabulary: [{ emoji: '📄', pt: 'Me dá o documento', en: 'Give me the document' },
+        { emoji: '📝', pt: 'Me dá seu número', en: 'Give me your number' },
+        { emoji: '⏰', pt: 'Me dá um minuto', en: 'Give me a minute' },
+        { emoji: '🤝', pt: 'Me dá uma mão (ajuda)', en: 'Give me a hand' },
+        { emoji: '🚗', pt: 'Me dá uma carona', en: 'Give me a ride' },
+        { emoji: '📞', pt: 'Me liga', en: 'Give me a call' },
+        { emoji: '🎁', pt: 'Eu dei um presente', en: 'I gave a gift' },
+        { emoji: '⏳', pt: 'Me dá um tempo!', en: 'Give me a break!' },
+        { emoji: '💪', pt: 'Dá o seu melhor', en: 'Give it your best' },
+        { emoji: '🔙', pt: 'Devolve pra mim', en: 'Give it back to me' },
+      ]
+    },
+
+  { id: 'tell-say', title: 'TELL vs SAY', emoji: '🗣️💬', description: 'Diferença entre TELL e SAY', module: 3, order: 6,    slides: [
+        { type: 'title', emoji: '🗣️💬', title: 'TELL vs SAY', subtitle: 'Quando usar cada um?' },
+        { type: 'situation', emoji: '🤔', cardClass: 'purple', text: 'Você quer contar algo pro seu amigo.<br>Usa <strong>TELL</strong> ou <strong>SAY</strong>?<br><br>Qual a diferença?' },
+        { type: 'sequence-step', stepNumber: 1, totalSteps: 5, emoji: '🗣️', english: 'What did the boss say? He said we finish early today!', portuguese: 'O que o chefe disse? Ele disse que terminamos cedo hoje!', breakdown: '<strong>SAY</strong> = dizer (sem pessoa depois). WHAT DID HE SAY? He SAID...' },
+        { type: 'sequence-step', stepNumber: 2, totalSteps: 5, emoji: '📢', english: 'Tell him to come here. I need to tell him something.', portuguese: 'Fala pra ele vir aqui. Preciso falar uma coisa pra ele.', breakdown: '<strong>TELL + pessoa</strong> = falar para alguém. TELL HIM = fala pra ele.' },
+        { type: 'sequence-step', stepNumber: 3, totalSteps: 5, emoji: '🤫', english: 'Don\'t tell anyone, but I got a raise!', portuguese: 'Não conta pra ninguém, mas consegui aumento!', breakdown: '<strong>DON\'T TELL ANYONE</strong> = não conta pra ninguém. TELL = contar (requer pessoa).' },
+        { type: 'sequence-step', stepNumber: 4, totalSteps: 5, emoji: '📱', english: 'She said she\'s running late. Can you tell the team?', portuguese: 'Ela disse que tá atrasada. Pode avisar a equipe?', breakdown: 'SAY = palavras exatas. TELL = comunicar a alguém. <strong>TELL THE TEAM</strong> = avisar a equipe.' },
+        { type: 'sequence-step', stepNumber: 5, totalSteps: 5, emoji: '🏥', english: 'Tell the doctor what happened. Say exactly where it hurts.', portuguese: 'Conta pro médico o que aconteceu. Diz exatamente onde dói.', breakdown: 'TELL THE DOCTOR (pessoa). SAY WHERE IT HURTS (informação). A diferença na prática.' },
+        { type: 'rule', cardClass: 'cyan', text: 'A diferença principal:', keyword: 'TELL + pessoa / SAY + palavras', keywordAfter: 'TELL = conta PRA alguém | SAY = fala algo' },
+        { type: 'tip', cardClass: 'orange', icon: '🗣️', title: 'PRONÚNCIA', text: '<strong>TELL</strong> = "TÉL" → <strong>TOLD</strong> (tôuld)<br><strong>SAY</strong> = "SÊI" → <strong>SAID</strong> (séd)' },
+        { type: 'example', cardClass: 'cyan', emoji: '👤', question: "<span class='hl-cyan'>Tell</span> me the truth.", questionTr: 'Me conta a verdade.', answer: '(TELL + pessoa)', answerTr: 'Precisa de pessoa' },
+        { type: 'example', cardClass: 'green', emoji: '💬', question: "What did you <span class='hl-green'>say</span>?", questionTr: 'O que você disse?', answer: '(SAY = as palavras)', answerTr: 'Foco nas palavras' },
+        { type: 'example', cardClass: 'cyan', emoji: '🤐', question: "Don't <span class='hl-cyan'>tell</span> anyone!", questionTr: 'Não conta pra ninguém!', answer: '(TELL + pessoa)', answerTr: 'Anyone é pessoa' },
+        { type: 'examples', cardClass: 'cyan', title: '👤 TELL + PESSOA', items: [
+          { emoji: '👤', en: '<span class="hl-cyan">Tell</span> me about it.', pt: 'Me conta sobre isso.' },
+          { emoji: '🔔', en: '<span class="hl-cyan">Tell</span> him to come.', pt: 'Diz pra ele vir.' },
+          { emoji: '🤫', en: "Don't <span class='hl-cyan'>tell</span> her!", pt: 'Não conta pra ela!' },
+          { emoji: '📖', en: '<span class="hl-cyan">Tell</span> me a story.', pt: 'Me conta uma história.' }
+        ]},
+        { type: 'examples', cardClass: 'green', title: '💬 SAY + PALAVRAS', items: [
+          { emoji: '👋', en: '<span class="hl-green">Say</span> hello.', pt: 'Diz oi.' },
+          { emoji: '🙏', en: '<span class="hl-green">Say</span> please.', pt: 'Diz por favor.' },
+          { emoji: '❓', en: 'What did you <span class="hl-green">say</span>?', pt: 'O que você disse?' },
+          { emoji: '🔄', en: '<span class="hl-green">Say</span> it again.', pt: 'Fala de novo.' }
+        ]},
+        { type: 'tip', cardClass: 'green', icon: '💡', title: 'TRUQUE FÁCIL', text: '<strong>TELL</strong> precisa de PESSOA depois:<br>• Tell <strong>me</strong> / Tell <strong>him</strong> / Tell <strong>her</strong><br><br><strong>SAY</strong> precisa de PALAVRAS depois:<br>• Say <strong>hello</strong> / Say <strong>something</strong>' },
+        { type: 'comparison', cardClass: 'cyan', title: '🗣️ TELL vs SAY', leftClass: 'left-side', rightClass: 'right-side', leftIcon: '👤', rightIcon: '💬', leftLabel: 'TELL + pessoa', rightLabel: 'SAY + palavras', left: '<span class="hl-cyan">Tell</span> me.', leftNote: 'Me conta.', right: '<span class="hl-green">Say</span> something.', rightNote: 'Fala algo.', explanation: 'TELL precisa de pessoa | SAY precisa de conteúdo' },
+        { type: 'examples', cardClass: 'gold', title: '⚡ EXCEÇÕES COMUNS', items: [
+          { emoji: '⏰', en: '<span class="hl-gold">Tell</span> time', pt: 'Ver as horas' },
+          { emoji: '🤥', en: '<span class="hl-gold">Tell</span> a lie', pt: 'Contar uma mentira' },
+          { emoji: '😂', en: '<span class="hl-gold">Tell</span> a joke', pt: 'Contar uma piada' },
+          { emoji: '✅', en: '<span class="hl-gold">Tell</span> the truth', pt: 'Falar a verdade' }
+        ]},
+        { type: 'comparison', cardClass: 'red', title: '⚠️ ERRO COMUM', leftClass: 'wrong', rightClass: 'right', leftIcon: '❌', rightIcon: '✅', leftLabel: 'ERRADO', rightLabel: 'CERTO', left: 'Say me your name.', leftNote: 'SAY não leva pessoa direta', right: 'Tell me your name.', rightNote: 'TELL + pessoa', explanation: 'Com pessoa direta, use TELL!' },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 "Me conta a verdade" em inglês:', options: ['Say me the truth', 'Tell me the truth', 'Speak me the truth'], correct: 1 },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 "O que você disse?" em inglês:', options: ['What did you tell?', 'What did you say?', 'What did you speak?'], correct: 1 },
+        { type: 'fill-blank', cardClass: 'cyan', prompt: '✍️ Complete:', sentence: "Don't _____ anyone about this!", correctWord: 'tell' },
+        { type: 'list', cardClass: 'gold', title: '📝 RESUMO - TELL vs SAY', items: [
+          { emoji: '👤', text: '<strong>TELL</strong> + pessoa (tell me, tell him)' },
+          { emoji: '💬', text: '<strong>SAY</strong> + palavras (say hello, say it)' },
+          { emoji: '⏪', text: 'Passado: TOLD / SAID' },
+          { emoji: '⚡', text: 'Tell a lie/joke/story = exceções' }
+        ]},
+        { type: 'end' }
+      ],
+      vocabulary: [{ emoji: '👤', pt: 'Me conta', en: 'Tell me' },
+        { emoji: '🤐', pt: 'Não conta pra ninguém', en: "Don't tell anyone" },
+        { emoji: '✅', pt: 'Fala a verdade', en: 'Tell the truth' },
+        { emoji: '🤥', pt: 'Contar mentira', en: 'Tell a lie' },
+        { emoji: '😂', pt: 'Contar piada', en: 'Tell a joke' },
+        { emoji: '❓', pt: 'O que você disse?', en: 'What did you say?' },
+        { emoji: '👋', pt: 'Diz oi', en: 'Say hello' },
+        { emoji: '🔄', pt: 'Fala de novo', en: 'Say it again' },
+        { emoji: '🙏', pt: 'Diz por favor', en: 'Say please' },
+        { emoji: '🙏', pt: 'Diz obrigado', en: 'Say thank you' },
+      ]
+    },
+
+  { id: 'present-progressive', title: 'PRESENT PROGRESSIVE', emoji: '🔄⏳', description: 'Ação contínua no presente', module: 3, order: 7, slides: [    { type: 'title', emoji: '🔄⏳', title: 'PRESENT PROGRESSIVE', subtitle: 'O que está acontecendo AGORA' },
+      { type: 'situation', emoji: '👷', cardClass: 'purple', text: 'Seu chefe liga e pergunta:<br><strong>"What are you doing?"</strong><br><br>Você está pintando a parede.<br>Como responder?' },
+        { type: 'sequence-step', stepNumber: 1, totalSteps: 5, emoji: '📞', english: 'Hey boss, what\'s up? — I\'m working on the second floor right now.', portuguese: 'E aí chefe? — Tô trabalhando no segundo andar agora.', breakdown: '<strong>I\'M WORKING</strong> = estou trabalhando. AM/IS/ARE + verbo-ING = ação acontecendo AGORA.' },
+        { type: 'sequence-step', stepNumber: 2, totalSteps: 5, emoji: '🔨', english: 'Carlos is fixing the sink. Maria is painting the bedroom.', portuguese: 'Carlos tá consertando a pia. Maria tá pintando o quarto.', breakdown: '<strong>IS FIXING</strong> / <strong>IS PAINTING</strong> = está fazendo (3ª pessoa = IS + ING).' },
+        { type: 'sequence-step', stepNumber: 3, totalSteps: 5, emoji: '🌧️', english: 'It\'s raining! Are you still coming? — Yeah, I\'m driving there now.', portuguese: 'Tá chovendo! Ainda vai vir? — Sim, tô dirigindo pra aí agora.', breakdown: '<strong>IT\'S RAINING</strong> = está chovendo. <strong>I\'M DRIVING</strong> = estou dirigindo.' },
+        { type: 'sequence-step', stepNumber: 4, totalSteps: 5, emoji: '🍳', english: 'What are you doing? — I\'m making dinner. The kids are doing homework.', portuguese: 'O que tá fazendo? — Tô fazendo jantar. As crianças tão fazendo dever.', breakdown: '<strong>WHAT ARE YOU DOING</strong> = o que tá fazendo? ARE = plural/you.' },
+        { type: 'sequence-step', stepNumber: 5, totalSteps: 5, emoji: '😤', english: 'Why are you yelling? I\'m not yelling — I\'m just talking loud!', portuguese: 'Por que tá gritando? Não tô gritando — tô só falando alto!', breakdown: '<strong>I\'M NOT + ING</strong> = não estou fazendo. Negativa do progressive.' },
+      { type: 'rule', cardClass: 'cyan', text: 'Para falar o que está acontecendo <strong>AGORA</strong>:', keyword: 'BE + VERB-ING', keywordAfter: 'I am working = Estou trabalhando' },
+      { type: 'tip', cardClass: 'orange', icon: '🗣️', title: 'PRONÚNCIA', text: '<strong>-ING</strong> soa como \"IN\" (sem o G forte):<br><br>\"working\" → \"UÔRKIN\"<br>\"painting\" → \"PÊINTIN\"<br>O G quase desaparece!' },
+      { type: 'example', cardClass: 'cyan', emoji: '🎨', question: "I'm <span class='hl-cyan'>painting</span> the wall.", questionTr: 'Estou pintando a parede.', answer: "I am + verb-ING", answerTr: 'Eu estou + verbo-NDO' },
+      { type: 'example', cardClass: 'cyan', emoji: '🔨', question: "He's <span class='hl-cyan'>fixing</span> the roof.", questionTr: 'Ele está consertando o telhado.', answer: "He is + verb-ING", answerTr: 'Ele está + verbo-NDO' },
+      { type: 'example', cardClass: 'cyan', emoji: '🧹', question: "She's <span class='hl-cyan'>cleaning</span> the bathroom.", questionTr: 'Ela está limpando o banheiro.', answer: "She is + verb-ING", answerTr: 'Ela está + verbo-NDO' },
+      { type: 'examples', cardClass: 'cyan', title: '👷 NO TRABALHO', items: [
+        { emoji: '🪚', en: "I'm <span class='hl-cyan'>cutting</span> the wood.", pt: 'Estou cortando a madeira.' },
+        { emoji: '🧱', en: "We're <span class='hl-cyan'>building</span> a wall.", pt: 'Estamos construindo uma parede.' },
+        { emoji: '🪣', en: "They're <span class='hl-cyan'>mixing</span> the cement.", pt: 'Eles estão misturando o cimento.' },
+        { emoji: '📏', en: "He's <span class='hl-cyan'>measuring</span> the room.", pt: 'Ele está medindo o cômodo.' }
+      ]},
+      { type: 'examples', cardClass: 'purple', title: '❓ PERGUNTAS DO CHEFE', items: [
+        { emoji: '❓', en: "What <span class='hl-purple'>are</span> you <span class='hl-cyan'>doing</span>?", pt: 'O que você está fazendo?' },
+        { emoji: '👀', en: "<span class='hl-purple'>Are</span> you <span class='hl-cyan'>working</span>?", pt: 'Você está trabalhando?' },
+        { emoji: '🔧', en: "Who <span class='hl-purple'>is</span> <span class='hl-cyan'>using</span> the drill?", pt: 'Quem está usando a furadeira?' }
+      ]},
+      { type: 'comparison', cardClass: 'cyan', title: '🔀 SIMPLE vs PROGRESSIVE', leftClass: 'left-side', rightClass: 'right-side', leftIcon: '🔁', rightIcon: '⏳', leftLabel: 'SIMPLE (rotina)', rightLabel: 'PROGRESSIVE (agora)', left: "I <span class='hl-purple'>work</span> every day.", leftNote: 'Trabalho todo dia (hábito)', right: "I'm <span class='hl-cyan'>working</span> right now.", rightNote: 'Estou trabalhando agora', explanation: 'SIMPLE = sempre faz | PROGRESSIVE = fazendo agora' },
+      { type: 'tip', cardClass: 'green', icon: '💡', title: 'DICA DE OURO', text: 'No trabalho, seu chefe quer saber o que você está fazendo <strong>AGORA</strong>.<br><br>Sempre responda com: <strong>I\'m + verbo-ING</strong><br><br>\"I\'m painting\" ✅<br>\"I\'m finishing\" ✅<br>\"I\'m cleaning up\" ✅' },
+      { type: 'comparison', cardClass: 'red', title: '⚠️ ERRO COMUM', leftClass: 'wrong', rightClass: 'right', leftIcon: '❌', rightIcon: '✅', leftLabel: 'ERRADO', rightLabel: 'CERTO', left: "I working now.", leftNote: 'Faltou o AM/IS/ARE', right: "I'm working now.", rightNote: "Com AM (I'm)", explanation: 'Sempre: <strong>AM/IS/ARE</strong> + verbo-ING' },
+      { type: 'quiz', cardClass: 'cyan', question: '🎯 "Estou pintando a parede" em inglês:', options: ['I painting the wall', "I'm painting the wall", 'I paint the wall'], correct: 1 },
+      { type: 'quiz', cardClass: 'cyan', question: '🎯 Seu chefe pergunta "What are you doing?" Você está limpando. Resposta:', options: ["I'm cleaning", 'I clean', 'I cleaning'], correct: 0 },
+      { type: 'fill-blank', cardClass: 'cyan', prompt: '✍️ Complete:', sentence: "He _____ fixing the pipe.", correctWord: 'is' },
+      { type: 'list', cardClass: 'gold', title: '📝 RESUMO - PRESENT PROGRESSIVE', items: [
+        { emoji: '⏳', text: '<strong>AM/IS/ARE + verbo-ING</strong> = agora' },
+        { emoji: '👷', text: "I'm working = Estou trabalhando" },
+        { emoji: '🗣️', text: '-ING soa como "IN" (sem G forte)' },
+        { emoji: '💡', text: 'Use pra dizer o que está fazendo AGORA' }
+      ]},
+      { type: 'end' }
+    ], vocabulary: [{ emoji: '🎨', pt: 'Estou pintando a parede', en: "I'm painting the wall", level: 1 },
+      { emoji: '🔨', pt: 'Ele está consertando o telhado', en: "He's fixing the roof", level: 1 },
+      { emoji: '🧹', pt: 'Ela está limpando o banheiro', en: "She's cleaning the bathroom", level: 1 },
+      { emoji: '🪚', pt: 'Estou cortando a madeira', en: "I'm cutting the wood", level: 1 },
+      { emoji: '🧱', pt: 'Estamos construindo uma parede', en: "We're building a wall", level: 1 },
+      { emoji: '📏', pt: 'Ele está medindo o cômodo', en: "He's measuring the room", level: 2 },
+      { emoji: '🔧', pt: 'Estou instalando a pia', en: "I'm installing the sink", level: 2 },
+      { emoji: '🪣', pt: 'Eles estão misturando o cimento', en: "They're mixing the cement", level: 1 },
+      { emoji: '🪜', pt: 'Ele está subindo a escada', en: "He's climbing the ladder", level: 1 },
+      { emoji: '🚿', pt: 'Estou consertando o chuveiro', en: "I'm fixing the shower", level: 1 },
+      { emoji: '💡', pt: 'Ela está trocando a lâmpada', en: "She's changing the light bulb", level: 1 },
+      { emoji: '🧤', pt: 'Estou usando luvas', en: "I'm wearing gloves", level: 1 },
+      { emoji: '📞', pt: 'Ele está ligando pro chefe', en: "He's calling the boss", level: 1 },
+      { emoji: '🚛', pt: 'O caminhão está chegando', en: "The truck is coming", level: 1 },
+      { emoji: '⏰', pt: 'Estou terminando', en: "I'm finishing up", level: 1 },
+      { emoji: '❓', pt: 'O que você está fazendo?', en: "What are you doing?", level: 1 },
+      { emoji: '👀', pt: 'Você está trabalhando?', en: "Are you working?", level: 1 },
+      { emoji: '🔧', pt: 'Quem está usando a furadeira?', en: "Who is using the drill?", level: 2 },
+      { emoji: '🚰', pt: 'A água está vazando', en: "The water is leaking", level: 2 },
+      { emoji: '☔', pt: 'Está chovendo', en: "It\'s raining", level: 1 },
+      { emoji: '🏃', pt: 'Estou indo', en: "I'm coming", level: 1 },
+      { emoji: '⏳', pt: 'Estou esperando', en: "I'm waiting", level: 1 },
+      { emoji: '🍽️', pt: 'Estamos almoçando', en: "We're having lunch", level: 1 }
+    ] },
+
+  { id: 'going-to', title: 'GOING TO', emoji: '🔮➡️', description: 'Futuro planejado', module: 3, order: 8,    slides: [
+        { type: 'title', emoji: '🔮➡️', title: 'GOING TO', subtitle: 'Futuro (planos e intenções)' },
+        { type: 'situation', emoji: '🍕', cardClass: 'purple', text: 'Você decidiu comer pizza hoje à noite.<br>"Eu <strong>VOU</strong> comer pizza."<br><br>Como falar sobre planos futuros?' },
+        { type: 'sequence-step', stepNumber: 1, totalSteps: 5, emoji: '🍕', english: 'What are we going to eat tonight? — I\'m going to order pizza.', portuguese: 'O que a gente vai comer hoje? — Vou pedir pizza.', breakdown: '<strong>GOING TO</strong> = vou/vai (plano decidido). I\'M GOING TO = eu vou.' },
+        { type: 'sequence-step', stepNumber: 2, totalSteps: 5, emoji: '🏗️', english: 'Tomorrow we\'re going to start the kitchen. It\'s going to take two days.', portuguese: 'Amanhã vamos começar a cozinha. Vai levar dois dias.', breakdown: '<strong>WE\'RE GOING TO</strong> = nós vamos. <strong>IT\'S GOING TO TAKE</strong> = vai levar/demorar.' },
+        { type: 'sequence-step', stepNumber: 3, totalSteps: 5, emoji: '☁️', english: 'Look at those clouds. It\'s going to rain. — I\'m going to get the tools inside.', portuguese: 'Olha essas nuvens. Vai chover. — Vou guardar as ferramentas.', breakdown: 'GOING TO pra previsões baseadas em evidência: olhou pro céu → VAI chover.' },
+        { type: 'sequence-step', stepNumber: 4, totalSteps: 5, emoji: '📅', english: 'Are you going to work this Saturday? — No, I\'m going to visit my brother.', portuguese: 'Vai trabalhar nesse sábado? — Não, vou visitar meu irmão.', breakdown: '<strong>ARE YOU GOING TO</strong> = você vai? Pergunta sobre planos.' },
+        { type: 'sequence-step', stepNumber: 5, totalSteps: 5, emoji: '🎓', english: 'My son is going to start school next month. We\'re going to be so proud!', portuguese: 'Meu filho vai começar a escola mês que vem. Vamos ficar tão orgulhosos!', breakdown: 'GOING TO pra planos futuros confirmados. <strong>IS GOING TO START</strong> = vai começar.' },
+        { type: 'rule', cardClass: 'purple', text: '<strong>GOING TO</strong> = VOU + verbo (futuro planejado):', keyword: "I'M GOING TO", keywordAfter: 'Vou fazer / Vai acontecer' },
+        { type: 'tip', cardClass: 'orange', icon: '🗣️', title: 'PRONÚNCIA', text: '<strong>GOING TO</strong> vira <strong>GONNA</strong> na fala:<br><br>"I\'m gonna eat" = "Vou comer"<br>Muito informal mas super comum!' },
+        { type: 'example', cardClass: 'purple', emoji: '🍕', question: "I'm <span class='hl-purple'>going to</span> eat pizza.", questionTr: 'Eu vou comer pizza.', answer: '(plano)', answerTr: 'Decidido' },
+        { type: 'example', cardClass: 'purple', emoji: '💤', question: "I'm <span class='hl-purple'>going to</span> sleep.", questionTr: 'Eu vou dormir.', answer: '(intenção)', answerTr: 'Decidido agora' },
+        { type: 'example', cardClass: 'purple', emoji: '🌧️', question: "It\'s <span class='hl-purple'>going to</span> rain.", questionTr: 'Vai chover.', answer: '(previsão)', answerTr: 'Evidência clara' },
+        { type: 'tip', cardClass: 'green', icon: '💡', title: 'ESTRUTURA', text: '<strong>BE + GOING TO + verbo</strong><br><br>I<strong>\'m</strong> going to eat<br>She<strong>\'s</strong> going to work<br>We<strong>\'re</strong> going to study' },
+        { type: 'examples', cardClass: 'purple', title: '🔮 PLANOS FUTUROS', items: [
+          { emoji: '💼', en: "I'm <span class='hl-purple'>going to</span> work.", pt: 'Vou trabalhar.' },
+          { emoji: '🏠', en: "I'm <span class='hl-purple'>going to</span> stay home.", pt: 'Vou ficar em casa.' },
+          { emoji: '📞', en: "I'm <span class='hl-purple'>going to</span> call you.", pt: 'Vou te ligar.' },
+          { emoji: '📚', en: "I'm <span class='hl-purple'>going to</span> study.", pt: 'Vou estudar.' }
+        ]},
+        { type: 'examples', cardClass: 'cyan', title: '❓ PERGUNTAS', items: [
+          { emoji: '❓', en: 'What <span class="hl-cyan">are</span> you <span class="hl-purple">going to</span> do?', pt: 'O que você vai fazer?' },
+          { emoji: '📅', en: 'When <span class="hl-cyan">are</span> you <span class="hl-purple">going to</span> come?', pt: 'Quando você vai vir?' },
+          { emoji: '🏠', en: '<span class="hl-cyan">Are</span> you <span class="hl-purple">going to</span> stay?', pt: 'Você vai ficar?' }
+        ]},
+        { type: 'comparison', cardClass: 'cyan', title: '🔮 GOING TO vs WILL', leftClass: 'left-side', rightClass: 'right-side', leftIcon: '📋', rightIcon: '⚡', leftLabel: 'GOING TO (planejado)', rightLabel: 'WILL (decisão na hora)', left: "I'm <span class='hl-purple'>going to</span> study tonight.", leftNote: 'Já planejei isso', right: "I <span class='hl-cyan'>will</span> help you.", rightNote: 'Decidi agora', explanation: 'GOING TO = plano | WILL = decisão instantânea' },
+        { type: 'comparison', cardClass: 'red', title: '⚠️ ERRO COMUM', leftClass: 'wrong', rightClass: 'right', leftIcon: '❌', rightIcon: '✅', leftLabel: 'ERRADO', rightLabel: 'CERTO', left: 'She going to work.', leftNote: 'Faltou o BE', right: "She's going to work.", rightNote: 'Com BE (is)', explanation: 'Sempre: <strong>BE</strong> + GOING TO + verbo' },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 "Ela vai trabalhar" em inglês:', options: ['She going to work', "She's going to work", 'She go to work'], correct: 1 },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 "O que você vai fazer?":', options: ['What you going to do?', 'What are you going to do?', 'What going to you do?'], correct: 1 },
+        { type: 'fill-blank', cardClass: 'cyan', prompt: '✍️ Complete:', sentence: "I'm _____ to call you later.", correctWord: 'going' },
+        { type: 'list', cardClass: 'gold', title: '📝 RESUMO - GOING TO', items: [
+          { emoji: '🔮', text: '<strong>GOING TO</strong> = vou/vai (futuro)' },
+          { emoji: '🔤', text: 'BE + GOING TO + verbo' },
+          { emoji: '🗣️', text: 'GONNA = going to (informal)' },
+          { emoji: '📋', text: 'Usado para planos/intenções' }
+        ]},
+        { type: 'end' }
+      ],
+      vocabulary: [{ emoji: '🍕', pt: 'Vou comer pizza', en: "I'm going to eat pizza" },
+        { emoji: '💤', pt: 'Vou dormir', en: "I'm going to sleep" },
+        { emoji: '💼', pt: 'Vou trabalhar', en: "I'm going to work" },
+        { emoji: '🏠', pt: 'Vou ficar em casa', en: "I'm going to stay home" },
+        { emoji: '📞', pt: 'Vou ligar pra você', en: "I'm going to call you" },
+        { emoji: '🛒', pt: 'Vou fazer compras', en: "I'm going to go shopping" },
+        { emoji: '📚', pt: 'Vou estudar', en: "I'm going to study" },
+        { emoji: '🎉', pt: 'Vai ter festa', en: "There's going to be a party" },
+        { emoji: '🌧️', pt: 'Vai chover', en: "It\'s going to rain" },
+        { emoji: '❓', pt: 'O que você vai fazer?', en: 'What are you going to do?' },
+      ]
+    },
+
+  { id: 'in-on-at-time', title: 'IN / ON / AT (Time)', emoji: '⏰📅', description: 'Preposições de tempo', module: 3, order: 9,    slides: [
+        { type: 'title', emoji: '⏰📅', title: 'IN / ON / AT', subtitle: 'Preposições de tempo' },
+        { type: 'situation', emoji: '📅', cardClass: 'purple', text: 'Você quer dizer quando algo acontece:<br>"Meu aniversário é <strong>EM</strong> julho."<br><br>IN, ON ou AT?' },
+        { type: 'sequence-step', stepNumber: 1, totalSteps: 5, emoji: '📅', english: 'The meeting is at 9 AM on Monday. Can you be there?', portuguese: 'A reunião é às 9 da manhã na segunda. Pode estar lá?', breakdown: '<strong>AT</strong> = hora exata (AT 9 AM). <strong>ON</strong> = dia (ON Monday).' },
+        { type: 'sequence-step', stepNumber: 2, totalSteps: 5, emoji: '🎂', english: 'My birthday is in December, on the 15th.', portuguese: 'Meu aniversário é em dezembro, dia 15.', breakdown: '<strong>IN</strong> = mês/ano (IN December). <strong>ON</strong> = data específica (ON the 15th).' },
+        { type: 'sequence-step', stepNumber: 3, totalSteps: 5, emoji: '🌙', english: 'I work at night. In the morning, I sleep. On weekends, I rest.', portuguese: 'Trabalho à noite. De manhã, durmo. Nos fins de semana, descanso.', breakdown: 'AT NIGHT (hora geral). IN THE MORNING (período). ON WEEKENDS (dias).' },
+        { type: 'sequence-step', stepNumber: 4, totalSteps: 5, emoji: '🏥', english: 'The appointment is at 2:30 in the afternoon on Wednesday.', portuguese: 'A consulta é às 2:30 da tarde na quarta.', breakdown: 'AT 2:30 (hora). IN THE AFTERNOON (período). ON WEDNESDAY (dia). Os 3 juntos!' },
+        { type: 'sequence-step', stepNumber: 5, totalSteps: 5, emoji: '🎄', english: 'In 2024, on Christmas Day, at midnight — that\'s when we celebrate!', portuguese: 'Em 2024, no dia de Natal, à meia-noite — é quando comemoramos!', breakdown: 'IN = ano. ON = dia especial. AT = momento exato. Regra completa.' },
+        { type: 'rule', cardClass: 'cyan', text: 'IN, ON, AT também são usados para <strong>TEMPO</strong>:', keyword: 'IN / ON / AT', keywordAfter: 'Cada uma com períodos diferentes!' },
+        { type: 'tip', cardClass: 'gold', icon: '⭐', title: 'REGRA DE TEMPO', text: '<strong>IN</strong> = meses, anos, partes do dia<br><strong>ON</strong> = dias, datas<br><strong>AT</strong> = horas, momentos' },
+        { type: 'example', cardClass: 'cyan', emoji: '📅', question: 'My birthday is <span class="hl-cyan">in</span> July.', questionTr: 'Meu aniversário é em julho.', answer: '(IN = mês)', answerTr: 'Meses usam IN' },
+        { type: 'example', cardClass: 'orange', emoji: '📆', question: 'I work <span class="hl-orange">on</span> Monday.', questionTr: 'Eu trabalho na segunda.', answer: '(ON = dia)', answerTr: 'Dias usam ON' },
+        { type: 'example', cardClass: 'green', emoji: '⏰', question: 'The meeting is <span class="hl-green">at</span> 3 PM.', questionTr: 'A reunião é às 3.', answer: '(AT = hora)', answerTr: 'Horas usam AT' },
+        { type: 'examples', cardClass: 'cyan', title: '📅 IN = PERÍODOS LONGOS', items: [
+          { emoji: '📅', en: '<span class="hl-cyan">in</span> January', pt: 'em janeiro' },
+          { emoji: '📆', en: '<span class="hl-cyan">in</span> 2024', pt: 'em 2024' },
+          { emoji: '🌅', en: '<span class="hl-cyan">in</span> the morning', pt: 'de manhã' },
+          { emoji: '🌆', en: '<span class="hl-cyan">in</span> the afternoon', pt: 'à tarde' }
+        ]},
+        { type: 'examples', cardClass: 'orange', title: '📆 ON = DIAS/DATAS', items: [
+          { emoji: '📅', en: '<span class="hl-orange">on</span> Monday', pt: 'na segunda' },
+          { emoji: '📅', en: '<span class="hl-orange">on</span> Friday', pt: 'na sexta' },
+          { emoji: '🎂', en: '<span class="hl-orange">on</span> my birthday', pt: 'no meu aniversário' },
+          { emoji: '🎄', en: '<span class="hl-orange">on</span> December 25th', pt: 'no dia 25 de dezembro' }
+        ]},
+        { type: 'examples', cardClass: 'green', title: '⏰ AT = HORAS/MOMENTOS', items: [
+          { emoji: '⏰', en: '<span class="hl-green">at</span> 3 o\'clock', pt: 'às 3 horas' },
+          { emoji: '☀️', en: '<span class="hl-green">at</span> noon', pt: 'ao meio-dia' },
+          { emoji: '🌙', en: '<span class="hl-green">at</span> night', pt: 'à noite' },
+          { emoji: '🌅', en: '<span class="hl-green">at</span> sunrise', pt: 'ao nascer do sol' }
+        ]},
+        { type: 'tip', cardClass: 'purple', icon: '⚠️', title: 'EXCEÇÕES', text: '<strong>AT night</strong> (não IN night!)<br><strong>IN the morning/afternoon/evening</strong><br><br>Mas: <strong>AT</strong> noon, <strong>AT</strong> midnight' },
+        { type: 'comparison', cardClass: 'red', title: '⚠️ ERRO COMUM', leftClass: 'wrong', rightClass: 'right', leftIcon: '❌', rightIcon: '✅', leftLabel: 'ERRADO', rightLabel: 'CERTO', left: '<span class="hl-red">in</span> Monday', leftNote: 'IN é para meses/anos', right: '<span class="hl-green">on</span> Monday', rightNote: 'ON é para dias', explanation: 'Dias da semana = ON!' },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 "Na segunda-feira":', options: ['in Monday', 'on Monday', 'at Monday'], correct: 1 },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 "Às 5 horas":', options: ['in 5 o\'clock', 'on 5 o\'clock', 'at 5 o\'clock'], correct: 2 },
+        { type: 'fill-blank', cardClass: 'cyan', prompt: '✍️ Complete:', sentence: 'I was born _____ 1990.', correctWord: 'in' },
+        { type: 'list', cardClass: 'gold', title: '📝 RESUMO - TEMPO', items: [
+          { emoji: '📅', text: '<strong>IN</strong> = meses, anos (in July, in 2024)' },
+          { emoji: '📆', text: '<strong>ON</strong> = dias, datas (on Monday, on Dec 25)' },
+          { emoji: '⏰', text: '<strong>AT</strong> = horas (at 3 PM, at night)' }
+        ]},
+        { type: 'end' }
+      ],
+      vocabulary: [{ emoji: '📅', pt: 'Em janeiro', en: 'In January' }, { emoji: '📆', pt: 'Em 2024', en: 'In 2024' },
+        { emoji: '🌅', pt: 'De manhã', en: 'In the morning' }, { emoji: '📅', pt: 'Na segunda', en: 'On Monday' },
+        { emoji: '🎂', pt: 'No dia 15', en: 'On the 15th' }, { emoji: '⏰', pt: 'Às 3 horas', en: 'At 3 o\'clock' },
+        { emoji: '🌙', pt: 'À noite', en: 'At night' }, { emoji: '☀️', pt: 'Ao meio-dia', en: 'At noon' },
+        { emoji: '🌆', pt: 'À tarde', en: 'In the afternoon' }, { emoji: '🌃', pt: 'À noite (parte do dia)', en: 'In the evening' },
+      ]
+    },
+
+  { id: 'phone-calls-basic', title: 'Phone Calls (Basic)', emoji: '📞👋', description: 'Ligações - básico', module: 3, order: 10,    slides: [
+        { type: 'title', emoji: '📞👋', title: 'PHONE CALLS', subtitle: 'Ligações básicas' },
+        { type: 'situation', emoji: '📞', cardClass: 'purple', text: 'O telefone toca. Você atende.<br>Ou você precisa ligar pra algum lugar.<br><br>O que dizer?' },
+        { type: 'sequence-step', stepNumber: 1, totalSteps: 5, emoji: '📞', english: 'Hello, this is Carlos. Can I speak to the manager, please?', portuguese: 'Alô, aqui é o Carlos. Posso falar com o gerente, por favor?', breakdown: '<strong>THIS IS</strong> = aqui é (ao telefone, nunca \'I am\'). CAN I SPEAK TO = posso falar com.' },
+        { type: 'sequence-step', stepNumber: 2, totalSteps: 5, emoji: '📱', english: 'Hi Carlos! One moment, please. I\'ll put you through.', portuguese: 'Oi Carlos! Um momento, por favor. Vou te transferir.', breakdown: '<strong>ONE MOMENT</strong> = um momento. <strong>PUT YOU THROUGH</strong> = transferir a ligação.' },
+        { type: 'sequence-step', stepNumber: 3, totalSteps: 5, emoji: '🏢', english: 'I\'m calling about the job. I saw your ad online.', portuguese: 'Tô ligando sobre a vaga. Vi o anúncio online.', breakdown: '<strong>I\'M CALLING ABOUT</strong> = estou ligando sobre. Frase padrão.' },
+        { type: 'sequence-step', stepNumber: 4, totalSteps: 5, emoji: '📝', english: 'Can I leave a message? Please tell him to call me back.', portuguese: 'Posso deixar recado? Por favor diz pra ele me retornar.', breakdown: '<strong>LEAVE A MESSAGE</strong> = deixar recado. <strong>CALL ME BACK</strong> = me retornar.' },
+        { type: 'sequence-step', stepNumber: 5, totalSteps: 5, emoji: '👋', english: 'Thank you for calling. Have a good day! — You too, bye!', portuguese: 'Obrigado pela ligação. Tenha um bom dia! — Você também, tchau!', breakdown: 'THANK YOU FOR CALLING = obrigado pela ligação. Despedida formal ao telefone.' },
+        { type: 'rule', cardClass: 'cyan', text: 'Frases essenciais ao telefone:', keyword: 'ATENDER | PEDIR | AGUARDAR', keywordAfter: 'Comunicação telefônica!' },
+        { type: 'tip', cardClass: 'gold', icon: '📞', title: 'ATENDENDO', text: '<strong>Hello?</strong> = Alô?<br><strong>Hello, this is [nome].</strong> = Alô, aqui é [nome].<br><strong>[Empresa], how can I help you?</strong><br>= [Empresa], como posso ajudar?' },
+        { type: 'example', cardClass: 'cyan', emoji: '📞', question: "Hello, <span class='hl-cyan'>this is</span> Maria.", questionTr: 'Alô, aqui é Maria.', answer: '(THIS IS = aqui é)', answerTr: 'Identificando-se' },
+        { type: 'example', cardClass: 'green', emoji: '❓', question: "May I <span class='hl-green'>speak to</span> John?", questionTr: 'Posso falar com John?', answer: '(SPEAK TO = falar com)', answerTr: 'Pedindo pessoa' },
+        { type: 'example', cardClass: 'orange', emoji: '⏳', question: "<span class='hl-orange'>Please hold</span>.", questionTr: 'Aguarde.', answer: '(PLEASE HOLD = aguarde)', answerTr: 'Pedindo para esperar' },
+        { type: 'examples', cardClass: 'cyan', title: '📞 FAZENDO LIGAÇÃO', items: [
+          { emoji: '👋', en: "Hi, <span class='hl-cyan'>this is</span> [nome]", pt: 'Oi, aqui é [nome]' },
+          { emoji: '❓', en: 'May I <span class="hl-cyan">speak to</span>...?', pt: 'Posso falar com...?' },
+          { emoji: '📞', en: "I'm <span class='hl-cyan'>calling about</span>...", pt: 'Estou ligando sobre...' },
+          { emoji: '❓', en: 'Is [nome] <span class="hl-cyan">available</span>?', pt: '[nome] está disponível?' }
+        ]},
+        { type: 'examples', cardClass: 'green', title: '📲 RECEBENDO LIGAÇÃO', items: [
+          { emoji: '👋', en: '<span class="hl-green">Hello?</span>', pt: 'Alô?' },
+          { emoji: '❓', en: "Who's <span class='hl-green'>calling</span>?", pt: 'Quem está falando?' },
+          { emoji: '⏳', en: '<span class="hl-green">One moment</span>, please.', pt: 'Um momento, por favor.' },
+          { emoji: '🔄', en: "I'll <span class='hl-green'>transfer</span> you.", pt: 'Vou te transferir.' }
+        ]},
+        { type: 'examples', cardClass: 'orange', title: '📝 RECADOS', items: [
+          { emoji: '❌', en: "He's <span class='hl-orange'>not available</span>", pt: 'Ele não está disponível' },
+          { emoji: '📝', en: 'Would you like to <span class="hl-orange">leave a message</span>?', pt: 'Quer deixar recado?' },
+          { emoji: '🔄', en: "I'll <span class='hl-orange'>call back</span> later", pt: 'Ligo de volta mais tarde' },
+          { emoji: '📞', en: 'Can you <span class="hl-orange">call me back</span>?', pt: 'Pode me ligar de volta?' }
+        ]},
+        { type: 'tip', cardClass: 'purple', icon: '🔢', title: 'NÚMERO DE TELEFONE', text: '<strong>What\'s your number?</strong><br>Qual seu número?<br><br>Diga os números UM A UM:<br>555-1234 = "five five five, one two three four"' },
+        { type: 'comparison', cardClass: 'red', title: '⚠️ ERRO COMUM', leftClass: 'wrong', rightClass: 'right', leftIcon: '❌', rightIcon: '✅', leftLabel: 'ERRADO', rightLabel: 'CERTO', left: '<span class="hl-red">I am</span> Maria.', leftNote: 'Ao telefone usa THIS IS', right: '<span class="hl-green">This is</span> Maria.', rightNote: 'Forma correta', explanation: 'Ao telefone: THIS IS, não I AM!' },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 "Aguarde":', options: ['Wait please', 'Please hold', 'Hold on please'], correct: 1 },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 "Posso falar com John?":', options: ['Can I talk John?', 'May I speak to John?', 'I want speak John'], correct: 1 },
+        { type: 'fill-blank', cardClass: 'cyan', prompt: '✍️ Complete:', sentence: 'Hello, _____ is Maria calling.', correctWord: 'this' },
+        { type: 'list', cardClass: 'gold', title: '📝 RESUMO - TELEFONE', items: [
+          { emoji: '📞', text: '<strong>This is [nome]</strong> = aqui é...' },
+          { emoji: '❓', text: '<strong>May I speak to...?</strong>' },
+          { emoji: '⏳', text: '<strong>Please hold</strong> = aguarde' },
+          { emoji: '📝', text: '<strong>Leave a message</strong> = deixar recado' }
+        ]},
+        { type: 'end' }
+      ],
+      vocabulary: [{ emoji: '📞', pt: 'Alô', en: 'Hello' }, { emoji: '👤', pt: 'Aqui é [nome]', en: 'This is [name]' },
+        { emoji: '❓', pt: 'Posso falar com...?', en: 'May I speak to...?' }, { emoji: '⏳', pt: 'Aguarde', en: 'Please hold' },
+        { emoji: '✅', pt: 'Um momento', en: 'One moment' }, { emoji: '📝', pt: 'Quer deixar recado?', en: 'Would you like to leave a message?' },
+        { emoji: '🔄', pt: 'Ligo de volta', en: "I'll call back" }, { emoji: '❌', pt: 'Ele não está', en: "He's not available" },
+        { emoji: '📱', pt: 'Qual seu número?', en: "What\'s your number?" }, { emoji: '👋', pt: 'Tchau', en: 'Goodbye / Bye / See you' },
+      ]
+    },
+
+  { id: 'phone-calls-problems', title: 'Phone Calls (Problems)', emoji: '📞❌', description: 'Problemas na ligação', module: 3, order: 11,    slides: [
+        { type: 'title', emoji: '📞❌', title: 'PHONE PROBLEMS', subtitle: 'Problemas na ligação' },
+        { type: 'situation', emoji: '📶', cardClass: 'purple', text: 'A ligação está ruim.<br>Você não está entendendo a pessoa.<br><br>O que dizer?' },
+        { type: 'sequence-step', stepNumber: 1, totalSteps: 5, emoji: '📶', english: 'Hello? I can\'t hear you. You\'re breaking up.', portuguese: 'Alô? Não tô te ouvindo. Tá cortando.', breakdown: '<strong>I CAN\'T HEAR YOU</strong> = não te ouço. <strong>BREAKING UP</strong> = cortando (sinal).' },
+        { type: 'sequence-step', stepNumber: 2, totalSteps: 5, emoji: '🔊', english: 'Can you speak louder? The connection is bad.', portuguese: 'Pode falar mais alto? A conexão tá ruim.', breakdown: '<strong>SPEAK LOUDER</strong> = falar mais alto. Pedido comum em ligações.' },
+        { type: 'sequence-step', stepNumber: 3, totalSteps: 5, emoji: '🔄', english: 'Sorry, can you repeat that? I didn\'t catch it.', portuguese: 'Desculpa, pode repetir? Não entendi.', breakdown: '<strong>CAN YOU REPEAT THAT</strong> = pode repetir? <strong>DIDN\'T CATCH IT</strong> = não peguei (não entendi).' },
+        { type: 'sequence-step', stepNumber: 4, totalSteps: 5, emoji: '📵', english: 'I think we got disconnected. Let me call you back.', portuguese: 'Acho que caiu a ligação. Deixa eu te ligar de volta.', breakdown: '<strong>GOT DISCONNECTED</strong> = caiu a ligação. CALL YOU BACK = ligar de volta.' },
+        { type: 'sequence-step', stepNumber: 5, totalSteps: 5, emoji: '❌', english: 'Sorry, wrong number. — No problem. Happens all the time!', portuguese: 'Desculpa, número errado. — Sem problema. Acontece direto!', breakdown: '<strong>WRONG NUMBER</strong> = número errado. Frase pronta pra quando ligar errado.' },
+        { type: 'rule', cardClass: 'orange', text: 'Quando não entender na ligação:', keyword: 'REPEAT | SLOWER | SPELL', keywordAfter: 'Repetir, Mais devagar, Soletrar' },
+        { type: 'example', cardClass: 'orange', emoji: '🔊', question: "I <span class='hl-orange'>can't hear</span> you well.", questionTr: 'Não consigo te ouvir bem.', answer: "(CAN'T HEAR = não ouço)", answerTr: 'Problema de áudio' },
+        { type: 'example', cardClass: 'cyan', emoji: '🔄', question: "Can you <span class='hl-cyan'>repeat</span> that?", questionTr: 'Pode repetir?', answer: '(REPEAT = repetir)', answerTr: 'Pedindo repetição' },
+        { type: 'example', cardClass: 'green', emoji: '🐢', question: "Can you speak <span class='hl-green'>slower</span>?", questionTr: 'Pode falar mais devagar?', answer: '(SLOWER = mais devagar)', answerTr: 'Pedindo clareza' },
+        { type: 'examples', cardClass: 'orange', title: '📶 PROBLEMAS DE CONEXÃO', items: [
+          { emoji: '🔊', en: "I <span class='hl-orange'>can't hear</span> you", pt: 'Não consigo te ouvir' },
+          { emoji: '📶', en: 'The <span class="hl-orange">connection is bad</span>', pt: 'A conexão está ruim' },
+          { emoji: '🔇', en: "You're <span class='hl-orange'>breaking up</span>", pt: 'Está cortando' },
+          { emoji: '❌', en: 'The <span class="hl-orange">call dropped</span>', pt: 'A ligação caiu' }
+        ]},
+        { type: 'examples', cardClass: 'cyan', title: '🔄 PEDINDO CLAREZA', items: [
+          { emoji: '🔄', en: 'Can you <span class="hl-cyan">repeat</span> that?', pt: 'Pode repetir?' },
+          { emoji: '🐢', en: 'Can you speak <span class="hl-cyan">slower</span>?', pt: 'Pode falar mais devagar?' },
+          { emoji: '🔊', en: 'Can you speak <span class="hl-cyan">louder</span>?', pt: 'Pode falar mais alto?' },
+          { emoji: '🔤', en: 'Can you <span class="hl-cyan">spell</span> that?', pt: 'Pode soletrar?' }
+        ]},
+        { type: 'examples', cardClass: 'green', title: '❓ PERGUNTAS ÚTEIS', items: [
+          { emoji: '❓', en: 'What did you <span class="hl-green">say</span>?', pt: 'O que você disse?' },
+          { emoji: '🤷', en: "I <span class='hl-green'>didn't understand</span>", pt: 'Não entendi' },
+          { emoji: '🤔', en: "What does that <span class='hl-green'>mean</span>?", pt: 'O que isso significa?' },
+          { emoji: '📞', en: "I'll <span class='hl-green'>call you back</span>", pt: 'Vou ligar de volta' }
+        ]},
+        { type: 'tip', cardClass: 'gold', icon: '💡', title: 'SOLETRAR', text: 'Para soletrar palavras difíceis:<br><br>A = Alpha, B = Bravo, C = Charlie...<br><br>Ou simplesmente: "M as in Mary"<br>"M de Mary"' },
+        { type: 'tip', cardClass: 'purple', icon: '📞', title: 'LIGAÇÃO CAIU?', text: '<strong>If we get disconnected...</strong><br>Se a ligação cair...<br><br><strong>...I\'ll call you back.</strong><br>...eu ligo de volta.' },
+        { type: 'comparison', cardClass: 'red', title: '⚠️ ERRO COMUM', leftClass: 'wrong', rightClass: 'right', leftIcon: '❌', rightIcon: '✅', leftLabel: 'ERRADO', rightLabel: 'CERTO', left: 'Speak <span class="hl-red">more slow</span>.', leftNote: 'Forma errada', right: 'Speak <span class="hl-green">slower</span>.', rightNote: 'Ou: more slowly', explanation: 'SLOWER é a forma correta!' },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 "Não entendi":', options: ["I don't understand", "I didn't understand", 'Ambos funcionam'], correct: 2 },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 "Pode soletrar?":', options: ['Can you letter that?', 'Can you spell that?', 'Can you write that?'], correct: 1 },
+        { type: 'fill-blank', cardClass: 'cyan', prompt: '✍️ Complete:', sentence: "Can you speak _____? I can't understand.", correctWord: 'slower' },
+        { type: 'list', cardClass: 'gold', title: '📝 RESUMO - PROBLEMAS', items: [
+          { emoji: '🔊', text: "<strong>I can't hear you</strong>" },
+          { emoji: '🔄', text: '<strong>Can you repeat that?</strong>' },
+          { emoji: '🐢', text: '<strong>Can you speak slower?</strong>' },
+          { emoji: '🔤', text: '<strong>Can you spell that?</strong>' }
+        ]},
+        { type: 'end' }
+      ],
+      vocabulary: [{ emoji: '🔊', pt: 'Não consigo ouvir', en: "I can't hear you" }, { emoji: '🔄', pt: 'Pode repetir?', en: 'Can you repeat that?' },
+        { emoji: '🐢', pt: 'Fala mais devagar', en: 'Can you speak slower?' }, { emoji: '🔤', pt: 'Pode soletrar?', en: 'Can you spell that?' },
+        { emoji: '❓', pt: 'O que você disse?', en: 'What did you say?' }, { emoji: '📶', pt: 'A ligação está ruim', en: 'The connection is bad' },
+        { emoji: '🔇', pt: 'Não escuto nada', en: "I can't hear anything" }, { emoji: '📞', pt: 'Vou ligar de volta', en: "I'll call you back" },
+        { emoji: '❌', pt: 'A ligação caiu', en: 'The call dropped' }, { emoji: '🔊', pt: 'Fala mais alto', en: 'Can you speak louder?' },
+      ]
+    },
+
+  { id: 'at-work-problems', title: 'At Work (Problems)', emoji: '💼⚠️', description: 'Problemas no trabalho', module: 3, order: 12,    slides: [
+        { type: 'title', emoji: '💼⚠️', title: 'WORK PROBLEMS', subtitle: 'Comunicar problemas' },
+        { type: 'situation', emoji: '🤒', cardClass: 'purple', text: 'Você está doente e não pode ir trabalhar.<br>Ou vai chegar atrasado.<br><br>Como avisar?' },
+        { type: 'sequence-step', stepNumber: 1, totalSteps: 5, emoji: '🤒', english: 'Boss, I can\'t come in today. I\'m sick.', portuguese: 'Chefe, não posso ir hoje. Tô doente.', breakdown: '<strong>I CAN\'T COME IN</strong> = não posso ir (ao trabalho). <strong>I\'M SICK</strong> = estou doente.' },
+        { type: 'sequence-step', stepNumber: 2, totalSteps: 5, emoji: '⏰', english: 'I\'m going to be late. There\'s a lot of traffic.', portuguese: 'Vou chegar atrasado. Tem muito trânsito.', breakdown: '<strong>GOING TO BE LATE</strong> = vou atrasar. Avisar o chefe é essencial.' },
+        { type: 'sequence-step', stepNumber: 3, totalSteps: 5, emoji: '🔧', english: 'The machine is broken. It\'s not working. Who do I call?', portuguese: 'A máquina quebrou. Não tá funcionando. Pra quem eu ligo?', breakdown: '<strong>IS BROKEN</strong> = está quebrada. <strong>NOT WORKING</strong> = não funciona.' },
+        { type: 'sequence-step', stepNumber: 4, totalSteps: 5, emoji: '😔', english: 'I need to leave early. My kid is sick at school.', portuguese: 'Preciso sair mais cedo. Meu filho tá doente na escola.', breakdown: '<strong>LEAVE EARLY</strong> = sair mais cedo. Explicar o motivo ajuda.' },
+        { type: 'sequence-step', stepNumber: 5, totalSteps: 5, emoji: '💰', english: 'I haven\'t been paid yet. Can you check my hours?', portuguese: 'Ainda não recebi. Pode conferir minhas horas?', breakdown: '<strong>HAVEN\'T BEEN PAID</strong> = não fui pago. CHECK MY HOURS = conferir horas.' },
+        { type: 'rule', cardClass: 'red', text: 'Situações problemáticas:', keyword: 'DOENÇA | ATRASO | PROBLEMA', keywordAfter: 'Avise o quanto antes!' },
+        { type: 'example', cardClass: 'red', emoji: '🤒', question: "I <span class='hl-red'>can't come in</span> today. I'm sick.", questionTr: 'Não posso ir hoje. Estou doente.', answer: '(FALTANDO)', answerTr: 'Avisando ausência' },
+        { type: 'example', cardClass: 'orange', emoji: '⏰', question: "I'm <span class='hl-orange'>going to be late</span>.", questionTr: 'Vou chegar atrasado.', answer: '(ATRASO)', answerTr: 'Avisando atraso' },
+        { type: 'example', cardClass: 'cyan', emoji: '⚠️', question: "There's a <span class='hl-cyan'>problem</span> with the machine.", questionTr: 'Tem um problema com a máquina.', answer: '(PROBLEMA)', answerTr: 'Reportando' },
+        { type: 'examples', cardClass: 'red', title: '🤒 DOENÇA/FALTA', items: [
+          { emoji: '🤒', en: "I'm <span class='hl-red'>sick</span>", pt: 'Estou doente' },
+          { emoji: '🚫', en: "I <span class='hl-red'>can't come in</span> today", pt: 'Não posso ir hoje' },
+          { emoji: '🏥', en: 'I have a <span class="hl-red">doctor\'s appointment</span>', pt: 'Tenho consulta médica' },
+          { emoji: '👨‍👩‍👧', en: '<span class="hl-red">Family emergency</span>', pt: 'Emergência familiar' }
+        ]},
+        { type: 'examples', cardClass: 'orange', title: '⏰ ATRASO', items: [
+          { emoji: '⏰', en: "I'm <span class='hl-orange'>going to be late</span>", pt: 'Vou me atrasar' },
+          { emoji: '🚗', en: "I'm <span class='hl-orange'>stuck in traffic</span>", pt: 'Estou preso no trânsito' },
+          { emoji: '😔', en: '<span class="hl-orange">Sorry for being late</span>', pt: 'Desculpa pelo atraso' },
+          { emoji: '🚌', en: 'I <span class="hl-orange">missed the bus</span>', pt: 'Perdi o ônibus' }
+        ]},
+        { type: 'examples', cardClass: 'cyan', title: '⚠️ PROBLEMAS NO TRABALHO', items: [
+          { emoji: '🔧', en: 'The <span class="hl-cyan">machine broke down</span>', pt: 'A máquina quebrou' },
+          { emoji: '❌', en: "I <span class='hl-cyan'>can't finish</span> today", pt: 'Não consigo terminar hoje' },
+          { emoji: '🆘', en: 'I <span class="hl-cyan">need help</span> with this', pt: 'Preciso de ajuda com isso' },
+          { emoji: '⚠️', en: "There's a <span class='hl-cyan'>problem</span>", pt: 'Tem um problema' }
+        ]},
+        { type: 'tip', cardClass: 'gold', icon: '📞', title: 'COMO AVISAR', text: '<strong>Ligue ou mande mensagem CEDO:</strong><br><br>"Hi, this is [nome]. I can\'t come in today because I\'m sick."<br><br>"Hi, I\'m going to be about 30 minutes late."' },
+        { type: 'tip', cardClass: 'purple', icon: '🙏', title: 'PEDINDO DESCULPAS', text: '<strong>Sorry for...</strong> = Desculpa por...<br><br>Sorry for being late.<br>Sorry for the inconvenience.<br>Sorry for the trouble.' },
+        { type: 'comparison', cardClass: 'red', title: '⚠️ ERRO COMUM', leftClass: 'wrong', rightClass: 'right', leftIcon: '❌', rightIcon: '✅', leftLabel: 'ERRADO', rightLabel: 'CERTO', left: "I <span class='hl-red'>will late</span>.", leftNote: 'Faltam palavras', right: "I'm <span class='hl-green'>going to be late</span>.", rightNote: 'Ou: I\'ll be late.', explanation: "Precisa do BE antes de LATE!" },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 "Vou me atrasar":', options: ["I'll be late", "I'm going to be late", 'Ambos estão corretos'], correct: 2 },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 "Estou preso no trânsito":', options: ["I'm stuck in traffic", "I'm in the traffic", 'Traffic is stuck'], correct: 0 },
+        { type: 'fill-blank', cardClass: 'cyan', prompt: '✍️ Complete:', sentence: "Sorry for _____ late.", correctWord: 'being' },
+        { type: 'list', cardClass: 'gold', title: '📝 RESUMO - PROBLEMAS', items: [
+          { emoji: '🤒', text: "<strong>I'm sick</strong> = estou doente" },
+          { emoji: '⏰', text: "<strong>I'm going to be late</strong>" },
+          { emoji: '🚗', text: "<strong>Stuck in traffic</strong> = preso no trânsito" },
+          { emoji: '🙏', text: '<strong>Sorry for...</strong> = desculpa por...' }
+        ]},
+        { type: 'end' }
+      ],
+      vocabulary: [{ emoji: '🤒', pt: 'Estou doente', en: "I'm sick" }, { emoji: '⏰', pt: 'Vou chegar atrasado', en: "I'm going to be late" },
+        { emoji: '⚠️', pt: 'Tem um problema', en: "There's a problem" }, { emoji: '🔧', pt: 'A máquina quebrou', en: 'The machine broke down' },
+        { emoji: '❌', pt: 'Não consigo terminar hoje', en: "I can't finish today" }, { emoji: '🆘', pt: 'Preciso de ajuda', en: 'I need help with this' },
+        { emoji: '😔', pt: 'Desculpa pelo atraso', en: 'Sorry for being late' }, { emoji: '📞', pt: 'Posso sair mais cedo?', en: 'Can I leave early?' },
+        { emoji: '🏥', pt: 'Emergência familiar', en: 'Family emergency' }, { emoji: '🙏', pt: 'Desculpa pelo inconveniente', en: 'Sorry for the inconvenience' },
+      ]
+    },
+
+  { id: 'in-on-at-place', title: 'IN / ON / AT (Place)', emoji: '📍🗺️', description: 'Preposições de lugar', module: 3, order: 13,    slides: [
+        { type: 'title', emoji: '📍🗺️', title: 'IN / ON / AT', subtitle: 'Preposições de lugar' },
+        { type: 'situation', emoji: '🏠', cardClass: 'purple', text: 'Você quer dizer onde está:<br>"Estou <strong>NA</strong> casa."<br><br>IN, ON ou AT?' },
+        { type: 'sequence-step', stepNumber: 1, totalSteps: 5, emoji: '🏠', english: 'I\'m at home right now. The kids are in the living room.', portuguese: 'Tô em casa agora. As crianças tão na sala.', breakdown: '<strong>AT HOME</strong> = em casa. <strong>IN THE LIVING ROOM</strong> = na sala (dentro de).' },
+        { type: 'sequence-step', stepNumber: 2, totalSteps: 5, emoji: '🚗', english: 'She\'s in the car. I\'m at the gas station, on Main Street.', portuguese: 'Ela tá no carro. Tô no posto, na Main Street.', breakdown: '<strong>IN</strong> = dentro (carro). <strong>AT</strong> = ponto (posto). <strong>ON</strong> = rua.' },
+        { type: 'sequence-step', stepNumber: 3, totalSteps: 5, emoji: '🏢', english: 'I work at a restaurant. The kitchen is on the second floor.', portuguese: 'Trabalho num restaurante. A cozinha fica no segundo andar.', breakdown: '<strong>AT</strong> = estabelecimento (AT a restaurant). <strong>ON</strong> = andar (ON the second floor).' },
+        { type: 'sequence-step', stepNumber: 4, totalSteps: 5, emoji: '🏥', english: 'He\'s at the hospital. He\'s in room 305, on the third floor.', portuguese: 'Ele tá no hospital. Tá no quarto 305, no terceiro andar.', breakdown: 'AT = lugar geral. IN = espaço fechado (quarto). ON = andar. Os 3 juntos!' },
+        { type: 'sequence-step', stepNumber: 5, totalSteps: 5, emoji: '🌍', english: 'I was born in Brazil, in São Paulo. Now I live in Boston, on Elm Street.', portuguese: 'Nasci no Brasil, em São Paulo. Agora moro em Boston, na Elm Street.', breakdown: 'IN = país/cidade. ON = rua. Padrão geográfico.' },
+        { type: 'rule', cardClass: 'cyan', text: 'As 3 preposições de lugar mais importantes:', keyword: 'IN / ON / AT', keywordAfter: 'Cada uma tem seu uso!' },
+        { type: 'tip', cardClass: 'gold', icon: '⭐', title: 'REGRA GERAL', text: '<strong>IN</strong> = DENTRO de algo<br><strong>ON</strong> = EM CIMA / superfície<br><strong>AT</strong> = PONTO específico' },
+        { type: 'example', cardClass: 'cyan', emoji: '🏠', question: "I'm <span class='hl-cyan'>in</span> the house.", questionTr: 'Estou na casa. (dentro)', answer: '(IN = dentro)', answerTr: 'Espaço fechado' },
+        { type: 'example', cardClass: 'orange', emoji: '📦', question: "The book is <span class='hl-orange'>on</span> the table.", questionTr: 'O livro está na mesa. (em cima)', answer: '(ON = superfície)', answerTr: 'Em cima de' },
+        { type: 'example', cardClass: 'green', emoji: '🚪', question: "I'm <span class='hl-green'>at</span> the door.", questionTr: 'Estou na porta. (ponto)', answer: '(AT = ponto)', answerTr: 'Local específico' },
+        { type: 'examples', cardClass: 'cyan', title: '📦 IN = DENTRO', items: [
+          { emoji: '🏠', en: '<span class="hl-cyan">in</span> the house', pt: 'na casa (dentro)' },
+          { emoji: '🚗', en: '<span class="hl-cyan">in</span> the car', pt: 'no carro (dentro)' },
+          { emoji: '🇧🇷', en: '<span class="hl-cyan">in</span> Brazil', pt: 'no Brasil (dentro do país)' },
+          { emoji: '🏙️', en: '<span class="hl-cyan">in</span> the city', pt: 'na cidade' }
+        ]},
+        { type: 'examples', cardClass: 'orange', title: '📋 ON = SUPERFÍCIE', items: [
+          { emoji: '📦', en: '<span class="hl-orange">on</span> the table', pt: 'na mesa (em cima)' },
+          { emoji: '🛣️', en: '<span class="hl-orange">on</span> the street', pt: 'na rua' },
+          { emoji: '🚌', en: '<span class="hl-orange">on</span> the bus', pt: 'no ônibus' },
+          { emoji: '✈️', en: '<span class="hl-orange">on</span> the plane', pt: 'no avião' }
+        ]},
+        { type: 'examples', cardClass: 'green', title: '📍 AT = PONTO', items: [
+          { emoji: '💼', en: '<span class="hl-green">at</span> work', pt: 'no trabalho' },
+          { emoji: '🏫', en: '<span class="hl-green">at</span> school', pt: 'na escola' },
+          { emoji: '🚪', en: '<span class="hl-green">at</span> the door', pt: 'na porta' },
+          { emoji: '🚏', en: '<span class="hl-green">at</span> the bus stop', pt: 'no ponto de ônibus' }
+        ]},
+        { type: 'tip', cardClass: 'purple', icon: '🚗', title: 'VEÍCULOS', text: '<strong>IN</strong> = carros, táxis (você entra)<br>→ in the car, in a táxi<br><br><strong>ON</strong> = transporte público (você sobe)<br>→ on the bus, on the train, on the plane' },
+        { type: 'comparison', cardClass: 'red', title: '⚠️ ERRO COMUM', leftClass: 'wrong', rightClass: 'right', leftIcon: '❌', rightIcon: '✅', leftLabel: 'ERRADO', rightLabel: 'CERTO', left: 'I am <span class="hl-red">in</span> work.', leftNote: 'IN = dentro', right: 'I am <span class="hl-green">at</span> work.', rightNote: 'AT = ponto/lugar', explanation: 'AT work, AT school, AT home!' },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 "Estou no trabalho":', options: ['I am in work', 'I am on work', 'I am at work'], correct: 2 },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 "No ônibus":', options: ['in the bus', 'on the bus', 'at the bus'], correct: 1 },
+        { type: 'fill-blank', cardClass: 'cyan', prompt: '✍️ Complete:', sentence: 'The keys are _____ the table.', correctWord: 'on' },
+        { type: 'list', cardClass: 'gold', title: '📝 RESUMO - LUGAR', items: [
+          { emoji: '📦', text: '<strong>IN</strong> = dentro (in the house, in Brazil)' },
+          { emoji: '📋', text: '<strong>ON</strong> = superfície (on the table, on the bus)' },
+          { emoji: '📍', text: '<strong>AT</strong> = ponto (at work, at school)' }
+        ]},
+        { type: 'end' }
+      ],
+      vocabulary: [{ emoji: '🏠', pt: 'Na casa', en: 'In the house' }, { emoji: '🇧🇷', pt: 'No Brasil', en: 'In Brazil' },
+        { emoji: '📦', pt: 'Na mesa', en: 'On the table' }, { emoji: '🛣️', pt: 'Na rua', en: 'On the street' },
+        { emoji: '🚪', pt: 'Na porta', en: 'At the door' }, { emoji: '💼', pt: 'No trabalho', en: 'At work' },
+        { emoji: '🏫', pt: 'Na escola', en: 'At school' }, { emoji: '🏥', pt: 'No hospital', en: 'At the hospital' },
+        { emoji: '🚌', pt: 'No ônibus', en: 'On the bus' }, { emoji: '🚗', pt: 'No carro', en: 'In the car' },
+      ]
+    },
+
+  { id: 'directions-basic', title: 'DIRECTIONS (Basic)', emoji: '🧭📍', description: 'Direções básicas', module: 3, order: 14,    slides: [
+        { type: 'title', emoji: '🧭📍', title: 'DIRECTIONS', subtitle: 'Direções básicas' },
+        { type: 'situation', emoji: '🗺️', cardClass: 'purple', text: 'Você está perdido e alguém diz:<br>"<strong>TURN RIGHT</strong>, then go straight."<br><br>Como entender direções?' },
+        { type: 'sequence-step', stepNumber: 1, totalSteps: 5, emoji: '🚶', english: 'Excuse me, how do I get to the post office?', portuguese: 'Com licença, como chego nos Correios?', breakdown: '<strong>HOW DO I GET TO</strong> = como chego em? Pergunta padrão pra direções.' },
+        { type: 'sequence-step', stepNumber: 2, totalSteps: 5, emoji: '👉', english: 'Go straight for two blocks, then turn right.', portuguese: 'Vai reto por dois quarteirões, depois vira à direita.', breakdown: '<strong>GO STRAIGHT</strong> = vai reto. <strong>TURN RIGHT</strong> = vira à direita.' },
+        { type: 'sequence-step', stepNumber: 3, totalSteps: 5, emoji: '📍', english: 'It\'s on the left side, next to the bank. You can\'t miss it.', portuguese: 'Fica do lado esquerdo, do lado do banco. Não tem como errar.', breakdown: '<strong>ON THE LEFT</strong> = do lado esquerdo. <strong>NEXT TO</strong> = do lado de.' },
+        { type: 'sequence-step', stepNumber: 4, totalSteps: 5, emoji: '🤔', english: 'Is it far from here? — No, it\'s about a five-minute walk.', portuguese: 'É longe daqui? — Não, uns 5 minutos a pé.', breakdown: '<strong>FAR FROM HERE</strong> = longe daqui. A FIVE-MINUTE WALK = 5 minutos andando.' },
+        { type: 'sequence-step', stepNumber: 5, totalSteps: 5, emoji: '🙏', english: 'Thank you so much! — No problem. Have a good day!', portuguese: 'Muito obrigado! — Sem problema. Tenha um bom dia!', breakdown: 'Agradecer sempre. NO PROBLEM = sem problema (resposta natural).' },
+        { type: 'rule', cardClass: 'cyan', text: 'As 3 direções mais importantes:', keyword: 'LEFT | RIGHT | STRAIGHT', keywordAfter: 'Esquerda, Direita, Reto' },
+        { type: 'tip', cardClass: 'gold', icon: '🗣️', title: 'PRONÚNCIA', text: '<strong>RIGHT</strong> = "RÁIT"<br><strong>LEFT</strong> = "LÉFT"<br><strong>STRAIGHT</strong> = "STRÉIT"' },
+        { type: 'example', cardClass: 'cyan', emoji: '👉', question: '<span class="hl-cyan">Turn right</span>.', questionTr: 'Vira à direita.', answer: '(TURN RIGHT)', answerTr: 'Vira + direção' },
+        { type: 'example', cardClass: 'cyan', emoji: '👈', question: '<span class="hl-cyan">Turn left</span>.', questionTr: 'Vira à esquerda.', answer: '(TURN LEFT)', answerTr: 'Vira + direção' },
+        { type: 'example', cardClass: 'green', emoji: '⬆️', question: '<span class="hl-green">Go straight</span>.', questionTr: 'Vai reto.', answer: '(GO STRAIGHT)', answerTr: 'Segue em frente' },
+        { type: 'examples', cardClass: 'cyan', title: '🧭 DIREÇÕES BÁSICAS', items: [
+          { emoji: '👉', en: '<span class="hl-cyan">Turn right</span>', pt: 'Vira à direita' },
+          { emoji: '👈', en: '<span class="hl-cyan">Turn left</span>', pt: 'Vira à esquerda' },
+          { emoji: '⬆️', en: '<span class="hl-cyan">Go straight</span>', pt: 'Vai reto' },
+          { emoji: '🔄', en: '<span class="hl-cyan">Go back</span>', pt: 'Volta' }
+        ]},
+        { type: 'examples', cardClass: 'green', title: '🚗 MAIS COMANDOS', items: [
+          { emoji: '⏭️', en: '<span class="hl-green">Keep going</span>', pt: 'Continua' },
+          { emoji: '🛑', en: '<span class="hl-green">Stop here</span>', pt: 'Para aqui' },
+          { emoji: '📍', en: "<span class='hl-green'>It\'s here</span>", pt: 'É aqui' },
+          { emoji: '🔄', en: '<span class="hl-green">Make a U-turn</span>', pt: 'Faz um retorno' }
+        ]},
+        { type: 'tip', cardClass: 'purple', icon: '❓', title: 'COMO PERGUNTAR', text: '<strong>Where is...?</strong><br>Onde fica...?<br><br><strong>How do I get to...?</strong><br>Como eu chego em...?<br><br><strong>Is it far?</strong><br>É longe?' },
+        { type: 'comparison', cardClass: 'red', title: '⚠️ CUIDADO!', leftClass: 'left-side', rightClass: 'right-side', leftIcon: '👈', rightIcon: '👉', leftLabel: 'LEFT', rightLabel: 'RIGHT', left: '<span class="hl-cyan">LEFT</span>', leftNote: 'Esquerda', right: '<span class="hl-orange">RIGHT</span>', rightNote: 'Direita', explanation: 'Não confunda! LEFT = esquerda' },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 "Vira à esquerda":', options: ['Go left', 'Turn left', 'Left turn'], correct: 1 },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 "Vai reto":', options: ['Go right', 'Turn straight', 'Go straight'], correct: 2 },
+        { type: 'fill-blank', cardClass: 'cyan', prompt: '✍️ Complete:', sentence: '_____ right at the traffic light.', correctWord: 'Turn' },
+        { type: 'list', cardClass: 'gold', title: '📝 RESUMO - DIREÇÕES', items: [
+          { emoji: '👉', text: '<strong>Turn right</strong> = vira à direita' },
+          { emoji: '👈', text: '<strong>Turn left</strong> = vira à esquerda' },
+          { emoji: '⬆️', text: '<strong>Go straight</strong> = vai reto' },
+          { emoji: '🔄', text: '<strong>Go back</strong> = volta' }
+        ]},
+        { type: 'end' }
+      ],
+      vocabulary: [{ emoji: '👉', pt: 'Vira à direita', en: 'Turn right' }, { emoji: '👈', pt: 'Vira à esquerda', en: 'Turn left' },
+        { emoji: '⬆️', pt: 'Vai reto', en: 'Go straight' }, { emoji: '🔄', pt: 'Volta', en: 'Go back' },
+        { emoji: '⏭️', pt: 'Continua', en: 'Keep going' }, { emoji: '🛑', pt: 'Para aqui', en: 'Stop here' },
+        { emoji: '📍', pt: 'É aqui', en: "It\'s here" }, { emoji: '📍', pt: 'É ali', en: "It\'s over there" },
+        { emoji: '❓', pt: 'Onde fica?', en: 'Where is it?' }, { emoji: '🗺️', pt: 'Como chego lá?', en: 'How do I get there?' },
+      ]
+    },
+
+  { id: 'directions-street', title: 'DIRECTIONS (Street)', emoji: '🛣️🚗', description: 'Direções na rua', module: 3, order: 15,    slides: [
+        { type: 'title', emoji: '🛣️🚗', title: 'STREET DIRECTIONS', subtitle: 'Direções mais detalhadas' },
+        { type: 'situation', emoji: '🏢', cardClass: 'purple', text: 'Você pergunta onde fica o banco:<br>"É na <strong>ESQUINA</strong>, ao <strong>LADO</strong> da farmácia."<br><br>Como falar de localizações?' },
+        { type: 'sequence-step', stepNumber: 1, totalSteps: 5, emoji: '🗺️', english: 'Where\'s the nearest ATM? — There\'s one on Oak Street, across from the pharmacy.', portuguese: 'Onde fica o caixa eletrônico mais perto? — Tem um na Oak Street, em frente à farmácia.', breakdown: '<strong>NEAREST</strong> = mais perto. <strong>ACROSS FROM</strong> = em frente a.' },
+        { type: 'sequence-step', stepNumber: 2, totalSteps: 5, emoji: '🏦', english: 'Go past the church, then it\'s on the corner of Oak and Main.', portuguese: 'Passa a igreja, aí fica na esquina da Oak com a Main.', breakdown: '<strong>GO PAST</strong> = passa (além de). <strong>ON THE CORNER OF</strong> = na esquina de.' },
+        { type: 'sequence-step', stepNumber: 3, totalSteps: 5, emoji: '🚦', english: 'At the traffic light, make a left. It\'s the second building on the right.', portuguese: 'No semáforo, vira à esquerda. É o segundo prédio à direita.', breakdown: '<strong>AT THE TRAFFIC LIGHT</strong> = no semáforo. <strong>MAKE A LEFT</strong> = vira à esquerda.' },
+        { type: 'sequence-step', stepNumber: 4, totalSteps: 5, emoji: '🏪', english: 'Is it between the bakery and the laundromat?', portuguese: 'Fica entre a padaria e a lavanderia?', breakdown: '<strong>BETWEEN</strong> = entre. Referências com prédios ao redor.' },
+        { type: 'sequence-step', stepNumber: 5, totalSteps: 5, emoji: '📱', english: 'I\'ll send you the address. It\'s behind the mall, near the parking lot.', portuguese: 'Mando o endereço. Fica atrás do shopping, perto do estacionamento.', breakdown: '<strong>BEHIND</strong> = atrás. <strong>NEAR</strong> = perto de.' },
+        { type: 'rule', cardClass: 'cyan', text: 'Referências de lugar na rua:', keyword: 'CORNER | BLOCK | NEXT TO', keywordAfter: 'Esquina, Quarteirão, Ao lado' },
+        { type: 'example', cardClass: 'cyan', emoji: '🏢', question: "It\'s on the <span class='hl-cyan'>corner</span>.", questionTr: 'É na esquina.', answer: '(CORNER = esquina)', answerTr: 'Referência comum' },
+        { type: 'example', cardClass: 'cyan', emoji: '🛣️', question: "It\'s two <span class='hl-cyan'>blocks</span> away.", questionTr: 'Fica a dois quarteirões.', answer: '(BLOCK = quarteirão)', answerTr: 'Distância' },
+        { type: 'example', cardClass: 'green', emoji: '🏪', question: "It\'s <span class='hl-green'>next to</span> the store.", questionTr: 'É ao lado da loja.', answer: '(NEXT TO = ao lado)', answerTr: 'Posição' },
+        { type: 'examples', cardClass: 'cyan', title: '📍 POSIÇÃO', items: [
+          { emoji: '🏪', en: "<span class='hl-cyan'>Next to</span> the store", pt: 'Ao lado da loja' },
+          { emoji: '🏦', en: "<span class='hl-cyan'>Across from</span> the bank", pt: 'Em frente ao banco' },
+          { emoji: '🏥', en: "<span class='hl-cyan'>Behind</span> the hospital", pt: 'Atrás do hospital' },
+          { emoji: '🏠', en: "<span class='hl-cyan'>Between</span> the houses", pt: 'Entre as casas' }
+        ]},
+        { type: 'examples', cardClass: 'green', title: '🛣️ REFERÊNCIAS', items: [
+          { emoji: '🏢', en: "On the <span class='hl-green'>corner</span>", pt: 'Na esquina' },
+          { emoji: '🚦', en: "At the <span class='hl-green'>traffic light</span>", pt: 'No semáforo' },
+          { emoji: '🛑', en: "At the <span class='hl-green'>stop sign</span>", pt: 'Na placa de pare' },
+          { emoji: '🚦', en: "At the <span class='hl-green'>intersection</span>", pt: 'No cruzamento' }
+        ]},
+        { type: 'tip', cardClass: 'gold', icon: '📏', title: 'DISTÂNCIA', text: '<strong>Two blocks away</strong><br>A dois quarteirões<br><br><strong>About 5 minutes</strong><br>Uns 5 minutos<br><br><strong>Not far from here</strong><br>Não é longe daqui' },
+        { type: 'tip', cardClass: 'purple', icon: '💡', title: 'NEXT TO vs ACROSS FROM', text: '<strong>Next to</strong> = AO LADO (mesma calçada)<br><strong>Across from</strong> = EM FRENTE (outro lado da rua)' },
+        { type: 'comparison', cardClass: 'red', title: '⚠️ ERRO COMUM', leftClass: 'wrong', rightClass: 'right', leftIcon: '❌', rightIcon: '✅', leftLabel: 'ERRADO', rightLabel: 'CERTO', left: '<span class="hl-red">Near to</span> the bank', leftNote: 'NEAR não usa TO', right: '<span class="hl-green">Next to</span> the bank', rightNote: 'NEXT TO é a expressão', explanation: 'NEAR the bank OU NEXT TO the bank' },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 "Ao lado do banco":', options: ['Next the bank', 'Next to the bank', 'Near to the bank'], correct: 1 },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 "Na esquina":', options: ['In the corner', 'On the corner', 'At corner'], correct: 1 },
+        { type: 'fill-blank', cardClass: 'cyan', prompt: '✍️ Complete:', sentence: 'The pharmacy is _____ the hospital.', correctWord: 'next to' },
+        { type: 'list', cardClass: 'gold', title: '📝 RESUMO - RUA', items: [
+          { emoji: '🏢', text: '<strong>On the corner</strong> = na esquina' },
+          { emoji: '🏪', text: '<strong>Next to</strong> = ao lado' },
+          { emoji: '🏦', text: '<strong>Across from</strong> = em frente' },
+          { emoji: '🛣️', text: '<strong>Two blocks</strong> = dois quarteirões' }
+        ]},
+        { type: 'end' }
+      ],
+      vocabulary: [{ emoji: '🏢', pt: 'Na esquina', en: 'On the corner' }, { emoji: '🛣️', pt: 'Dois quarteirões', en: 'Two blocks' },
+        { emoji: '🚦', pt: 'No cruzamento', en: 'At the intersection' }, { emoji: '🚦', pt: 'No semáforo', en: 'At the traffic light' },
+        { emoji: '🛑', pt: 'Na placa de pare', en: 'At the stop sign' }, { emoji: '🏪', pt: 'Ao lado da loja', en: 'Next to the store' },
+        { emoji: '🏦', pt: 'Em frente ao banco', en: 'Across from the bank' }, { emoji: '🏠', pt: 'Entre as casas', en: 'Between the houses' },
+        { emoji: '🏥', pt: 'Atrás do hospital', en: 'Behind the hospital' }, { emoji: '🎯', pt: 'Bem ali', en: 'Right there' },
+      ]
+    },
+
+  { id: 'turn-left-right', title: 'TURN LEFT / RIGHT', emoji: '⬅️➡️', description: 'Vira à esquerda/direita', module: 3, order: 16,    slides: [
+        { type: 'title', emoji: '⬅️➡️', title: 'TURN LEFT / RIGHT', subtitle: 'Direções: virar' },
+        { type: 'situation', emoji: '🚗', cardClass: 'purple', text: 'Você está de Uber.<br>Precisa dizer pro motorista VIRAR.<br><br>Como dar direções?' },
+        { type: 'sequence-step', stepNumber: 1, totalSteps: 5, emoji: '🚗', english: 'Turn left at the next light. Then turn right on Oak Street.', portuguese: 'Vira à esquerda no próximo sinal. Depois vira à direita na Oak Street.', breakdown: '<strong>TURN LEFT/RIGHT</strong> = virar à esquerda/direita. AT THE NEXT LIGHT = no próximo sinal.' },
+        { type: 'sequence-step', stepNumber: 2, totalSteps: 5, emoji: '📱', english: 'The GPS says turn right, but I think it\'s wrong.', portuguese: 'O GPS fala pra virar à direita, mas acho que tá errado.', breakdown: 'SAYS TURN RIGHT = diz pra virar à direita. Questionar o GPS!' },
+        { type: 'sequence-step', stepNumber: 3, totalSteps: 5, emoji: '🚕', english: 'Driver, please turn left here. — Here? — Yes, right here.', portuguese: 'Motorista, vira à esquerda aqui. — Aqui? — Sim, bem aqui.', breakdown: 'Instruir motorista de Uber/táxi. RIGHT HERE = bem aqui (reforço).' },
+        { type: 'sequence-step', stepNumber: 4, totalSteps: 5, emoji: '🔄', english: 'I missed the turn! — No problem, make a U-turn at the next block.', portuguese: 'Passei da curva! — Sem problema, faz retorno no próximo quarteirão.', breakdown: '<strong>MISSED THE TURN</strong> = passei da curva. <strong>U-TURN</strong> = retorno.' },
+        { type: 'sequence-step', stepNumber: 5, totalSteps: 5, emoji: '🏠', english: 'Turn into the driveway. It\'s the house with the red door.', portuguese: 'Entra na garagem. É a casa com a porta vermelha.', breakdown: '<strong>TURN INTO</strong> = entrar em. THE HOUSE WITH = a casa com.' },
+        { type: 'rule', cardClass: 'cyan', text: 'Para dar direção de virar:', keyword: 'TURN LEFT / TURN RIGHT', keywordAfter: 'Vira à esquerda / Vira à direita' },
+        { type: 'example', cardClass: 'cyan', emoji: '⬅️', question: '<span class="hl-cyan">Turn left</span> here.', questionTr: 'Vira à esquerda aqui.', answer: '(LEFT = esquerda)', answerTr: 'Direção' },
+        { type: 'example', cardClass: 'green', emoji: '➡️', question: '<span class="hl-green">Turn right</span> at the light.', questionTr: 'Vira à direita no sinal.', answer: '(RIGHT = direita)', answerTr: 'Direção' },
+        { type: 'example', cardClass: 'gold', emoji: '🔄', question: '<span class="hl-gold">Turn around</span>.', questionTr: 'Faz o retorno / Vira de volta.', answer: '(180 graus)', answerTr: 'Voltar' },
+        { type: 'examples', cardClass: 'cyan', title: '⬅️ LEFT (esquerda)', items: [
+          { emoji: '⬅️', en: '<span class="hl-cyan">Turn left</span>', pt: 'Vira à esquerda' },
+          { emoji: '🚗', en: '<span class="hl-cyan">Turn left</span> at the corner', pt: 'Vira na esquina à esquerda' },
+          { emoji: '👆', en: 'On your <span class="hl-cyan">left</span>', pt: 'À sua esquerda' },
+          { emoji: '🛣️', en: 'Take the <span class="hl-cyan">left</span>', pt: 'Pega à esquerda' }
+        ]},
+        { type: 'examples', cardClass: 'green', title: '➡️ RIGHT (direita)', items: [
+          { emoji: '➡️', en: '<span class="hl-green">Turn right</span>', pt: 'Vira à direita' },
+          { emoji: '🚦', en: '<span class="hl-green">Turn right</span> at the light', pt: 'Vira no sinal à direita' },
+          { emoji: '👆', en: 'On your <span class="hl-green">right</span>', pt: 'À sua direita' },
+          { emoji: '🛣️', en: 'Take the <span class="hl-green">right</span>', pt: 'Pega à direita' }
+        ]},
+        { type: 'tip', cardClass: 'green', icon: '💡', title: 'AT THE...', text: 'Pontos de referência:<br><br>• At the <strong>corner</strong> (na esquina)<br>• At the <strong>light</strong> (no sinal)<br>• At the <strong>stop sign</strong> (no pare)<br>• At the <strong>intersection</strong> (no cruzamento)' },
+        { type: 'tip', cardClass: 'gold', icon: '⚡', title: 'TURN ON/OFF', text: '⚠️ TURN também significa LIGAR/DESLIGAR:<br><br>• <strong>Turn on</strong> the light (liga a luz)<br>• <strong>Turn off</strong> the TV (desliga a TV)<br><br>Contexto diferente!' },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 "Vira à esquerda no sinal" em inglês:', options: ['Turn left in the light', 'Turn left at the light', 'Turn to left at light'], correct: 1 },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 "Faz o retorno" em inglês:', options: ['Turn back', 'Turn around', 'Turn again'], correct: 1 },
+        { type: 'fill-blank', cardClass: 'cyan', prompt: '✍️ Complete:', sentence: "_____ right at the corner.", correctWord: 'Turn' },
+        { type: 'list', cardClass: 'gold', title: '📝 RESUMO', items: [
+          { emoji: '⬅️', text: '<strong>TURN LEFT</strong> = vira à esquerda' },
+          { emoji: '➡️', text: '<strong>TURN RIGHT</strong> = vira à direita' },
+          { emoji: '🔄', text: '<strong>TURN AROUND</strong> = faz retorno' },
+          { emoji: '📍', text: 'AT the light/corner/sign' }
+        ]},
+        { type: 'end' }
+      ],
+      vocabulary: [{ emoji: '⬅️', pt: 'Vira à esquerda', en: 'Turn left' },
+        { emoji: '➡️', pt: 'Vira à direita', en: 'Turn right' },
+        { emoji: '🔄', pt: 'Faz o retorno', en: 'Turn around' },
+        { emoji: '🚦', pt: 'No sinal', en: 'At the light' },
+        { emoji: '🏠', pt: 'Na esquina', en: 'At the corner' },
+        { emoji: '🛑', pt: 'No pare', en: 'At the stop sign' },
+        { emoji: '👆', pt: 'À sua esquerda', en: 'On your left' },
+        { emoji: '👆', pt: 'À sua direita', en: 'On your right' },
+        { emoji: '💡', pt: 'Liga a luz', en: 'Turn on the light' },
+        { emoji: '📺', pt: 'Desliga a TV', en: 'Turn off the TV' },
+      ]
+    },
+
+  { id: 'stop-wait-go', title: 'STOP / WAIT / GO', emoji: '🛑⏳🚦', description: 'Para / Espera / Vai', module: 3, order: 17,    slides: [
+        { type: 'title', emoji: '🛑⏳🚦', title: 'STOP / WAIT / GO', subtitle: 'Comandos básicos de movimento' },
+        { type: 'situation', emoji: '🚧', cardClass: 'purple', text: 'Você está trabalhando numa obra.<br>Precisa parar, esperar ou seguir.<br><br>Comandos essenciais!' },
+        { type: 'sequence-step', stepNumber: 1, totalSteps: 5, emoji: '🏗️', english: 'Stop! Don\'t move that beam yet. Wait for Carlos.', portuguese: 'Para! Não mexe nessa viga ainda. Espera o Carlos.', breakdown: '<strong>STOP</strong> = para (imediato). <strong>WAIT FOR</strong> = espera por (alguém/algo).' },
+        { type: 'sequence-step', stepNumber: 2, totalSteps: 5, emoji: '🚗', english: 'Go! The light is green. — Wait, I need to check the map first.', portuguese: 'Vai! O sinal tá verde. — Espera, preciso ver o mapa primeiro.', breakdown: '<strong>GO</strong> = vai. <strong>WAIT</strong> = espera. Opostos do dia a dia.' },
+        { type: 'sequence-step', stepNumber: 3, totalSteps: 5, emoji: '👮', english: 'Stop right there! License and registration, please.', portuguese: 'Para aí! Carteira e documento do carro, por favor.', breakdown: '<strong>STOP RIGHT THERE</strong> = para aí. Comando policial — importante saber.' },
+        { type: 'sequence-step', stepNumber: 4, totalSteps: 5, emoji: '⏰', english: 'Don\'t wait for me. Go ahead. I\'ll catch up later.', portuguese: 'Não me espera. Vai na frente. Eu alcanço depois.', breakdown: '<strong>GO AHEAD</strong> = vai na frente. <strong>CATCH UP</strong> = alcançar.' },
+        { type: 'sequence-step', stepNumber: 5, totalSteps: 5, emoji: '🚌', english: 'Wait here. The bus stops at this corner. It goes downtown.', portuguese: 'Espera aqui. O ônibus para nessa esquina. Ele vai pro centro.', breakdown: 'WAIT HERE / STOPS AT / GOES (direção). Os 3 verbos juntos.' },
+        { type: 'rule', cardClass: 'cyan', text: 'Os 3 comandos mais básicos:', keyword: 'STOP! / WAIT! / GO!', keywordAfter: 'Curtos e diretos!' },
+        { type: 'example', cardClass: 'red', emoji: '🛑', question: '<span class="hl-red">Stop</span>!', questionTr: 'Para!', answer: '(parar imediatamente)', answerTr: 'Urgente!' },
+        { type: 'example', cardClass: 'gold', emoji: '⏳', question: '<span class="hl-gold">Wait</span>!', questionTr: 'Espera!', answer: '(aguardar)', answerTr: 'Pausa' },
+        { type: 'example', cardClass: 'green', emoji: '🚦', question: '<span class="hl-green">Go</span>!', questionTr: 'Vai!', answer: '(seguir/começar)', answerTr: 'Ação!' },
+        { type: 'examples', cardClass: 'red', title: '🛑 STOP', items: [
+          { emoji: '🛑', en: '<span class="hl-red">Stop</span> right there!', pt: 'Para aí mesmo!' },
+          { emoji: '🚗', en: '<span class="hl-red">Stop</span> the car!', pt: 'Para o carro!' },
+          { emoji: '🤫', en: '<span class="hl-red">Stop</span> talking!', pt: 'Para de falar!' },
+          { emoji: '⚠️', en: "<span class='hl-red'>Don't stop</span>!", pt: 'Não para!' }
+        ]},
+        { type: 'examples', cardClass: 'gold', title: '⏳ WAIT', items: [
+          { emoji: '⏳', en: '<span class="hl-gold">Wait</span> here.', pt: 'Espera aqui.' },
+          { emoji: '⏰', en: '<span class="hl-gold">Wait</span> a minute.', pt: 'Espera um minuto.' },
+          { emoji: '👋', en: '<span class="hl-gold">Wait</span> for me!', pt: 'Me espera!' },
+          { emoji: '⏸️', en: '<span class="hl-gold">Wait</span>, let me check.', pt: 'Espera, deixa eu ver.' }
+        ]},
+        { type: 'examples', cardClass: 'green', title: '🚦 GO', items: [
+          { emoji: '🚦', en: '<span class="hl-green">Go</span>!', pt: 'Vai!' },
+          { emoji: '🏃', en: '<span class="hl-green">Go</span> now!', pt: 'Vai agora!' },
+          { emoji: '➡️', en: '<span class="hl-green">Go</span> ahead.', pt: 'Pode ir / Vai em frente.' },
+          { emoji: '🔙', en: '<span class="hl-green">Go</span> back.', pt: 'Volta.' }
+        ]},
+        { type: 'tip', cardClass: 'green', icon: '💡', title: 'GO AHEAD', text: '<strong>Go ahead</strong> tem 2 significados:<br><br>1. Vai em frente (direção)<br>2. Pode fazer / Fique à vontade<br><br>"Can I use this?" → "Go ahead!"' },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 "Me espera!" em inglês:', options: ['Wait me!', 'Wait for me!', 'Wait to me!'], correct: 1 },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 "Para de falar!" em inglês:', options: ['Stop to talk!', 'Stop talking!', 'Stop talk!'], correct: 1 },
+        { type: 'fill-blank', cardClass: 'cyan', prompt: '✍️ Complete:', sentence: "_____ here, I'll be right back.", correctWord: 'Wait' },
+        { type: 'list', cardClass: 'gold', title: '📝 RESUMO', items: [
+          { emoji: '🛑', text: '<strong>STOP</strong> = para (imediato)' },
+          { emoji: '⏳', text: '<strong>WAIT</strong> = espera' },
+          { emoji: '🚦', text: '<strong>GO</strong> = vai' },
+          { emoji: '➡️', text: '<strong>GO AHEAD</strong> = pode ir / fique à vontade' }
+        ]},
+        { type: 'end' }
+      ],
+      vocabulary: [{ emoji: '🛑', pt: 'Para!', en: 'Stop!' },
+        { emoji: '⏳', pt: 'Espera!', en: 'Wait!' },
+        { emoji: '🚦', pt: 'Vai!', en: 'Go!' },
+        { emoji: '👋', pt: 'Me espera!', en: 'Wait for me!' },
+        { emoji: '⏰', pt: 'Espera um minuto', en: 'Wait a minute' },
+        { emoji: '➡️', pt: 'Pode ir', en: 'Go ahead' },
+        { emoji: '🔙', pt: 'Volta', en: 'Go back' },
+        { emoji: '🚗', pt: 'Para o carro', en: 'Stop the car' },
+        { emoji: '🤫', pt: 'Para de falar', en: 'Stop talking' },
+        { emoji: '🏃', pt: 'Vai agora!', en: 'Go now!' },
+      ]
+    },
+
+  { id: 'to-from', title: 'TO / FROM', emoji: '➡️⬅️', description: 'Para / De', module: 3, order: 18,    slides: [
+        { type: 'title', emoji: '➡️⬅️', title: 'TO / FROM', subtitle: 'Direção e origem' },
+        { type: 'situation', emoji: '🇧🇷', cardClass: 'purple', text: 'Alguém pergunta de onde você é:<br>"Eu sou <strong>DO</strong> Brasil."<br><br>Como expressar ORIGEM e DESTINO?' },
+        { type: 'sequence-step', stepNumber: 1, totalSteps: 5, emoji: '🌎', english: 'Where are you from? — I\'m from Brazil, from a small town in Rondônia.', portuguese: 'De onde você é? — Sou do Brasil, de uma cidade pequena em Rondônia.', breakdown: '<strong>FROM</strong> = de (origem). WHERE ARE YOU FROM = de onde você é.' },
+        { type: 'sequence-step', stepNumber: 2, totalSteps: 5, emoji: '🚌', english: 'I go from home to work by bus. It takes an hour.', portuguese: 'Vou de casa pro trabalho de ônibus. Leva uma hora.', breakdown: '<strong>FROM... TO...</strong> = de... para... Direção completa.' },
+        { type: 'sequence-step', stepNumber: 3, totalSteps: 5, emoji: '📦', english: 'This package is from Amazon. Send it to the office.', portuguese: 'Esse pacote é da Amazon. Manda pro escritório.', breakdown: 'FROM = de onde vem. TO = pra onde vai.' },
+        { type: 'sequence-step', stepNumber: 4, totalSteps: 5, emoji: '🏥', english: 'The doctor is from India. She moved to Boston in 2019.', portuguese: 'A médica é da Índia. Se mudou pra Boston em 2019.', breakdown: 'FROM (origem). TO (destino). MOVED TO = se mudou pra.' },
+        { type: 'sequence-step', stepNumber: 5, totalSteps: 5, emoji: '🕐', english: 'We work from 7 AM to 4 PM, from Monday to Friday.', portuguese: 'Trabalhamos das 7 da manhã às 4 da tarde, de segunda a sexta.', breakdown: 'FROM...TO com HORÁRIO e DIAS. Padrão: FROM (início) TO (fim).' },
+        { type: 'rule', cardClass: 'cyan', text: '<strong>TO</strong> = PARA (destino)<br><strong>FROM</strong> = DE (origem)', keyword: 'TO → | FROM ←', keywordAfter: 'Direção de movimento!' },
+        { type: 'tip', cardClass: 'gold', icon: '⭐', title: 'VISUALIZE', text: '<strong>TO</strong> = para onde você VAI →<br><strong>FROM</strong> = de onde você VEM ←' },
+        { type: 'example', cardClass: 'cyan', emoji: '💼', question: "I'm going <span class='hl-cyan'>to</span> work.", questionTr: 'Estou indo pro trabalho.', answer: '(TO = destino)', answerTr: 'Para onde vai' },
+        { type: 'example', cardClass: 'orange', emoji: '🇧🇷', question: "I'm <span class='hl-orange'>from</span> Brazil.", questionTr: 'Eu sou do Brasil.', answer: '(FROM = origem)', answerTr: 'De onde vem' },
+        { type: 'example', cardClass: 'purple', emoji: '⏰', question: "I work <span class='hl-orange'>from</span> 9 <span class='hl-cyan'>to</span> 5.", questionTr: 'Trabalho das 9 às 5.', answer: '(FROM...TO)', answerTr: 'De...até' },
+        { type: 'examples', cardClass: 'cyan', title: '➡️ TO = DESTINO', items: [
+          { emoji: '🏠', en: 'Go <span class="hl-cyan">to</span> home', pt: 'Ir pra casa' },
+          { emoji: '💼', en: 'Go <span class="hl-cyan">to</span> work', pt: 'Ir pro trabalho' },
+          { emoji: '🏪', en: 'Go <span class="hl-cyan">to</span> the store', pt: 'Ir pra loja' },
+          { emoji: '🗣️', en: 'Talk <span class="hl-cyan">to</span> me', pt: 'Fala comigo' }
+        ]},
+        { type: 'examples', cardClass: 'orange', title: '⬅️ FROM = ORIGEM', items: [
+          { emoji: '🇧🇷', en: "I'm <span class='hl-orange'>from</span> Brazil", pt: 'Sou do Brasil' },
+          { emoji: '🏢', en: 'Back <span class="hl-orange">from</span> work', pt: 'De volta do trabalho' },
+          { emoji: '✉️', en: 'Letter <span class="hl-orange">from</span> mom', pt: 'Carta da mãe' },
+          { emoji: '❓', en: 'Where are you <span class="hl-orange">from</span>?', pt: 'De onde você é?' }
+        ]},
+        { type: 'tip', cardClass: 'green', icon: '💡', title: 'FROM...TO (DE...ATÉ)', text: 'Muito usado para períodos:<br><br><strong>From</strong> Monday <strong>to</strong> Friday<br>De segunda a sexta<br><br><strong>From</strong> 9 AM <strong>to</strong> 5 PM<br>Das 9 às 5' },
+        { type: 'comparison', cardClass: 'red', title: '⚠️ ERRO COMUM', leftClass: 'wrong', rightClass: 'right', leftIcon: '❌', rightIcon: '✅', leftLabel: 'ERRADO', rightLabel: 'CERTO', left: 'I go <span class="hl-red">to</span> home.', leftNote: 'HOME não precisa de TO', right: 'I go home.', rightNote: 'Só GO HOME', explanation: 'HOME, HERE, THERE = sem TO!' },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 "De onde você é?":', options: ['Where are you to?', 'Where are you from?', 'Where you from?'], correct: 1 },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 "Das 9 às 5":', options: ['From 9 to 5', 'Since 9 until 5', 'Of 9 to 5'], correct: 0 },
+        { type: 'fill-blank', cardClass: 'cyan', prompt: '✍️ Complete:', sentence: "I'm going _____ the bank.", correctWord: 'to' },
+        { type: 'list', cardClass: 'gold', title: '📝 RESUMO - TO / FROM', items: [
+          { emoji: '➡️', text: '<strong>TO</strong> = para (destino): go to work' },
+          { emoji: '⬅️', text: '<strong>FROM</strong> = de (origem): from Brazil' },
+          { emoji: '↔️', text: '<strong>FROM...TO</strong> = de...até: from 9 to 5' },
+          { emoji: '⚠️', text: 'Exceção: go HOME (sem to)' }
+        ]},
+        { type: 'end' }
+      ],
+      vocabulary: [{ emoji: '🏠', pt: 'Ir pra casa', en: 'Go home' }, { emoji: '💼', pt: 'Ir pro trabalho', en: 'Go to work' },
+        { emoji: '🇧🇷', pt: 'Sou do Brasil', en: "I'm from Brazil" }, { emoji: '🗣️', pt: 'Falar com você', en: 'Talk to you' },
+        { emoji: '✉️', pt: 'Carta de Maria', en: 'Letter from Maria' }, { emoji: '🚗', pt: 'Ir pra loja', en: 'Go to the store' },
+        { emoji: '⏰', pt: 'Das 9 às 5', en: 'From 9 to 5' }, { emoji: '🏢', pt: 'Voltar do trabalho', en: 'Come back from work' },
+        { emoji: '🎁', pt: 'Presente pra você', en: 'Gift for you' }, { emoji: '📍', pt: 'Daqui pra lá', en: 'From here to there' },
+      ]
+    },
+
+  { id: 'pick-up-drop', title: 'PICK UP / DROP / PUT DOWN', emoji: '✋⬇️', description: 'Pega / Larga / Coloca', module: 3, order: 19,    slides: [
+        { type: 'title', emoji: '✋⬇️', title: 'PICK UP / DROP / PUT DOWN', subtitle: 'Pegar / Largar / Colocar' },
+        { type: 'situation', emoji: '📦', cardClass: 'purple', text: 'No trabalho, seu chefe pede pra você <strong>PEGAR</strong> as caixas do chão.<br><br>Qual comando ele usa?' },
+        { type: 'sequence-step', stepNumber: 1, totalSteps: 5, emoji: '📦', english: 'Pick up those boxes and put them on the truck.', portuguese: 'Pega essas caixas e coloca no caminhão.', breakdown: '<strong>PICK UP</strong> = pegar (do chão). Sempre separável: PICK them UP.' },
+        { type: 'sequence-step', stepNumber: 2, totalSteps: 5, emoji: '🏫', english: 'I need to pick up my kid from school at 3.', portuguese: 'Preciso buscar meu filho na escola às 3.', breakdown: '<strong>PICK UP</strong> = buscar (pessoa). PICK UP FROM = buscar em.' },
+        { type: 'sequence-step', stepNumber: 3, totalSteps: 5, emoji: '📱', english: 'Oops, I dropped my phone! — Be careful, don\'t drop it again.', portuguese: 'Opa, derrubei o celular! — Cuidado, não derruba de novo.', breakdown: '<strong>DROPPED</strong> = derrubei. <strong>DROP</strong> = derrubar/largar.' },
+        { type: 'sequence-step', stepNumber: 4, totalSteps: 5, emoji: '🚗', english: 'Drop me off at the corner, please. I\'ll walk from there.', portuguese: 'Me deixa na esquina, por favor. Vou andando de lá.', breakdown: '<strong>DROP OFF</strong> = deixar (pessoa num lugar). DROP ME OFF = me deixa.' },
+        { type: 'sequence-step', stepNumber: 5, totalSteps: 5, emoji: '🧹', english: 'Put that down carefully! You almost dropped it on my foot!', portuguese: 'Coloca isso no chão com cuidado! Quase derrubou no meu pé!', breakdown: '<strong>PUT DOWN</strong> = colocar no chão. Oposto de PICK UP.' },
+        { type: 'rule', cardClass: 'cyan', text: 'Comandos de manuseio:', keyword: 'PICK UP / DROP / PUT DOWN', keywordAfter: 'Pega / Solta / Coloca (no chão)' },
+        { type: 'example', cardClass: 'green', emoji: '📦', question: '<span class="hl-green">Pick up</span> the box.', questionTr: 'Pega a caixa.', answer: '(levantar do chão)', answerTr: 'PICK UP' },
+        { type: 'example', cardClass: 'red', emoji: '💧', question: "<span class='hl-red'>Don't drop</span> it!", questionTr: 'Não deixa cair!', answer: '(deixar cair)', answerTr: 'DROP' },
+        { type: 'example', cardClass: 'gold', emoji: '⬇️', question: '<span class="hl-gold">Put it down</span>.', questionTr: 'Coloca no chão.', answer: '(colocar/largar)', answerTr: 'PUT DOWN' },
+        { type: 'examples', cardClass: 'green', title: '✋ PICK UP (pegar/levantar)', items: [
+          { emoji: '📦', en: '<span class="hl-green">Pick up</span> the box', pt: 'Pega a caixa' },
+          { emoji: '🔑', en: '<span class="hl-green">Pick up</span> your keys', pt: 'Pega suas chaves' },
+          { emoji: '📱', en: '<span class="hl-green">Pick up</span> the phone', pt: 'Atende o telefone' },
+          { emoji: '🚗', en: '<span class="hl-green">Pick me up</span> at 5', pt: 'Me busca às 5' }
+        ]},
+        { type: 'examples', cardClass: 'red', title: '💧 DROP (deixar cair)', items: [
+          { emoji: '⚠️', en: "<span class='hl-red'>Don't drop</span> it!", pt: 'Não deixa cair!' },
+          { emoji: '💧', en: 'I <span class="hl-red">dropped</span> my phone', pt: 'Deixei cair meu celular' },
+          { emoji: '📍', en: '<span class="hl-red">Drop</span> me off here', pt: 'Me deixa aqui' }
+        ]},
+        { type: 'examples', cardClass: 'gold', title: '⬇️ PUT DOWN (largar/colocar)', items: [
+          { emoji: '⬇️', en: '<span class="hl-gold">Put it down</span>', pt: 'Coloca no chão / Larga' },
+          { emoji: '📱', en: '<span class="hl-gold">Put down</span> your phone', pt: 'Larga o celular' },
+          { emoji: '🔫', en: '<span class="hl-gold">Put the weapon down</span>!', pt: 'Larga a arma!' }
+        ]},
+        { type: 'tip', cardClass: 'green', icon: '💡', title: 'PICK UP = BUSCAR', text: '<strong>PICK UP</strong> também significa BUSCAR:<br><br>• <strong>Pick me up</strong> at 5 (Me busca às 5)<br>• I\'ll <strong>pick up</strong> the kids (Vou buscar as crianças)' },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 "Pega a caixa" em inglês:', options: ['Get up the box', 'Pick up the box', 'Take up the box'], correct: 1 },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 "Me busca às 5" em inglês:', options: ['Pick me at 5', 'Pick me up at 5', 'Pick up me at 5'], correct: 1 },
+        { type: 'fill-blank', cardClass: 'cyan', prompt: '✍️ Complete:', sentence: "Don't _____ it! It\'s fragile.", correctWord: 'drop' },
+        { type: 'list', cardClass: 'gold', title: '📝 RESUMO', items: [
+          { emoji: '✋', text: '<strong>PICK UP</strong> = pegar/levantar/buscar' },
+          { emoji: '💧', text: '<strong>DROP</strong> = deixar cair' },
+          { emoji: '⬇️', text: '<strong>PUT DOWN</strong> = largar/colocar' },
+          { emoji: '🚗', text: 'Pick me up = me busca' }
+        ]},
+        { type: 'end' }
+      ],
+      vocabulary: [{ emoji: '📦', pt: 'Pega a caixa', en: 'Pick up the box' },
+        { emoji: '🔑', pt: 'Pega suas chaves', en: 'Pick up your keys' },
+        { emoji: '📱', pt: 'Atende o telefone', en: 'Pick up the phone' },
+        { emoji: '🚗', pt: 'Me busca às 5', en: 'Pick me up at 5' },
+        { emoji: '⚠️', pt: 'Não deixa cair!', en: "Don't drop it!" },
+        { emoji: '📍', pt: 'Me deixa aqui', en: 'Drop me off here' },
+        { emoji: '⬇️', pt: 'Coloca no chão', en: 'Put it down' },
+        { emoji: '📱', pt: 'Larga o celular', en: 'Put down your phone' },
+        { emoji: '💧', pt: 'Deixei cair', en: 'I dropped it' },
+        { emoji: '👶', pt: 'Vou buscar as crianças', en: "I'll pick up the kids" },
+      ]
+    },
+
+  { id: 'hold-keep-move', title: 'HOLD / KEEP / MOVE', emoji: '✊📍🏃', description: 'Segura / Mantém / Move', module: 3, order: 20,    slides: [
+        { type: 'title', emoji: '✊📍🏃', title: 'HOLD / KEEP / MOVE', subtitle: 'Segura / Mantém / Move' },
+        { type: 'situation', emoji: '📦', cardClass: 'purple', text: 'Você está carregando algo pesado.<br>Pede pro colega <strong>SEGURAR</strong> a porta.<br><br>Qual comando usar?' },
+        { type: 'sequence-step', stepNumber: 1, totalSteps: 5, emoji: '📦', english: 'Hold this for me, please. I need both hands to open the door.', portuguese: 'Segura isso pra mim, por favor. Preciso das duas mãos pra abrir a porta.', breakdown: '<strong>HOLD THIS</strong> = segura isso. HOLD = segurar temporariamente.' },
+        { type: 'sequence-step', stepNumber: 2, totalSteps: 5, emoji: '🔑', english: 'Keep the change. And keep the receipt — you might need it.', portuguese: 'Fica com o troco. E guarda o recibo — pode precisar.', breakdown: '<strong>KEEP</strong> = ficar com / guardar (permanente). KEEP THE CHANGE = fica com o troco.' },
+        { type: 'sequence-step', stepNumber: 3, totalSteps: 5, emoji: '🏗️', english: 'Move that ladder to the left. A little more. Hold it right there!', portuguese: 'Move a escada pra esquerda. Um pouco mais. Segura aí!', breakdown: '<strong>MOVE</strong> = mover/mexer. <strong>HOLD IT RIGHT THERE</strong> = segura bem aí.' },
+        { type: 'sequence-step', stepNumber: 4, totalSteps: 5, emoji: '🤫', english: 'Keep quiet! The baby is sleeping. — Sorry, I\'ll keep my voice down.', portuguese: 'Fica quieto! O bebê tá dormindo. — Desculpa, vou falar baixo.', breakdown: '<strong>KEEP QUIET</strong> = fique quieto. <strong>KEEP + adjetivo</strong> = manter-se.' },
+        { type: 'sequence-step', stepNumber: 5, totalSteps: 5, emoji: '🚛', english: 'Help me move this couch. Hold that end. Now move it to the right.', portuguese: 'Me ajuda a mover esse sofá. Segura essa ponta. Agora move pra direita.', breakdown: 'MOVE + HOLD + MOVE: sequência comum quando carregando coisas pesadas.' },
+        { type: 'rule', cardClass: 'cyan', text: 'Três comandos essenciais no trabalho:', keyword: 'HOLD / KEEP / MOVE', keywordAfter: 'Segura / Mantém / Move' },
+        { type: 'example', cardClass: 'cyan', emoji: '✊', question: '<span class="hl-cyan">Hold</span> this.', questionTr: 'Segura isso.', answer: '(segurar)', answerTr: 'HOLD' },
+        { type: 'example', cardClass: 'green', emoji: '📍', question: '<span class="hl-green">Keep</span> it there.', questionTr: 'Mantém aí.', answer: '(manter)', answerTr: 'KEEP' },
+        { type: 'example', cardClass: 'gold', emoji: '🏃', question: '<span class="hl-gold">Move</span> it to the left.', questionTr: 'Move pra esquerda.', answer: '(mover)', answerTr: 'MOVE' },
+        { type: 'examples', cardClass: 'cyan', title: '✊ HOLD (segurar)', items: [
+          { emoji: '🚪', en: '<span class="hl-cyan">Hold</span> the door', pt: 'Segura a porta' },
+          { emoji: '⏳', en: '<span class="hl-cyan">Hold</span> on', pt: 'Espera / Aguenta' },
+          { emoji: '📱', en: '<span class="hl-cyan">Hold</span> the line', pt: 'Aguarde na linha' },
+          { emoji: '✊', en: '<span class="hl-cyan">Hold</span> it steady', pt: 'Segura firme' }
+        ]},
+        { type: 'examples', cardClass: 'green', title: '📍 KEEP (manter)', items: [
+          { emoji: '📍', en: '<span class="hl-green">Keep</span> it there', pt: 'Mantém aí' },
+          { emoji: '🤫', en: '<span class="hl-green">Keep</span> quiet', pt: 'Fica quieto' },
+          { emoji: '🚶', en: '<span class="hl-green">Keep</span> moving', pt: 'Continua andando' },
+          { emoji: '💪', en: '<span class="hl-green">Keep</span> going', pt: 'Continua!' }
+        ]},
+        { type: 'examples', cardClass: 'gold', title: '🏃 MOVE (mover)', items: [
+          { emoji: '⬅️', en: '<span class="hl-gold">Move</span> to the left', pt: 'Move pra esquerda' },
+          { emoji: '🚶', en: '<span class="hl-gold">Move</span> out of the way', pt: 'Sai do caminho' },
+          { emoji: '🏃', en: '<span class="hl-gold">Move</span>!', pt: 'Se mexe!' },
+          { emoji: '📦', en: '<span class="hl-gold">Move</span> the box', pt: 'Move a caixa' }
+        ]},
+        { type: 'tip', cardClass: 'green', icon: '💡', title: 'HOLD ON', text: '<strong>HOLD ON</strong> tem dois usos:<br><br>1. Espera! (wait)<br>2. Aguenta! (endure)<br><br>"Hold on, I\'m coming!" = Espera, tô chegando!' },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 "Segura a porta" em inglês:', options: ['Keep the door', 'Hold the door', 'Move the door'], correct: 1 },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 "Continua!" em inglês:', options: ['Hold going', 'Keep going', 'Move going'], correct: 1 },
+        { type: 'fill-blank', cardClass: 'cyan', prompt: '✍️ Complete:', sentence: "_____ this for a second.", correctWord: 'Hold' },
+        { type: 'list', cardClass: 'gold', title: '📝 RESUMO', items: [
+          { emoji: '✊', text: '<strong>HOLD</strong> = segura' },
+          { emoji: '📍', text: '<strong>KEEP</strong> = mantém' },
+          { emoji: '🏃', text: '<strong>MOVE</strong> = move' },
+          { emoji: '⏳', text: 'Hold on = espera / aguenta' }
+        ]},
+        { type: 'end' }
+      ],
+      vocabulary: [{ emoji: '🚪', pt: 'Segura a porta', en: 'Hold the door' },
+        { emoji: '⏳', pt: 'Espera / Aguenta', en: 'Hold on' },
+        { emoji: '✊', pt: 'Segura firme', en: 'Hold it steady' },
+        { emoji: '📍', pt: 'Mantém aí', en: 'Keep it there' },
+        { emoji: '🤫', pt: 'Fica quieto', en: 'Keep quiet' },
+        { emoji: '💪', pt: 'Continua!', en: 'Keep going' },
+        { emoji: '🏃', pt: 'Se mexe!', en: 'Move!' },
+        { emoji: '⬅️', pt: 'Move pra esquerda', en: 'Move to the left' },
+        { emoji: '🚶', pt: 'Sai do caminho', en: 'Move out of the way' },
+        { emoji: '📦', pt: 'Move a caixa', en: 'Move the box' },
+      ]
+    },
+
+  { id: 'bring-take', title: 'BRING / TAKE', emoji: '⬅️➡️📦', description: 'Trazer / Levar', module: 3, order: 21,    slides: [
+        { type: 'title', emoji: '⬅️➡️📦', title: 'BRING / TAKE', subtitle: 'Trazer / Levar' },
+        { type: 'situation', emoji: '📦', cardClass: 'purple', text: 'Seu colega pede pra você <strong>TRAZER</strong> algo pra ele.<br>Ou <strong>LEVAR</strong> algo pra outro lugar.<br><br>Qual a diferença?' },
+        { type: 'sequence-step', stepNumber: 1, totalSteps: 5, emoji: '🍺', english: 'I\'m going to the BBQ. Should I bring anything? — Bring some beer!', portuguese: 'Vou pro churrasco. Levo alguma coisa? — Traz umas cervejas!', breakdown: '<strong>BRING</strong> = trazer (em direção ao ouvinte). BRING = vem com a coisa.' },
+        { type: 'sequence-step', stepNumber: 2, totalSteps: 5, emoji: '📋', english: 'Take this form to the office. And bring me a copy when you come back.', portuguese: 'Leva esse formulário pro escritório. E traz uma cópia quando voltar.', breakdown: '<strong>TAKE</strong> = levar (pra longe). <strong>BRING</strong> = trazer (de volta).' },
+        { type: 'sequence-step', stepNumber: 3, totalSteps: 5, emoji: '☂️', english: 'Take an umbrella! It\'s going to rain. And bring a jacket too.', portuguese: 'Leva um guarda-chuva! Vai chover. E traz um casaco também.', breakdown: 'TAKE = levar com você (saindo). A diferença de direção é a chave.' },
+        { type: 'sequence-step', stepNumber: 4, totalSteps: 5, emoji: '👶', english: 'Can I bring my kid to work tomorrow? I don\'t have a sitter.', portuguese: 'Posso trazer meu filho no trabalho amanhã? Não tenho babá.', breakdown: 'BRING = trazer pro lugar onde estamos falando (o trabalho).' },
+        { type: 'sequence-step', stepNumber: 5, totalSteps: 5, emoji: '🎁', english: 'She brought cake for everyone! — Nice! Take a piece home.', portuguese: 'Ela trouxe bolo pra todo mundo! — Legal! Leva um pedaço pra casa.', breakdown: '<strong>BROUGHT</strong> = trouxe (passado de BRING). TAKE HOME = levar pra casa.' },
+        { type: 'rule', cardClass: 'cyan', text: 'A diferença é a DIREÇÃO:', keyword: 'BRING = pra cá / TAKE = pra lá', keywordAfter: 'Trazer / Levar' },
+        { type: 'example', cardClass: 'green', emoji: '⬅️', question: '<span class="hl-green">Bring</span> me the hammer.', questionTr: 'Me traz o martelo.', answer: '(vindo PRA MIM)', answerTr: 'BRING = pra cá' },
+        { type: 'example', cardClass: 'cyan', emoji: '➡️', question: '<span class="hl-cyan">Take</span> this to him.', questionTr: 'Leva isso pra ele.', answer: '(indo PRA LÁ)', answerTr: 'TAKE = pra lá' },
+        { type: 'examples', cardClass: 'green', title: '⬅️ BRING (trazer - pra cá)', items: [
+          { emoji: '⬅️', en: '<span class="hl-green">Bring</span> me water', pt: 'Me traz água' },
+          { emoji: '🏠', en: '<span class="hl-green">Bring</span> it here', pt: 'Traz aqui' },
+          { emoji: '🎒', en: '<span class="hl-green">Bring</span> your tools', pt: 'Traz suas ferramentas' },
+          { emoji: '👋', en: '<span class="hl-green">Bring</span> him along', pt: 'Traz ele junto' }
+        ]},
+        { type: 'examples', cardClass: 'cyan', title: '➡️ TAKE (levar - pra lá)', items: [
+          { emoji: '➡️', en: '<span class="hl-cyan">Take</span> this to the office', pt: 'Leva isso pro escritório' },
+          { emoji: '🗑️', en: '<span class="hl-cyan">Take</span> out the trash', pt: 'Leva o lixo pra fora' },
+          { emoji: '🏠', en: '<span class="hl-cyan">Take</span> me home', pt: 'Me leva pra casa' },
+          { emoji: '📦', en: '<span class="hl-cyan">Take</span> it away', pt: 'Leva embora' }
+        ]},
+        { type: 'comparison', cardClass: 'cyan', title: '⬅️ BRING vs TAKE ➡️', leftClass: 'left-side', rightClass: 'right-side', leftIcon: '⬅️', rightIcon: '➡️', leftLabel: 'BRING (pra cá)', rightLabel: 'TAKE (pra lá)', left: '<span class="hl-green">Bring</span> it to me.', leftNote: 'Traz pra mim.', right: '<span class="hl-cyan">Take</span> it to him.', rightNote: 'Leva pra ele.', explanation: 'BRING = aproximando | TAKE = afastando' },
+        { type: 'tip', cardClass: 'green', icon: '💡', title: 'DICA VISUAL', text: 'Imagine você no centro:<br><br>⬅️ <strong>BRING</strong> = algo vem NA SUA DIREÇÃO<br>➡️ <strong>TAKE</strong> = algo vai LONGE DE VOCÊ' },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 "Me traz água" em inglês:', options: ['Take me water', 'Bring me water', 'Give me water'], correct: 1 },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 "Leva isso pro escritório" em inglês:', options: ['Bring this to the office', 'Take this to the office', 'Carry this to the office'], correct: 1 },
+        { type: 'fill-blank', cardClass: 'cyan', prompt: '✍️ Complete:', sentence: "Can you _____ me a coffee?", correctWord: 'bring' },
+        { type: 'list', cardClass: 'gold', title: '📝 RESUMO', items: [
+          { emoji: '⬅️', text: '<strong>BRING</strong> = trazer (pra cá)' },
+          { emoji: '➡️', text: '<strong>TAKE</strong> = levar (pra lá)' },
+          { emoji: '👤', text: 'Perspectiva: você é o centro' },
+          { emoji: '📍', text: 'BRING = aproxima | TAKE = afasta' }
+        ]},
+        { type: 'end' }
+      ],
+      vocabulary: [{ emoji: '⬅️', pt: 'Me traz água', en: 'Bring me water' },
+        { emoji: '🏠', pt: 'Traz aqui', en: 'Bring it here' },
+        { emoji: '🎒', pt: 'Traz suas ferramentas', en: 'Bring your tools' },
+        { emoji: '➡️', pt: 'Leva pro escritório', en: 'Take it to the office' },
+        { emoji: '🗑️', pt: 'Leva o lixo', en: 'Take out the trash' },
+        { emoji: '🏠', pt: 'Me leva pra casa', en: 'Take me home' },
+        { emoji: '📦', pt: 'Leva embora', en: 'Take it away' },
+        { emoji: '👋', pt: 'Traz ele junto', en: 'Bring him along' },
+        { emoji: '🔙', pt: 'Traz de volta', en: 'Bring it back' },
+        { emoji: '📍', pt: 'Leva pra lá', en: 'Take it there' },
+      ]
+    },
+
+  { id: 'with-without', title: 'WITH / WITHOUT', emoji: '🤝❌', description: 'Com / Sem', module: 3, order: 22,    slides: [
+        { type: 'title', emoji: '🤝❌', title: 'WITH / WITHOUT', subtitle: 'Com e sem' },
+        { type: 'situation', emoji: '☕', cardClass: 'purple', text: 'Você quer café, mas sem açúcar:<br>"Café <strong>SEM</strong> açúcar, por favor."<br><br>Como usar WITH e WITHOUT?' },
+        { type: 'sequence-step', stepNumber: 1, totalSteps: 5, emoji: '☕', english: 'Coffee with milk, please. Without sugar.', portuguese: 'Café com leite, por favor. Sem açúcar.', breakdown: '<strong>WITH</strong> = com. <strong>WITHOUT</strong> = sem. Pedidos em restaurante/café.' },
+        { type: 'sequence-step', stepNumber: 2, totalSteps: 5, emoji: '🍔', english: 'I want a burger with cheese but without onions.', portuguese: 'Quero hambúrguer com queijo mas sem cebola.', breakdown: 'WITH cheese / WITHOUT onions. Personalizando pedidos.' },
+        { type: 'sequence-step', stepNumber: 3, totalSteps: 5, emoji: '👷', english: 'Come with me. I\'ll show you. But without the helmet, you can\'t enter.', portuguese: 'Vem comigo. Vou te mostrar. Mas sem capacete, não pode entrar.', breakdown: '<strong>WITH ME</strong> = comigo. <strong>WITHOUT THE HELMET</strong> = sem capacete.' },
+        { type: 'sequence-step', stepNumber: 4, totalSteps: 5, emoji: '👨‍👩‍👧', english: 'I live with my wife and two kids. Without them, life would be boring!', portuguese: 'Moro com minha esposa e dois filhos. Sem eles, vida seria chata!', breakdown: 'WITH = companhia. WITHOUT = ausência. Sentido emocional.' },
+        { type: 'sequence-step', stepNumber: 5, totalSteps: 5, emoji: '📱', english: 'I can\'t work without my phone. And I can\'t sleep with the lights on!', portuguese: 'Não consigo trabalhar sem celular. E não consigo dormir com a luz acesa!', breakdown: 'WITHOUT = necessidade. WITH = condição. Coisas do dia a dia.' },
+        { type: 'rule', cardClass: 'green', text: '<strong>WITH</strong> = COM<br><strong>WITHOUT</strong> = SEM', keyword: 'WITH ✓ | WITHOUT ✗', keywordAfter: 'Opostos!' },
+        { type: 'example', cardClass: 'green', emoji: '☕', question: 'Coffee <span class="hl-green">with</span> sugar.', questionTr: 'Café com açúcar.', answer: '(WITH = com)', answerTr: 'Inclui' },
+        { type: 'example', cardClass: 'red', emoji: '☕', question: 'Coffee <span class="hl-red">without</span> sugar.', questionTr: 'Café sem açúcar.', answer: '(WITHOUT = sem)', answerTr: 'Não inclui' },
+        { type: 'example', cardClass: 'cyan', emoji: '🚶', question: 'Come <span class="hl-cyan">with</span> me.', questionTr: 'Vem comigo.', answer: '(WITH = junto)', answerTr: 'Acompanhado' },
+        { type: 'examples', cardClass: 'green', title: '✅ WITH = COM', items: [
+          { emoji: '☕', en: 'Coffee <span class="hl-green">with</span> milk', pt: 'Café com leite' },
+          { emoji: '🍔', en: 'Burger <span class="hl-green">with</span> cheese', pt: 'Hambúrguer com queijo' },
+          { emoji: '👥', en: 'I\'m <span class="hl-green">with</span> friends', pt: 'Estou com amigos' },
+          { emoji: '🆘', en: 'Help me <span class="hl-green">with</span> this', pt: 'Me ajuda com isso' }
+        ]},
+        { type: 'examples', cardClass: 'red', title: '❌ WITHOUT = SEM', items: [
+          { emoji: '☕', en: 'Coffee <span class="hl-red">without</span> sugar', pt: 'Café sem açúcar' },
+          { emoji: '🥗', en: 'Salad <span class="hl-red">without</span> dressing', pt: 'Salada sem molho' },
+          { emoji: '😢', en: 'I can\'t live <span class="hl-red">without</span> you', pt: 'Não consigo viver sem você' },
+          { emoji: '✅', en: '<span class="hl-red">Without</span> problems', pt: 'Sem problemas' }
+        ]},
+        { type: 'tip', cardClass: 'orange', icon: '🗣️', title: 'PRONÚNCIA', text: '<strong>WITH</strong> = "uíf" ou "uíz"<br><strong>WITHOUT</strong> = "uidáut"<br><br>O TH pode soar como F ou Z dependendo do sotaque!' },
+        { type: 'tip', cardClass: 'purple', icon: '💡', title: 'WITH + PESSOA', text: 'Muito usado para companhia:<br><br>I live <strong>with</strong> my parents.<br>Moro com meus pais.<br><br>I work <strong>with</strong> Maria.<br>Trabalho com Maria.' },
+        { type: 'comparison', cardClass: 'red', title: '⚠️ ERRO COMUM', leftClass: 'wrong', rightClass: 'right', leftIcon: '❌', rightIcon: '✅', leftLabel: 'ERRADO', rightLabel: 'CERTO', left: 'Come <span class="hl-red">with</span> I.', leftNote: 'I é sujeito', right: 'Come <span class="hl-green">with</span> me.', rightNote: 'ME é objeto', explanation: 'Depois de WITH, use pronome objeto!' },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 "Sem problemas":', options: ['With no problems', 'Without problems', 'No with problems'], correct: 1 },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 "Vem comigo":', options: ['Come with I', 'Come with me', 'Come with my'], correct: 1 },
+        { type: 'fill-blank', cardClass: 'cyan', prompt: '✍️ Complete:', sentence: 'I want pizza _____ pepperoni.', correctWord: 'with' },
+        { type: 'list', cardClass: 'gold', title: '📝 RESUMO - WITH / WITHOUT', items: [
+          { emoji: '✅', text: '<strong>WITH</strong> = com (with sugar, with me)' },
+          { emoji: '❌', text: '<strong>WITHOUT</strong> = sem (without sugar)' },
+          { emoji: '👥', text: 'Companhia: with friends, with my family' },
+          { emoji: '⚠️', text: 'Use pronome objeto: with ME (não with I)' }
+        ]},
+        { type: 'end' }
+      ],
+      vocabulary: [{ emoji: '☕', pt: 'Café com açúcar', en: 'Coffee with sugar' }, { emoji: '☕', pt: 'Café sem açúcar', en: 'Coffee without sugar' },
+        { emoji: '🚶', pt: 'Vem comigo', en: 'Come with me' }, { emoji: '😢', pt: 'Sem você', en: 'Without you' },
+        { emoji: '🍔', pt: 'Hambúrguer com queijo', en: 'Burger with cheese' }, { emoji: '🥗', pt: 'Salada sem molho', en: 'Salad without dressing' },
+        { emoji: '✅', pt: 'Sem problemas', en: 'Without problems' }, { emoji: '🔑', pt: 'Com ou sem chave?', en: 'With or without key?' },
+        { emoji: '👥', pt: 'Com amigos', en: 'With friends' }, { emoji: '🙅', pt: 'Não consigo sem ajuda', en: "I can't without help" },
+      ]
+    },
+
+  { id: 'for', title: 'FOR', emoji: '⏱️🎯', description: 'Duração / Propósito', module: 3, order: 23,    slides: [
+        { type: 'title', emoji: '⏱️🎯', title: 'FOR', subtitle: 'Duração e propósito' },
+        { type: 'situation', emoji: '⏰', cardClass: 'purple', text: 'Você quer dizer quanto tempo trabalhou:<br>"Trabalhei <strong>POR</strong> 8 horas."<br><br>Como usar FOR?' },
+        { type: 'sequence-step', stepNumber: 1, totalSteps: 5, emoji: '⏰', english: 'I\'ve lived here for three years. I worked there for six months.', portuguese: 'Moro aqui faz 3 anos. Trabalhei lá por 6 meses.', breakdown: '<strong>FOR + tempo</strong> = por/há (duração). FOR three years = por 3 anos.' },
+        { type: 'sequence-step', stepNumber: 2, totalSteps: 5, emoji: '🎁', english: 'This is for you. I bought it for your birthday.', portuguese: 'Isso é pra você. Comprei pro seu aniversário.', breakdown: '<strong>FOR + pessoa</strong> = para alguém. FOR YOUR BIRTHDAY = pro seu aniversário.' },
+        { type: 'sequence-step', stepNumber: 3, totalSteps: 5, emoji: '💼', english: 'I\'m looking for a job. I\'ve been waiting for a call.', portuguese: 'Tô procurando emprego. Tô esperando uma ligação.', breakdown: '<strong>LOOKING FOR</strong> = procurando. <strong>WAITING FOR</strong> = esperando por.' },
+        { type: 'sequence-step', stepNumber: 4, totalSteps: 5, emoji: '🙏', english: 'Thank you for helping me. I\'m grateful for everything.', portuguese: 'Obrigado por me ajudar. Sou grato por tudo.', breakdown: '<strong>THANK YOU FOR</strong> = obrigado por. FOR + gerúndio (-ing).' },
+        { type: 'sequence-step', stepNumber: 5, totalSteps: 5, emoji: '🍽️', english: 'What\'s for dinner? — Pasta. I\'m making it for the whole family.', portuguese: 'O que tem pra jantar? — Macarrão. Tô fazendo pra família toda.', breakdown: 'WHAT\'S FOR DINNER = o que tem pra jantar. FOR = propósito/destino.' },
+        { type: 'rule', cardClass: 'cyan', text: '<strong>FOR</strong> tem dois usos principais:', keyword: 'FOR', keywordAfter: 'DURAÇÃO (tempo) ou PROPÓSITO (para quem/quê)' },
+        { type: 'tip', cardClass: 'gold', icon: '⭐', title: 'DOIS USOS', text: '<strong>FOR + TEMPO</strong> = por quanto tempo<br>→ for 2 hours, for 3 days<br><br><strong>FOR + PESSOA/COISA</strong> = para quem<br>→ for you, for work' },
+        { type: 'example', cardClass: 'cyan', emoji: '⏰', question: 'I worked <span class="hl-cyan">for</span> 8 hours.', questionTr: 'Trabalhei por 8 horas.', answer: '(FOR = duração)', answerTr: 'Quanto tempo' },
+        { type: 'example', cardClass: 'green', emoji: '🎁', question: 'This is <span class="hl-green">for</span> you.', questionTr: 'Isso é pra você.', answer: '(FOR = destinatário)', answerTr: 'Para quem' },
+        { type: 'example', cardClass: 'orange', emoji: '🙏', question: 'Thanks <span class="hl-orange">for</span> helping.', questionTr: 'Obrigado por ajudar.', answer: '(FOR = razão)', answerTr: 'Pelo quê' },
+        { type: 'examples', cardClass: 'cyan', title: '⏱️ FOR = DURAÇÃO', items: [
+          { emoji: '⏰', en: '<span class="hl-cyan">for</span> 8 hours', pt: 'por 8 horas' },
+          { emoji: '📅', en: '<span class="hl-cyan">for</span> 3 days', pt: 'por 3 dias' },
+          { emoji: '📆', en: '<span class="hl-cyan">for</span> 2 weeks', pt: 'por 2 semanas' },
+          { emoji: '📆', en: '<span class="hl-cyan">for</span> a long time', pt: 'por muito tempo' }
+        ]},
+        { type: 'examples', cardClass: 'green', title: '🎯 FOR = PROPÓSITO', items: [
+          { emoji: '🎁', en: 'This is <span class="hl-green">for</span> you', pt: 'Isso é pra você' },
+          { emoji: '💼', en: 'Dressed <span class="hl-green">for</span> work', pt: 'Vestido pro trabalho' },
+          { emoji: '🍽️', en: 'Ready <span class="hl-green">for</span> dinner', pt: 'Pronto pro jantar' },
+          { emoji: '❓', en: 'What is this <span class="hl-green">for</span>?', pt: 'Pra que isso?' }
+        ]},
+        { type: 'tip', cardClass: 'purple', icon: '🙏', title: 'THANKS FOR / SORRY FOR', text: '<strong>Thanks for</strong> + verbo-ING<br>→ Thanks for <strong>helping</strong>.<br><br><strong>Sorry for</strong> + verbo-ING<br>→ Sorry for <strong>being</strong> late.' },
+        { type: 'comparison', cardClass: 'red', title: '⚠️ FOR vs DURING', leftClass: 'left-side', rightClass: 'right-side', leftIcon: '⏱️', rightIcon: '📅', leftLabel: 'FOR (duração)', rightLabel: 'DURING (quando)', left: 'I slept <span class="hl-cyan">for</span> 8 hours.', leftNote: 'Quanto tempo', right: 'I slept <span class="hl-purple">during</span> the movie.', rightNote: 'Quando/em que momento', explanation: 'FOR = quanto tempo | DURING = em que momento' },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 "Por 2 semanas":', options: ['for 2 weeks', 'during 2 weeks', 'in 2 weeks'], correct: 0 },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 "Obrigado por ajudar":', options: ['Thanks to help', 'Thanks for help', 'Thanks for helping'], correct: 2 },
+        { type: 'fill-blank', cardClass: 'cyan', prompt: '✍️ Complete:', sentence: 'I waited _____ 30 minutes.', correctWord: 'for' },
+        { type: 'list', cardClass: 'gold', title: '📝 RESUMO - FOR', items: [
+          { emoji: '⏱️', text: '<strong>FOR + tempo</strong> = duração (for 2 hours)' },
+          { emoji: '🎁', text: '<strong>FOR + pessoa</strong> = destinatário (for you)' },
+          { emoji: '🙏', text: '<strong>Thanks/Sorry FOR</strong> + verbo-ING' },
+          { emoji: '❓', text: '<strong>What...for?</strong> = Pra quê?' }
+        ]},
+        { type: 'end' }
+      ],
+      vocabulary: [{ emoji: '⏰', pt: 'Por 8 horas', en: 'For 8 hours' }, { emoji: '📅', pt: 'Por 3 dias', en: 'For 3 days' },
+        { emoji: '📆', pt: 'Por 2 semanas', en: 'For 2 weeks' }, { emoji: '🎁', pt: 'Pra você', en: 'For you' },
+        { emoji: '💼', pt: 'Pro trabalho', en: 'For work' }, { emoji: '🎉', pt: 'Pra festa', en: 'For the party' },
+        { emoji: '🙏', pt: 'Obrigado por ajudar', en: 'Thanks for helping' }, { emoji: '❓', pt: 'Pra que isso?', en: 'What is this for?' },
+        { emoji: '🍽️', pt: 'Pro jantar', en: 'For dinner' }, { emoji: '💤', pt: 'Dormi por 6 horas', en: 'I slept for 6 hours' },
+      ]
+    },
+
+  { id: 'about', title: 'ABOUT', emoji: '💬📝', description: 'Sobre', module: 3, order: 24,    slides: [
+        { type: 'title', emoji: '💬📝', title: 'ABOUT', subtitle: 'Falar sobre algo' },
+        { type: 'situation', emoji: '🗣️', cardClass: 'purple', text: 'Alguém pergunta qual é o tema:<br>"É <strong>SOBRE</strong> o quê?"<br><br>Como usar ABOUT?' },
+        { type: 'sequence-step', stepNumber: 1, totalSteps: 5, emoji: '📞', english: 'I\'m calling about the apartment. Is it still available?', portuguese: 'Tô ligando sobre o apartamento. Ainda tá disponível?', breakdown: '<strong>ABOUT</strong> = sobre (assunto). CALLING ABOUT = ligando sobre.' },
+        { type: 'sequence-step', stepNumber: 2, totalSteps: 5, emoji: '🤔', english: 'What\'s the movie about? — It\'s about a family that moves to America.', portuguese: 'Sobre o que é o filme? — É sobre uma família que se muda pros EUA.', breakdown: '<strong>WHAT\'S IT ABOUT</strong> = sobre o que é? Pergunta universal.' },
+        { type: 'sequence-step', stepNumber: 3, totalSteps: 5, emoji: '⏰', english: 'The meeting is about to start. It\'s about 10 minutes long.', portuguese: 'A reunião tá prestes a começar. Dura uns 10 minutos.', breakdown: '<strong>ABOUT TO</strong> = prestes a. <strong>ABOUT 10</strong> = aproximadamente 10.' },
+        { type: 'sequence-step', stepNumber: 4, totalSteps: 5, emoji: '😟', english: 'I\'m worried about my son. He\'s not doing well at school.', portuguese: 'Tô preocupado com meu filho. Ele não tá indo bem na escola.', breakdown: '<strong>WORRIED ABOUT</strong> = preocupado com. Sentimento + ABOUT.' },
+        { type: 'sequence-step', stepNumber: 5, totalSteps: 5, emoji: '📖', english: 'Tell me about yourself. — I\'m from Brazil. I\'ve been here about two years.', portuguese: 'Me conta sobre você. — Sou do Brasil. Tô aqui faz uns dois anos.', breakdown: 'TELL ME ABOUT = me conta sobre. Entrevistas, conversas novas.' },
+        { type: 'rule', cardClass: 'cyan', text: '<strong>ABOUT</strong> = SOBRE (assunto, tema)', keyword: 'ABOUT', keywordAfter: 'Falar SOBRE, pensar SOBRE, livro SOBRE...' },
+        { type: 'tip', cardClass: 'gold', icon: '⭐', title: 'DOIS USOS', text: '<strong>ABOUT</strong> = sobre (assunto)<br>→ Talk about, think about<br><br><strong>ABOUT</strong> = aproximadamente<br>→ About 10 people (umas 10 pessoas)' },
+        { type: 'example', cardClass: 'cyan', emoji: '🗣️', question: "Let's talk <span class='hl-cyan'>about</span> it.", questionTr: 'Vamos falar sobre isso.', answer: '(ABOUT = assunto)', answerTr: 'Tema da conversa' },
+        { type: 'example', cardClass: 'cyan', emoji: '💭', question: "What do you think <span class='hl-cyan'>about</span> it?", questionTr: 'O que você acha sobre isso?', answer: '(ABOUT = tema)', answerTr: 'Opinião sobre' },
+        { type: 'example', cardClass: 'orange', emoji: '🔢', question: "<span class='hl-orange'>About</span> 10 people came.", questionTr: 'Umas 10 pessoas vieram.', answer: '(ABOUT = aproximado)', answerTr: 'Mais ou menos' },
+        { type: 'examples', cardClass: 'cyan', title: '💬 ABOUT = ASSUNTO', items: [
+          { emoji: '🗣️', en: 'Talk <span class="hl-cyan">about</span> it', pt: 'Falar sobre isso' },
+          { emoji: '💭', en: 'Think <span class="hl-cyan">about</span> it', pt: 'Pensar sobre isso' },
+          { emoji: '📖', en: 'A book <span class="hl-cyan">about</span> history', pt: 'Um livro sobre história' },
+          { emoji: '🎬', en: 'A movie <span class="hl-cyan">about</span> love', pt: 'Um filme sobre amor' }
+        ]},
+        { type: 'examples', cardClass: 'orange', title: '🔢 ABOUT = APROXIMADO', items: [
+          { emoji: '👥', en: '<span class="hl-orange">About</span> 10 people', pt: 'Umas 10 pessoas' },
+          { emoji: '⏰', en: '<span class="hl-orange">About</span> 3 o\'clock', pt: 'Umas 3 horas' },
+          { emoji: '💰', en: '<span class="hl-orange">About</span> $50', pt: 'Uns $50' },
+          { emoji: '📏', en: '<span class="hl-orange">About</span> 2 hours', pt: 'Umas 2 horas' }
+        ]},
+        { type: 'tip', cardClass: 'green', icon: '❓', title: 'WHAT ABOUT...?', text: '<strong>What about you?</strong><br>E você? / E quanto a você?<br><br><strong>What about tomorrow?</strong><br>E amanhã? / Que tal amanhã?' },
+        { type: 'comparison', cardClass: 'red', title: '⚠️ THINK ABOUT vs THINK OF', leftClass: 'left-side', rightClass: 'right-side', leftIcon: '💭', rightIcon: '💡', leftLabel: 'THINK ABOUT', rightLabel: 'THINK OF', left: 'Think <span class="hl-cyan">about</span> it.', leftNote: 'Refletir, considerar', right: 'Think <span class="hl-purple">of</span> a number.', rightNote: 'Lembrar, imaginar', explanation: 'ABOUT = refletir | OF = lembrar/imaginar' },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 "O que você acha sobre isso?":', options: ['What do you think about it?', 'What do you think of about it?', 'What you think about?'], correct: 0 },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 "Umas 20 pessoas":', options: ['Around 20 people', 'About 20 people', 'Ambas estão corretas'], correct: 2 },
+        { type: 'fill-blank', cardClass: 'cyan', prompt: '✍️ Complete:', sentence: "Let's talk _____ the problem.", correctWord: 'about' },
+        { type: 'list', cardClass: 'gold', title: '📝 RESUMO - ABOUT', items: [
+          { emoji: '💬', text: '<strong>ABOUT</strong> = sobre (assunto/tema)' },
+          { emoji: '🔢', text: '<strong>ABOUT</strong> = aproximadamente (about 10)' },
+          { emoji: '❓', text: '<strong>What about...?</strong> = E quanto a...?' },
+          { emoji: '💭', text: 'Think about = refletir sobre' }
+        ]},
+        { type: 'end' }
+      ],
+      vocabulary: [{ emoji: '🗣️', pt: 'Falar sobre isso', en: 'Talk about it' }, { emoji: '🎬', pt: 'Sobre amor', en: 'About love' },
+        { emoji: '💭', pt: 'Pensar sobre', en: 'Think about' }, { emoji: '❓', pt: 'É sobre você?', en: 'What about you?' },
+        { emoji: '📖', pt: 'Um livro sobre história', en: 'A book about history' }, { emoji: '🤔', pt: 'Preocupado com isso', en: 'Worried about it' },
+        { emoji: '😊', pt: 'Feliz por você', en: 'Happy about you' }, { emoji: '🔢', pt: 'Umas 10 pessoas', en: 'About 10 people' },
+        { emoji: '⏰', pt: 'Por volta das 3', en: 'About 3 o\'clock' }, { emoji: '📰', pt: 'Notícias sobre', en: 'News about' },
+      ]
+    },
+
+  { id: 'and', title: 'AND', emoji: '➕🔗', description: 'E (conectar)', module: 3, order: 25,    slides: [
+        { type: 'title', emoji: '➕🔗', title: 'AND', subtitle: 'Conectar ideias' },
+        { type: 'situation', emoji: '☕', cardClass: 'purple', text: 'Você quer café E chá.<br>Como juntar as duas coisas?' },
+        { type: 'sequence-step', stepNumber: 1, totalSteps: 5, emoji: '🍽️', english: 'I want rice and beans, and maybe some salad.', portuguese: 'Quero arroz e feijão, e talvez uma salada.', breakdown: '<strong>AND</strong> = e. Conecta coisas na mesma frase.' },
+        { type: 'sequence-step', stepNumber: 2, totalSteps: 5, emoji: '👨‍👩‍👧', english: 'My wife and I work hard. We save and send money to Brazil.', portuguese: 'Eu e minha esposa trabalhamos duro. Economizamos e mandamos dinheiro pro Brasil.', breakdown: 'MY WIFE AND I (não \'me and my wife\'). AND conecta ações também.' },
+        { type: 'sequence-step', stepNumber: 3, totalSteps: 5, emoji: '📋', english: 'Sign here and here. And write your phone number and email.', portuguese: 'Assina aqui e aqui. E escreve seu telefone e email.', breakdown: 'AND repetido = lista. Documentos pedem várias coisas com AND.' },
+        { type: 'sequence-step', stepNumber: 4, totalSteps: 5, emoji: '😴', english: 'I\'m tired and hungry. And my back hurts. Long day!', portuguese: 'Tô cansado e com fome. E minhas costas doem. Dia longo!', breakdown: 'AND junta condições/sentimentos. Natural no desabafo do dia.' },
+        { type: 'sequence-step', stepNumber: 5, totalSteps: 5, emoji: '🛒', english: 'We need milk, bread, and eggs. Oh, and don\'t forget the cheese!', portuguese: 'Precisa de leite, pão e ovos. Ah, e não esquece o queijo!', breakdown: 'Lista com AND antes do último item. OH AND = ah, e (adição de última hora).' },
+        { type: 'rule', cardClass: 'green', text: '<strong>AND</strong> = E<br>Conecta palavras, frases e ideias', keyword: 'AND', keywordAfter: 'O conector mais usado!' },
+        { type: 'tip', cardClass: 'gold', icon: '🗣️', title: 'PRONÚNCIA', text: '<strong>AND</strong> = "énd" ou "ên"<br><br>Na fala rápida, muitas vezes soa só como "n":<br>Coffee and tea → "Coffee \'n tea"' },
+        { type: 'example', cardClass: 'green', emoji: '☕', question: 'Coffee <span class="hl-green">and</span> tea.', questionTr: 'Café e chá.', answer: '(AND = e)', answerTr: 'Junta duas coisas' },
+        { type: 'example', cardClass: 'green', emoji: '📚', question: 'I work <span class="hl-green">and</span> study.', questionTr: 'Eu trabalho e estudo.', answer: '(AND = e)', answerTr: 'Junta duas ações' },
+        { type: 'example', cardClass: 'green', emoji: '👫', question: 'Me <span class="hl-green">and</span> you.', questionTr: 'Eu e você.', answer: '(AND = e)', answerTr: 'Junta pessoas' },
+        { type: 'examples', cardClass: 'green', title: '➕ AND = JUNTA COISAS', items: [
+          { emoji: '🍞', en: 'Bread <span class="hl-green">and</span> butter', pt: 'Pão e manteiga' },
+          { emoji: '⬛', en: 'Black <span class="hl-green">and</span> white', pt: 'Preto e branco' },
+          { emoji: '🌅', en: 'Day <span class="hl-green">and</span> night', pt: 'Dia e noite' },
+          { emoji: '👨‍👩‍👧', en: 'Mom <span class="hl-green">and</span> dad', pt: 'Mãe e pai' }
+        ]},
+        { type: 'examples', cardClass: 'cyan', title: '🔗 AND = JUNTA AÇÕES', items: [
+          { emoji: '✍️', en: 'Read <span class="hl-cyan">and</span> write', pt: 'Ler e escrever' },
+          { emoji: '🏃', en: 'Come <span class="hl-cyan">and</span> go', pt: 'Ir e vir' },
+          { emoji: '🍽️', en: 'Eat <span class="hl-cyan">and</span> drink', pt: 'Comer e beber' },
+          { emoji: '😊', en: 'Smile <span class="hl-cyan">and</span> wave', pt: 'Sorrir e acenar' }
+        ]},
+        { type: 'tip', cardClass: 'purple', icon: '💡', title: 'LISTAS COM AND', text: 'Em listas, AND vem antes do último item:<br><br>Apples, oranges, <strong>and</strong> bananas.<br>Maçãs, laranjas e bananas.' },
+        { type: 'comparison', cardClass: 'red', title: '⚠️ AND vs WITH', leftClass: 'left-side', rightClass: 'right-side', leftIcon: '➕', rightIcon: '🤝', leftLabel: 'AND (lista)', rightLabel: 'WITH (junto)', left: 'Coffee <span class="hl-cyan">and</span> sugar.', leftNote: 'Duas coisas separadas', right: 'Coffee <span class="hl-purple">with</span> sugar.', rightNote: 'Dentro/junto', explanation: 'AND lista | WITH = misturado' },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 "Pão e manteiga":', options: ['Bread or butter', 'Bread and butter', 'Bread with butter'], correct: 1 },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 "Eu trabalho e estudo":', options: ['I work and study', 'I work or study', 'I work but study'], correct: 0 },
+        { type: 'fill-blank', cardClass: 'cyan', prompt: '✍️ Complete:', sentence: 'I like pizza _____ pasta.', correctWord: 'and' },
+        { type: 'list', cardClass: 'gold', title: '📝 RESUMO - AND', items: [
+          { emoji: '➕', text: '<strong>AND</strong> = e (conecta coisas)' },
+          { emoji: '🔗', text: 'Junta palavras, frases, ideias' },
+          { emoji: '🗣️', text: 'Pronúncia: "énd" ou só "n"' },
+          { emoji: '📝', text: 'Listas: A, B, and C' }
+        ]},
+        { type: 'end' }
+      ],
+      vocabulary: [{ emoji: '☕', pt: 'Café e chá', en: 'Coffee and tea' }, { emoji: '🍞', pt: 'Pão e manteiga', en: 'Bread and butter' },
+        { emoji: '👫', pt: 'Eu e você', en: 'Me and you' }, { emoji: '⬛', pt: 'Preto e branco', en: 'Black and white' },
+        { emoji: '📚', pt: 'Trabalho e estudo', en: 'I work and study' }, { emoji: '🌅', pt: 'Dia e noite', en: 'Day and night' },
+        { emoji: '👨‍👩‍👧', pt: 'Mãe e pai', en: 'Mom and dad' }, { emoji: '🍕', pt: 'Pizza e refrigerante', en: 'Pizza and soda' },
+        { emoji: '✍️', pt: 'Ler e escrever', en: 'Read and write' }, { emoji: '🏃', pt: 'Ir e voltar', en: 'Come and go' },
+      ]
+    },
+
+  { id: 'but', title: 'BUT', emoji: '↩️🔗', description: 'Mas (contraste)', module: 3, order: 26,    slides: [
+        { type: 'title', emoji: '↩️🔗', title: 'BUT', subtitle: 'Mostrar contraste' },
+        { type: 'situation', emoji: '💭', cardClass: 'purple', text: 'Você quer ir, MAS não pode.<br>Como mostrar esse contraste?' },
+        { type: 'sequence-step', stepNumber: 1, totalSteps: 5, emoji: '💼', english: 'I like my job, but the pay is not great.', portuguese: 'Gosto do meu trabalho, mas o salário não é bom.', breakdown: '<strong>BUT</strong> = mas. Mostra contraste/contrário.' },
+        { type: 'sequence-step', stepNumber: 2, totalSteps: 5, emoji: '🌧️', english: 'I wanted to go, but it started raining.', portuguese: 'Queria ir, mas começou a chover.', breakdown: 'BUT conecta o desejo (queria ir) com o impedimento (choveu).' },
+        { type: 'sequence-step', stepNumber: 3, totalSteps: 5, emoji: '🍔', english: 'The food is good, but it\'s expensive. But I\'ll eat here anyway!', portuguese: 'A comida é boa, mas é cara. Mas vou comer aqui mesmo assim!', breakdown: 'BUT repetido é natural. ANYWAY = mesmo assim.' },
+        { type: 'sequence-step', stepNumber: 4, totalSteps: 5, emoji: '😊', english: 'My English isn\'t perfect, but people understand me. That\'s what matters.', portuguese: 'Meu inglês não é perfeito, mas as pessoas me entendem. É o que importa.', breakdown: 'BUT pra virar o negativo em positivo. Mentalidade!' },
+        { type: 'sequence-step', stepNumber: 5, totalSteps: 5, emoji: '🏠', english: 'I miss Brazil, but I\'m building a good life here. It\'s hard but worth it.', portuguese: 'Sinto saudade do Brasil, mas tô construindo uma vida boa aqui. É difícil mas vale a pena.', breakdown: 'BUT pra equilibrar sentimentos. WORTH IT = vale a pena.' },
+        { type: 'rule', cardClass: 'orange', text: '<strong>BUT</strong> = MAS<br>Mostra contraste, oposição, exceção', keyword: 'BUT', keywordAfter: 'Conecta ideias opostas!' },
+        { type: 'tip', cardClass: 'gold', icon: '⭐', title: 'QUANDO USAR', text: '<strong>BUT</strong> = quando a segunda parte<br>CONTRASTA com a primeira<br><br>Eu quero, <strong>MAS</strong> não posso.<br>É bom, <strong>MAS</strong> é caro.' },
+        { type: 'example', cardClass: 'orange', emoji: '💭', question: "I want to, <span class='hl-orange'>but</span> I can't.", questionTr: 'Eu quero, mas não posso.', answer: '(BUT = mas)', answerTr: 'Contraste' },
+        { type: 'example', cardClass: 'orange', emoji: '🍕', question: "It\'s good, <span class='hl-orange'>but</span> expensive.", questionTr: 'É bom, mas caro.', answer: '(BUT = mas)', answerTr: 'Oposição' },
+        { type: 'example', cardClass: 'orange', emoji: '😴', question: "I'm tired, <span class='hl-orange'>but</span> happy.", questionTr: 'Estou cansado, mas feliz.', answer: '(BUT = mas)', answerTr: 'Contraste' },
+        { type: 'examples', cardClass: 'orange', title: '↩️ BUT = CONTRASTE', items: [
+          { emoji: '📱', en: 'Small, <span class="hl-orange">but</span> powerful', pt: 'Pequeno, mas potente' },
+          { emoji: '🏃', en: 'Slow, <span class="hl-orange">but</span> steady', pt: 'Devagar, mas constante' },
+          { emoji: '💰', en: 'Cheap, <span class="hl-orange">but</span> good', pt: 'Barato, mas bom' },
+          { emoji: '📚', en: 'Difficult, <span class="hl-orange">but</span> interesting', pt: 'Difícil, mas interessante' }
+        ]},
+        { type: 'examples', cardClass: 'cyan', title: '🙏 DESCULPAS COM BUT', items: [
+          { emoji: '🙏', en: "Sorry, <span class='hl-cyan'>but</span> I can't", pt: 'Desculpa, mas não posso' },
+          { emoji: '❤️', en: 'I love you, <span class="hl-cyan">but</span> I have to go', pt: 'Te amo, mas preciso ir' },
+          { emoji: '🙇', en: "I tried, <span class='hl-cyan'>but</span> I failed", pt: 'Tentei, mas falhei' },
+          { emoji: '💼', en: "I want to help, <span class='hl-cyan'>but</span> I'm busy", pt: 'Quero ajudar, mas estou ocupado' }
+        ]},
+        { type: 'tip', cardClass: 'purple', icon: '💡', title: 'NOT...BUT', text: 'Padrão comum:<br><br><strong>Not</strong> this, <strong>but</strong> that.<br>Não isso, mas aquilo.<br><br><strong>Not</strong> me, <strong>but</strong> him.<br>Não eu, mas ele.' },
+        { type: 'comparison', cardClass: 'red', title: '⚠️ BUT vs AND', leftClass: 'left-side', rightClass: 'right-side', leftIcon: '↩️', rightIcon: '➕', leftLabel: 'BUT (contraste)', rightLabel: 'AND (soma)', left: 'Tired, <span class="hl-orange">but</span> happy.', leftNote: 'Ideias opostas', right: 'Tired <span class="hl-green">and</span> hungry.', rightNote: 'Ideias similares', explanation: 'BUT = oposição | AND = adição' },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 "Eu gosto, mas é caro":', options: ['I like, and is expensive', 'I like it, but it\'s expensive', 'I like, so is expensive'], correct: 1 },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 "Desculpa, mas não posso":', options: ['Sorry, and I can\'t', 'Sorry, but I can\'t', 'Sorry, so I can\'t'], correct: 1 },
+        { type: 'fill-blank', cardClass: 'cyan', prompt: '✍️ Complete:', sentence: "I'm hungry, _____ I have no money.", correctWord: 'but' },
+        { type: 'list', cardClass: 'gold', title: '📝 RESUMO - BUT', items: [
+          { emoji: '↩️', text: '<strong>BUT</strong> = mas (contraste)' },
+          { emoji: '⚡', text: 'Conecta ideias opostas' },
+          { emoji: '🙏', text: 'Comum em desculpas: Sorry, but...' },
+          { emoji: '🔄', text: 'Padrão: Not X, but Y' }
+        ]},
+        { type: 'end' }
+      ],
+      vocabulary: [{ emoji: '💭', pt: 'Quero, mas não posso', en: "I want to, but I can't" }, { emoji: '🍕', pt: 'Bom, mas caro', en: "It\'s good, but expensive" },
+        { emoji: '😴', pt: 'Cansado, mas feliz', en: 'Tired, but happy' }, { emoji: '📱', pt: 'Pequeno, mas potente', en: 'Small, but powerful' },
+        { emoji: '🏃', pt: 'Devagar, mas constante', en: 'Slow, but steady' }, { emoji: '💰', pt: 'Barato, mas bom', en: 'Cheap, but good' },
+        { emoji: '🌧️', pt: 'Frio, mas ensolarado', en: 'Cold, but sunny' }, { emoji: '📚', pt: 'Difícil, mas interessante', en: 'Difficult, but interesting' },
+        { emoji: '🙏', pt: 'Desculpa, mas não posso', en: "Sorry, but I can't" }, { emoji: '❤️', pt: 'Te amo, mas preciso ir', en: 'I love you, but I have to go' },
+      ]
+    },
+
+  { id: 'so-because', title: 'SO / BECAUSE', emoji: '➡️💡', description: 'Então / Porque', module: 3, order: 27,    slides: [
+        { type: 'title', emoji: '➡️💡', title: 'SO / BECAUSE', subtitle: 'Causa e consequência' },
+        { type: 'situation', emoji: '🌧️', cardClass: 'purple', text: 'Estava chovendo, ENTÃO você ficou em casa.<br>Você ficou em casa PORQUE estava chovendo.<br><br>Qual a diferença?' },
+        { type: 'sequence-step', stepNumber: 1, totalSteps: 5, emoji: '🌧️', english: 'It was raining, so I stayed home. I stayed home because it was raining.', portuguese: 'Tava chovendo, então fiquei em casa. Fiquei em casa porque tava chovendo.', breakdown: '<strong>SO</strong> = então (resultado). <strong>BECAUSE</strong> = porque (motivo). Mesma ideia, ordem diferente.' },
+        { type: 'sequence-step', stepNumber: 2, totalSteps: 5, emoji: '🤒', english: 'I\'m sick, so I can\'t go to work. — Call the boss because he needs to know.', portuguese: 'Tô doente, então não posso ir trabalhar. — Liga pro chefe porque ele precisa saber.', breakdown: 'SO = consequência. BECAUSE = explicação/razão.' },
+        { type: 'sequence-step', stepNumber: 3, totalSteps: 5, emoji: '💰', english: 'I work overtime because I need the money. So I don\'t have much free time.', portuguese: 'Faço hora extra porque preciso do dinheiro. Então não tenho muito tempo livre.', breakdown: 'BECAUSE primeiro (razão) → SO depois (resultado).' },
+        { type: 'sequence-step', stepNumber: 4, totalSteps: 5, emoji: '📚', english: 'My son is studying hard, so his grades are improving. He\'s happy because he passed!', portuguese: 'Meu filho tá estudando duro, então as notas tão melhorando. Ele tá feliz porque passou!', breakdown: 'SO = resultado positivo. BECAUSE = motivo da felicidade.' },
+        { type: 'sequence-step', stepNumber: 5, totalSteps: 5, emoji: '🚗', english: 'The car broke down, so I took an Uber. It was expensive because it was surge pricing.', portuguese: 'O carro quebrou, então peguei Uber. Foi caro porque era preço dinâmico.', breakdown: 'SO liga problema → solução. BECAUSE explica por quê foi caro.' },
+        { type: 'rule', cardClass: 'cyan', text: '<strong>SO</strong> = ENTÃO (resultado)<br><strong>BECAUSE</strong> = PORQUE (causa)', keyword: 'SO → | ← BECAUSE', keywordAfter: 'Direções opostas!' },
+        { type: 'tip', cardClass: 'gold', icon: '⭐', title: 'VISUALIZE', text: '<strong>BECAUSE</strong> = olha pra TRÁS (motivo)<br>→ Fiquei em casa <strong>because</strong> choveu.<br><br><strong>SO</strong> = olha pra FRENTE (resultado)<br>→ Choveu, <strong>so</strong> fiquei em casa.' },
+        { type: 'example', cardClass: 'cyan', emoji: '🌧️', question: "It was raining, <span class='hl-cyan'>so</span> I stayed home.", questionTr: 'Estava chovendo, então fiquei em casa.', answer: '(SO = então)', answerTr: 'Resultado' },
+        { type: 'example', cardClass: 'green', emoji: '🏠', question: "I stayed home <span class='hl-green'>because</span> it was raining.", questionTr: 'Fiquei em casa porque estava chovendo.', answer: '(BECAUSE = porque)', answerTr: 'Causa' },
+        { type: 'example', cardClass: 'cyan', emoji: '😴', question: "I was tired, <span class='hl-cyan'>so</span> I slept.", questionTr: 'Estava cansado, então dormi.', answer: '(SO = então)', answerTr: 'Resultado' },
+        { type: 'examples', cardClass: 'cyan', title: '➡️ SO = RESULTADO', items: [
+          { emoji: '🌧️', en: "Raining, <span class='hl-cyan'>so</span> I stayed", pt: 'Chovendo, então fiquei' },
+          { emoji: '😴', en: "Tired, <span class='hl-cyan'>so</span> I slept", pt: 'Cansado, então dormi' },
+          { emoji: '🤒', en: "Sick, <span class='hl-cyan'>so</span> I missed it", pt: 'Doente, então faltei' },
+          { emoji: '🚗', en: "Traffic, <span class='hl-cyan'>so</span> I was late", pt: 'Trânsito, então atrasei' }
+        ]},
+        { type: 'examples', cardClass: 'green', title: '💡 BECAUSE = CAUSA', items: [
+          { emoji: '💰', en: "<span class='hl-green'>Because</span> I have no money", pt: 'Porque não tenho dinheiro' },
+          { emoji: '⏰', en: "<span class='hl-green'>Because</span> it's late", pt: 'Porque é tarde' },
+          { emoji: '📚', en: "<span class='hl-green'>Because</span> I need to study", pt: 'Porque preciso estudar' },
+          { emoji: '❤️', en: "<span class='hl-green'>Because</span> I love you", pt: 'Porque te amo' }
+        ]},
+        { type: 'tip', cardClass: 'purple', icon: '💡', title: 'MESMA IDEIA, ORDEM DIFERENTE', text: 'Duas formas de dizer a mesma coisa:<br><br>Cansado, <strong>so</strong> dormi. (resultado)<br>Dormi <strong>because</strong> estava cansado. (causa)<br><br>A informação é a mesma!' },
+        { type: 'comparison', cardClass: 'red', title: '⚠️ SO vs BECAUSE', leftClass: 'left-side', rightClass: 'right-side', leftIcon: '➡️', rightIcon: '💡', leftLabel: 'SO (resultado)', rightLabel: 'BECAUSE (causa)', left: "Tired, <span class='hl-cyan'>so</span> I slept.", leftNote: 'CAUSA → RESULTADO', right: "I slept <span class='hl-green'>because</span> I was tired.", rightNote: 'RESULTADO ← CAUSA', explanation: 'Mesma ideia, ordem diferente!' },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 "Estava cansado, então dormi":', options: ['I was tired, because I slept', 'I was tired, so I slept', 'I was tired, but I slept'], correct: 1 },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 "Porque te amo":', options: ['So I love you', 'Because I love you', 'But I love you'], correct: 1 },
+        { type: 'fill-blank', cardClass: 'cyan', prompt: '✍️ Complete:', sentence: "I'm studying _____ I have a test tomorrow.", correctWord: 'because' },
+        { type: 'list', cardClass: 'gold', title: '📝 RESUMO - SO / BECAUSE', items: [
+          { emoji: '➡️', text: '<strong>SO</strong> = então (olha pro resultado)' },
+          { emoji: '💡', text: '<strong>BECAUSE</strong> = porque (olha pro motivo)' },
+          { emoji: '🔄', text: 'Mesma ideia, ordem diferente' },
+          { emoji: '❓', text: '<strong>Why?</strong> → Because...' }
+        ]},
+        { type: 'end' }
+      ],
+      vocabulary: [{ emoji: '🌧️', pt: 'Chovendo, então fiquei', en: 'It was raining, so I stayed' }, { emoji: '😴', pt: 'Cansado, então dormi', en: 'I was tired, so I slept' },
+        { emoji: '💰', pt: 'Porque não tenho dinheiro', en: "Because I don't have money" }, { emoji: '⏰', pt: 'Porque é tarde', en: "Because it's late" },
+        { emoji: '🤒', pt: 'Doente, então faltei', en: 'I was sick, so I missed it' }, { emoji: '📚', pt: 'Porque preciso estudar', en: 'Because I need to study' },
+        { emoji: '🚗', pt: 'Trânsito, então atrasei', en: 'Traffic, so I was late' }, { emoji: '❤️', pt: 'Porque te amo', en: 'Because I love you' },
+        { emoji: '💼', pt: 'Ocupado, então não pude', en: "Busy, so I couldn't" }, { emoji: '🎯', pt: 'Porque é importante', en: "Because it's important" },
+      ]
+    },
+
+  { id: 'then', title: 'THEN', emoji: '➡️⏭️', description: 'Então / Depois', module: 3, order: 28,    slides: [
+        { type: 'title', emoji: '➡️⏭️', title: 'THEN', subtitle: 'Sequência de eventos' },
+        { type: 'situation', emoji: '🍳', cardClass: 'purple', text: 'Primeiro você tomou café,<br>DEPOIS foi trabalhar.<br><br>Como falar de sequência?' },
+        { type: 'sequence-step', stepNumber: 1, totalSteps: 5, emoji: '🌅', english: 'First I wake up, then I take a shower, then I have breakfast.', portuguese: 'Primeiro acordo, depois tomo banho, depois tomo café.', breakdown: '<strong>THEN</strong> = depois/então. Sequência de eventos com FIRST... THEN... THEN...' },
+        { type: 'sequence-step', stepNumber: 2, totalSteps: 5, emoji: '🏗️', english: 'Finish this wall, then move to the bathroom. Then we\'re done for today.', portuguese: 'Termina essa parede, depois vai pro banheiro. Depois terminamos por hoje.', breakdown: 'THEN pra dar instruções em sequência no trabalho.' },
+        { type: 'sequence-step', stepNumber: 3, totalSteps: 5, emoji: '📞', english: 'Call the doctor, then go to the pharmacy. Then come home and rest.', portuguese: 'Liga pro médico, depois vai na farmácia. Depois vem pra casa e descansa.', breakdown: 'THEN encadeia 3 tarefas. THEN COME HOME = depois volte pra casa.' },
+        { type: 'sequence-step', stepNumber: 4, totalSteps: 5, emoji: '🤔', english: 'If the bus doesn\'t come, then I\'ll take an Uber. — OK, and then what?', portuguese: 'Se o ônibus não vier, então pego Uber. — OK, e depois?', breakdown: 'IF... THEN = se... então (condicional). AND THEN WHAT = e depois?' },
+        { type: 'sequence-step', stepNumber: 5, totalSteps: 5, emoji: '😊', english: 'I didn\'t speak any English. Then I started practicing every day. Now I can talk to anyone!', portuguese: 'Não falava nada de inglês. Aí comecei a praticar todo dia. Agora falo com qualquer um!', breakdown: 'THEN pra contar história pessoal. THEN = aí/então (narrativa).' },
+        { type: 'rule', cardClass: 'cyan', text: '<strong>THEN</strong> = ENTÃO / DEPOIS<br>Indica sequência, próximo passo', keyword: 'THEN', keywordAfter: 'Primeiro X, THEN Y' },
+        { type: 'tip', cardClass: 'gold', icon: '⭐', title: 'DOIS USOS', text: '<strong>THEN</strong> = depois (sequência)<br>→ First eat, <strong>then</strong> go.<br><br><strong>THEN</strong> = então (condicional)<br>→ If you want, <strong>then</strong> do it.' },
+        { type: 'example', cardClass: 'cyan', emoji: '🍳', question: "First I ate, <span class='hl-cyan'>then</span> I went to work.", questionTr: 'Primeiro comi, depois fui trabalhar.', answer: '(THEN = depois)', answerTr: 'Sequência' },
+        { type: 'example', cardClass: 'cyan', emoji: '🚿', question: "Take a shower, <span class='hl-cyan'>then</span> get dressed.", questionTr: 'Tome banho, depois se vista.', answer: '(THEN = depois)', answerTr: 'Sequência' },
+        { type: 'example', cardClass: 'green', emoji: '🎯', question: "If you want, <span class='hl-green'>then</span> do it.", questionTr: 'Se você quer, então faça.', answer: '(THEN = então)', answerTr: 'Condicional' },
+        { type: 'examples', cardClass: 'cyan', title: '⏭️ THEN = SEQUÊNCIA', items: [
+          { emoji: '🍳', en: 'Breakfast, <span class="hl-cyan">then</span> work', pt: 'Café da manhã, depois trabalho' },
+          { emoji: '🚿', en: 'Shower, <span class="hl-cyan">then</span> dinner', pt: 'Banho, depois jantar' },
+          { emoji: '🚶', en: 'Go straight, <span class="hl-cyan">then</span> turn', pt: 'Vai reto, depois vira' },
+          { emoji: '💭', en: 'Think, <span class="hl-cyan">then</span> speak', pt: 'Pensa, depois fala' }
+        ]},
+        { type: 'examples', cardClass: 'green', title: '🎯 THEN = CONDICIONAL', items: [
+          { emoji: '🎯', en: 'If you want, <span class="hl-green">then</span> do it', pt: 'Se quer, então faça' },
+          { emoji: '💡', en: "If it's true, <span class='hl-green'>then</span> okay", pt: 'Se for verdade, então tá' },
+          { emoji: '🤷', en: "If not now, <span class='hl-green'>then</span> when?", pt: 'Se não agora, então quando?' },
+          { emoji: '📞', en: "Call me, <span class='hl-green'>then</span> we talk", pt: 'Me liga, aí conversamos' }
+        ]},
+        { type: 'tip', cardClass: 'purple', icon: '💡', title: 'FIRST...THEN', text: 'Padrão muito comum:<br><br><strong>First</strong> this, <strong>then</strong> that.<br>Primeiro isso, depois aquilo.<br><br><strong>First</strong> work, <strong>then</strong> play.<br>Primeiro trabalho, depois diversão.' },
+        { type: 'tip', cardClass: 'orange', icon: '⏰', title: 'EXPRESSÕES COM THEN', text: '<strong>Until then</strong> = Até lá/então<br>See you tomorrow. Until then!<br><br><strong>Since then</strong> = Desde então<br>I moved here in 2020. Since then...' },
+        { type: 'comparison', cardClass: 'red', title: '⚠️ THEN vs SO', leftClass: 'left-side', rightClass: 'right-side', leftIcon: '⏭️', rightIcon: '➡️', leftLabel: 'THEN (sequência)', rightLabel: 'SO (resultado)', left: 'Eat, <span class="hl-cyan">then</span> go.', leftNote: 'Ordem de eventos', right: "Hungry, <span class='hl-purple'>so</span> I ate.", rightNote: 'Causa → Efeito', explanation: 'THEN = ordem | SO = consequência' },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 "Primeiro isso, depois aquilo":', options: ['First this, after that', 'First this, then that', 'First this, so that'], correct: 1 },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 "Até lá!":', options: ['Until then!', 'Since then!', 'Before then!'], correct: 0 },
+        { type: 'fill-blank', cardClass: 'cyan', prompt: '✍️ Complete:', sentence: 'First study, _____ you can play.', correctWord: 'then' },
+        { type: 'list', cardClass: 'gold', title: '📝 RESUMO - THEN', items: [
+          { emoji: '⏭️', text: '<strong>THEN</strong> = depois (sequência)' },
+          { emoji: '🎯', text: '<strong>THEN</strong> = então (condicional)' },
+          { emoji: '1️⃣', text: 'Padrão: First X, then Y' },
+          { emoji: '⏰', text: 'Until then, Since then' }
+        ]},
+        { type: 'end' }
+      ],
+      vocabulary: [{ emoji: '1️⃣', pt: 'Primeiro isso, depois aquilo', en: 'First this, then that' }, { emoji: '🍳', pt: 'Café da manhã, depois trabalho', en: 'Breakfast, then work' },
+        { emoji: '❓', pt: 'E depois?', en: 'What then?' }, { emoji: '🚿', pt: 'Banho, depois jantar', en: 'Shower, then dinner' },
+        { emoji: '📞', pt: 'Me liga, aí conversamos', en: 'Call me, then we talk' }, { emoji: '✍️', pt: 'Assina aqui, depois ali', en: 'Sign here, then there' },
+        { emoji: '🚶', pt: 'Vai reto, depois vira', en: 'Go straight, then turn' }, { emoji: '💭', pt: 'Pensa, depois fala', en: 'Think, then speak' },
+        { emoji: '🎯', pt: 'Se quiser, então faça', en: 'If you want, then do it' }, { emoji: '👋', pt: 'Até então!', en: 'Until then!' },
+      ]
+    }
+] as Lesson[];

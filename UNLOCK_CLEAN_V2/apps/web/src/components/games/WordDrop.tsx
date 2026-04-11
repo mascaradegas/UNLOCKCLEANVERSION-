@@ -1,5 +1,4 @@
 import { useState, useEffect, useCallback, useMemo, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
 import type { Lesson, VocabularyItem } from '@unlock2026/shared';
 import { useProgressStore } from '@/stores/progressStore';
 import { SFX } from '@/utils/sounds';
@@ -31,7 +30,12 @@ if (typeof document !== 'undefined') {
   }
 }
 
-interface Props { lesson: Lesson; onFinish: () => void; }
+interface Props {
+  lesson: Lesson;
+  onFinish: () => void;
+  onSelectMode: () => void;
+  backLabel: string;
+}
 
 interface Block {
   id: number;
@@ -54,9 +58,73 @@ const ANSWER_ZONE_OFFSET = 220;
 const FLOOR_MARGIN = 60;
 const FEEDBACK_DELAY_CORRECT = 800;
 const FEEDBACK_DELAY_WRONG = 1200;
+const WORD_DROP_TARGET_CORRECT = 30;
+const BLOCK_START_Y = 18;
+const BLOCK_SPEED_MIN = 0.85;
+const BLOCK_SPEED_VARIANCE = 0.25;
+const WORD_DROP_SPAWN_INTERVAL_MS = 2200;
+const WORD_DROP_LEVEL_STARTS = [0, 5, 10, 14, 18, 21, 24, 26, 28, 30] as const;
+const WORD_DROP_LEVELS = [
+  { fallMultiplier: 0.3, spawnMultiplier: 0.58, maxActiveBlocks: 2 },
+  { fallMultiplier: 0.38, spawnMultiplier: 0.66, maxActiveBlocks: 2 },
+  { fallMultiplier: 0.46, spawnMultiplier: 0.74, maxActiveBlocks: 3 },
+  { fallMultiplier: 0.56, spawnMultiplier: 0.82, maxActiveBlocks: 3 },
+  { fallMultiplier: 0.68, spawnMultiplier: 0.9, maxActiveBlocks: 4 },
+  { fallMultiplier: 0.8, spawnMultiplier: 0.99, maxActiveBlocks: 5 },
+  { fallMultiplier: 0.94, spawnMultiplier: 1.08, maxActiveBlocks: 5 },
+  { fallMultiplier: 1.08, spawnMultiplier: 1.18, maxActiveBlocks: 6 },
+  { fallMultiplier: 1.22, spawnMultiplier: 1.29, maxActiveBlocks: 6 },
+  { fallMultiplier: 1.38, spawnMultiplier: 1.42, maxActiveBlocks: 7 },
+] as const;
 
-export function WordDropGame({ lesson, onFinish }: Props) {
-  const navigate = useNavigate();
+function getWordDropLevelTone(level: number) {
+  const ratio = (level - 1) / Math.max(WORD_DROP_LEVELS.length - 1, 1);
+  const start = { r: 0, g: 255, b: 136 };
+  const end = { r: 255, g: 107, b: 107 };
+  const r = Math.round(start.r + ((end.r - start.r) * ratio));
+  const g = Math.round(start.g + ((end.g - start.g) * ratio));
+  const b = Math.round(start.b + ((end.b - start.b) * ratio));
+
+  return {
+    border: `rgba(${r}, ${g}, ${b}, 0.55)`,
+    background: `rgba(${r}, ${g}, ${b}, 0.12)`,
+    text: `rgb(${r}, ${g}, ${b})`,
+    glow: `0 0 18px rgba(${r}, ${g}, ${b}, 0.18)`,
+  };
+}
+
+function getWordDropPercent(correct: number) {
+  return Math.max(0, Math.min(100, Math.round((correct / WORD_DROP_TARGET_CORRECT) * 100)));
+}
+
+function getWordDropDifficulty(correctCount: number) {
+  let levelIndex = 0;
+  for (let i = WORD_DROP_LEVEL_STARTS.length - 1; i >= 0; i--) {
+    if (correctCount >= WORD_DROP_LEVEL_STARTS[i]) {
+      levelIndex = i;
+      break;
+    }
+  }
+
+  const level = levelIndex + 1;
+  const config = WORD_DROP_LEVELS[levelIndex];
+  const currentLevelStart = WORD_DROP_LEVEL_STARTS[levelIndex];
+  const nextLevelAt = levelIndex < WORD_DROP_LEVEL_STARTS.length - 1
+    ? WORD_DROP_LEVEL_STARTS[levelIndex + 1]
+    : null;
+  const progressWithinLevel = nextLevelAt === null
+    ? 1
+    : Math.max(0, Math.min(1, (correctCount - currentLevelStart) / (nextLevelAt - currentLevelStart)));
+
+  return {
+    level,
+    nextLevelAt,
+    progressWithinLevel,
+    ...config,
+  };
+}
+
+export function WordDropGame({ lesson, onFinish, onSelectMode, backLabel }: Props) {
   const store = useProgressStore();
   const vocab = useMemo(() => {
     // Remove duplicate vocabulary entries (same English answer)
@@ -70,7 +138,7 @@ export function WordDropGame({ lesson, onFinish }: Props) {
       return true;
     });
     return shuffle(unique);
-  }, [lesson.id]);
+  }, [lesson.id, lesson.vocabulary]);
 
   // Game State
   const [score, setScore] = useState(0);
@@ -88,8 +156,9 @@ export function WordDropGame({ lesson, onFinish }: Props) {
   const [gameStarted, setGameStarted] = useState(false);
   const [paused, setPaused] = useState(false);
   const [selectedOptionIndex, setSelectedOptionIndex] = useState<number | null>(null);
-  const [forceRegenerate, setForceRegenerate] = useState(false);
   const [loseEffectActive, setLoseEffectActive] = useState(false);
+  const [xpGained, setXpGained] = useState(0);
+  const [recordBeat, setRecordBeat] = useState(false);
 
   // Refs
   const arenaRef = useRef<HTMLDivElement>(null);
@@ -98,6 +167,10 @@ export function WordDropGame({ lesson, onFinish }: Props) {
   const wordIndexRef = useRef(0);
   const lastSpawnRef = useRef(0);
   const blocksRef = useRef<Block[]>([]);
+  const startTimeRef = useRef(Date.now());
+  const finishedRef = useRef(false);
+
+  const bestScore = store.getBestScore(lesson.id, 'word-drop');
 
   const getArenaDimensions = useCallback(() => {
     if (!arenaRef.current) return { height: 450, width: 400 };
@@ -107,6 +180,67 @@ export function WordDropGame({ lesson, onFinish }: Props) {
     };
   }, []);
 
+  const difficultyState = useMemo(() => getWordDropDifficulty(correct), [correct]);
+  const difficultyTone = useMemo(
+    () => getWordDropLevelTone(difficultyState.level),
+    [difficultyState.level],
+  );
+
+  const createBlock = useCallback((arenaWidth: number): Block | null => {
+    if (vocab.length === 0) {
+      return null;
+    }
+
+    const word = vocab[wordIndexRef.current % vocab.length];
+    wordIndexRef.current++;
+
+    const numLanes = 3;
+    const laneWidth = arenaWidth / numLanes;
+    const lane = blockIdRef.current % numLanes;
+    const laneCenter = lane * laneWidth + laneWidth / 2;
+    const x = Math.max(5, Math.min(arenaWidth - 75, laneCenter - 30 + (Math.random() - 0.5) * 30));
+
+    return {
+      id: blockIdRef.current++,
+      word,
+      y: BLOCK_START_Y,
+      x,
+      speed: BLOCK_SPEED_MIN + Math.random() * BLOCK_SPEED_VARIANCE,
+    };
+  }, [vocab]);
+
+  const getPriorityBlock = useCallback((blockList: Block[]) => {
+    if (blockList.length === 0) {
+      return null;
+    }
+
+    const arena = getArenaDimensions();
+    const floorY = arena.height - FLOOR_MARGIN;
+    const answerZone = floorY - ANSWER_ZONE_OFFSET;
+    const eligible = blockList.filter(b => b.y >= answerZone);
+
+    if (eligible.length > 0) {
+      return eligible.reduce((a, b) => (a.y > b.y ? a : b));
+    }
+
+    return blockList.reduce((a, b) => (a.y > b.y ? a : b));
+  }, [getArenaDimensions]);
+
+  const buildOptionsForWord = useCallback((targetEn: string) => {
+    const correctOption = getDisplayAnswer(targetEn);
+    const wrongOptions = vocab
+      .filter(w => w.en !== targetEn)
+      .map(w => getDisplayAnswer(w.en))
+      .filter((opt, idx, arr) => arr.indexOf(opt) === idx)
+      .filter(opt => opt !== correctOption);
+
+    if (wrongOptions.length < 2) {
+      console.warn('⚠️ Not enough unique wrong options. Available:', wrongOptions.length);
+    }
+
+    return shuffle([correctOption, ...shuffle(wrongOptions).slice(0, 2)]);
+  }, [vocab]);
+
   // Keep blocksRef in sync with blocks state
   useEffect(() => {
     blocksRef.current = blocks;
@@ -114,59 +248,32 @@ export function WordDropGame({ lesson, onFinish }: Props) {
 
   // Auto-select block
   useEffect(() => {
-    if (blocks.length === 0 || answering) {
+    if (blocks.length === 0) {
       setSelectedBlockId(null);
       setOptions([]);
       return;
     }
 
+    if (answering) {
+      return;
+    }
+
     console.log('🎯 Auto-select effect running. Blocks:', blocks.length);
-
-    const arena = getArenaDimensions();
-    const floorY = arena.height - FLOOR_MARGIN;
-    const answerZone = floorY - ANSWER_ZONE_OFFSET;
-
-    console.log('📍 Arena:', arena, 'FloorY:', floorY, 'AnswerZone:', answerZone);
     console.log('📦 Block positions:', blocks.map(b => ({ id: b.id, y: b.y, word: b.word.pt })));
 
-    const eligible = blocks.filter(b => b.y >= answerZone);
-    let pick: Block | null = null;
+    const pick = getPriorityBlock(blocks);
 
-    if (eligible.length > 0) {
-      pick = eligible.reduce((a, b) => (a.y > b.y ? a : b));
-      console.log('✅ Selected from eligible blocks:', pick.word.pt);
-    } else if (blocks.length > 0) {
-      pick = blocks.reduce((a, b) => (a.y > b.y ? a : b));
-      console.log('🟡 Selected from all blocks:', pick.word.pt);
-    }
-
-    if (pick && (pick.id !== selectedBlockId || forceRegenerate)) {
+    if (pick && (pick.id !== selectedBlockId || options.length === 0)) {
       if (pick.id !== selectedBlockId) {
         setSelectedBlockId(pick.id);
+        setSelectedOptionIndex(null);
       }
 
-      const correct = getDisplayAnswer(pick.word.en);
-      const wrongOptions = vocab
-        .filter(w => w.en !== pick.word.en)
-        .map(w => getDisplayAnswer(w.en))
-        .filter((opt, idx, arr) => arr.indexOf(opt) === idx) // Remove duplicate options
-        .filter(opt => opt !== correct); // Ensure wrong options don't include correct answer
-
-      // If we don't have enough wrong options, that's a problem with the vocab
-      if (wrongOptions.length < 2) {
-        console.warn('⚠️ Not enough unique wrong options. Available:', wrongOptions.length);
-      }
-
-      const selected = shuffle(wrongOptions).slice(0, 2);
-      const allOptions = shuffle([correct, ...selected]);
-      console.log('🔤 Options generated:', allOptions, 'for word:', pick.word.pt);
-      setOptions(allOptions);
-
-      if (forceRegenerate) {
-        setForceRegenerate(false);
-      }
+      const nextOptions = buildOptionsForWord(pick.word.en);
+      console.log('🔤 Options generated:', nextOptions, 'for word:', pick.word.pt);
+      setOptions(nextOptions);
     }
-  }, [blocks, answering, vocab, getArenaDimensions, selectedBlockId, forceRegenerate]);
+  }, [blocks, answering, getPriorityBlock, selectedBlockId, options.length, buildOptionsForWord]);
 
   // Keyboard Controls
 
@@ -223,6 +330,9 @@ export function WordDropGame({ lesson, onFinish }: Props) {
         module: lesson.module,
       });
 
+      const remainingBlocks = blocks.filter(bl => bl.id !== blockIdToRemove);
+      const nextBlock = getPriorityBlock(remainingBlocks);
+
       // Remove block immediately, show feedback after
       setBlocks(b => {
         const filtered = b.filter(bl => bl.id !== blockIdToRemove);
@@ -230,10 +340,17 @@ export function WordDropGame({ lesson, onFinish }: Props) {
         return filtered;
       });
 
+      if (nextBlock) {
+        setSelectedBlockId(nextBlock.id);
+        setOptions(buildOptionsForWord(nextBlock.word.en));
+      } else {
+        setSelectedBlockId(null);
+        setOptions([]);
+      }
+      setSelectedOptionIndex(null);
+
       setTimeout(() => {
         console.log('⏱️ Feedback timeout reached');
-        setSelectedBlockId(null);
-        setSelectedOptionIndex(null); // Reset option navigation
         setAnswering(false);
         setFeedbackBlockId(null);
         setFeedbackResult(null);
@@ -259,15 +376,24 @@ export function WordDropGame({ lesson, onFinish }: Props) {
       });
 
       setTimeout(() => {
-        setSelectedBlockId(null); // Reset selection to force re-selection
-        setSelectedOptionIndex(null); // Reset option navigation
-        setForceRegenerate(true); // Force new options to be generated
+        const activeBlocks = blocksRef.current;
+        const nextBlock = getPriorityBlock(activeBlocks);
+
+        if (nextBlock) {
+          setSelectedBlockId(nextBlock.id);
+          setOptions(buildOptionsForWord(nextBlock.word.en));
+        } else {
+          setSelectedBlockId(null);
+          setOptions([]);
+        }
+
+        setSelectedOptionIndex(null);
         setAnswering(false);
         setFeedbackBlockId(null);
         setFeedbackResult(null);
       }, FEEDBACK_DELAY_WRONG);
     }
-  }, [selectedBlockId, blocks, answering, store, lesson, combo]);
+  }, [selectedBlockId, blocks, answering, store, lesson, combo, getPriorityBlock, buildOptionsForWord]);
 
   useEffect(() => {
     // Always attach the listener, but guard inside the handler
@@ -316,7 +442,7 @@ export function WordDropGame({ lesson, onFinish }: Props) {
 
     window.addEventListener('keydown', handleKeyPress);
     return () => window.removeEventListener('keydown', handleKeyPress);
-  }, [gameStarted, gameOver, answering, options, selectedOptionIndex, handleAnswer]);
+  }, [gameStarted, gameOver, paused, answering, options, selectedOptionIndex, handleAnswer]);
 
 
   // Game Loop
@@ -339,10 +465,12 @@ export function WordDropGame({ lesson, onFinish }: Props) {
 
       // --- All logic computed OUTSIDE the updater ---
 
+      const difficulty = getWordDropDifficulty(correct);
+
       // Apply gravity
       let updated = currentBlocks.map(b => ({
         ...b,
-        y: b.y + b.speed,
+        y: b.y + (b.speed * difficulty.fallMultiplier),
       }));
 
       // Remove blocks at floor (track how many fell for lives)
@@ -362,49 +490,28 @@ export function WordDropGame({ lesson, onFinish }: Props) {
         setTimeout(() => setLoseEffectActive(false), 600); // Match shake duration
       }
 
-      // Difficulty scaling: speed up every 5 combos
-      const difficultyLevel = Math.floor(combo / 5);
-      const speedMultiplier = 1 + (difficultyLevel * 0.25); // +25% speed per difficulty level
-
-      // Spawn logic: first 3 blocks in 5 seconds, then every 10 seconds
+      // Spawn logic: keep spawning on a fixed cadence until the stage cap is reached
       if (lastSpawnRef.current === 0) {
         lastSpawnRef.current = now;
       }
 
       const timeSinceLastSpawn = now - lastSpawnRef.current;
-      const totalBlocksSpawned = blockIdRef.current;
 
-      // If no blocks on screen, spawn immediately to speed up gameplay
+      // If no blocks on screen, spawn immediately. Otherwise keep stacking
+      // until the stage cap is reached.
       let shouldSpawn = false;
       if (updated.length === 0) {
         shouldSpawn = true;
-      } else if (totalBlocksSpawned < 3) {
-        // First 3 blocks: spawn every ~1667ms (5 seconds / 3), scaled by difficulty
-        shouldSpawn = timeSinceLastSpawn >= (1667 / speedMultiplier);
-      } else {
-        // After 3 blocks: spawn every 10 seconds, scaled by difficulty
-        shouldSpawn = timeSinceLastSpawn >= (10000 / speedMultiplier);
+      } else if (updated.length < difficulty.maxActiveBlocks) {
+        shouldSpawn = timeSinceLastSpawn >= (WORD_DROP_SPAWN_INTERVAL_MS / difficulty.spawnMultiplier);
       }
 
       if (shouldSpawn && vocab.length > 0) {
-        const word = vocab[wordIndexRef.current % vocab.length];
-        wordIndexRef.current++;
-
-        // Create lanes to prevent block collisions
-        const numLanes = 3;
-        const laneWidth = arena.width / numLanes;
-        const lane = blockIdRef.current % numLanes;
-        const laneCenter = lane * laneWidth + laneWidth / 2;
-        const x = Math.max(5, Math.min(arena.width - 75, laneCenter - 30 + (Math.random() - 0.5) * 30));
-
-        updated = [...updated, {
-          id: blockIdRef.current++,
-          word,
-          y: -80,
-          x,
-          speed: (0.30 + Math.random() * 0.1) * speedMultiplier,
-        }];
-        lastSpawnRef.current = now;
+        const block = createBlock(arena.width);
+        if (block) {
+          updated = [...updated, block];
+          lastSpawnRef.current = now;
+        }
       }
 
       // Pure state update — just set the computed result
@@ -421,14 +528,47 @@ export function WordDropGame({ lesson, onFinish }: Props) {
         cancelAnimationFrame(gameLoopRef.current);
       }
     };
-  }, [gameOver, gameStarted, vocab, getArenaDimensions]);
+  }, [gameOver, gameStarted, paused, correct, vocab, getArenaDimensions, createBlock]);
 
   // Game Over
+  const finishGame = useCallback(() => {
+    if (finishedRef.current) return;
+    finishedRef.current = true;
+
+    const duration = Math.round((Date.now() - startTimeRef.current) / 1000);
+    const totalAttempts = correct + wrong;
+    const accuracy = totalAttempts > 0 ? Math.round((correct / totalAttempts) * 100) : 0;
+    const result = store.completeGame(
+      lesson.id,
+      'word-drop',
+      score,
+      Math.max(WORD_DROP_TARGET_CORRECT * 10, score, 1),
+      {
+        percent: getWordDropPercent(correct),
+        isPerfect: false,
+      },
+    );
+
+    store.logSession({
+      type: 'word-drop',
+      lessonId: lesson.id,
+      score,
+      accuracy,
+      duration,
+      wordsAttempted: totalAttempts,
+    });
+
+    setXpGained(50 + (result.isPerfect ? 100 : 0));
+    setRecordBeat(result.isNewBest);
+    setGameOver(true);
+    SFX.gameover();
+  }, [correct, lesson.id, score, store, wrong]);
+
   useEffect(() => {
     if (lives <= 0) {
-      setGameOver(true);
+      finishGame();
     }
-  }, [lives]);
+  }, [finishGame, lives]);
 
   // Handle Answer
 
@@ -438,12 +578,28 @@ export function WordDropGame({ lesson, onFinish }: Props) {
     console.log('Arena ref:', arenaRef.current);
     console.log('Arena dimensions:', getArenaDimensions());
     console.log('Vocab:', vocab.length, 'words');
-    setGameStarted(true);
-  }, [getArenaDimensions, vocab]);
 
-  const goBack = useCallback(() => {
-    navigate(-1);
-  }, [navigate]);
+    if (vocab.length === 0) {
+      return;
+    }
+
+    const arena = getArenaDimensions();
+    const initialBlock = createBlock(arena.width);
+    const now = Date.now();
+
+    startTimeRef.current = Date.now();
+    finishedRef.current = false;
+    lastSpawnRef.current = now;
+    setPaused(false);
+    setBlocks(initialBlock ? [initialBlock] : []);
+    blocksRef.current = initialBlock ? [initialBlock] : [];
+    setGameStarted(true);
+  }, [createBlock, getArenaDimensions, vocab]);
+
+  useEffect(() => {
+    if (gameStarted || gameOver || vocab.length === 0) return;
+    startGame();
+  }, [gameStarted, gameOver, startGame, vocab.length]);
 
   const restartGame = useCallback(() => {
     // Reset all game state
@@ -460,14 +616,24 @@ export function WordDropGame({ lesson, onFinish }: Props) {
     setFeedbackBlockId(null);
     setFeedbackResult(null);
     setGameStarted(false);
+    setPaused(false);
     setSelectedOptionIndex(null);
+    setXpGained(0);
+    setRecordBeat(false);
 
     // Reset refs
     blockIdRef.current = 0;
     wordIndexRef.current = 0;
     lastSpawnRef.current = 0;
     blocksRef.current = [];
+    startTimeRef.current = Date.now();
+    finishedRef.current = false;
   }, []);
+
+  const backButtonLabel = backLabel.toUpperCase();
+  const recordPct = bestScore > 0 ? Math.min((score / bestScore) * 100, 100) : 0;
+  const selectedBlock = selectedBlockId !== null ? blocks.find(b => b.id === selectedBlockId) ?? null : null;
+  const waitingForFirstBlock = gameStarted && blocks.length === 0 && !gameOver;
 
   return (
     <div style={{
@@ -503,6 +669,57 @@ export function WordDropGame({ lesson, onFinish }: Props) {
           }}>
             {lesson.title}
           </p>
+          <div
+            style={{
+              marginTop: 10,
+              marginInline: 'auto',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'stretch',
+              gap: 8,
+              padding: '10px 14px',
+              minWidth: '210px',
+              borderRadius: 16,
+              border: `2px solid ${difficultyTone.border}`,
+              background: difficultyTone.background,
+              color: difficultyTone.text,
+              fontFamily: 'Orbitron, sans-serif',
+              fontSize: '0.72rem',
+              fontWeight: 800,
+              letterSpacing: '1px',
+              boxShadow: difficultyTone.glow,
+            }}
+          >
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 10 }}>
+              <span>⚙️ NÍVEL {difficultyState.level}/10</span>
+              <span style={{ opacity: 0.8, fontSize: '0.66rem' }}>
+                {difficultyState.nextLevelAt === null
+                  ? 'MAX'
+                  : `PRÓX. ${difficultyState.nextLevelAt}`}
+              </span>
+            </div>
+            <div
+              style={{
+                width: '100%',
+                height: '8px',
+                borderRadius: 999,
+                overflow: 'hidden',
+                background: 'rgba(255,255,255,0.08)',
+                border: '1px solid rgba(255,255,255,0.08)',
+              }}
+            >
+              <div
+                style={{
+                  width: `${difficultyState.progressWithinLevel * 100}%`,
+                  height: '100%',
+                  borderRadius: 999,
+                  background: difficultyTone.text,
+                  boxShadow: difficultyTone.glow,
+                  transition: 'width 0.25s ease-out',
+                }}
+              />
+            </div>
+          </div>
           {gameStarted && !gameOver && (
             <button onClick={() => setPaused(!paused)} style={{
               marginTop: 10, padding: '8px 20px', background: paused ? 'var(--green)' : 'rgba(255,255,255,0.08)',
@@ -555,6 +772,13 @@ export function WordDropGame({ lesson, onFinish }: Props) {
           </div>
         </div>
 
+        {bestScore > 0 && (
+          <div className="game-record-bar">
+            <div className="game-record-fill" style={{ width: `${recordPct}%` }} />
+            <div className="game-record-text">Recorde: {bestScore}</div>
+          </div>
+        )}
+
         {/* Progress Bar */}
         <div style={{
           width: '100%',
@@ -593,6 +817,28 @@ export function WordDropGame({ lesson, onFinish }: Props) {
             backdropFilter: 'blur(5px)',
           }}
         >
+          {waitingForFirstBlock && (
+            <div
+              style={{
+                position: 'absolute',
+                inset: 0,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                flexDirection: 'column',
+                gap: '10px',
+                color: 'var(--cyan)',
+                fontFamily: 'Orbitron, sans-serif',
+                fontWeight: 700,
+                letterSpacing: '1px',
+                background: 'linear-gradient(180deg, rgba(10,22,40,0.15), rgba(10,22,40,0.05))',
+              }}
+            >
+              <div style={{ fontSize: '1.4rem' }}>🧱</div>
+              <div style={{ fontSize: '0.8rem' }}>CARREGANDO PRIMEIRO BLOCO...</div>
+            </div>
+          )}
+
           {blocks.map(block => (
             <div
               key={block.id}
@@ -675,17 +921,17 @@ export function WordDropGame({ lesson, onFinish }: Props) {
             style={{
               fontSize: '1.2rem',
               fontWeight: 900,
-              color: selectedBlockId !== null && blocks.find(b => b.id === selectedBlockId) ? 'var(--gold)' : 'var(--gray)',
+              color: selectedBlock ? 'var(--gold)' : waitingForFirstBlock ? 'var(--cyan)' : 'var(--gray)',
               fontFamily: 'Orbitron, sans-serif',
               wordBreak: 'break-word',
-              textShadow: selectedBlockId !== null && blocks.find(b => b.id === selectedBlockId) ? '0 0 10px rgba(255,215,0,0.4)' : 'none',
+              textShadow: selectedBlock ? '0 0 10px rgba(255,215,0,0.4)' : waitingForFirstBlock ? '0 0 10px rgba(0,191,255,0.35)' : 'none',
               minHeight: '28px',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
             }}
           >
-            {selectedBlockId !== null && blocks.find(b => b.id === selectedBlockId) ? blocks.find(b => b.id === selectedBlockId)?.word.pt : '- Aguardando seleção -'}
+            {selectedBlock ? selectedBlock.word.pt : waitingForFirstBlock ? 'Carregando primeiro bloco...' : '- Aguardando seleção -'}
           </div>
         </div>
 
@@ -761,32 +1007,32 @@ export function WordDropGame({ lesson, onFinish }: Props) {
         <div style={{ display: 'flex', gap: '12px', marginTop: 'auto' }}>
           <button
             onClick={startGame}
-            disabled={gameStarted}
+            disabled={gameStarted && !gameOver}
             style={{
               flex: 1,
               padding: '14px',
-              background: gameStarted ?
+              background: gameStarted && !gameOver ?
                 'linear-gradient(180deg, rgba(100,100,100,0.3), rgba(80,80,80,0.2))' :
                 'linear-gradient(135deg, #FFE566, #FFD700)',
-              color: gameStarted ? 'var(--gray)' : '#000',
+              color: gameStarted && !gameOver ? 'var(--gray)' : '#000',
               fontFamily: 'Orbitron, sans-serif',
               fontWeight: 900,
               fontSize: '0.95rem',
               letterSpacing: '1px',
-              border: gameStarted ? '2px solid rgba(255,255,255,0.1)' : 'none',
-              cursor: gameStarted ? 'not-allowed' : 'pointer',
+              border: gameStarted && !gameOver ? '2px solid rgba(255,255,255,0.1)' : 'none',
+              cursor: gameStarted && !gameOver ? 'not-allowed' : 'pointer',
               borderRadius: '10px',
               transition: 'all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
-              boxShadow: gameStarted ? 'none' : '0 0 20px rgba(255,215,0,0.4), 0 5px 15px rgba(255,215,0,0.2)',
-              transform: gameStarted ? 'none' : 'translateY(0)',
+              boxShadow: gameStarted && !gameOver ? 'none' : '0 0 20px rgba(255,215,0,0.4), 0 5px 15px rgba(255,215,0,0.2)',
+              transform: gameStarted && !gameOver ? 'none' : 'translateY(0)',
             }}
-            onMouseEnter={(e) => !gameStarted && (e.currentTarget.style.transform = 'translateY(-3px)', e.currentTarget.style.boxShadow = '0 0 25px rgba(255,215,0,0.5), 0 8px 20px rgba(255,215,0,0.3)')}
-            onMouseLeave={(e) => !gameStarted && (e.currentTarget.style.transform = 'translateY(0)', e.currentTarget.style.boxShadow = '0 0 20px rgba(255,215,0,0.4), 0 5px 15px rgba(255,215,0,0.2)')}
+            onMouseEnter={(e) => !(gameStarted && !gameOver) && (e.currentTarget.style.transform = 'translateY(-3px)', e.currentTarget.style.boxShadow = '0 0 25px rgba(255,215,0,0.5), 0 8px 20px rgba(255,215,0,0.3)')}
+            onMouseLeave={(e) => !(gameStarted && !gameOver) && (e.currentTarget.style.transform = 'translateY(0)', e.currentTarget.style.boxShadow = '0 0 20px rgba(255,215,0,0.4), 0 5px 15px rgba(255,215,0,0.2)')}
           >
-            {gameStarted ? '▶️ PLAYING' : '🚀 INICIAR'}
+            {gameStarted && !gameOver ? '🟢 EM ANDAMENTO' : '🚀 INICIAR'}
           </button>
           <button
-            onClick={goBack}
+            onClick={onFinish}
             style={{
               flex: 1,
               padding: '14px',
@@ -805,7 +1051,7 @@ export function WordDropGame({ lesson, onFinish }: Props) {
             onMouseEnter={(e) => (e.currentTarget.style.transform = 'translateY(-3px)', e.currentTarget.style.boxShadow = '0 0 25px rgba(155,109,255,0.5), 0 8px 20px rgba(155,109,255,0.3)')}
             onMouseLeave={(e) => (e.currentTarget.style.transform = 'translateY(0)', e.currentTarget.style.boxShadow = '0 0 20px rgba(155,109,255,0.4), 0 5px 15px rgba(155,109,255,0.2)')}
           >
-            📋 MENU
+            ↩ {backButtonLabel}
           </button>
         </div>
 
@@ -869,6 +1115,11 @@ export function WordDropGame({ lesson, onFinish }: Props) {
               <div style={{ fontSize: '3.5rem', marginBottom: '18px', display: 'block', animation: 'emojiFloat 3s ease-in-out infinite' }}>
                 💀
               </div>
+              {recordBeat && (
+                <div className="game-record-alert" style={{ marginBottom: 12 }}>
+                  🏆 NOVO RECORDE!
+                </div>
+              )}
               <h2 style={{
                 fontFamily: 'Orbitron, sans-serif',
                 fontSize: '1.8rem',
@@ -897,11 +1148,11 @@ export function WordDropGame({ lesson, onFinish }: Props) {
                   <span style={{ color: 'var(--green)', fontWeight: 900, fontSize: '1.3rem', textShadow: '0 0 10px rgba(0,255,136,0.5)' }}>{correct}</span>
                 </div>
               </div>
-              <div style={{ display: 'flex', gap: '12px' }}>
+              <div className="game-xp-gained" style={{ marginBottom: 16 }}>+{xpGained} XP ⚡</div>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
                 <button
                   onClick={restartGame}
                   style={{
-                    flex: 1,
                     padding: '14px',
                     background: 'linear-gradient(135deg, var(--green), #00CC66)',
                     color: '#000',
@@ -921,9 +1172,27 @@ export function WordDropGame({ lesson, onFinish }: Props) {
                   🔄 TENTAR NOVAMENTE
                 </button>
                 <button
-                  onClick={() => navigate('/')}
+                  onClick={onSelectMode}
                   style={{
-                    flex: 1,
+                    padding: '14px',
+                    background: 'rgba(0,191,255,0.12)',
+                    color: 'var(--cyan)',
+                    fontFamily: 'Orbitron, sans-serif',
+                    fontWeight: 900,
+                    fontSize: '0.9rem',
+                    letterSpacing: '1px',
+                    border: '2px solid var(--cyan)',
+                    cursor: 'pointer',
+                    borderRadius: '10px',
+                    transition: 'all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
+                    boxShadow: '0 0 20px rgba(0,191,255,0.2)',
+                  }}
+                >
+                  🎯 OUTROS JOGOS
+                </button>
+                <button
+                  onClick={onFinish}
+                  style={{
                     padding: '14px',
                     background: 'linear-gradient(135deg, #FFE566, var(--gold))',
                     color: '#000',
@@ -940,7 +1209,7 @@ export function WordDropGame({ lesson, onFinish }: Props) {
                   onMouseEnter={(e) => (e.currentTarget.style.transform = 'translateY(-2px)', e.currentTarget.style.boxShadow = '0 0 25px rgba(255,215,0,0.6), 0 5px 15px rgba(255,215,0,0.3)')}
                   onMouseLeave={(e) => (e.currentTarget.style.transform = 'translateY(0)', e.currentTarget.style.boxShadow = '0 0 20px rgba(255,215,0,0.4)')}
                 >
-                  📋 MENU
+                  ↩ {backButtonLabel}
                 </button>
               </div>
             </div>

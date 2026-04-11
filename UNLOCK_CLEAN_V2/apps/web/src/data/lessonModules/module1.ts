@@ -1,0 +1,1375 @@
+import type { Lesson } from '@unlock2026/shared';
+
+export const module1Lessons = [
+  { id: 'survival-phrases', title: 'SURVIVAL PHRASES', emoji: '🆘🗣️', description: 'Frases de sobrevivência', module: 1, order: 1,    slides: [
+        { type: 'title', emoji: '🆘🗣️', title: 'SURVIVAL PHRASES', subtitle: 'Frases de sobrevivência — o minimo que você precisa' },
+        { type: 'situation', emoji: '😰', cardClass: 'cyan', text: 'Você acabou de chegar nos Estados Unidos. Não sabe quase nada de inglês. Precisa comer, pedir ajuda, entender o básico. Essas frases são o kit de sobrevivência. Não precisa entender gramatica agora. So decore e use.' },
+        { type: 'sequence-step', stepNumber: 1, totalSteps: 4, emoji: '👋', english: 'Hi, how are you?', portuguese: 'Como vai você?', breakdown: '<strong>HOW ARE YOU</strong> = como vai. Resposta: "I\'m good, thanks."' },
+        { type: 'sequence-step', stepNumber: 2, totalSteps: 4, emoji: '😊', english: 'I\'m good, thanks. And you?', portuguese: 'Estou bem, obrigado. E você?', breakdown: '<strong>I\'M GOOD</strong> = estou bem. Contração de "I am". Natural e casual.' },
+        { type: 'sequence-step', stepNumber: 3, totalSteps: 4, emoji: '🤝', english: 'Good. Nice to meet you.', portuguese: 'Prazer em conhecer.', breakdown: '<strong>NICE TO MEET YOU</strong> = prazer. Responda: "Nice to meet you too!"' },
+        { type: 'sequence-step', stepNumber: 4, totalSteps: 4, emoji: '👍', english: 'Nice to meet you too.', portuguese: 'Prazer em conhecer você também.', breakdown: '<strong>NICE TO MEET YOU</strong> = prazer. Responda: "Nice to meet you too!"' },
+        { type: 'examples', cardClass: 'purple', title: '👋 CUMPRIMENTOS BASICOS', revealOnHover: true, items: [
+          { emoji: '📋', en: 'Hi / Hello', pt: 'Oi / Ola' },
+          { emoji: '💬', en: 'Good morning', pt: 'Bom dia' },
+          { emoji: '🔑', en: 'How are you? — I\'m good, thanks.', pt: 'Como vai? — Estou bem, obrigado.' },
+          { emoji: '⚡', en: 'Nice to meet you.', pt: 'Prazer em conhecer.' }
+        ]},
+        { type: 'examples', cardClass: 'green', title: '💡 FRASES DE NECESSIDADE', revealOnHover: true, items: [
+          { emoji: '📋', en: 'I need help.', pt: 'Preciso de ajuda.' },
+          { emoji: '💬', en: 'I need water.', pt: 'Preciso de água.' },
+          { emoji: '🔑', en: 'I need a bathroom.', pt: 'Preciso de banheiro.' },
+          { emoji: '⚡', en: 'I don\'t understand.', pt: 'Não entendo.' },
+          { emoji: '🎯', en: 'Can you repeat?', pt: 'Pode repetir?' }
+        ]},
+        { type: 'examples', cardClass: 'orange', title: '💬 FRASES DE EMERGENCIA', revealOnHover: true, items: [
+          { emoji: '📋', en: 'Help!', pt: 'Socorro!' },
+          { emoji: '💬', en: 'Call 911!', pt: 'Liga pro 911!' },
+          { emoji: '🔑', en: 'I\'m hurt.', pt: 'Estou machucado.' },
+          { emoji: '⚡', en: 'Where is the hospital?', pt: 'Onde é o hospital?' }
+        ]},
+        { type: 'examples', cardClass: 'gold', title: '📦 FRASES DO DIA A DIA', revealOnHover: true, items: [
+          { emoji: '📋', en: 'Yes / No', pt: 'Sim / Não' },
+          { emoji: '💬', en: 'Please / Thank you', pt: 'Por favor / Obrigado' },
+          { emoji: '🔑', en: 'Excuse me', pt: 'Com licenca' },
+          { emoji: '⚡', en: 'Sorry', pt: 'Desculpa' },
+          { emoji: '🎯', en: 'How much is this?', pt: 'Quanto custa isso?' },
+          { emoji: '📦', en: 'Where is the bathroom?', pt: 'Onde é o banheiro?' }
+        ]},
+        { type: 'tip', cardClass: 'green', icon: '💡', title: 'DICA DE OURO', text: 'Não tente traduzir. Decore a frase inteira como um bloco. "I don\'t understand" e uma<br><br>frase so — não tres palavras separadas.' },
+        { type: 'comparison', cardClass: 'red', title: '⚠️ ERRO COMUM', leftClass: 'wrong', rightClass: 'right', leftIcon: '❌', rightIcon: '✅', leftLabel: 'ERRADO', rightLabel: 'CERTO', left: 'Please repeat', leftNote: '', right: 'Can you repeat?', rightNote: 'Com "please repeat" você parece estar dando uma ordem.', explanation: '' },
+        { type: 'comparison', cardClass: 'red', title: '⚠️ ERRO COMUM', leftClass: 'wrong', rightClass: 'right', leftIcon: '❌', rightIcon: '✅', leftLabel: 'ERRADO', rightLabel: 'CERTO', left: 'I no understand', leftNote: '', right: 'I don\'t understand', rightNote: 'Negacao em inglês usa DON\'T, não "no" antes do verbo.', explanation: '' },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 Como se diz "Oi / Ola" em inglês?', options: ['Hi / Hello', 'Good morning', 'Good afternoon'], correct: 0 },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 O que significa "Good evening / Good night"?', options: ['Boa noite', 'Como você está?', 'Estou bem'], correct: 0 },
+        { type: 'list', cardClass: 'gold', title: '📝 RESUMO - SURVIVAL PHRASES', items: [
+  ,
+          { emoji: '✅', text: 'Cumprimentar alguém' },
+          { emoji: '✅', text: 'Pedir ajuda basica' },
+          { emoji: '✅', text: 'Falar em emergência' },
+          { emoji: '✅', text: 'Usar frases do dia a dia sem travar' }
+        ]},
+        { type: 'fill-blank', cardClass: 'cyan', prompt: '✍️ Complete a frase:', sentence: 'I don\'t _____.', correctWord: 'understand' },
+        { type: 'fill-blank', cardClass: 'cyan', prompt: '✍️ Complete a frase:', sentence: '_____ you repeat?', correctWord: 'Can' },
+        { type: 'end' }
+      ],
+      vocabulary: [
+        { emoji: '📋', pt: 'Oi / Ola', en: 'Hi / Hello', level: 1 },
+        { emoji: '🌅', pt: 'Bom dia', en: 'Good morning', level: 1 },
+        { emoji: '🌅', pt: 'Boa tarde', en: 'Good afternoon', level: 1 },
+        { emoji: '🌅', pt: 'Boa noite', en: 'Good evening / Good night', level: 1 },
+        { emoji: '❓', pt: 'Como você está?', en: 'How are you?', level: 1 },
+        { emoji: '📋', pt: 'Estou bem', en: 'I\'m good / I\'m fine', level: 1 },
+        { emoji: '📋', pt: 'Prazer', en: 'Nice to meet you', level: 1 },
+        { emoji: '🆘', pt: 'Preciso de ajuda', en: 'I need help', level: 1 },
+        { emoji: '💡', pt: 'Preciso de água', en: 'I need water', level: 1 },
+        { emoji: '📍', pt: 'Onde é o banheiro?', en: 'Where is the bathroom?', level: 1 },
+        { emoji: '🚫', pt: 'Não entendo', en: 'I don\'t understand', level: 1 },
+        { emoji: '🍽️', pt: 'Pode repetir?', en: 'Can you repeat?', level: 1 },
+        { emoji: '🤝', pt: 'Por favor', en: 'Please', level: 1 },
+        { emoji: '🙏', pt: 'Obrigado', en: 'Thank you / Thanks', level: 1 },
+        { emoji: '📋', pt: 'Com licenca', en: 'Excuse me', level: 1 },
+        { emoji: '😔', pt: 'Desculpa', en: 'Sorry', level: 1 },
+        { emoji: '📋', pt: 'Sim', en: 'Yes', level: 1 },
+        { emoji: '📋', pt: 'Não', en: 'No', level: 1 },
+        { emoji: '❓', pt: 'Quanto custa?', en: 'How much is this?', level: 1 },
+        { emoji: '🆘', pt: 'Socorro!', en: 'Help!', level: 1 },
+        { emoji: '📞', pt: 'Liga pro 911', en: 'Call 911', level: 1 },
+        { emoji: '🏥', pt: 'Estou machucado', en: 'I\'m hurt', level: 1 },
+        { emoji: '📍', pt: 'Onde é o hospital?', en: 'Where is the hospital?', level: 1 },
+        { emoji: '📋', pt: 'Tchau', en: 'Bye / See you', level: 1 },
+        { emoji: '📋', pt: 'OK / Tudo bem', en: 'OK / That\'s fine', level: 1 }
+      ]
+    },
+
+  { id: 'is-are', title: 'IS / ARE', emoji: '✅🔵', description: 'Ser / Estar', module: 1, order: 2,    slides: [
+        { type: 'title', emoji: '✅🔵', title: 'IS / ARE', subtitle: 'Ser / Estar — falar do estado das coisas' },
+        { type: 'situation', emoji: '😰', cardClass: 'cyan', text: 'Grande parte das conversas em inglês não é sobre ação. É sobre estado. Se alguém está bem. Se um lugar está aberto. Se algo está pronto ou atrasado. Em português, isso sai automático: esta, estão, e, são. Em inglês, se você não souber usar IS e ARE, você trava para responder.' },
+        { type: 'sequence-step', stepNumber: 1, totalSteps: 5, emoji: '🏗️', english: 'Hey, is the boss here today?', portuguese: 'Ei, o chefe tá aqui hoje?', breakdown: '<strong>IS + HE</strong> (singular) → inverta pra pergunta: IS the boss here? IS = usado com HE, SHE, IT.' },
+        { type: 'sequence-step', stepNumber: 2, totalSteps: 5, emoji: '👷', english: 'No, he isn\'t. He\'s at the other job site. But the foreman is here.', portuguese: 'Não, ele não tá. Ele tá na outra obra. Mas o encarregado tá aqui.', breakdown: '<strong>ISN\'T</strong> = is not (negativa). <strong>HE\'S</strong> = he is (contração). <strong>IS HERE</strong> = está aqui.' },
+        { type: 'sequence-step', stepNumber: 3, totalSteps: 5, emoji: '🔨', english: 'Are the materials ready? We need to start early today.', portuguese: 'Os materiais tão prontos? Precisa começar cedo hoje.', breakdown: '<strong>ARE + THE MATERIALS</strong> (plural) → ARE = usado com THEY, WE, YOU e plurais. <strong>READY</strong> = pronto.' },
+        { type: 'sequence-step', stepNumber: 4, totalSteps: 5, emoji: '☀️', english: 'It\'s really hot today. The water bottles are in the truck.', portuguese: 'Tá muito quente hoje. As garrafas de água tão no caminhão.', breakdown: '<strong>IT\'S</strong> = it is (tempo, clima). <strong>ARE IN</strong> = estão em (plural + localização).' },
+        { type: 'sequence-step', stepNumber: 5, totalSteps: 5, emoji: '🤝', english: 'You\'re new here, right? I\'m Carlos. Nice to meet you!', portuguese: 'Você é novo aqui, né? Eu sou o Carlos. Prazer!', breakdown: '<strong>YOU\'RE</strong> = you are. <strong>I\'M</strong> = I am. Contrações são o jeito natural de falar.' },
+        { type: 'tip', cardClass: 'orange', icon: '🗣️', title: 'PRONÚNCIA', text: 'IS soa como "IZ" — ARE soa como "AR" Nas contracoes: He\'s = "RIZ" / They\'re = "DEIR"' },
+        { type: 'rule', cardClass: 'purple', text: 'Aprender a usar IS e ARE para falar como algo está agora — quem você e, como algo está, onde algo fica.', keyword: 'IS' },
+        { type: 'examples', cardClass: 'green', title: '📋 IS — SINGULAR (HE / SHE / IT)', revealOnHover: true, items: [
+          { emoji: '📋', en: 'He is tired.', pt: 'Ele está cansado.' },
+          { emoji: '💬', en: 'She is busy.', pt: 'Ela está ocupada.' },
+          { emoji: '🔑', en: 'It is open.', pt: 'Está aberto.' },
+          { emoji: '⚡', en: 'The store is closed.', pt: 'A loja está fechada.' }
+        ]},
+        { type: 'examples', cardClass: 'orange', title: '🔧 ARE — PLURAL / YOU', revealOnHover: true, items: [
+          { emoji: '📋', en: 'You are late.', pt: 'Você está atrasado.' },
+          { emoji: '💬', en: 'We are ready.', pt: 'Estamos prontos.' },
+          { emoji: '🔑', en: 'They are busy.', pt: 'Eles estão ocupados.' },
+          { emoji: '⚡', en: 'The doors are open.', pt: 'As portas estão abertas.' }
+        ]},
+        { type: 'examples', cardClass: 'gold', title: '❓ PERGUNTAS COM IS / ARE', revealOnHover: true, items: [
+          { emoji: '📋', en: 'Is she tired?', pt: 'Ela está cansada?' },
+          { emoji: '💬', en: 'Is it open?', pt: 'Está aberto?' },
+          { emoji: '🔑', en: 'Are you okay?', pt: 'Você está bem?' },
+          { emoji: '⚡', en: 'Are they ready?', pt: 'Eles estão prontos?' }
+        ]},
+        { type: 'examples', cardClass: 'red', title: '🚫 NEGATIVA — NAO ESTA', revealOnHover: true, items: [
+          { emoji: '📋', en: 'I\'m not ready.', pt: 'Não estou pronto.' },
+          { emoji: '💬', en: 'He isn\'t here.', pt: 'Ele não está aqui.' },
+          { emoji: '🔑', en: 'They aren\'t available.', pt: 'Eles não estão disponíveis.' }
+        ]},
+        { type: 'comparison', cardClass: 'red', title: '⚠️ ERRO COMUM', leftClass: 'wrong', rightClass: 'right', leftIcon: '❌', rightIcon: '✅', leftLabel: 'ERRADO', rightLabel: 'CERTO', left: 'She are tired', leftNote: '', right: 'She is tired', rightNote: 'She/He/It = sempre IS.', explanation: '' },
+        { type: 'comparison', cardClass: 'red', title: '⚠️ ERRO COMUM', leftClass: 'wrong', rightClass: 'right', leftIcon: '❌', rightIcon: '✅', leftLabel: 'ERRADO', rightLabel: 'CERTO', left: 'They is ready', leftNote: '', right: 'They are ready', rightNote: 'They/We/You = sempre ARE.', explanation: '' },
+        { type: 'comparison', cardClass: 'red', title: '⚠️ ERRO COMUM', leftClass: 'wrong', rightClass: 'right', leftIcon: '❌', rightIcon: '✅', leftLabel: 'ERRADO', rightLabel: 'CERTO', left: 'Is you okay?', leftNote: '', right: 'Are you okay?', rightNote: 'YOU = sempre ARE.', explanation: '' },
+        { type: 'fill-blank', cardClass: 'cyan', prompt: '✍️ Complete a frase:', sentence: 'He _____ tired.', correctWord: 'is' },
+        { type: 'fill-blank', cardClass: 'cyan', prompt: '✍️ Complete a frase:', sentence: 'She _____ busy.', correctWord: 'is' },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 Como se diz "Eu estou bem" em inglês?', options: ['She is busy / She\'s busy', 'He is tired / He\'s tired', 'I\'m good / I\'m fine'], correct: 2 },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 O que significa "It is open / It\'s open"?', options: ['Você está atrasado', 'Está aberto', 'Está fechado'], correct: 1 },
+        { type: 'list', cardClass: 'gold', title: '📝 RESUMO - IS / ARE', items: [
+  ,
+          { emoji: '✅', text: 'Falar do estado atual de pessoas e coisas' },
+          { emoji: '✅', text: 'Usar IS (singular) e ARE (plural)' },
+          { emoji: '✅', text: 'Fazer perguntas: Is it...? / Are you...?' },
+          { emoji: '✅', text: 'Negar: isn\'t / aren\'t' }
+        ]},
+        { type: 'end' }
+      ],
+      vocabulary: [
+        { emoji: '📋', pt: 'Eu estou bem', en: 'I\'m good / I\'m fine', level: 1 },
+        { emoji: '📋', pt: 'Ele está cansado', en: 'He is tired / He\'s tired', level: 1 },
+        { emoji: '📋', pt: 'Ela está ocupada', en: 'She is busy / She\'s busy', level: 1 },
+        { emoji: '📋', pt: 'Está aberto', en: 'It is open / It\'s open', level: 1 },
+        { emoji: '📋', pt: 'Está fechado', en: 'It is closed / It\'s closed', level: 1 },
+        { emoji: '📋', pt: 'Você está atrasado', en: 'You are late / You\'re late', level: 1 },
+        { emoji: '📋', pt: 'Estamos prontos', en: 'We are ready / We\'re ready', level: 1 },
+        { emoji: '📋', pt: 'Eles estão ocupados', en: 'They are busy / They\'re busy', level: 1 },
+        { emoji: '❓', pt: 'Você está bem?', en: 'Are you okay?', level: 1 },
+        { emoji: '❓', pt: 'Ela está aqui?', en: 'Is she here?', level: 1 },
+        { emoji: '📋', pt: 'Não estou pronto', en: 'I\'m not ready', level: 1 },
+        { emoji: '🚫', pt: 'Ele não está aqui', en: 'He isn\'t here', level: 1 },
+        { emoji: '❓', pt: 'A loja está aberta?', en: 'Is the store open?', level: 1 },
+        { emoji: '📋', pt: 'O material está pronto', en: 'The material is ready', level: 1 },
+        { emoji: '📋', pt: 'Eu estou doente', en: 'I\'m sick', level: 1 },
+        { emoji: '❓', pt: 'Você está pronto?', en: 'Are you ready?', level: 1 },
+        { emoji: '📋', pt: 'Eu estou aqui', en: 'I\'m here', level: 1 },
+        { emoji: '📋', pt: 'Ele está ali', en: 'He\'s there / He\'s over there', level: 1 },
+        { emoji: '❓', pt: 'Esta disponível?', en: 'Is it available?', level: 2 },
+        { emoji: '📋', pt: 'Esta quebrado', en: 'It\'s broken', level: 1 },
+        { emoji: '📋', pt: 'Esta certo', en: 'It\'s correct / That\'s right', level: 1 },
+        { emoji: '📋', pt: 'Esta errado', en: 'It\'s wrong / That\'s wrong', level: 1 },
+        { emoji: '📋', pt: 'Esta quente', en: 'It\'s hot', level: 1 },
+        { emoji: '📋', pt: 'Esta frio', en: 'It\'s cold', level: 1 },
+        { emoji: '📋', pt: 'Tudo bem', en: 'It\'s okay / It\'s fine', level: 1 }
+      ]
+    },
+
+  { id: 'want', title: 'WANT', emoji: '💭✨', description: 'Querer', module: 1, order: 3,    slides: [
+        { type: 'title', emoji: '💭✨', title: 'WANT', subtitle: 'Querer — expressar desejos' },
+        { type: 'situation', emoji: '😰', cardClass: 'cyan', text: 'Você está com fome. Alguem pergunta o que você quer comer. Você quer água. Você quer ir embora. Você quer ajuda. Em inglês, WANT resolve tudo isso. É direto, simples e funciona em qualquer situação.' },
+        { type: 'sequence-step', stepNumber: 1, totalSteps: 4, emoji: '🍽️', english: 'What do you want?', portuguese: 'O que você quer?', breakdown: '<strong>WHAT DO YOU WANT</strong> = o que você quer. Pergunta direta — muito comum.' },
+        { type: 'sequence-step', stepNumber: 2, totalSteps: 4, emoji: '🍔', english: 'I want a hamburger and water, please.', portuguese: 'Quero um hambúrguer e água, por favor.', breakdown: '<strong>I WANT</strong> + coisa = eu quero algo. Direto e educado com "please" no final.' },
+        { type: 'sequence-step', stepNumber: 3, totalSteps: 4, emoji: '❓', english: 'Anything else?', portuguese: 'Mais alguma coisa?', breakdown: '<strong>ANYTHING ELSE?</strong> = mais alguma coisa? Pergunta clássica de restaurante/loja.' },
+        { type: 'sequence-step', stepNumber: 4, totalSteps: 4, emoji: '✅', english: 'No, that\'s it. Thanks.', portuguese: 'Só isso. Obrigado.', breakdown: '<strong>THAT\'S IT</strong> = é isso / só isso. Use pra fechar um pedido.' },
+        { type: 'rule', cardClass: 'purple', text: 'Aprender a usar WANT para dizer o que você quer, perguntar o que alguém quer, e fazer pedidos básicos.', keyword: 'WANT' },
+        { type: 'examples', cardClass: 'green', title: '📋 I WANT — EU QUERO', revealOnHover: true, items: [
+          { emoji: '📋', en: 'I want water.', pt: 'Quero água.' },
+          { emoji: '💬', en: 'I want coffee.', pt: 'Quero café.' },
+          { emoji: '🔑', en: 'I want to go home.', pt: 'Quero ir pra casa.' },
+          { emoji: '⚡', en: 'I want to eat.', pt: 'Quero comer.' }
+        ]},
+        { type: 'examples', cardClass: 'orange', title: '❓ PERGUNTAS COM WANT', revealOnHover: true, items: [
+          { emoji: '📋', en: 'What do you want?', pt: 'O que você quer?' },
+          { emoji: '💬', en: 'Do you want coffee?', pt: 'Você quer café?' },
+          { emoji: '🔑', en: 'Do you want to come?', pt: 'Você quer vir?' }
+        ]},
+        { type: 'examples', cardClass: 'gold', title: '🚫 NEGATIVA — NAO QUERO', revealOnHover: true, items: [
+          { emoji: '📋', en: 'I don\'t want this.', pt: 'Não quero isso.' },
+          { emoji: '💬', en: 'I don\'t want to go.', pt: 'Não quero ir.' },
+          { emoji: '🔑', en: 'She doesn\'t want coffee.', pt: 'Ela não quer café.' }
+        ]},
+        { type: 'comparison', cardClass: 'red', title: '⚠️ ERRO COMUM', leftClass: 'wrong', rightClass: 'right', leftIcon: '❌', rightIcon: '✅', leftLabel: 'ERRADO', rightLabel: 'CERTO', left: 'I want go home', leftNote: '', right: 'I want TO go home', rightNote: 'Antes de verbo, sempre use TO.', explanation: '' },
+        { type: 'comparison', cardClass: 'red', title: '⚠️ ERRO COMUM', leftClass: 'wrong', rightClass: 'right', leftIcon: '❌', rightIcon: '✅', leftLabel: 'ERRADO', rightLabel: 'CERTO', left: 'I no want', leftNote: '', right: 'I don\'t want', rightNote: 'Negacao usa DON\'T, não "no".', explanation: '' },
+        { type: 'fill-blank', cardClass: 'cyan', prompt: '✍️ Complete a frase:', sentence: 'I _____ water', correctWord: 'want' },
+        { type: 'fill-blank', cardClass: 'cyan', prompt: '✍️ Complete a frase:', sentence: 'I _____ coffee', correctWord: 'want' },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 Como se diz "Quero água" em inglês?', options: ['I want water', 'I want coffee', 'I want to eat'], correct: 0 },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 O que significa "I want to go home"?', options: ['O que você quer?', 'Quero dormir', 'Quero ir pra casa'], correct: 2 },
+        { type: 'list', cardClass: 'gold', title: '📝 RESUMO - WANT', items: [
+  ,
+          { emoji: '✅', text: 'Dizer o que você quer (coisa ou ação)' },
+          { emoji: '✅', text: 'Perguntar o que alguém quer' },
+          { emoji: '✅', text: 'Recusar: I don\'t want...' }
+        ]},
+        { type: 'tip', cardClass: 'green', icon: '💡', title: 'DICA DE OURO', text: 'Pra soar educado, adicione <strong>please</strong> no final:<br><br>I want water, <strong>please</strong>.<br>I want to go home, <strong>please</strong>.<br><br>Sem "please" pode soar rude!' },
+        { type: 'end' }
+      ],
+      vocabulary: [
+        { emoji: '💭', pt: 'Quero água', en: 'I want water', level: 1 },
+        { emoji: '💭', pt: 'Quero café', en: 'I want coffee', level: 1 },
+        { emoji: '💭', pt: 'Quero comer', en: 'I want to eat', level: 1 },
+        { emoji: '💭', pt: 'Quero ir pra casa', en: 'I want to go home', level: 1 },
+        { emoji: '💭', pt: 'Quero dormir', en: 'I want to sleep', level: 1 },
+        { emoji: '💭', pt: 'O que você quer?', en: 'What do you want?', level: 1 },
+        { emoji: '💭', pt: 'Você quer café?', en: 'Do you want coffee?', level: 1 },
+        { emoji: '💭', pt: 'Você quer ir?', en: 'Do you want to go?', level: 1 },
+        { emoji: '💭', pt: 'Não quero isso', en: 'I don\'t want this', level: 1 },
+        { emoji: '💭', pt: 'Não quero ir', en: 'I don\'t want to go', level: 1 },
+        { emoji: '💭', pt: 'Quero comprar', en: 'I want to buy', level: 1 },
+        { emoji: '💭', pt: 'Quero ligar', en: 'I want to call', level: 1 },
+        { emoji: '💭', pt: 'Quero falar', en: 'I want to talk / I want to speak', level: 1 },
+        { emoji: '💭', pt: 'Quero consertar', en: 'I want to fix', level: 1 },
+        { emoji: '💭', pt: 'Quero aprender', en: 'I want to learn', level: 1 },
+        { emoji: '💭', pt: 'O que você quer comer?', en: 'What do you want to eat?', level: 1 },
+        { emoji: '💭', pt: 'Quero tentar', en: 'I want to try', level: 1 },
+        { emoji: '💼', pt: 'Quero trabalhar', en: 'I want to work', level: 1 },
+        { emoji: '💭', pt: 'Quero descansar', en: 'I want to rest', level: 1 },
+        { emoji: '🆘', pt: 'Quero ajuda', en: 'I want help', level: 1 },
+        { emoji: '💭', pt: 'Ele quer ligar', en: 'He wants to call', level: 1 },
+        { emoji: '💭', pt: 'Ela quer ir', en: 'She wants to go', level: 1 },
+        { emoji: '💭', pt: 'Eles querem comer', en: 'They want to eat', level: 1 },
+        { emoji: '💭', pt: 'Ela não quer', en: 'She doesn\'t want', level: 1 },
+        { emoji: '💭', pt: 'O que ele quer?', en: 'What does he want?', level: 2 }
+      ]
+    },
+
+  { id: 'need', title: 'NEED', emoji: '💡❗', description: 'Precisar', module: 1, order: 4,    slides: [
+        { type: 'title', emoji: '💡❗', title: 'NEED', subtitle: 'Precisar — expressar necessidade' },
+        { type: 'situation', emoji: '😰', cardClass: 'cyan', text: 'WANT é desejo. NEED é necessidade. "I want coffee" = quero café (desejo). "I need water" = preciso de água (necessidade). No trabalho, na rua, em emergência — NEED é mais forte que WANT.' },
+        { type: 'sequence-step', stepNumber: 1, totalSteps: 4, emoji: '🏗️', english: 'I need more tiles.', portuguese: 'Preciso de mais azulejos.', breakdown: '<strong>I NEED</strong> + coisa = preciso de algo. Direto e claro.' },
+        { type: 'sequence-step', stepNumber: 2, totalSteps: 4, emoji: '👷', english: 'How many?', portuguese: 'Quantos?', breakdown: '<strong>HOW MANY</strong> = quantos. Use com coisas contáveis (boxes, tiles, hours).' },
+        { type: 'sequence-step', stepNumber: 3, totalSteps: 4, emoji: '🔧', english: 'About 20.', portuguese: 'Uns 20.', breakdown: '<strong>ABOUT + número</strong> = mais ou menos. Aproximação — muito útil.' },
+        { type: 'sequence-step', stepNumber: 4, totalSteps: 4, emoji: '✅', english: 'I\'ll get them.', portuguese: 'Vou buscar.', breakdown: '<strong>I\'LL GET</strong> = eu pego/busco. Oferecendo ajuda de forma rápida.' },
+        { type: 'rule', cardClass: 'purple', text: 'Aprender a usar NEED para expressar necessidade — o que você precisa ter ou fazer.', keyword: 'NEED' },
+        { type: 'examples', cardClass: 'green', title: '📋 I NEED — EU PRECISO', revealOnHover: true, items: [
+          { emoji: '📋', en: 'I need help.', pt: 'Preciso de ajuda.' },
+          { emoji: '💬', en: 'I need a break.', pt: 'Preciso de uma pausa.' },
+          { emoji: '🔑', en: 'I need to go.', pt: 'Preciso ir.' },
+          { emoji: '⚡', en: 'I need to call my wife.', pt: 'Preciso ligar pra minha esposa.' }
+        ]},
+        { type: 'examples', cardClass: 'orange', title: '❓ PERGUNTAS E NEGATIVA', revealOnHover: true, items: [
+          { emoji: '📋', en: 'Do you need help?', pt: 'Você precisa de ajuda?' },
+          { emoji: '💬', en: 'What do you need?', pt: 'O que você precisa?' },
+          { emoji: '🔑', en: 'I don\'t need this.', pt: 'Não preciso disso.' }
+        ]},
+        { type: 'comparison', cardClass: 'red', title: '⚠️ ERRO COMUM', leftClass: 'wrong', rightClass: 'right', leftIcon: '❌', rightIcon: '✅', leftLabel: 'ERRADO', rightLabel: 'CERTO', left: 'I need go', leftNote: '', right: 'I need TO go', rightNote: 'Antes de verbo, sempre TO.', explanation: '' },
+        { type: 'comparison', cardClass: 'red', title: '⚠️ ERRO COMUM', leftClass: 'wrong', rightClass: 'right', leftIcon: '❌', rightIcon: '✅', leftLabel: 'ERRADO', rightLabel: 'CERTO', left: 'I no need', leftNote: '', right: 'I don\'t need', rightNote: 'Negacao com DON\'T.', explanation: '' },
+        { type: 'fill-blank', cardClass: 'cyan', prompt: '✍️ Complete a frase:', sentence: 'I _____ help', correctWord: 'need' },
+        { type: 'fill-blank', cardClass: 'cyan', prompt: '✍️ Complete a frase:', sentence: 'I _____ water', correctWord: 'need' },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 Como se diz "Preciso de ajuda" em inglês?', options: ['I need help', 'I need a break', 'I need water'], correct: 0 },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 O que significa "I need to go"?', options: ['Preciso ligar', 'Preciso ir', 'Preciso de ferramentas'], correct: 1 },
+        { type: 'tip', cardClass: 'green', icon: '💡', title: 'DICA DE OURO', text: '<strong>NEED</strong> = necessidade real. <strong>WANT</strong> = desejo.<br><br>I <strong>need</strong> water = preciso de água (sede).<br>I <strong>want</strong> water = quero água (preferência).<br><br>No trabalho, use NEED — soa mais urgente.' },
+        { type: 'list', cardClass: 'gold', title: '📝 RESUMO - NEED', items: [
+          { emoji: '✅', text: 'Dizer o que você precisa' },
+          { emoji: '✅', text: 'Perguntar o que alguém precisa' },
+          { emoji: '✅', text: 'Negar: I don\'t need...' },
+          { emoji: '✅', text: 'Diferenciar NEED de WANT' }
+        ]},
+        { type: 'end' }
+      ],
+      vocabulary: [
+        { emoji: '🆘', pt: 'Preciso de ajuda', en: 'I need help', level: 1 },
+        { emoji: '💡', pt: 'Preciso de água', en: 'I need water', level: 1 },
+        { emoji: '💡', pt: 'Preciso de uma pausa', en: 'I need a break', level: 1 },
+        { emoji: '💡', pt: 'Preciso ir', en: 'I need to go', level: 1 },
+        { emoji: '💡', pt: 'Preciso ligar', en: 'I need to call', level: 1 },
+        { emoji: '💡', pt: 'Preciso de ferramentas', en: 'I need tools', level: 1 },
+        { emoji: '💡', pt: 'Preciso de material', en: 'I need materials / I need supplies', level: 1 },
+        { emoji: '⏰', pt: 'Preciso de mais tempo', en: 'I need more time', level: 1 },
+        { emoji: '💰', pt: 'Preciso de dinheiro', en: 'I need money', level: 1 },
+        { emoji: '💡', pt: 'O que você precisa?', en: 'What do you need?', level: 1 },
+        { emoji: '🆘', pt: 'Você precisa de ajuda?', en: 'Do you need help?', level: 1 },
+        { emoji: '💡', pt: 'Não preciso', en: 'I don\'t need it', level: 1 },
+        { emoji: '💡', pt: 'Preciso de um médico', en: 'I need a doctor', level: 1 },
+        { emoji: '💡', pt: 'Preciso de remedio', en: 'I need medicine', level: 1 },
+        { emoji: '💡', pt: 'Preciso falar com você', en: 'I need to talk to you', level: 1 },
+        { emoji: '💡', pt: 'Preciso assinar', en: 'I need to sign', level: 1 },
+        { emoji: '💡', pt: 'Preciso de banheiro', en: 'I need a bathroom', level: 1 },
+        { emoji: '💡', pt: 'Preciso comer', en: 'I need to eat', level: 1 },
+        { emoji: '💡', pt: 'Preciso ir pra casa', en: 'I need to go home', level: 1 },
+        { emoji: '💡', pt: 'Preciso do meu telefone', en: 'I need my phone', level: 1 },
+        { emoji: '💡', pt: 'Preciso da chave', en: 'I need the key', level: 1 },
+        { emoji: '💡', pt: 'Preciso limpar', en: 'I need to clean', level: 1 },
+        { emoji: '💡', pt: 'Preciso terminar', en: 'I need to finish', level: 1 },
+        { emoji: '💡', pt: 'Preciso verificar', en: 'I need to check', level: 1 },
+        { emoji: '💡', pt: 'Preciso de você', en: 'I need you', level: 1 }
+      ]
+    },
+
+  { id: 'what', title: 'WHAT', emoji: '❓🤔', description: 'Perguntar "o que" / "qual"', module: 1, order: 5,    slides: [
+        { type: 'title', emoji: '❓🤔', title: 'WHAT', subtitle: 'Perguntar "o que" / "qual"' },
+        { type: 'situation', emoji: '😰', cardClass: 'cyan', text: 'Você está no trabalho. O chefe fala algo rápido. Você não entendeu o que ele disse...' },
+        { type: 'sequence-step', stepNumber: 1, totalSteps: 4, emoji: '😅', english: 'Sorry, what did you say?', portuguese: 'Desculpa, o que você disse?', breakdown: '<strong>WHAT + DID + SUJEITO + SAY</strong> = perguntar o que alguém disse. Use quando não entendeu.' },
+        { type: 'sequence-step', stepNumber: 2, totalSteps: 4, emoji: '🤔', english: 'What does that mean?', portuguese: 'O que isso significa?', breakdown: '<strong>WHAT + DOES + THAT + MEAN</strong> = perguntar significado. Essencial quando ouvir palavra nova.' },
+        { type: 'sequence-step', stepNumber: 3, totalSteps: 4, emoji: '📋', english: 'What do I need to do?', portuguese: 'O que eu preciso fazer?', breakdown: '<strong>WHAT + DO + I + NEED TO DO</strong> = pedir instrução clara. Mostra proatividade!' },
+        { type: 'sequence-step', stepNumber: 4, totalSteps: 4, emoji: '👍', english: 'OK, got it!', portuguese: 'OK, entendi!', breakdown: '<strong>GOT IT</strong> = entendi. Muito mais natural que "I understand". Use sempre!' },
+        { type: 'tip', cardClass: 'orange', icon: '🗣️', title: 'PRONÚNCIA', text: 'WHAT soa como "UOT" O "WH" geralmente soa como "U".' },
+        { type: 'rule', cardClass: 'purple', text: 'Aprender a usar WHAT para perguntar "o que" e "qual" em situações reais.', keyword: 'WHAT' },
+        { type: 'examples', cardClass: 'green', title: '📋 WHAT — "O QUE"', revealOnHover: true, items: [
+          { emoji: '📋', en: 'What is this?', pt: 'O que é isso?' },
+          { emoji: '💬', en: 'What do you want?', pt: 'O que você quer?' },
+          { emoji: '🔑', en: 'What happened?', pt: 'O que aconteceu?' },
+          { emoji: '⚡', en: 'What does this mean?', pt: 'O que isso significa?' }
+        ]},
+        { type: 'examples', cardClass: 'orange', title: '🔧 WHAT — "QUAL"', revealOnHover: true, items: [
+          { emoji: '📋', en: 'What is your name?', pt: 'Qual é seu nome?' },
+          { emoji: '💬', en: 'What is your number?', pt: 'Qual é seu número?' },
+          { emoji: '🔑', en: 'What is the address?', pt: 'Qual é o endereço?' },
+          { emoji: '⚡', en: 'What time is it?', pt: 'Que horas são?' }
+        ]},
+        { type: 'tip', cardClass: 'green', icon: '💡', title: 'DICA DE OURO', text: 'Na duvida, use WHAT! E a pergunta mais segura.' },
+        { type: 'comparison', cardClass: 'red', title: '⚠️ ERRO COMUM', leftClass: 'wrong', rightClass: 'right', leftIcon: '❌', rightIcon: '✅', leftLabel: 'ERRADO', rightLabel: 'CERTO', left: 'What means this?', leftNote: '', right: 'What does this mean?', rightNote: 'Use: WHAT + auxiliar + sujeito + verbo.', explanation: '' },
+        { type: 'comparison', cardClass: 'red', title: '⚠️ ERRO COMUM', leftClass: 'wrong', rightClass: 'right', leftIcon: '❌', rightIcon: '✅', leftLabel: 'ERRADO', rightLabel: 'CERTO', left: 'What hour is it?', leftNote: '', right: 'What time is it?', rightNote: 'Em inglês usamos TIME, não "hour".', explanation: '' },
+        { type: 'fill-blank', cardClass: 'cyan', prompt: '✍️ Complete a frase:', sentence: '_____ is this?', correctWord: 'What' },
+        { type: 'fill-blank', cardClass: 'cyan', prompt: '✍️ Complete a frase:', sentence: '_____ do you want?', correctWord: 'What' },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 Como se diz "O que é isso?" em inglês?', options: ['What do you want?', 'What is this?', 'What time is it?'], correct: 1 },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 O que significa "What do you do?"?', options: ['O que você faz?', 'Qual é seu número?', 'O que significa?'], correct: 0 },
+        { type: 'list', cardClass: 'gold', title: '📝 RESUMO - WHAT', items: [
+  ,
+          { emoji: '✅', text: 'Perguntar "o que" e "qual"' },
+          { emoji: '✅', text: 'Usar WHAT TIME para horas' },
+          { emoji: '✅', text: 'Diferenciar WHAT de WHICH' }
+        ]},
+        { type: 'end' }
+      ],
+      vocabulary: [
+        { emoji: '❓', pt: 'O que é isso?', en: 'What is this?', level: 1 },
+        { emoji: '💭', pt: 'O que você quer?', en: 'What do you want?', level: 1 },
+        { emoji: '⏰', pt: 'Que horas são?', en: 'What time is it?', level: 1 },
+        { emoji: '❓', pt: 'O que você faz?', en: 'What do you do?', level: 1 },
+        { emoji: '❓', pt: 'O que significa?', en: 'What does this mean?', level: 2 },
+        { emoji: '❓', pt: 'Qual é seu número?', en: 'What is your number?', level: 1 },
+        { emoji: '❓', pt: 'O que aconteceu?', en: 'What happened?', level: 1 },
+        { emoji: '❓', pt: 'O que há de errado?', en: 'What\'s wrong?', level: 1 },
+        { emoji: '❓', pt: 'Qual é seu nome?', en: 'What\'s your name?', level: 1 },
+        { emoji: '💭', pt: 'O que você quer comer?', en: 'What do you want to eat?', level: 1 },
+        { emoji: '❓', pt: 'O que ele disse?', en: 'What did he say?', level: 1 },
+        { emoji: '💡', pt: 'O que você precisa?', en: 'What do you need?', level: 1 },
+        { emoji: '❓', pt: 'O que você acha?', en: 'What do you think?', level: 2 },
+        { emoji: '❓', pt: 'Qual é o endereço?', en: 'What\'s the address?', level: 1 },
+        { emoji: '❓', pt: 'Qual é sua cor favorita?', en: 'What\'s your favorite color?', level: 1 },
+        { emoji: '⏰', pt: 'Que horas você acorda?', en: 'What time do you wake up?', level: 2 },
+        { emoji: '❓', pt: 'Quanto custa?', en: 'How much is this?', level: 1 },
+        { emoji: '❓', pt: 'Qual carro é seu?', en: 'What car is yours?', level: 1 },
+        { emoji: '❓', pt: 'O que tem no menu?', en: 'What\'s on the menu?', level: 2 },
+        { emoji: '❓', pt: 'O que deu errado?', en: 'What went wrong?', level: 2 },
+        { emoji: '❓', pt: 'O que você está assistindo?', en: 'What are you watching?', level: 1 },
+        { emoji: '❓', pt: 'O que você está lendo?', en: 'What are you reading?', level: 1 },
+        { emoji: '❓', pt: 'O que você está ouvindo?', en: 'What are you listening to?', level: 2 },
+        { emoji: '❓', pt: 'O que tem na TV?', en: 'What\'s on TV?', level: 1 },
+        { emoji: '⏰', pt: 'Que horas você dorme?', en: 'What time do you go to bed?', level: 2 }
+      ]
+    },
+
+  { id: 'where', title: 'WHERE', emoji: '📍❓', description: 'Perguntar sobre lugares', module: 1, order: 6,    slides: [
+        { type: 'title', emoji: '📍❓', title: 'WHERE', subtitle: 'Perguntar sobre lugares' },
+        { type: 'situation', emoji: '🛍️', cardClass: 'cyan', text: 'Você está num shopping. Precisa MUITO ir ao banheiro. Mas não sabe onde fica...' },
+        { type: 'sequence-step', stepNumber: 1, totalSteps: 4, emoji: '😰', english: 'Excuse me!', portuguese: 'Com licença!', breakdown: 'Primeira coisa: chamar a atenção da pessoa de forma educada' },
+        { type: 'sequence-step', stepNumber: 2, totalSteps: 4, emoji: '❓', english: 'Where is the bathroom?', portuguese: 'Onde fica o banheiro?', breakdown: 'Usar <strong>WHERE + IS + LUGAR</strong> específico. "Where is" = "Onde fica" / "Onde é"' },
+        { type: 'sequence-step', stepNumber: 3, totalSteps: 4, emoji: '👉', english: 'It\'s over there.', portuguese: 'Fica ali.', breakdown: 'Resposta comum: <strong>IT\'S + LUGAR</strong>. Outras: "upstairs", "downstairs", "on the left"' },
+        { type: 'sequence-step', stepNumber: 4, totalSteps: 4, emoji: '🙏', english: 'Thank you!', portuguese: 'Obrigado!', breakdown: 'Sempre seja cortês — isso abre portas! Também: "Thanks!" ou "Thank you so much!"' },
+        { type: 'tip', cardClass: 'orange', icon: '🗣️', title: 'PRONÚNCIA', text: 'WHERE soa como "UER" — parece com "WEAR" (vestir).' },
+        { type: 'rule', cardClass: 'purple', text: 'Aprender a usar WHERE para perguntar onde fica, onde está, onde mora — essencial para sobrevivência.', keyword: 'WHERE' },
+        { type: 'examples', cardClass: 'green', title: '❓ WHERE — PERGUNTAR ONDE', revealOnHover: true, items: [
+          { emoji: '📋', en: 'Where is the bathroom?', pt: 'Onde é o banheiro?' },
+          { emoji: '💬', en: 'Where do you live?', pt: 'Onde você mora?' },
+          { emoji: '🔑', en: 'Where do you work?', pt: 'Onde você trabalha?' }
+        ]},
+        { type: 'examples', cardClass: 'orange', title: '🔧 LUGARES ESSENCIAIS', revealOnHover: true, items: [
+          { emoji: '📋', en: 'Where is the hospital?', pt: 'Onde é o hospital?' },
+          { emoji: '💬', en: 'Where is the supermarket?', pt: 'Onde é o supermercado?' },
+          { emoji: '🔑', en: 'Where is the bus stop?', pt: 'Onde é o ponto de ônibus?' },
+          { emoji: '⚡', en: 'Where is the pharmacy?', pt: 'Onde é a farmácia?' },
+          { emoji: '🎯', en: 'Where is the gas station?', pt: 'Onde é o posto?' }
+        ]},
+        { type: 'examples', cardClass: 'gold', title: '💬 WHERE NO PASSADO', revealOnHover: true, items: [
+          { emoji: '📋', en: 'Where did you go?', pt: 'Onde você foi?' },
+          { emoji: '💬', en: 'Where did you park?', pt: 'Onde você estacionou?' },
+          { emoji: '🔑', en: 'Where were you?', pt: 'Onde você estava?' }
+        ]},
+        { type: 'examples', cardClass: 'red', title: '📦 WHERE VS HERE VS THERE', revealOnHover: true, items: [
+          { emoji: '📋', en: 'Come here, please.', pt: 'Vem aqui.' },
+          { emoji: '💬', en: 'Go there and wait.', pt: 'Vai ali e espera.' }
+        ]},
+        { type: 'comparison', cardClass: 'red', title: '⚠️ ERRO COMUM', leftClass: 'wrong', rightClass: 'right', leftIcon: '❌', rightIcon: '✅', leftLabel: 'ERRADO', rightLabel: 'CERTO', left: 'Where is the bathroom at?', leftNote: '', right: 'Where is the bathroom?', rightNote: '"At" e redundante.', explanation: '' },
+        { type: 'comparison', cardClass: 'red', title: '⚠️ ERRO COMUM', leftClass: 'wrong', rightClass: 'right', leftIcon: '❌', rightIcon: '✅', leftLabel: 'ERRADO', rightLabel: 'CERTO', left: 'Where you live?', leftNote: '', right: 'Where do you live?', rightNote: 'Faltou o auxiliar DO.', explanation: '' },
+        { type: 'fill-blank', cardClass: 'cyan', prompt: '✍️ Complete a frase:', sentence: '_____ is the bathroom?', correctWord: 'Where' },
+        { type: 'fill-blank', cardClass: 'cyan', prompt: '✍️ Complete a frase:', sentence: '_____ do you live?', correctWord: 'Where' },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 Como se diz "Onde é o banheiro?" em inglês?', options: ['Where do you live?', 'Where is the bathroom?', 'Where is the supermarket?'], correct: 1 },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 O que significa "Where is the hospital?"?', options: ['Onde você trabalha?', 'Onde é o hospital?', 'Onde você foi?'], correct: 1 },
+        { type: 'list', cardClass: 'gold', title: '📝 RESUMO - WHERE', items: [
+          { emoji: '✅', text: 'Perguntar onde fica: Where is...?' },
+          { emoji: '✅', text: 'Falar onde mora: I live in...' },
+          { emoji: '✅', text: 'Lugares essenciais' },
+          { emoji: '✅', text: 'HERE vs THERE' }
+        ]},
+        { type: 'end' }
+      ],
+      vocabulary: [
+        { emoji: '📍', pt: 'Onde é o banheiro?', en: 'Where is the bathroom?', level: 1 },
+        { emoji: '📍', pt: 'Onde você mora?', en: 'Where do you live?', level: 1 },
+        { emoji: '📍', pt: 'Onde é o supermercado?', en: 'Where is the supermarket?', level: 1 },
+        { emoji: '📍', pt: 'Onde é o hospital?', en: 'Where is the hospital?', level: 1 },
+        { emoji: '💼', pt: 'Onde você trabalha?', en: 'Where do you work?', level: 1 },
+        { emoji: '📍', pt: 'Onde você foi?', en: 'Where did you go?', level: 1 },
+        { emoji: '📍', pt: 'Onde estão as chaves?', en: 'Where are the keys?', level: 1 },
+        { emoji: '📍', pt: 'Onde é o ponto?', en: 'Where is the bus stop?', level: 1 },
+        { emoji: '📍', pt: 'Onde você estacionou?', en: 'Where did you park?', level: 1 },
+        { emoji: '📍', pt: 'Onde é a farmácia?', en: 'Where is the pharmacy?', level: 1 },
+        { emoji: '📍', pt: 'Onde é o posto?', en: 'Where is the gas station?', level: 1 },
+        { emoji: '📍', pt: 'Onde é o banco?', en: 'Where is the bank?', level: 1 },
+        { emoji: '📍', pt: 'Onde podemos comer?', en: 'Where can we eat?', level: 1 },
+        { emoji: '📍', pt: 'Onde é o metro?', en: 'Where is the subway?', level: 1 },
+        { emoji: '📍', pt: 'Onde é a academia?', en: 'Where is the gym?', level: 1 },
+        { emoji: '📍', pt: 'Onde é a igreja?', en: 'Where is the church?', level: 1 },
+        { emoji: '📍', pt: 'Onde é a delegacia?', en: 'Where is the police station?', level: 2 },
+        { emoji: '📋', pt: 'Esta aqui', en: 'It\'s here / It\'s right here', level: 1 },
+        { emoji: '📋', pt: 'Esta ali', en: 'It\'s there / It\'s over there', level: 1 },
+        { emoji: '📋', pt: 'Vem aqui', en: 'Come here', level: 1 },
+        { emoji: '📋', pt: 'Vai ali', en: 'Go there', level: 1 },
+        { emoji: '📍', pt: 'Onde pego táxi?', en: 'Where can I get a táxi?', level: 2 },
+        { emoji: '📍', pt: 'Onde compro água?', en: 'Where can I buy water?', level: 1 },
+        { emoji: '📍', pt: 'Onde está hospedado?', en: 'Where are you staying?', level: 2 },
+        { emoji: '📍', pt: 'Onde você nasceu?', en: 'Where were you born?', level: 1 }
+      ]
+    },
+
+  { id: 'who', title: 'WHO', emoji: '👤❓', description: 'Perguntar sobre pessoas', module: 1, order: 7,    slides: [
+        { type: 'title', emoji: '👤❓', title: 'WHO', subtitle: 'Perguntar sobre pessoas' },
+        { type: 'situation', emoji: '🏗️', cardClass: 'cyan', text: 'Você é novo no trabalho. Precisa saber quem é quem — quem é o chefe, quem é o eletricista, quem liga pra emergência...' },
+        { type: 'sequence-step', stepNumber: 1, totalSteps: 4, emoji: '👋', english: 'Excuse me, who is the foreman?', portuguese: 'Com licença, quem é o encarregado?', breakdown: '<strong>WHO + IS</strong> = quem é. Use pra identificar pessoas no trabalho.' },
+        { type: 'sequence-step', stepNumber: 2, totalSteps: 4, emoji: '👔', english: 'He\'s over there. The tall guy.', portuguese: 'Ele está ali. O cara alto.', breakdown: 'Resposta: <strong>HE\'S / SHE\'S</strong> + descrição. Preste atenção nas pistas visuais!' },
+        { type: 'sequence-step', stepNumber: 3, totalSteps: 4, emoji: '🤝', english: 'Hi, I\'m the new guy. Who do I talk to?', portuguese: 'Oi, sou novo. Com quem eu falo?', breakdown: '<strong>WHO DO I TALK TO</strong> = com quem eu falo. Essencial no primeiro dia.' },
+        { type: 'sequence-step', stepNumber: 4, totalSteps: 4, emoji: '👍', english: 'Talk to John. He\'ll show you around.', portuguese: 'Fala com o John. Ele te mostra tudo.', breakdown: '<strong>HE\'LL SHOW YOU AROUND</strong> = ele te mostra o lugar. Frase muito comum no primeiro dia.' },
+        { type: 'tip', cardClass: 'orange', icon: '🗣️', title: 'PRONÚNCIA', text: 'WHO soa como "RU" — o W é mudo!' },
+        { type: 'rule', cardClass: 'purple', text: 'Aprender a usar WHO para perguntar sobre pessoas — quem é, quem fez, quem está.', keyword: 'WHO' },
+        { type: 'examples', cardClass: 'green', title: '❓ WHO — PERGUNTAR QUEM', revealOnHover: true, items: [
+          { emoji: '📋', en: 'Who is that?', pt: 'Quem é aquele?' },
+          { emoji: '💬', en: 'Who called?', pt: 'Quem ligou?' },
+          { emoji: '🔑', en: 'Who is at the door?', pt: 'Quem está na porta?' },
+          { emoji: '⚡', en: 'Who is your boss?', pt: 'Quem é seu chefe?' }
+        ]},
+        { type: 'examples', cardClass: 'orange', title: '🔧 WHO COM PREPOSICOES', revealOnHover: true, items: [
+          { emoji: '📋', en: 'Who is this for?', pt: 'Pra quem é isso?' },
+          { emoji: '💬', en: 'Who did you go with?', pt: 'Com quem você foi?' },
+          { emoji: '🔑', en: 'Who do you work for?', pt: 'Para quem você trabalha?' }
+        ]},
+        { type: 'comparison', cardClass: 'red', title: '⚠️ ERRO COMUM', leftClass: 'wrong', rightClass: 'right', leftIcon: '❌', rightIcon: '✅', leftLabel: 'ERRADO', rightLabel: 'CERTO', left: 'Who did call?', leftNote: '', right: 'Who called?', rightNote: 'Quando WHO e o sujeito, não use DID.', explanation: '' },
+        { type: 'fill-blank', cardClass: 'cyan', prompt: '✍️ Complete a frase:', sentence: '_____ is that?', correctWord: 'Who' },
+        { type: 'fill-blank', cardClass: 'cyan', prompt: '✍️ Complete a frase:', sentence: '_____ called?', correctWord: 'Who' },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 Como se diz "Quem é aquele?" em inglês?', options: ['Who is that?', 'Who called?', 'Who is at the door?'], correct: 0 },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 O que significa "Who is your boss?"?', options: ['Quem fez isso?', 'Quem é seu chefe?', 'Quem mora aqui?'], correct: 1 },
+        { type: 'list', cardClass: 'gold', title: '📝 RESUMO - WHO', items: [
+          { emoji: '✅', text: 'Perguntar quem é: Who is...?' },
+          { emoji: '✅', text: 'Identificar pessoas no trabalho' },
+          { emoji: '✅', text: 'Who como sujeito (sem DID)' },
+          { emoji: '✅', text: 'Com quem falar: Who do I talk to?' }
+        ]},
+        { type: 'end' }
+      ],
+      vocabulary: [
+        { emoji: '👤', pt: 'Quem é aquele?', en: 'Who is that?', level: 1 },
+        { emoji: '👤', pt: 'Quem ligou?', en: 'Who called?', level: 1 },
+        { emoji: '👤', pt: 'Quem está na porta?', en: 'Who is at the door?', level: 1 },
+        { emoji: '👤', pt: 'Quem é seu chefe?', en: 'Who is your boss?', level: 1 },
+        { emoji: '👤', pt: 'Quem fez isso?', en: 'Who did this?', level: 1 },
+        { emoji: '👤', pt: 'Quem mora aqui?', en: 'Who lives here?', level: 1 },
+        { emoji: '👤', pt: 'Quem está dirigindo?', en: 'Who is driving?', level: 1 },
+        { emoji: '👤', pt: 'Pra quem é isso?', en: 'Who is this for?', level: 1 },
+        { emoji: '👤', pt: 'Com quem você está falando?', en: 'Who are you talking to?', level: 1 },
+        { emoji: '💼', pt: 'Para quem você trabalha?', en: 'Who do you work for?', level: 1 },
+        { emoji: '👤', pt: 'Quem são eles?', en: 'Who are they?', level: 1 },
+        { emoji: '👤', pt: 'Quem ganhou?', en: 'Who won?', level: 1 },
+        { emoji: '💰', pt: 'Quem paga?', en: 'Who pays?', level: 1 },
+        { emoji: '👤', pt: 'Quem mandou isso?', en: 'Who sent this?', level: 1 },
+        { emoji: '👤', pt: 'Quem está falando?', en: 'Who is speaking?', level: 1 },
+        { emoji: '💼', pt: 'Quem trabalha aqui?', en: 'Who works here?', level: 2 },
+        { emoji: '👤', pt: 'Quem sabe?', en: 'Who knows?', level: 2 },
+        { emoji: '👤', pt: 'Quem bateu na porta?', en: 'Who knocked?', level: 2 },
+        { emoji: '👤', pt: 'Quem é seu médico?', en: 'Who is your doctor?', level: 1 },
+        { emoji: '👤', pt: 'Com quem você foi?', en: 'Who did you go with?', level: 1 },
+        { emoji: '👤', pt: 'Quem é o gerente?', en: 'Who is the manager?', level: 1 },
+        { emoji: '👤', pt: 'Quem é o diretor?', en: 'Who is the director?', level: 1 },
+        { emoji: '👤', pt: 'Quem é sua família?', en: 'Who is your family?', level: 1 },
+        { emoji: '👤', pt: 'Quem canta essa musica?', en: 'Who sings this song?', level: 1 }
+      ]
+    },
+
+  { id: 'how-much', title: 'HOW MUCH', emoji: '💰❓', description: 'Quanto', module: 1, order: 8,    slides: [
+        { type: 'title', emoji: '💰❓', title: 'HOW MUCH', subtitle: 'Quanto — preço e coisas incontáveis' },
+        { type: 'situation', emoji: '😰', cardClass: 'cyan', text: 'Em algum momento, você vai precisar perguntar: Quanto custa isso? Em português, tudo vira "quanto". Em inglês, não. Se você usa a forma errada, a frase soa estranha.' },
+        { type: 'sequence-step', stepNumber: 1, totalSteps: 4, emoji: '💰', english: 'How much is this?', portuguese: 'Quanto custa isso?', breakdown: '<strong>HOW MUCH IS THIS</strong> = quanto custa isso. A pergunta de preço mais usada.' },
+        { type: 'sequence-step', stepNumber: 2, totalSteps: 4, emoji: '💵', english: 'It\'s $3.50.', portuguese: 'Custa $3.50.', breakdown: '<strong>IT\'S $X</strong> = custa X dólares. Resposta padrão com preço.' },
+        { type: 'sequence-step', stepNumber: 3, totalSteps: 4, emoji: '🛒', english: 'I\'ll take two.', portuguese: 'Vou levar dois.', breakdown: '<strong>I\'LL TAKE</strong> = eu levo. Forma natural de dizer que vai comprar.' },
+        { type: 'sequence-step', stepNumber: 4, totalSteps: 4, emoji: '✅', english: 'That\'ll be $7.00.', portuguese: 'Vai ficar $7.00.', breakdown: '<strong>THAT\'LL BE</strong> = vai ficar / o total é. O que o caixa fala.' },
+        { type: 'tip', cardClass: 'orange', icon: '🗣️', title: 'PRONÚNCIA', text: 'HOW MUCH soa como "RAU MATCH"' },
+        { type: 'rule', cardClass: 'purple', text: 'Aprender a usar HOW MUCH para perguntar preço e quantidade de coisas incontáveis.', keyword: 'HOW MUCH' },
+        { type: 'examples', cardClass: 'green', title: '📋 HOW MUCH — PRECO', revealOnHover: true, items: [
+          { emoji: '📋', en: 'How much is this?', pt: 'Quanto custa isso?' },
+          { emoji: '💬', en: 'How much is the total?', pt: 'Quanto e o total?' },
+          { emoji: '🔑', en: 'How much do I owe you?', pt: 'Quanto eu te devo?' },
+          { emoji: '⚡', en: 'How much did you pay?', pt: 'Quanto você pagou?' }
+        ]},
+        { type: 'examples', cardClass: 'orange', title: '🔧 HOW MUCH — INCONTAVEIS', revealOnHover: true, items: [
+          { emoji: '📋', en: 'How much water do you want?', pt: 'Quanta água você quer?' },
+          { emoji: '💬', en: 'How much money do you have?', pt: 'Quanto dinheiro você tem?' },
+          { emoji: '🔑', en: 'How much time do we have?', pt: 'Quanto tempo temos?' }
+        ]},
+        { type: 'comparison', cardClass: 'red', title: '⚠️ ERRO COMUM', leftClass: 'wrong', rightClass: 'right', leftIcon: '❌', rightIcon: '✅', leftLabel: 'ERRADO', rightLabel: 'CERTO', left: 'How much dollars?', leftNote: '', right: 'How many dollars? / How much money?', rightNote: 'Dollars = contavel. Money = incontavel.', explanation: '' },
+        { type: 'comparison', cardClass: 'red', title: '⚠️ ERRO COMUM', leftClass: 'wrong', rightClass: 'right', leftIcon: '❌', rightIcon: '✅', leftLabel: 'ERRADO', rightLabel: 'CERTO', left: 'How much people?', leftNote: '', right: 'How many people?', rightNote: 'People = contavel (1 person, 2 people).', explanation: '' },
+        { type: 'fill-blank', cardClass: 'cyan', prompt: '✍️ Complete a frase:', sentence: '_____ is this?', correctWord: 'How much' },
+        { type: 'fill-blank', cardClass: 'cyan', prompt: '✍️ Complete a frase:', sentence: '_____ is the total?', correctWord: 'How much' },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 Como se diz "Quanto custa?" em inglês?', options: ['How much water?', 'How much is this?', 'How much is the total?'], correct: 1 },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 O que significa "How much time?"?', options: ['Quanto café?', 'Quanto dinheiro?', 'Quanto tempo?'], correct: 2 },
+        { type: 'list', cardClass: 'gold', title: '📝 RESUMO - HOW MUCH', items: [
+          { emoji: '✅', text: 'Perguntar preço: How much is this?' },
+          { emoji: '✅', text: 'HOW MUCH vs HOW MANY' },
+          { emoji: '✅', text: 'MUCH = incontável / MANY = contável' },
+          { emoji: '✅', text: 'Negociar e pagar' }
+        ]},
+        { type: 'end' }
+      ],
+      vocabulary: [
+        { emoji: '❓', pt: 'Quanto custa?', en: 'How much is this?', level: 1 },
+        { emoji: '❓', pt: 'Quanto e o total?', en: 'How much is the total?', level: 2 },
+        { emoji: '💧', pt: 'Quanta água?', en: 'How much water?', level: 1 },
+        { emoji: '⏰', pt: 'Quanto tempo?', en: 'How much time?', level: 1 },
+        { emoji: '💰', pt: 'Quanto dinheiro?', en: 'How much money?', level: 1 },
+        { emoji: '❓', pt: 'Quanto café?', en: 'How much coffee?', level: 1 },
+        { emoji: '❓', pt: 'Quanto arroz?', en: 'How much rice?', level: 1 },
+        { emoji: '❓', pt: 'Quanto foi?', en: 'How much was it?', level: 1 },
+        { emoji: '❓', pt: 'Quanto e o pao?', en: 'How much is the bread?', level: 1 },
+        { emoji: '❓', pt: 'Quanto e a gasolina?', en: 'How much is gas?', level: 1 },
+        { emoji: '❓', pt: 'Quanto e o aluguel?', en: 'How much is the rent?', level: 1 },
+        { emoji: '❓', pt: 'Quanto e o ingresso?', en: 'How much is the ticket?', level: 1 },
+        { emoji: '❓', pt: 'Quanto e o táxi?', en: 'How much is the táxi?', level: 1 },
+        { emoji: '💭', pt: 'Quanta água quer?', en: 'How much water do you want?', level: 1 },
+        { emoji: '⏰', pt: 'Quanto tempo tem?', en: 'How much time do you have?', level: 1 },
+        { emoji: '❓', pt: 'Quanto acucar?', en: 'How much sugar?', level: 1 },
+        { emoji: '❓', pt: 'Quanto espaco?', en: 'How much space?', level: 2 },
+        { emoji: '💰', pt: 'Quanto você pagou?', en: 'How much did you pay?', level: 2 },
+        { emoji: '❓', pt: 'Quanto você ganha?', en: 'How much do you make?', level: 2 },
+        { emoji: '❓', pt: 'Quanto custa o telefone?', en: 'How much is the phone?', level: 2 },
+        { emoji: '❓', pt: 'Quanto eu te devo?', en: 'How much do I owe you?', level: 1 },
+        { emoji: '❓', pt: 'Quanto de leite?', en: 'How much milk?', level: 1 },
+        { emoji: '❓', pt: 'Quanto de sal?', en: 'How much salt?', level: 1 },
+        { emoji: '⏰', pt: 'Quanto por hora?', en: 'How much per hour?', level: 1 },
+        { emoji: '❓', pt: 'Quanto por isso?', en: 'How much for this?', level: 1 }
+      ]
+    },
+
+  { id: 'can', title: 'CAN', emoji: '💪✅', description: 'Poder / Conseguir', module: 1, order: 9,    slides: [
+        { type: 'title', emoji: '💪✅', title: 'CAN', subtitle: 'Poder / Conseguir — habilidade e permissao' },
+        { type: 'situation', emoji: '😰', cardClass: 'cyan', text: 'Em português, tudo vira "poder". Eu posso dirigir. Posso entrar? Não posso agora. Em inglês, isso se resolve com uma palavra: CAN.' },
+        { type: 'sequence-step', stepNumber: 1, totalSteps: 4, emoji: '🏗️', english: 'Can you help me with this?', portuguese: 'Pode me ajudar com isso?', breakdown: '<strong>CAN YOU HELP</strong> = pode me ajudar. Forma educada de pedir ajuda.' },
+        { type: 'sequence-step', stepNumber: 2, totalSteps: 4, emoji: '👷', english: 'Yes, I can. What do you need?', portuguese: 'Sim, posso. O que precisa?', breakdown: '<strong>YES, I CAN</strong> = sim, posso. Resposta afirmativa direta.' },
+        { type: 'sequence-step', stepNumber: 3, totalSteps: 4, emoji: '🔧', english: 'Can you hold this for me?', portuguese: 'Pode segurar isso pra mim?', breakdown: '<strong>CAN YOU HOLD</strong> = pode segurar. Pedindo ajuda específica.' },
+        { type: 'sequence-step', stepNumber: 4, totalSteps: 4, emoji: '✅', english: 'Sure.', portuguese: 'Claro.', breakdown: '<strong>SURE</strong> = claro. Resposta rápida e positiva. Mais natural que "yes".' },
+        { type: 'rule', cardClass: 'purple', text: 'Aprender a usar CAN para falar do que você sabe fazer (habilidade) e do que pode fazer (permissao).', keyword: 'CAN' },
+        { type: 'examples', cardClass: 'green', title: '📋 CAN — HABILIDADE', revealOnHover: true, items: [
+          { emoji: '📋', en: 'I can drive.', pt: 'Eu sei dirigir.' },
+          { emoji: '💬', en: 'She can cook very well.', pt: 'Ela sabe cozinhar muito bem.' },
+          { emoji: '🔑', en: 'I can speak English.', pt: 'Eu consigo falar inglês.' },
+          { emoji: '⚡', en: 'He can\'t swim.', pt: 'Ele não sabe nadar.' }
+        ]},
+        { type: 'examples', cardClass: 'orange', title: '🔧 CAN — PERMISSAO', revealOnHover: true, items: [
+          { emoji: '📋', en: 'Can I use the bathroom?', pt: 'Posso usar o banheiro?' },
+          { emoji: '💬', en: 'Can I sit here?', pt: 'Posso sentar aqui?' },
+          { emoji: '🔑', en: 'You can park here.', pt: 'Você pode estacionar aqui.' },
+          { emoji: '⚡', en: 'You can\'t smoke here.', pt: 'Você não pode fumar aqui.' }
+        ]},
+        { type: 'examples', cardClass: 'gold', title: '🚫 CAN\'T — NAO PODER', revealOnHover: true, items: [
+          { emoji: '📋', en: 'I can\'t talk now.', pt: 'Não posso falar agora.' },
+          { emoji: '💬', en: 'You can\'t park here.', pt: 'Não pode estacionar aqui.' },
+          { emoji: '🔑', en: 'He can\'t come today.', pt: 'Ele não pode vir hoje.' }
+        ]},
+        { type: 'comparison', cardClass: 'red', title: '⚠️ ERRO COMUM', leftClass: 'wrong', rightClass: 'right', leftIcon: '❌', rightIcon: '✅', leftLabel: 'ERRADO', rightLabel: 'CERTO', left: 'I can to drive', leftNote: '', right: 'I can drive', rightNote: 'CAN nunca usa TO depois.', explanation: '' },
+        { type: 'comparison', cardClass: 'red', title: '⚠️ ERRO COMUM', leftClass: 'wrong', rightClass: 'right', leftIcon: '❌', rightIcon: '✅', leftLabel: 'ERRADO', rightLabel: 'CERTO', left: 'Do you can help?', leftNote: '', right: 'Can you help me?', rightNote: 'CAN ja e auxiliar. Não precisa de DO.', explanation: '' },
+        { type: 'comparison', cardClass: 'red', title: '⚠️ ERRO COMUM', leftClass: 'wrong', rightClass: 'right', leftIcon: '❌', rightIcon: '✅', leftLabel: 'ERRADO', rightLabel: 'CERTO', left: 'I don\'t can', leftNote: '', right: 'I can\'t', rightNote: 'Negativa de CAN = CAN\'T.', explanation: '' },
+        { type: 'fill-blank', cardClass: 'cyan', prompt: '✍️ Complete a frase:', sentence: 'I _____ drive', correctWord: 'can' },
+        { type: 'fill-blank', cardClass: 'cyan', prompt: '✍️ Complete a frase:', sentence: 'I _____ swim', correctWord: 'can' },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 Como se diz "Eu sei dirigir" em inglês?', options: ['I can swim', 'I can drive', 'I can speak English'], correct: 1 },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 O que significa "She can cook"?', options: ['Posso usar o banheiro?', 'Posso sentar aqui?', 'Ela sabe cozinhar'], correct: 2 },
+        { type: 'tip', cardClass: 'green', icon: '💡', title: 'DICA DE OURO', text: '<strong>CAN</strong> nunca usa TO depois!<br><br>✅ I <strong>can drive</strong><br>❌ I can to drive<br><br>E a negativa é <strong>CAN\'T</strong> (uma palavra só):<br>I can\'t swim. / She can\'t come.' },
+        { type: 'list', cardClass: 'gold', title: '📝 RESUMO - CAN', items: [
+          { emoji: '✅', text: 'Falar o que sabe/pode fazer' },
+          { emoji: '✅', text: 'Pedir ajuda: Can you...?' },
+          { emoji: '✅', text: 'Negar: I can\'t...' },
+          { emoji: '✅', text: 'CAN nunca usa TO depois' }
+        ]},
+        { type: 'end' }
+      ],
+      vocabulary: [
+        { emoji: '📋', pt: 'Eu sei dirigir', en: 'I can drive', level: 1 },
+        { emoji: '📋', pt: 'Eu sei nadar', en: 'I can swim', level: 1 },
+        { emoji: '📋', pt: 'Eu falo inglês', en: 'I can speak English', level: 1 },
+        { emoji: '📋', pt: 'Ela sabe cozinhar', en: 'She can cook', level: 1 },
+        { emoji: '❓', pt: 'Posso usar o banheiro?', en: 'Can I use the bathroom?', level: 1 },
+        { emoji: '❓', pt: 'Posso sentar aqui?', en: 'Can I sit here?', level: 1 },
+        { emoji: '💰', pt: 'Posso pagar com cartão?', en: 'Can I pay with card?', level: 1 },
+        { emoji: '🆘', pt: 'Pode me ajudar?', en: 'Can you help me?', level: 1 },
+        { emoji: '🍽️', pt: 'Pode repetir?', en: 'Can you repeat?', level: 1 },
+        { emoji: '📋', pt: 'Não posso agora', en: 'I can\'t right now', level: 1 },
+        { emoji: '📋', pt: 'Não pode fumar aqui', en: 'You can\'t smoke here', level: 1 },
+        { emoji: '📋', pt: 'Pode estacionar aqui', en: 'You can park here', level: 1 },
+        { emoji: '❓', pt: 'Posso entrar?', en: 'Can I come in?', level: 1 },
+        { emoji: '📋', pt: 'Você consegue', en: 'You can do it', level: 1 },
+        { emoji: '❓', pt: 'Podemos ir agora?', en: 'Can we go now?', level: 1 },
+        { emoji: '❓', pt: 'Posso perguntar?', en: 'Can I ask a question?', level: 1 },
+        { emoji: '📋', pt: 'Posso consertar', en: 'I can fix it', level: 1 },
+        { emoji: '📞', pt: 'Posso ligar?', en: 'Can I call?', level: 1 },
+        { emoji: '❓', pt: 'Consegue carregar?', en: 'Can you carry this?', level: 1 },
+        { emoji: '❓', pt: 'Consegue ver?', en: 'Can you see?', level: 1 },
+        { emoji: '❓', pt: 'Consegue ouvir?', en: 'Can you hear me?', level: 1 },
+        { emoji: '❓', pt: 'Pode assinar aqui?', en: 'Can you sign here?', level: 1 },
+        { emoji: '❓', pt: 'Pode me dar uma carona?', en: 'Can you give me a ride?', level: 2 },
+        { emoji: '❓', pt: 'Pode esperar?', en: 'Can you wait?', level: 1 },
+        { emoji: '❓', pt: 'Pode mandar mensagem?', en: 'Can you send a message?', level: 2 }
+      ]
+    },
+
+  { id: 'have-to', title: 'HAVE TO', emoji: '✋📝', description: 'Ter que', module: 1, order: 10,    slides: [
+        { type: 'title', emoji: '✋📝', title: 'HAVE TO', subtitle: 'Ter que — expressar obrigacao' },
+        { type: 'situation', emoji: '😩', cardClass: 'cyan', text: 'Segunda-feira, 6h da manhã. Você não quer levantar, mas o trabalho está esperando...' },
+        { type: 'sequence-step', stepNumber: 1, totalSteps: 4, emoji: '⏰', english: 'I have to wake up early.', portuguese: 'Tenho que acordar cedo.', breakdown: '<strong>I HAVE TO</strong> + verbo = tenho que fazer. Obrigação do dia a dia.' },
+        { type: 'sequence-step', stepNumber: 2, totalSteps: 4, emoji: '🏗️', english: 'I have to be there at 7.', portuguese: 'Tenho que estar lá às 7.', breakdown: '<strong>HAVE TO BE THERE</strong> = tenho que estar lá. Use com horário: at 7, at 8.' },
+        { type: 'sequence-step', stepNumber: 3, totalSteps: 4, emoji: '📞', english: 'Do you have to work today?', portuguese: 'Você tem que trabalhar hoje?', breakdown: '<strong>DO YOU HAVE TO</strong> = você tem que? Pergunta sobre obrigação.' },
+        { type: 'sequence-step', stepNumber: 4, totalSteps: 4, emoji: '✅', english: 'Yes, I have to. No choice.', portuguese: 'Sim, tenho que. Sem escolha.', breakdown: '<strong>NO CHOICE</strong> = sem escolha. Mostra que não é opcional.' },
+        { type: 'rule', cardClass: 'purple', text: 'Aprender a usar HAVE TO para expressar obrigacao — o que você TEM QUE fazer.', keyword: 'HAVE TO' },
+        { type: 'examples', cardClass: 'green', title: '📋 HAVE TO — TENHO QUE', revealOnHover: true, items: [
+          { emoji: '📋', en: 'I have to work tomorrow.', pt: 'Tenho que trabalhar amanhã.' },
+          { emoji: '💬', en: 'I have to go now.', pt: 'Tenho que ir agora.' },
+          { emoji: '🔑', en: 'She has to leave early.', pt: 'Ela tem que sair cedo.' },
+          { emoji: '⚡', en: 'We have to finish today.', pt: 'Temos que terminar hoje.' }
+        ]},
+        { type: 'examples', cardClass: 'orange', title: '❓ PERGUNTAS E NEGATIVA', revealOnHover: true, items: [
+          { emoji: '📋', en: 'Do you have to work today?', pt: 'Você tem que trabalhar hoje?' },
+          { emoji: '💬', en: 'Does he have to come?', pt: 'Ele tem que vir?' },
+          { emoji: '🔑', en: 'I don\'t have to work tomorrow.', pt: 'Não tenho que trabalhar amanhã.' }
+        ]},
+        { type: 'comparison', cardClass: 'red', title: '⚠️ ERRO COMUM', leftClass: 'wrong', rightClass: 'right', leftIcon: '❌', rightIcon: '✅', leftLabel: 'ERRADO', rightLabel: 'CERTO', left: 'I have go to work', leftNote: 'Faltou o TO', right: 'I have TO go to work', rightNote: 'HAVE TO é junto — nunca esqueça o TO.', explanation: '' },
+        { type: 'comparison', cardClass: 'red', title: '⚠️ ERRO COMUM', leftClass: 'wrong', rightClass: 'right', leftIcon: '❌', rightIcon: '✅', leftLabel: 'ERRADO', rightLabel: 'CERTO', left: 'He have to go', leftNote: '', right: 'He HAS to go', rightNote: 'He/She/It = HAS TO (não HAVE TO).', explanation: '' },
+        { type: 'fill-blank', cardClass: 'cyan', prompt: '✍️ Complete a frase:', sentence: 'I _____ work', correctWord: 'have to' },
+        { type: 'fill-blank', cardClass: 'cyan', prompt: '✍️ Complete a frase:', sentence: 'I _____ go', correctWord: 'have to' },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 Como se diz "Tenho que trabalhar" em inglês?', options: ['I have to go', 'I have to work', 'I have to finish'], correct: 1 },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 O que significa "I have to call"?', options: ['Tenho que ligar', 'Tenho que pagar', 'Tenho que acordar cedo'], correct: 0 },
+        { type: 'tip', cardClass: 'green', icon: '💡', title: 'DICA DE OURO', text: '<strong>HAVE TO</strong> = obrigação (alguém te obriga)<br>I have to work = tenho que trabalhar<br><br><strong>NEED TO</strong> = necessidade pessoal<br>I need to rest = preciso descansar<br><br>He/She: <strong>HAS TO</strong> (não HAVE TO).' },
+        { type: 'list', cardClass: 'gold', title: '📝 RESUMO - HAVE TO', items: [
+          { emoji: '✅', text: 'Expressar obrigação: I have to...' },
+          { emoji: '✅', text: 'Perguntar: Do you have to...?' },
+          { emoji: '✅', text: 'He/She: HAS to (não HAVE to)' },
+          { emoji: '✅', text: 'Diferenciar HAVE TO de NEED TO' }
+        ]},
+        { type: 'end' }
+      ],
+      vocabulary: [
+        { emoji: '💼', pt: 'Tenho que trabalhar', en: 'I have to work', level: 1 },
+        { emoji: '❓', pt: 'Tenho que ir', en: 'I have to go', level: 1 },
+        { emoji: '❓', pt: 'Tenho que terminar', en: 'I have to finish', level: 1 },
+        { emoji: '❓', pt: 'Tenho que ligar', en: 'I have to call', level: 1 },
+        { emoji: '💰', pt: 'Tenho que pagar', en: 'I have to pay', level: 1 },
+        { emoji: '❓', pt: 'Tenho que acordar cedo', en: 'I have to wake up early', level: 1 },
+        { emoji: '❓', pt: 'Tenho que sair cedo', en: 'I have to leave early', level: 1 },
+        { emoji: '✋', pt: 'Tem que assinar', en: 'You have to sign', level: 1 },
+        { emoji: '✋', pt: 'Tem que usar capacete', en: 'You have to wear a hard hat', level: 1 },
+        { emoji: '💼', pt: 'Tem que trabalhar hoje?', en: 'Do you have to work today?', level: 1 },
+        { emoji: '❓', pt: 'Não tenho que ir', en: 'I don\'t have to go', level: 1 },
+        { emoji: '📋', pt: 'Ele tem que vir', en: 'He has to come', level: 1 },
+        { emoji: '📋', pt: 'Ela tem que sair', en: 'She has to leave', level: 1 },
+        { emoji: '✋', pt: 'Temos que esperar', en: 'We have to wait', level: 1 },
+        { emoji: '❓', pt: 'Tenho que ir pra casa', en: 'I have to go home', level: 1 },
+        { emoji: '✋', pt: 'Tem que limpar', en: 'You have to clean', level: 1 },
+        { emoji: '✋', pt: 'Tem que preencher', en: 'You have to fill out', level: 1 },
+        { emoji: '✋', pt: 'Tem que consertar', en: 'You/We have to fix it', level: 1 },
+        { emoji: '✋', pt: 'Tem que chegar as 7', en: 'You have to be there at 7', level: 1 },
+        { emoji: '📋', pt: 'Toda semana', en: 'Every week', level: 1 },
+        { emoji: '✋', pt: 'Tem que usar uniforme', en: 'You have to wear a uniform', level: 2 },
+        { emoji: '📍', pt: 'Tenho que responder', en: 'I have to answer / I have to reply', level: 1 },
+        { emoji: '❓', pt: 'Tenho que ir ao banco', en: 'I have to go to the bank', level: 1 },
+        { emoji: '❓', pt: 'Tenho que ir ao médico', en: 'I have to go to the doctor', level: 1 },
+        { emoji: '❓', pt: 'Tenho que estudar', en: 'I have to study', level: 1 }
+      ]
+    },
+
+  { id: 'need-to', title: 'NEED TO', emoji: '⚡📝', description: 'Precisar fazer', module: 1, order: 11,    slides: [
+        { type: 'title', emoji: '⚡📝', title: 'NEED TO', subtitle: 'Precisar fazer — necessidade de ação' },
+        { type: 'situation', emoji: '🏗️', cardClass: 'cyan', text: 'Fim do dia na obra. Várias coisas urgentes pra resolver antes de ir embora...' },
+        { type: 'sequence-step', stepNumber: 1, totalSteps: 4, emoji: '🧹', english: 'I need to clean up before I go.', portuguese: 'Preciso limpar antes de ir.', breakdown: '<strong>I NEED TO</strong> + verbo = preciso fazer. Necessidade de ação.' },
+        { type: 'sequence-step', stepNumber: 2, totalSteps: 4, emoji: '📞', english: 'I need to call the supplier.', portuguese: 'Preciso ligar pro fornecedor.', breakdown: '<strong>NEED TO CALL</strong> = preciso ligar. Use com qualquer verbo de ação.' },
+        { type: 'sequence-step', stepNumber: 3, totalSteps: 4, emoji: '💬', english: 'Do you need to leave early?', portuguese: 'Você precisa sair mais cedo?', breakdown: '<strong>DO YOU NEED TO</strong> = você precisa? Pergunta sobre necessidade.' },
+        { type: 'sequence-step', stepNumber: 4, totalSteps: 4, emoji: '👍', english: 'Yes, I need to pick up my kids.', portuguese: 'Sim, preciso buscar meus filhos.', breakdown: '<strong>NEED TO PICK UP</strong> = preciso buscar. Razão pessoal — ninguém questiona.' },
+        { type: 'rule', cardClass: 'purple', text: 'Aprender a usar NEED TO para dizer que você precisa fazer algo — ação necessária.', keyword: 'NEED TO' },
+        { type: 'examples', cardClass: 'green', title: '📋 NEED TO — PRECISO FAZER', revealOnHover: true, items: [
+          { emoji: '📋', en: 'I need to go.', pt: 'Preciso ir.' },
+          { emoji: '💬', en: 'I need to talk to you.', pt: 'Preciso falar com você.' },
+          { emoji: '🔑', en: 'I need to finish this.', pt: 'Preciso terminar isso.' },
+          { emoji: '⚡', en: 'She needs to call the boss.', pt: 'Ela precisa ligar pro chefe.' },
+          { emoji: '🎯', en: 'We need to leave now.', pt: 'Precisamos ir agora.' }
+        ]},
+        { type: 'examples', cardClass: 'orange', title: '🚫 NEGATIVA', revealOnHover: true, items: [
+          { emoji: '📋', en: 'I don\'t need to go.', pt: 'Não preciso ir.' },
+          { emoji: '💬', en: 'You don\'t need to worry.', pt: 'Não precisa se preocupar.' }
+        ]},
+        { type: 'fill-blank', cardClass: 'cyan', prompt: '✍️ Complete a frase:', sentence: 'I _____ go', correctWord: 'need to' },
+        { type: 'fill-blank', cardClass: 'cyan', prompt: '✍️ Complete a frase:', sentence: 'I _____ talk', correctWord: 'need to' },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 Como se diz "Preciso ir" em inglês?', options: ['I need to talk', 'I need to finish', 'I need to go'], correct: 2 },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 O que significa "I need to call"?', options: ['Preciso ligar', 'Preciso comprar', 'Preciso pagar'], correct: 0 },
+        { type: 'tip', cardClass: 'green', icon: '💡', title: 'DICA DE OURO', text: '<strong>NEED TO</strong> = ação necessária:<br><br>I need to go. / I need to call.<br><br>Compare: <strong>NEED</strong> (sem TO) = coisa<br>I need water = preciso de água<br>I need TO drink = preciso beber' },
+        { type: 'comparison', cardClass: 'red', title: '⚠️ ERRO COMUM', leftClass: 'wrong', rightClass: 'right', leftIcon: '❌', rightIcon: '✅', leftLabel: 'ERRADO', rightLabel: 'CERTO', left: 'I need go', leftNote: '', right: 'I need TO go', rightNote: 'Antes de verbo, sempre TO.', explanation: '' },
+        { type: 'comparison', cardClass: 'red', title: '⚠️ ERRO COMUM', leftClass: 'wrong', rightClass: 'right', leftIcon: '❌', rightIcon: '✅', leftLabel: 'ERRADO', rightLabel: 'CERTO', left: 'He need to go', leftNote: '', right: 'He NEEDS to go', rightNote: 'He/She/It: NEEDS TO (com S).', explanation: '' },
+        { type: 'list', cardClass: 'gold', title: '📝 RESUMO - NEED TO', items: [
+          { emoji: '✅', text: 'Dizer o que precisa fazer' },
+          { emoji: '✅', text: 'Do you need to...?' },
+          { emoji: '✅', text: 'He/She: NEEDS to (com S)' },
+          { emoji: '✅', text: 'NEED vs NEED TO' }
+        ]},
+        { type: 'end' }
+      ],
+      vocabulary: [
+        { emoji: '💡', pt: 'Preciso ir', en: 'I need to go', level: 1 },
+        { emoji: '💡', pt: 'Preciso falar', en: 'I need to talk', level: 1 },
+        { emoji: '💡', pt: 'Preciso terminar', en: 'I need to finish', level: 1 },
+        { emoji: '💡', pt: 'Preciso ligar', en: 'I need to call', level: 1 },
+        { emoji: '💰', pt: 'Preciso pagar', en: 'I need to pay', level: 1 },
+        { emoji: '💡', pt: 'Preciso comprar', en: 'I need to buy', level: 1 },
+        { emoji: '💡', pt: 'Preciso assinar', en: 'I need to sign', level: 1 },
+        { emoji: '💡', pt: 'Preciso sair', en: 'I need to leave', level: 1 },
+        { emoji: '💡', pt: 'Preciso ir pra casa', en: 'I need to go home', level: 1 },
+        { emoji: '💡', pt: 'Preciso limpar', en: 'I need to clean', level: 1 },
+        { emoji: '💡', pt: 'Preciso consertar', en: 'I need to fix', level: 1 },
+        { emoji: '💡', pt: 'Preciso verificar', en: 'I need to check', level: 1 },
+        { emoji: '💡', pt: 'Ele precisa vir', en: 'He needs to come', level: 1 },
+        { emoji: '💡', pt: 'Ela precisa sair', en: 'She needs to leave', level: 1 },
+        { emoji: '💡', pt: 'Precisa fazer o que?', en: 'What do you need to do?', level: 1 },
+        { emoji: '💡', pt: 'Não preciso ir', en: 'I don\'t need to go', level: 1 },
+        { emoji: '💡', pt: 'Não precisa preocupar', en: 'You don\'t need to worry', level: 1 },
+        { emoji: '💡', pt: 'Preciso ir ao médico', en: 'I need to see a doctor', level: 1 },
+        { emoji: '💡', pt: 'Preciso responder', en: 'I need to answer', level: 1 },
+        { emoji: '💡', pt: 'Preciso comer', en: 'I need to eat', level: 1 },
+        { emoji: '💡', pt: 'Preciso dormir', en: 'I need to sleep', level: 1 },
+        { emoji: '💡', pt: 'Preciso estudar', en: 'I need to study', level: 1 },
+        { emoji: '💡', pt: 'Preciso treinar', en: 'I need to practice', level: 1 },
+        { emoji: '💡', pt: 'Precisamos conversar', en: 'We need to talk', level: 1 },
+        { emoji: '💡', pt: 'Preciso sair as 5', en: 'I need to leave at 5', level: 1 }
+      ]
+    },
+
+  { id: 'imperative', title: 'IMPERATIVE', emoji: '📢👆', description: 'Comandos', module: 1, order: 12,    slides: [
+        { type: 'title', emoji: '📢👆', title: 'IMPERATIVE', subtitle: 'Comandos — dando e recebendo ordens' },
+        { type: 'situation', emoji: '😰', cardClass: 'cyan', text: 'No trabalho, você vai ouvir ordens o dia todo: "Come here." "Wait." "Stop." "Move this." Comandos em inglês são simples: so o verbo. Sem sujeito, sem auxiliar.' },
+        { type: 'sequence-step', stepNumber: 1, totalSteps: 5, emoji: '🏗️', english: 'Move this to the truck.', portuguese: 'Move isso pro caminhão.', breakdown: '<strong>MOVE THIS</strong> = move isso. Comando direto — verbo + objeto.' },
+        { type: 'sequence-step', stepNumber: 2, totalSteps: 5, emoji: '👷', english: 'OK.', portuguese: 'OK.', breakdown: '<strong>OK</strong> = confirmação rápida. Simples e eficiente.' },
+        { type: 'sequence-step', stepNumber: 3, totalSteps: 5, emoji: '🔧', english: 'And bring more tiles.', portuguese: 'E traz mais azulejos.', breakdown: '<strong>BRING MORE</strong> = traz mais. Comando + quantidade.' },
+        { type: 'sequence-step', stepNumber: 4, totalSteps: 5, emoji: '✅', english: 'How many?', portuguese: 'Quantos?', breakdown: '<strong>HOW MANY</strong> = quantos. Use com coisas contáveis (boxes, tiles, hours).' },
+        { type: 'sequence-step', stepNumber: 5, totalSteps: 5, emoji: '🏗️', english: '10 boxes.', portuguese: '10 caixas.', breakdown: 'Repita em voz alta 3 vezes. A repetição é o que fixa a frase na memória.' },
+        { type: 'rule', cardClass: 'purple', text: 'Aprender a dar e entender comandos em inglês — essencial no trabalho e emergências.', keyword: 'IMPERATIVE' },
+        { type: 'examples', cardClass: 'green', title: '📋 ESTRUTURA — SO O VERBO', revealOnHover: true, items: [
+          { emoji: '📋', en: 'Come here.', pt: 'Vem aqui.' },
+          { emoji: '💬', en: 'Wait.', pt: 'Espera.' },
+          { emoji: '🔑', en: 'Stop.', pt: 'Para.' },
+          { emoji: '⚡', en: 'Sit down.', pt: 'Senta.' },
+          { emoji: '🎯', en: 'Stand up.', pt: 'Levanta.' },
+          { emoji: '📦', en: 'Open the door.', pt: 'Abre a porta.' }
+        ]},
+        { type: 'examples', cardClass: 'orange', title: '💼 COMANDOS NO TRABALHO', revealOnHover: true, items: [
+          { emoji: '📋', en: 'Move this.', pt: 'Move isso.' },
+          { emoji: '💬', en: 'Put it there.', pt: 'Coloca ali.' },
+          { emoji: '🔑', en: 'Bring the tools.', pt: 'Traz as ferramentas.' },
+          { emoji: '⚡', en: 'Clean this area.', pt: 'Limpa essa area.' },
+          { emoji: '🎯', en: 'Cut here.', pt: 'Corta aqui.' }
+        ]},
+        { type: 'examples', cardClass: 'gold', title: '🤝 COMANDOS EDUCADOS', revealOnHover: true, items: [
+          { emoji: '📋', en: 'Please wait.', pt: 'Por favor, espere.' },
+          { emoji: '💬', en: 'Sit down, please.', pt: 'Sente, por favor.' },
+          { emoji: '🔑', en: 'Please come here.', pt: 'Por favor, venha aqui.' }
+        ]},
+        { type: 'examples', cardClass: 'red', title: '🚫 NEGATIVA — NAO FACA', revealOnHover: true, items: [
+          { emoji: '📋', en: 'Don\'t touch this.', pt: 'Não toque nisso.' },
+          { emoji: '💬', en: 'Don\'t move.', pt: 'Não se mova.' },
+          { emoji: '🔑', en: 'Don\'t worry.', pt: 'Não se preocupe.' }
+        ]},
+        { type: 'comparison', cardClass: 'red', title: '⚠️ ERRO COMUM', leftClass: 'wrong', rightClass: 'right', leftIcon: '❌', rightIcon: '✅', leftLabel: 'ERRADO', rightLabel: 'CERTO', left: 'You come here', leftNote: '', right: 'Come here', rightNote: 'Comandos não tem sujeito.', explanation: '' },
+        { type: 'comparison', cardClass: 'red', title: '⚠️ ERRO COMUM', leftClass: 'wrong', rightClass: 'right', leftIcon: '❌', rightIcon: '✅', leftLabel: 'ERRADO', rightLabel: 'CERTO', left: 'No touch this', leftNote: '', right: 'Don\'t touch this', rightNote: 'Negativa usa DON\'T, não "no".', explanation: '' },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 Como se diz "Vem aqui" em inglês?', options: ['Come here', 'Stop', 'Wait'], correct: 0 },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 O que significa "Sit down"?', options: ['Levanta', 'Senta', 'Abre a porta'], correct: 1 },
+        { type: 'tip', cardClass: 'green', icon: '💡', title: 'DICA DE OURO', text: 'Comandos em inglês são SIMPLES: só o verbo!<br><br>✅ <strong>Come here.</strong> (Vem aqui)<br>✅ <strong>Stop.</strong> (Para)<br>✅ <strong>Don\'t move.</strong> (Não se mexe)<br><br>Sem sujeito, sem auxiliar. Direto ao ponto.' },
+        { type: 'fill-blank', cardClass: 'cyan', prompt: '✍️ Complete a frase:', sentence: '_____ here.', correctWord: 'Come' },
+        { type: 'fill-blank', cardClass: 'cyan', prompt: '✍️ Complete a frase:', sentence: 'Don\'t _____ this.', correctWord: 'touch' },
+        { type: 'list', cardClass: 'gold', title: '📝 RESUMO - IMPERATIVE', items: [
+          { emoji: '✅', text: 'Dar e entender comandos' },
+          { emoji: '✅', text: 'Ser educado com please' },
+          { emoji: '✅', text: 'Negar com Don\'t' },
+          { emoji: '✅', text: 'Comandos não têm sujeito' }
+        ]},
+        { type: 'end' }
+      ],
+      vocabulary: [
+        { emoji: '📋', pt: 'Vem aqui', en: 'Come here', level: 1 },
+        { emoji: '📋', pt: 'Espera', en: 'Wait', level: 1 },
+        { emoji: '🛑', pt: 'Para', en: 'Stop', level: 1 },
+        { emoji: '📋', pt: 'Senta', en: 'Sit down', level: 1 },
+        { emoji: '📋', pt: 'Levanta', en: 'Stand up', level: 1 },
+        { emoji: '📋', pt: 'Abre a porta', en: 'Open the door', level: 1 },
+        { emoji: '📋', pt: 'Fecha a porta', en: 'Close the door', level: 1 },
+        { emoji: '📋', pt: 'Move isso', en: 'Move this', level: 1 },
+        { emoji: '📋', pt: 'Coloca ali', en: 'Put it there', level: 1 },
+        { emoji: '🔧', pt: 'Traz as ferramentas', en: 'Bring the tools', level: 1 },
+        { emoji: '📋', pt: 'Limpa aqui', en: 'Clean this', level: 1 },
+        { emoji: '📋', pt: 'Corta aqui', en: 'Cut here', level: 1 },
+        { emoji: '📋', pt: 'Olha', en: 'Look', level: 1 },
+        { emoji: '📋', pt: 'Escuta', en: 'Listen', level: 1 },
+        { emoji: '📋', pt: 'Vai', en: 'Go', level: 1 },
+        { emoji: '📋', pt: 'Volta', en: 'Come back', level: 1 },
+        { emoji: '📞', pt: 'Liga pra ele', en: 'Call him', level: 1 },
+        { emoji: '📋', pt: 'Assina aqui', en: 'Sign here', level: 1 },
+        { emoji: '🤝', pt: 'Por favor espere', en: 'Please wait', level: 1 },
+        { emoji: '⚠️', pt: 'Cuidado!', en: 'Be careful!', level: 1 },
+        { emoji: '📋', pt: 'Fica quieto', en: 'Be quiet', level: 1 },
+        { emoji: '🚫', pt: 'Não toca', en: 'Don\'t touch', level: 1 },
+        { emoji: '🚫', pt: 'Não mexe', en: 'Don\'t move', level: 1 },
+        { emoji: '🚫', pt: 'Não preocupa', en: 'Don\'t worry', level: 1 },
+        { emoji: '📋', pt: 'Tenta', en: 'Try', level: 1 }
+      ]
+    },
+
+  { id: 'open-close', title: 'OPEN / CLOSE', emoji: '🚪🔒', description: 'Abre / Fecha', module: 1, order: 13,    slides: [
+        { type: 'title', emoji: '🚪🔒', title: 'OPEN / CLOSE', subtitle: 'Abrir / Fechar' },
+        { type: 'situation', emoji: '🚪', cardClass: 'purple', text: 'Está quente no escritório.<br>Você quer pedir pra <strong>ABRIR</strong> a janela.<br><br>Como pedir?' },
+        { type: 'sequence-step', stepNumber: 1, totalSteps: 5, emoji: '🏢', english: 'Hey, can you open the window? It\'s really hot in here.', portuguese: 'Ei, pode abrir a janela? Tá muito quente aqui.', breakdown: '<strong>CAN YOU OPEN</strong> = pode abrir? Jeito educado de pedir. <strong>IT\'S HOT IN HERE</strong> = tá quente aqui dentro.' },
+        { type: 'sequence-step', stepNumber: 2, totalSteps: 5, emoji: '🪟', english: 'Sure! And close the door, please — the AC is on in the hallway.', portuguese: 'Claro! E fecha a porta, por favor — o ar-condicionado tá ligado no corredor.', breakdown: '<strong>CLOSE THE DOOR</strong> = fecha a porta. <strong>THE AC IS ON</strong> = o ar-condicionado está ligado.' },
+        { type: 'sequence-step', stepNumber: 3, totalSteps: 5, emoji: '📦', english: 'Can you open this box for me? I can\'t find the cutter.', portuguese: 'Pode abrir essa caixa pra mim? Não acho o estilete.', breakdown: '<strong>OPEN THIS BOX</strong> = abrir esta caixa. OPEN serve pra qualquer coisa: porta, caixa, garrafa, app...' },
+        { type: 'sequence-step', stepNumber: 4, totalSteps: 5, emoji: '🏠', english: 'Don\'t forget to close the garage when you leave. And lock the door!', portuguese: 'Não esquece de fechar a garagem quando sair. E tranca a porta!', breakdown: '<strong>CLOSE THE GARAGE</strong> = fechar a garagem. <strong>LOCK THE DOOR</strong> = trancar a porta (LOCK ≠ CLOSE).' },
+        { type: 'sequence-step', stepNumber: 5, totalSteps: 5, emoji: '💻', english: 'Open your email — I sent you the schedule. Close it when you\'re done.', portuguese: 'Abre teu email — mandei a escala. Fecha quando terminar.', breakdown: 'OPEN/CLOSE também funciona pra coisas digitais: <strong>open the app</strong>, <strong>close the tab</strong>, <strong>open the file</strong>.' },
+        { type: 'rule', cardClass: 'cyan', text: 'Comandos simples:', keyword: 'OPEN / CLOSE', keywordAfter: 'Abre / Fecha' },
+        { type: 'example', cardClass: 'green', emoji: '🚪', question: '<span class="hl-green">Open</span> the door.', questionTr: 'Abre a porta.', answer: '(OPEN = abrir)', answerTr: 'Comando' },
+        { type: 'example', cardClass: 'red', emoji: '🪟', question: '<span class="hl-red">Close</span> the window.', questionTr: 'Fecha a janela.', answer: '(CLOSE = fechar)', answerTr: 'Comando' },
+        { type: 'example', cardClass: 'cyan', emoji: '📦', question: "Can you <span class='hl-cyan'>open</span> this for me?", questionTr: 'Você pode abrir isso pra mim?', answer: '(pedido educado)', answerTr: 'CAN YOU...' },
+        { type: 'examples', cardClass: 'green', title: '🚪 OPEN (abrir)', items: [
+          { emoji: '🚪', en: '<span class="hl-green">Open</span> the door', pt: 'Abre a porta' },
+          { emoji: '🪟', en: '<span class="hl-green">Open</span> the window', pt: 'Abre a janela' },
+          { emoji: '📦', en: '<span class="hl-green">Open</span> the box', pt: 'Abre a caixa' },
+          { emoji: '📱', en: '<span class="hl-green">Open</span> the app', pt: 'Abre o app' }
+        ]},
+        { type: 'examples', cardClass: 'red', title: '🔒 CLOSE (fechar)', items: [
+          { emoji: '🚪', en: '<span class="hl-red">Close</span> the door', pt: 'Fecha a porta' },
+          { emoji: '🪟', en: '<span class="hl-red">Close</span> the window', pt: 'Fecha a janela' },
+          { emoji: '👀', en: '<span class="hl-red">Close</span> your eyes', pt: 'Fecha os olhos' },
+          { emoji: '📱', en: '<span class="hl-red">Close</span> the app', pt: 'Fecha o app' }
+        ]},
+        { type: 'tip', cardClass: 'green', icon: '💡', title: 'OPEN vs OPENED', text: '<strong>OPEN</strong> também é adjetivo:<br><br>• The door is <strong>open</strong>. (A porta está aberta)<br>• The store is <strong>open</strong>. (A loja está aberta)<br><br>Não confunda com OPENED (passado do verbo)!' },
+        { type: 'tip', cardClass: 'gold', icon: '⚡', title: 'CLOSE vs CLOSED', text: '<strong>CLOSED</strong> = adjetivo (fechado)<br><br>• The store is <strong>closed</strong>. (A loja está fechada)<br>• Sorry, we\'re <strong>closed</strong>. (Desculpe, estamos fechados)' },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 "A loja está aberta" em inglês:', options: ['The store is opened', 'The store is open', 'The store opens'], correct: 1 },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 "Fecha os olhos" em inglês:', options: ['Close your eyes', 'Closed your eyes', 'Close the eyes'], correct: 0 },
+        { type: 'fill-blank', cardClass: 'cyan', prompt: '✍️ Complete:', sentence: "Can you _____ the window? It\'s cold.", correctWord: 'close' },
+        { type: 'list', cardClass: 'gold', title: '📝 RESUMO', items: [
+          { emoji: '🚪', text: '<strong>OPEN</strong> = abre (verbo) / aberto (adjetivo)' },
+          { emoji: '🔒', text: '<strong>CLOSE</strong> = fecha (verbo)' },
+          { emoji: '🔐', text: '<strong>CLOSED</strong> = fechado (adjetivo)' },
+          { emoji: '🏪', text: 'The store is open/closed' }
+        ]},
+        { type: 'end' }
+      ],
+      vocabulary: [{ emoji: '🚪', pt: 'Abre a porta', en: 'Open the door' },
+        { emoji: '🪟', pt: 'Fecha a janela', en: 'Close the window' },
+        { emoji: '📦', pt: 'Abre a caixa', en: 'Open the box' },
+        { emoji: '👀', pt: 'Fecha os olhos', en: 'Close your eyes' },
+        { emoji: '🏪', pt: 'A loja está aberta', en: 'The store is open' },
+        { emoji: '🔒', pt: 'A loja está fechada', en: 'The store is closed' },
+        { emoji: '📱', pt: 'Abre o app', en: 'Open the app' },
+        { emoji: '💻', pt: 'Fecha o arquivo', en: 'Close the file' },
+        { emoji: '🚗', pt: 'Abre o carro', en: 'Open the car' },
+        { emoji: '🎒', pt: 'Abre a mochila', en: 'Open the bag' },
+      ]
+    },
+
+  { id: 'phrasal-commands', title: 'PHRASAL COMMANDS', emoji: '📝📢', description: 'Fill out, turn off...', module: 1, order: 14,    slides: [
+        { type: 'title', emoji: '📝📢', title: 'PHRASAL COMMANDS', subtitle: 'Fill out, turn off... — comandos com phrasal verbs' },
+        { type: 'situation', emoji: '😰', cardClass: 'cyan', text: 'Alguem pede: "Fill out this form." Você entende "fill" (encher) e "out" (fora). Mas "fill out" = preencher. O significado muda quando junta. Esses são os phrasal verbs — verbos que mudam de sentido com uma preposicao.' },
+        { type: 'sequence-step', stepNumber: 1, totalSteps: 4, emoji: '🏗️', english: 'Pick up those boxes and put them in the truck.', portuguese: 'Pega essas caixas e coloca no caminhão.', breakdown: '<strong>PICK UP</strong> = pegar/levantar. Phrasal verb — PICK + UP são inseparáveis.' },
+        { type: 'sequence-step', stepNumber: 2, totalSteps: 4, emoji: '👷', english: 'OK. Turn off the machine first?', portuguese: 'OK. Desliga a máquina primeiro?', breakdown: '<strong>TURN OFF</strong> = desligar. Com pronome: "turn IT off" (it vai no meio).' },
+        { type: 'sequence-step', stepNumber: 3, totalSteps: 4, emoji: '🔧', english: 'Yes, turn it off. And clean up the area.', portuguese: 'Sim, desliga. E limpa a área.', breakdown: '<strong>TURN OFF</strong> = desligar. Com pronome: "turn IT off" (it vai no meio).' },
+        { type: 'sequence-step', stepNumber: 4, totalSteps: 4, emoji: '✅', english: 'Got it.', portuguese: 'Entendi.', breakdown: '<strong>GOT IT</strong> = entendi. Resposta rápida — muito melhor que "I understand".' },
+        { type: 'rule', cardClass: 'purple', text: 'Aprender os phrasal verbs mais comuns em comandos do dia a dia.', keyword: 'PHRASAL COMMANDS' },
+        { type: 'examples', cardClass: 'green', title: '📋 PHRASAL VERBS ESSENCIAIS', revealOnHover: true, items: [
+          { emoji: '📋', en: 'Fill out this form.', pt: 'Preenche esse formulario.' },
+          { emoji: '💬', en: 'Turn on the light.', pt: 'Liga a luz.' },
+          { emoji: '🔑', en: 'Turn off the machine.', pt: 'Desliga a máquina.' },
+          { emoji: '⚡', en: 'Pick up the box.', pt: 'Pega a caixa.' },
+          { emoji: '🎯', en: 'Put down the tool.', pt: 'Larga a ferramenta.' },
+          { emoji: '📦', en: 'Throw away the trash.', pt: 'Joga fora o lixo.' }
+        ]},
+        { type: 'examples', cardClass: 'orange', title: '🔧 MAIS PHRASAL VERBS UTEIS', revealOnHover: true, items: [
+          { emoji: '📋', en: 'Clean up this area.', pt: 'Limpa essa area.' },
+          { emoji: '💬', en: 'Set up the equipment.', pt: 'Monta o equipamento.' },
+          { emoji: '🔑', en: 'Take off your shoes.', pt: 'Tira o sapato.' },
+          { emoji: '⚡', en: 'Put on your safety vest.', pt: 'Coloca seu colete.' },
+          { emoji: '🎯', en: 'Look out!', pt: 'Cuidado!' },
+          { emoji: '📦', en: 'Watch out!', pt: 'Cuidado!' }
+        ]},
+        { type: 'comparison', cardClass: 'red', title: '⚠️ ERRO COMUM', leftClass: 'wrong', rightClass: 'right', leftIcon: '❌', rightIcon: '✅', leftLabel: 'ERRADO', rightLabel: 'CERTO', left: 'Fill this form', leftNote: '', right: 'Fill OUT this form', rightNote: 'Sem OUT, o significado muda.', explanation: '' },
+        { type: 'comparison', cardClass: 'red', title: '⚠️ ERRO COMUM', leftClass: 'wrong', rightClass: 'right', leftIcon: '❌', rightIcon: '✅', leftLabel: 'ERRADO', rightLabel: 'CERTO', left: 'Turn the light', leftNote: '', right: 'Turn ON the light', rightNote: 'Precisa de ON/OFF para ligar/desligar.', explanation: '' },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 Como se diz "Preenche isso" em inglês?', options: ['Turn on the light', 'Turn off the machine', 'Fill out this form'], correct: 2 },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 O que significa "Pick up the box"?', options: ['Joga fora', 'Larga a ferramenta', 'Pega a caixa'], correct: 2 },
+        { type: 'tip', cardClass: 'green', icon: '💡', title: 'DICA DE OURO', text: 'Phrasal verbs mudam o significado:<br><br><strong>Turn</strong> = virar → <strong>Turn ON</strong> = ligar<br><strong>Pick</strong> = escolher → <strong>Pick UP</strong> = pegar<br><strong>Clean</strong> = limpar → <strong>Clean UP</strong> = organizar<br><br>Sem a partícula, o significado muda!' },
+        { type: 'fill-blank', cardClass: 'cyan', prompt: '✍️ Complete a frase:', sentence: 'Turn _____ the light.', correctWord: 'on' },
+        { type: 'fill-blank', cardClass: 'cyan', prompt: '✍️ Complete a frase:', sentence: 'Fill _____ this form.', correctWord: 'out' },
+        { type: 'list', cardClass: 'gold', title: '📝 RESUMO - PHRASAL COMMANDS', items: [
+          { emoji: '✅', text: 'Entender phrasal verbs no trabalho' },
+          { emoji: '✅', text: 'Usar turn on/off, pick up, clean up' },
+          { emoji: '✅', text: 'Preencher formulários: fill out' },
+          { emoji: '✅', text: 'Desligar: turn off / shut down' }
+        ]},
+        { type: 'end' }
+      ],
+      vocabulary: [
+        { emoji: '📋', pt: 'Preenche isso', en: 'Fill out this form', level: 1 },
+        { emoji: '📞', pt: 'Liga a luz', en: 'Turn on the light', level: 1 },
+        { emoji: '📞', pt: 'Desliga a máquina', en: 'Turn off the machine', level: 1 },
+        { emoji: '📋', pt: 'Pega a caixa', en: 'Pick up the box', level: 1 },
+        { emoji: '🔧', pt: 'Larga a ferramenta', en: 'Put down the tool', level: 1 },
+        { emoji: '📋', pt: 'Joga fora', en: 'Throw away the trash', level: 1 },
+        { emoji: '📋', pt: 'Limpa tudo', en: 'Clean up', level: 1 },
+        { emoji: '📋', pt: 'Monta o equipamento', en: 'Set up the equipment', level: 1 },
+        { emoji: '📋', pt: 'Tira o sapato', en: 'Take off your shoes', level: 1 },
+        { emoji: '📋', pt: 'Coloca o colete', en: 'Put on your vest', level: 1 },
+        { emoji: '⚠️', pt: 'Cuidado!', en: 'Look out! / Watch out!', level: 1 },
+        { emoji: '📞', pt: 'Desliga o telefone', en: 'Turn off your phone', level: 1 },
+        { emoji: '📋', pt: 'Tranca a porta', en: 'Lock up', level: 1 },
+        { emoji: '📋', pt: 'Limpa isso', en: 'Wipe down', level: 1 },
+        { emoji: '📋', pt: 'Coloca ali', en: 'Put it down / Set it down', level: 1 },
+        { emoji: '📋', pt: 'Carrega o caminhão', en: 'Load up the truck', level: 1 },
+        { emoji: '📋', pt: 'Descarrega', en: 'Unload', level: 1 },
+        { emoji: '📋', pt: 'Aperta isso', en: 'Tighten it up', level: 2 },
+        { emoji: '📋', pt: 'Desmonta', en: 'Take apart', level: 2 },
+        { emoji: '📋', pt: 'Levanta isso', en: 'Lift it up', level: 1 },
+        { emoji: '📋', pt: 'Abaixa', en: 'Put it down', level: 1 },
+        { emoji: '📋', pt: 'Anota isso', en: 'Write it down', level: 1 },
+        { emoji: '📋', pt: 'Devolve', en: 'Give it back / Put it back', level: 1 },
+        { emoji: '📋', pt: 'Encosta o carro', en: 'Pull over', level: 2 },
+        { emoji: '📋', pt: 'Aumenta o volume', en: 'Turn it up', level: 1 }
+      ]
+    },
+
+  { id: 'at-work-basic', title: 'AT WORK (Basic)', emoji: '💼👔', description: 'Trabalho', module: 1, order: 15,    slides: [
+        { type: 'title', emoji: '💼👔', title: 'AT WORK (Basic)', subtitle: 'Trabalho — frases basicas do dia a dia' },
+        { type: 'situation', emoji: '😰', cardClass: 'cyan', text: 'Primeiro dia de trabalho. Você precisa se comunicar. Não precisa ser perfeito — precisa ser funcional.' },
+        { type: 'sequence-step', stepNumber: 1, totalSteps: 4, emoji: '👋', english: 'Good morning. I\'m the new guy.', portuguese: 'Bom dia. Sou o novo.', breakdown: '<strong>GOOD MORNING</strong> = bom dia. Use até meio-dia. Depois: "Good afternoon".' },
+        { type: 'sequence-step', stepNumber: 2, totalSteps: 4, emoji: '😊', english: 'Hi, welcome. Come with me.', portuguese: 'Oi, bem-vindo. Vem comigo.', breakdown: '<strong>COME WITH ME</strong> = vem comigo. Convite/instrução amigável.' },
+        { type: 'sequence-step', stepNumber: 3, totalSteps: 4, emoji: '🤝', english: 'Where do I start?', portuguese: 'Onde eu começo?', breakdown: '<strong>WHERE DO I START</strong> = onde eu começo. Pergunta essencial no primeiro dia.' },
+        { type: 'sequence-step', stepNumber: 4, totalSteps: 4, emoji: '👍', english: 'Start here. I\'ll show you.', portuguese: 'Começa aqui. Eu te mostro.', breakdown: '<strong>I\'LL SHOW YOU</strong> = eu te mostro. Oferecendo orientação.' },
+        { type: 'rule', cardClass: 'purple', text: 'Aprender as frases mais usadas no ambiente de trabalho — chegar, perguntar, avisar, se comunicar com colegas e chefe.', keyword: 'AT WORK' },
+        { type: 'examples', cardClass: 'green', title: '💼 CHEGANDO NO TRABALHO', revealOnHover: true, items: [
+          { emoji: '📋', en: 'Good morning.', pt: 'Bom dia.' },
+          { emoji: '💬', en: 'I\'m here.', pt: 'Estou aqui / Cheguei.' },
+          { emoji: '🔑', en: 'Where do I start?', pt: 'Onde eu comeco?' },
+          { emoji: '⚡', en: 'What do I do first?', pt: 'O que eu faco primeiro?' }
+        ]},
+        { type: 'examples', cardClass: 'orange', title: '💼 DURANTE O TRABALHO', revealOnHover: true, items: [
+          { emoji: '📋', en: 'I\'m done.', pt: 'Terminei.' },
+          { emoji: '💬', en: 'I\'m finished.', pt: 'Acabei.' },
+          { emoji: '🔑', en: 'What\'s next?', pt: 'Qual o próximo?' },
+          { emoji: '⚡', en: 'I need more materials.', pt: 'Preciso de mais material.' },
+          { emoji: '🎯', en: 'Where do I put this?', pt: 'Onde eu coloco isso?' },
+          { emoji: '📦', en: 'Can you show me?', pt: 'Pode me mostrar?' }
+        ]},
+        { type: 'examples', cardClass: 'gold', title: '❓ PROBLEMAS E PERGUNTAS', revealOnHover: true, items: [
+          { emoji: '📋', en: 'I don\'t understand.', pt: 'Não entendo.' },
+          { emoji: '💬', en: 'Can you repeat?', pt: 'Pode repetir?' },
+          { emoji: '🔑', en: 'Can you speak slower?', pt: 'Pode falar mais devagar?' },
+          { emoji: '⚡', en: 'Is this right?', pt: 'Isso ta certo?' },
+          { emoji: '🎯', en: 'I need help.', pt: 'Preciso de ajuda.' }
+        ]},
+        { type: 'examples', cardClass: 'red', title: '💼 SAINDO DO TRABALHO', revealOnHover: true, items: [
+          { emoji: '📋', en: 'I\'m leaving.', pt: 'Estou indo embora.' },
+          { emoji: '💬', en: 'See you tomorrow.', pt: 'Ate amanhã.' },
+          { emoji: '🔑', en: 'What time tomorrow?', pt: 'Que horas amanhã?' },
+          { emoji: '⚡', en: 'Same time?', pt: 'Mesmo horário?' }
+        ]},
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 Como se diz "Bom dia" em inglês?', options: ['I\'m here', 'Good morning', 'Where do I start?'], correct: 1 },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 O que significa "I\'m done / I\'m finished"?', options: ['Preciso de material', 'Terminei', 'Qual o próximo?'], correct: 1 },
+        { type: 'tip', cardClass: 'green', icon: '💡', title: 'DICA DE OURO', text: 'No primeiro dia, 3 frases resolvem tudo:<br><br>1. <strong>Where do I start?</strong> (Onde começo?)<br>2. <strong>What do I need to do?</strong> (O que preciso fazer?)<br>3. <strong>Who do I talk to?</strong> (Com quem falo?)<br><br>Decore essas 3 e você sobrevive.' },
+        { type: 'comparison', cardClass: 'red', title: '⚠️ ERRO COMUM', leftClass: 'wrong', rightClass: 'right', leftIcon: '❌', rightIcon: '✅', leftLabel: 'ERRADO', rightLabel: 'CERTO', left: 'What I do?', leftNote: '', right: 'What do I do?', rightNote: 'Perguntas precisam do auxiliar DO.', explanation: '' },
+        { type: 'fill-blank', cardClass: 'cyan', prompt: '✍️ Complete a frase:', sentence: '_____ do I start?', correctWord: 'Where' },
+        { type: 'list', cardClass: 'gold', title: '📝 RESUMO - AT WORK (Basic)', items: [
+          { emoji: '✅', text: 'Chegar e se apresentar' },
+          { emoji: '✅', text: 'Perguntar onde começar' },
+          { emoji: '✅', text: 'Pedir instruções' },
+          { emoji: '✅', text: 'Frases do dia a dia no trabalho' }
+        ]},
+        { type: 'end' }
+      ],
+      vocabulary: [
+        { emoji: '🌅', pt: 'Bom dia', en: 'Good morning', level: 1 },
+        { emoji: '📋', pt: 'Estou aqui', en: 'I\'m here', level: 1 },
+        { emoji: '📍', pt: 'Onde eu comeco?', en: 'Where do I start?', level: 1 },
+        { emoji: '📋', pt: 'Terminei', en: 'I\'m done / I\'m finished', level: 1 },
+        { emoji: '❓', pt: 'Qual o próximo?', en: 'What\'s next?', level: 1 },
+        { emoji: '💡', pt: 'Preciso de material', en: 'I need more materials', level: 1 },
+        { emoji: '📍', pt: 'Onde coloco isso?', en: 'Where do I put this?', level: 1 },
+        { emoji: '❓', pt: 'Pode me mostrar?', en: 'Can you show me?', level: 1 },
+        { emoji: '🍽️', pt: 'Pode repetir?', en: 'Can you repeat?', level: 1 },
+        { emoji: '❓', pt: 'Fala mais devagar?', en: 'Can you speak slower?', level: 1 },
+        { emoji: '❓', pt: 'Isso ta certo?', en: 'Is this right?', level: 1 },
+        { emoji: '🆘', pt: 'Preciso de ajuda', en: 'I need help', level: 1 },
+        { emoji: '📋', pt: 'Estou indo', en: 'I\'m leaving', level: 1 },
+        { emoji: '📋', pt: 'Ate amanhã', en: 'See you tomorrow', level: 1 },
+        { emoji: '⏰', pt: 'Que horas amanhã?', en: 'What time tomorrow?', level: 1 },
+        { emoji: '⏰', pt: 'Mesmo horário', en: 'Same time', level: 1 },
+        { emoji: '❓', pt: 'O que eu faco?', en: 'What do I do?', level: 1 },
+        { emoji: '❓', pt: 'Posso tirar uma pausa?', en: 'Can I take a break?', level: 1 },
+        { emoji: '📍', pt: 'Onde é o banheiro?', en: 'Where is the bathroom?', level: 1 },
+        { emoji: '📍', pt: 'Onde tem água?', en: 'Where is the water?', level: 1 },
+        { emoji: '💡', pt: 'Preciso de ferramentas', en: 'I need tools', level: 1 },
+        { emoji: '💡', pt: 'Preciso ligar', en: 'I need to make a call', level: 1 },
+        { emoji: '📋', pt: 'Prazer', en: 'Nice to meet you', level: 1 },
+        { emoji: '📋', pt: 'Eu sou novo aqui', en: 'I\'m new here', level: 1 },
+        { emoji: '😔', pt: 'Estou atrasado', en: 'I\'m late / Sorry I\'m late', level: 1 }
+      ]
+    },
+
+  { id: 'pay-hours', title: 'PAY & HOURS', emoji: '💰⏰', description: 'Pagamento e horário', module: 1, order: 16,    slides: [
+        { type: 'title', emoji: '💰⏰', title: 'PAY & HOURS', subtitle: 'Pagamento e horário — falar de dinheiro e tempo' },
+        { type: 'situation', emoji: '😰', cardClass: 'cyan', text: 'Você trabalhou a semana toda. Mas o contractor não pagou ainda... Como cobrar? Como perguntar quanto vai ganhar? Como negociar? Dinheiro se resolve com comunicação.' },
+        { type: 'sequence-step', stepNumber: 1, totalSteps: 5, emoji: '💰', english: 'Hey, when do I get paid?', portuguese: 'E aí, quando eu recebo?', breakdown: '<strong>WHEN DO I GET PAID</strong> = quando eu recebo. Pergunta direta sobre pagamento.' },
+        { type: 'sequence-step', stepNumber: 2, totalSteps: 5, emoji: '💵', english: 'Friday.', portuguese: 'Sexta-feira.', breakdown: 'Repita em voz alta 3 vezes. A repetição é o que fixa a frase na memória.' },
+        { type: 'sequence-step', stepNumber: 3, totalSteps: 5, emoji: '🛒', english: 'Cash or check?', portuguese: 'Dinheiro ou cheque?', breakdown: '<strong>CASH OR CHECK</strong> = dinheiro ou cheque. Perguntar forma de pagamento.' },
+        { type: 'sequence-step', stepNumber: 4, totalSteps: 5, emoji: '✅', english: 'Cash.', portuguese: 'Dinheiro.', breakdown: 'Repita em voz alta 3 vezes. A repetição é o que fixa a frase na memória.' },
+        { type: 'sequence-step', stepNumber: 5, totalSteps: 5, emoji: '💰', english: 'OK, thanks.', portuguese: 'OK, obrigado.', breakdown: 'Repita em voz alta 3 vezes. A repetição é o que fixa a frase na memória.' },
+        { type: 'examples', cardClass: 'purple', title: '❓ PERGUNTAR SOBRE PAGAMENTO', revealOnHover: true, items: [
+          { emoji: '📋', en: 'How much do you pay?', pt: 'Quanto você paga?' },
+          { emoji: '💬', en: 'How much per hour?', pt: 'Quanto por hora?' },
+          { emoji: '🔑', en: 'When do I get paid?', pt: 'Quando eu recebo?' },
+          { emoji: '⚡', en: 'Can I get paid today?', pt: 'Posso receber hoje?' },
+          { emoji: '🎯', en: 'Do you pay cash or check?', pt: 'Paga em dinheiro ou cheque?' }
+        ]},
+        { type: 'examples', cardClass: 'green', title: '💼 HORARIO DE TRABALHO', revealOnHover: true, items: [
+          { emoji: '📋', en: 'What time do I start?', pt: 'Que horas comeco?' },
+          { emoji: '💬', en: 'What time do we finish?', pt: 'Que horas acabamos?' },
+          { emoji: '🔑', en: 'How many hours today?', pt: 'Quantas horas hoje?' },
+          { emoji: '⚡', en: 'I worked 8 hours.', pt: 'Trabalhei 8 horas.' },
+          { emoji: '🎯', en: 'I worked overtime.', pt: 'Fiz hora extra.' }
+        ]},
+        { type: 'examples', cardClass: 'orange', title: '💰 NEGOCIANDO', revealOnHover: true, items: [
+          { emoji: '📋', en: 'I want $25 per hour.', pt: 'Quero $25 por hora.' },
+          { emoji: '💬', en: 'That\'s too low.', pt: 'Isso e muito baixo.' },
+          { emoji: '🔑', en: 'Can you pay more?', pt: 'Pode pagar mais?' },
+          { emoji: '⚡', en: 'I need at least $30.', pt: 'Preciso de pelo menos $30.' }
+        ]},
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 Como se diz "Quanto você paga?" em inglês?', options: ['How much do you pay?', 'When do I get paid?', 'How much per hour?'], correct: 0 },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 O que significa "Cash or check?"?', options: ['Dinheiro ou cheque?', 'Que horas acaba?', 'Que horas comeco?'], correct: 0 },
+        { type: 'tip', cardClass: 'green', icon: '💡', title: 'DICA DE OURO', text: '3 perguntas essenciais sobre pagamento:<br><br>💰 <strong>How much per hour?</strong><br>📅 <strong>When do I get paid?</strong><br>💵 <strong>Cash or check?</strong><br><br>Pergunte ANTES de começar. Depois é tarde.' },
+        { type: 'comparison', cardClass: 'red', title: '⚠️ ERRO COMUM', leftClass: 'wrong', rightClass: 'right', leftIcon: '❌', rightIcon: '✅', leftLabel: 'ERRADO', rightLabel: 'CERTO', left: 'When I get paid?', leftNote: '', right: 'When do I get paid?', rightNote: 'Faltou o auxiliar DO.', explanation: '' },
+        { type: 'comparison', cardClass: 'red', title: '⚠️ ERRO COMUM', leftClass: 'wrong', rightClass: 'right', leftIcon: '❌', rightIcon: '✅', leftLabel: 'ERRADO', rightLabel: 'CERTO', left: 'How many money?', leftNote: '', right: 'How much money?', rightNote: 'Money = incontável. Use HOW MUCH.', explanation: '' },
+        { type: 'fill-blank', cardClass: 'cyan', prompt: '✍️ Complete a frase:', sentence: 'How much _____ hour?', correctWord: 'per' },
+        { type: 'fill-blank', cardClass: 'cyan', prompt: '✍️ Complete a frase:', sentence: 'When do I get _____?', correctWord: 'paid' },
+        { type: 'list', cardClass: 'gold', title: '📝 RESUMO - PAY & HOURS', items: [
+          { emoji: '✅', text: 'Perguntar sobre pagamento' },
+          { emoji: '✅', text: 'Falar sobre horário' },
+          { emoji: '✅', text: 'Negociar valor' },
+          { emoji: '✅', text: 'Cobrar sem travar' }
+        ]},
+        { type: 'end' }
+      ],
+      vocabulary: [
+        { emoji: '💰', pt: 'Quanto você paga?', en: 'How much do you pay?', level: 1 },
+        { emoji: '⏰', pt: 'Quanto por hora?', en: 'How much per hour?', level: 1 },
+        { emoji: '❓', pt: 'Quando eu recebo?', en: 'When do I get paid?', level: 1 },
+        { emoji: '❓', pt: 'Dinheiro ou cheque?', en: 'Cash or check?', level: 1 },
+        { emoji: '⏰', pt: 'Que horas comeco?', en: 'What time do I start?', level: 1 },
+        { emoji: '⏰', pt: 'Que horas acaba?', en: 'What time do we finish?', level: 1 },
+        { emoji: '⏰', pt: 'Quantas horas?', en: 'How many hours?', level: 1 },
+        { emoji: '💼', pt: 'Trabalhei 8 horas', en: 'I worked 8 hours', level: 1 },
+        { emoji: '⏰', pt: 'Hora extra', en: 'Overtime', level: 1 },
+        { emoji: '💰', pt: 'Quero $25 por hora', en: 'I want $25 per hour', level: 1 },
+        { emoji: '📋', pt: 'Muito baixo', en: 'That\'s too low', level: 1 },
+        { emoji: '💰', pt: 'Pode pagar mais?', en: 'Can you pay more?', level: 1 },
+        { emoji: '💰', pt: 'Pelo menos $30', en: 'At least $30', level: 2 },
+        { emoji: '📋', pt: 'Vou aceitar', en: 'I\'ll take it', level: 1 },
+        { emoji: '📋', pt: 'Não posso aceitar', en: 'I can\'t accept that', level: 2 },
+        { emoji: '❓', pt: 'Quantos dias?', en: 'How many days?', level: 1 },
+        { emoji: '📋', pt: 'Toda semana', en: 'Every week', level: 1 },
+        { emoji: '📋', pt: 'Duas vezes por mes', en: 'Twice a month', level: 1 },
+        { emoji: '📋', pt: 'Deposito direto', en: 'Direct deposit', level: 2 },
+        { emoji: '❓', pt: 'Quanto eu te devo?', en: 'How much do I owe you?', level: 1 },
+        { emoji: '❓', pt: 'Aceita cartão?', en: 'Do you take card?', level: 1 },
+        { emoji: '❓', pt: 'Aceita Zelle?', en: 'Do you take Zelle?', level: 1 },
+        { emoji: '❓', pt: 'Quanto ficou?', en: 'How much was it?', level: 1 },
+        { emoji: '📋', pt: 'Total', en: 'The total', level: 1 },
+        { emoji: '❓', pt: 'Pode adiantar?', en: 'Can I get an advance?', level: 2 }
+      ]
+    },
+
+  { id: 'talking-to-boss', title: 'TALKING TO THE BOSS', emoji: '🤝👔', description: 'Falando com o chefe / contractor', module: 1, order: 17,    slides: [
+        { type: 'title', emoji: '🤝👔', title: 'TALKING TO THE BOSS', subtitle: 'Falando com o chefe / contractor' },
+        { type: 'situation', emoji: '😰', cardClass: 'cyan', text: 'Seu chefe fala algo. Você não entendeu. Que horas ir amanhã? Precisa avisar que vai atrasar... Comunicar bem = mais trabalho = mais dinheiro.' },
+        { type: 'sequence-step', stepNumber: 1, totalSteps: 4, emoji: '📞', english: 'Hey boss, I\'m going to be late today.', portuguese: 'Chefe, vou me atrasar hoje.', breakdown: '<strong>I\'M GOING TO BE LATE</strong> = vou me atrasar. Aviso profissional e educado.' },
+        { type: 'sequence-step', stepNumber: 2, totalSteps: 4, emoji: '😅', english: 'How late?', portuguese: 'Quanto?', breakdown: '<strong>HOW LATE</strong> = quanto de atraso. Pergunta natural do chefe.' },
+        { type: 'sequence-step', stepNumber: 3, totalSteps: 4, emoji: '⏰', english: 'About 30 minutes. Traffic.', portuguese: 'Uns 30 minutos. Trânsito.', breakdown: '<strong>ABOUT + número</strong> = mais ou menos. Aproximação — muito útil.' },
+        { type: 'sequence-step', stepNumber: 4, totalSteps: 4, emoji: '👍', english: 'OK, no problem. Be safe.', portuguese: 'OK, sem problema. Se cuida.', breakdown: '<strong>NO PROBLEM</strong> = sem problema. Resposta positiva e tranquila.' },
+        { type: 'rule', cardClass: 'purple', text: 'Aprender a se comunicar com o chefe/contractor — avisar, perguntar, pedir, negociar.', keyword: 'TALKING TO THE BOSS' },
+        { type: 'examples', cardClass: 'green', title: '🚫 NAO ENTENDEU', revealOnHover: true, items: [
+          { emoji: '📋', en: 'Sorry, I didn\'t understand.', pt: 'Desculpa, não entendi.' },
+          { emoji: '💬', en: 'Can you say that again?', pt: 'Pode falar de novo?' },
+          { emoji: '🔑', en: 'Can you speak slower, please?', pt: 'Pode falar mais devagar?' },
+          { emoji: '⚡', en: 'What do you mean?', pt: 'O que você quer dizer?' }
+        ]},
+        { type: 'examples', cardClass: 'orange', title: '🔧 AVISANDO', revealOnHover: true, items: [
+          { emoji: '📋', en: 'I\'m going to be late.', pt: 'Vou me atrasar.' },
+          { emoji: '💬', en: 'I can\'t come tomorrow.', pt: 'Não posso ir amanhã.' },
+          { emoji: '🔑', en: 'I\'m sick today.', pt: 'Estou doente hoje.' },
+          { emoji: '⚡', en: 'I need to leave early.', pt: 'Preciso sair mais cedo.' },
+          { emoji: '🎯', en: 'I finished the job.', pt: 'Terminei o serviço.' }
+        ]},
+        { type: 'examples', cardClass: 'gold', title: '❓ PERGUNTANDO', revealOnHover: true, items: [
+          { emoji: '📋', en: 'What time do I come tomorrow?', pt: 'Que horas venho amanhã?' },
+          { emoji: '💬', en: 'Where is the next job?', pt: 'Onde é o próximo serviço?' },
+          { emoji: '🔑', en: 'Do you need me this weekend?', pt: 'Precisa de mim nesse fim de semana?' },
+          { emoji: '⚡', en: 'What do you want me to do?', pt: 'O que você quer que eu faca?' }
+        ]},
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 Como se diz "Não entendi" em inglês?', options: ['Can you speak slower?', 'I didn\'t understand', 'Can you say that again?'], correct: 1 },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 O que significa "What do you mean?"?', options: ['Vou atrasar', 'Não posso ir amanhã', 'O que quer dizer?'], correct: 2 },
+        { type: 'tip', cardClass: 'green', icon: '💡', title: 'DICA DE OURO', text: 'Com o chefe, seja direto mas educado:<br><br>✅ <strong>I\'m going to be late.</strong><br>✅ <strong>I don\'t understand.</strong><br>✅ <strong>Can I leave early?</strong><br><br>Simplicidade é profissionalismo.' },
+        { type: 'comparison', cardClass: 'red', title: '⚠️ ERRO COMUM', leftClass: 'wrong', rightClass: 'right', leftIcon: '❌', rightIcon: '✅', leftLabel: 'ERRADO', rightLabel: 'CERTO', left: 'What you mean?', leftNote: '', right: 'What do you mean?', rightNote: 'Faltou o auxiliar DO.', explanation: '' },
+        { type: 'fill-blank', cardClass: 'cyan', prompt: '✍️ Complete a frase:', sentence: 'I\'m going to be _____ today.', correctWord: 'late' },
+        { type: 'fill-blank', cardClass: 'cyan', prompt: '✍️ Complete a frase:', sentence: 'Can I _____ early?', correctWord: 'leave' },
+        { type: 'list', cardClass: 'gold', title: '📝 RESUMO - TALKING TO THE BOSS', items: [
+          { emoji: '✅', text: 'Avisar atraso ou falta' },
+          { emoji: '✅', text: 'Pedir permissão ao chefe' },
+          { emoji: '✅', text: 'Perguntar o que não entendeu' },
+          { emoji: '✅', text: 'Conversar com respeito' }
+        ]},
+        { type: 'end' }
+      ],
+      vocabulary: [
+        { emoji: '📋', pt: 'Não entendi', en: 'I didn\'t understand', level: 1 },
+        { emoji: '❓', pt: 'Pode falar de novo?', en: 'Can you say that again?', level: 1 },
+        { emoji: '❓', pt: 'Fala mais devagar', en: 'Can you speak slower?', level: 1 },
+        { emoji: '💭', pt: 'O que quer dizer?', en: 'What do you mean?', level: 1 },
+        { emoji: '📋', pt: 'Vou atrasar', en: 'I\'m going to be late', level: 1 },
+        { emoji: '📋', pt: 'Não posso ir amanhã', en: 'I can\'t come tomorrow', level: 1 },
+        { emoji: '📋', pt: 'Estou doente', en: 'I\'m sick today', level: 1 },
+        { emoji: '💡', pt: 'Preciso sair cedo', en: 'I need to leave early', level: 1 },
+        { emoji: '📋', pt: 'Terminei', en: 'I finished / I\'m done', level: 1 },
+        { emoji: '⏰', pt: 'Que horas amanhã?', en: 'What time tomorrow?', level: 1 },
+        { emoji: '📍', pt: 'Onde é o próximo?', en: 'Where is the next job?', level: 1 },
+        { emoji: '💡', pt: 'Precisa de mim?', en: 'Do you need me?', level: 1 },
+        { emoji: '💭', pt: 'O que eu faco?', en: 'What do you want me to do?', level: 1 },
+        { emoji: '📋', pt: 'Entendi', en: 'Got it / I understand', level: 1 },
+        { emoji: '📞', pt: 'Posso ligar?', en: 'Can I make a call?', level: 1 },
+        { emoji: '❓', pt: 'Posso tirar pausa?', en: 'Can I take a break?', level: 1 },
+        { emoji: '💰', pt: 'Sobre o pagamento...', en: 'About the pay...', level: 1 },
+        { emoji: '📋', pt: 'Semana que vem', en: 'Next week', level: 1 },
+        { emoji: '📋', pt: 'Ate amanhã', en: 'See you tomorrow', level: 1 },
+        { emoji: '💼', pt: 'Obrigado pelo trabalho', en: 'Thanks for the work', level: 1 },
+        { emoji: '📋', pt: 'Pode contar comigo', en: 'You can count on me', level: 2 },
+        { emoji: '📋', pt: 'Te mando mensagem', en: 'I\'ll text you', level: 1 },
+        { emoji: '📞', pt: 'Te ligo', en: 'I\'ll call you', level: 1 },
+        { emoji: '📋', pt: 'Chego as 7', en: 'I\'ll be there at 7', level: 1 },
+        { emoji: '📋', pt: 'Sem problema', en: 'No problem', level: 1 }
+      ]
+    },
+
+  { id: 'safety-commands', title: 'SAFETY COMMANDS', emoji: '⚠️🦺', description: 'Comandos de segurança', module: 1, order: 18,    slides: [
+        { type: 'title', emoji: '⚠️🦺', title: 'SAFETY COMMANDS', subtitle: 'Comandos de segurança — podem salvar sua vida' },
+        { type: 'situation', emoji: '⚠️', cardClass: 'cyan', text: 'Você está na obra. De repente, alguém grita comandos de segurança. Você PRECISA entender na hora...' },
+        { type: 'sequence-step', stepNumber: 1, totalSteps: 4, emoji: '🛑', english: 'STOP! Don\'t move!', portuguese: 'PARA! Não se move!', breakdown: '<strong>STOP</strong> + <strong>DON\'T MOVE</strong> = para de fazer tudo. Quando ouvir isso, congela!' },
+        { type: 'sequence-step', stepNumber: 2, totalSteps: 4, emoji: '⚠️', english: 'Watch out! Falling objects!', portuguese: 'Cuidado! Objetos caindo!', breakdown: '<strong>WATCH OUT</strong> = cuidado! Olha pra cima e se protege. Pode salvar sua vida.' },
+        { type: 'sequence-step', stepNumber: 3, totalSteps: 4, emoji: '🔌', english: 'Don\'t touch that wire!', portuguese: 'Não toca nesse fio!', breakdown: '<strong>DON\'T TOUCH</strong> = não toca. Fios, máquinas ligadas, superfícies quentes.' },
+        { type: 'sequence-step', stepNumber: 4, totalSteps: 4, emoji: '🏃', english: 'Get out! Now!', portuguese: 'Sai! Agora!', breakdown: '<strong>GET OUT</strong> = sai do local. Quando ouvir isso, não pergunta — SAI.' },
+        { type: 'examples', cardClass: 'purple', title: '📋 COMANDOS CRITICOS', revealOnHover: true, items: [
+          { emoji: '📋', en: 'STOP!', pt: 'PARA!' },
+          { emoji: '💬', en: 'WATCH OUT!', pt: 'CUIDADO!' },
+          { emoji: '🔑', en: 'MOVE!', pt: 'SAI DA FRENTE!' },
+          { emoji: '⚡', en: 'GET DOWN!', pt: 'ABAIXA!' },
+          { emoji: '🎯', en: 'GET BACK!', pt: 'AFASTA!' },
+          { emoji: '📦', en: 'DON\'T TOUCH THAT!', pt: 'NAO TOCA NISSO!' }
+        ]},
+        { type: 'examples', cardClass: 'green', title: '⚠️ EQUIPAMENTO DE SEGURANCA (PPE)', revealOnHover: true, items: [
+          { emoji: '📋', en: 'Put on your hard hat.', pt: 'Coloca o capacete.' },
+          { emoji: '💬', en: 'Wear your safety glasses.', pt: 'Usa os óculos de proteção.' },
+          { emoji: '🔑', en: 'Put on your gloves.', pt: 'Coloca as luvas.' },
+          { emoji: '⚡', en: 'Wear your safety vest.', pt: 'Usa o colete de segurança.' },
+          { emoji: '🎯', en: 'Put on your steel-toe boots.', pt: 'Coloca a bota com biqueira.' }
+        ]},
+        { type: 'examples', cardClass: 'orange', title: '💬 AVISOS', revealOnHover: true, items: [
+          { emoji: '📋', en: 'Be careful.', pt: 'Cuidado. / Tenha cuidado.' },
+          { emoji: '💬', en: 'This is dangerous.', pt: 'Isso e perigoso.' },
+          { emoji: '🔑', en: 'Stay away from there.', pt: 'Fica longe dali.' },
+          { emoji: '⚡', en: 'Don\'t go there.', pt: 'Não vai la.' },
+          { emoji: '🎯', en: 'Wet floor. / Slippery.', pt: 'Chao molhado. / Escorregadio.' }
+        ]},
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 Como se diz "Para!" em inglês?', options: ['Stop!', 'Move! / Get out of the way!', 'Watch out! / Be careful!'], correct: 0 },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 O que significa "Get down!"?', options: ['Abaixa!', 'Afasta!', 'Não toca!'], correct: 0 },
+        { type: 'tip', cardClass: 'green', icon: '⚠️', title: 'DICA DE OURO', text: 'Comandos de segurança podem <strong>salvar sua vida</strong>.<br><br><strong>STOP!</strong> → Para.<br><strong>WATCH OUT!</strong> → Cuidado!<br><strong>GET OUT!</strong> → Sai AGORA.<br><strong>GET DOWN!</strong> → Abaixa!<br><br>Não precisa entender 100%. Precisa <strong>reagir</strong>.' },
+        { type: 'comparison', cardClass: 'red', title: '⚠️ ERRO COMUM', leftClass: 'wrong', rightClass: 'right', leftIcon: '❌', rightIcon: '✅', leftLabel: 'ERRADO', rightLabel: 'CERTO', left: 'No move!', leftNote: '', right: 'Don\'t move!', rightNote: 'DON\'T + verbo. Nunca "no" + verbo.', explanation: '' },
+        { type: 'comparison', cardClass: 'red', title: '⚠️ ERRO COMUM', leftClass: 'wrong', rightClass: 'right', leftIcon: '❌', rightIcon: '✅', leftLabel: 'ERRADO', rightLabel: 'CERTO', left: 'Careful!', leftNote: '', right: 'Be careful!', rightNote: 'Precisa do BE: Be careful, Be quiet.', explanation: '' },
+        { type: 'fill-blank', cardClass: 'cyan', prompt: '✍️ Complete a frase:', sentence: '_____ out! Danger!', correctWord: 'Watch' },
+        { type: 'fill-blank', cardClass: 'cyan', prompt: '✍️ Complete a frase:', sentence: 'Don\'t _____ that wire!', correctWord: 'touch' },
+        { type: 'list', cardClass: 'gold', title: '📝 RESUMO - SAFETY COMMANDS', items: [
+          { emoji: '✅', text: 'Entender comandos de segurança' },
+          { emoji: '✅', text: 'Reagir rápido a STOP, WATCH OUT, GET OUT' },
+          { emoji: '✅', text: 'Don\'t touch = não toque' },
+          { emoji: '✅', text: 'Segurança salva vidas' }
+        ]},
+        { type: 'end' }
+      ],
+      vocabulary: [
+        { emoji: '🛑', pt: 'Para!', en: 'Stop!', level: 1 },
+        { emoji: '⚠️', pt: 'Cuidado!', en: 'Watch out! / Be careful!', level: 1 },
+        { emoji: '📋', pt: 'Sai da frente!', en: 'Move! / Get out of the way!', level: 1 },
+        { emoji: '📋', pt: 'Abaixa!', en: 'Get down!', level: 1 },
+        { emoji: '📋', pt: 'Afasta!', en: 'Get back! / Stay back!', level: 1 },
+        { emoji: '🚫', pt: 'Não toca!', en: 'Don\'t touch that!', level: 1 },
+        { emoji: '📋', pt: 'Capacete', en: 'Hard hat', level: 1 },
+        { emoji: '🦺', pt: 'Oculos de proteção', en: 'Safety glasses', level: 1 },
+        { emoji: '📋', pt: 'Luvas', en: 'Gloves', level: 1 },
+        { emoji: '🦺', pt: 'Colete', en: 'Safety vest', level: 1 },
+        { emoji: '🦺', pt: 'Bota de segurança', en: 'Steel-toe boots', level: 1 },
+        { emoji: '⚠️', pt: 'Perigoso', en: 'Dangerous', level: 1 },
+        { emoji: '📋', pt: 'Chao molhado', en: 'Wet floor', level: 1 },
+        { emoji: '📋', pt: 'Fogo!', en: 'Fire!', level: 1 },
+        { emoji: '📞', pt: 'Desliga!', en: 'Turn it off!', level: 1 },
+        { emoji: '📋', pt: 'Eletricidade', en: 'Electricity / Electrical', level: 1 },
+        { emoji: '📋', pt: 'Area restrita', en: 'Restricted area', level: 2 },
+        { emoji: '📋', pt: 'Escada', en: 'Ladder', level: 1 },
+        { emoji: '📋', pt: 'Em cima', en: 'Up there / Above', level: 1 },
+        { emoji: '📋', pt: 'Embaixo', en: 'Down there / Below', level: 1 },
+        { emoji: '📋', pt: 'Saida de emergência', en: 'Emergency exit', level: 1 },
+        { emoji: '📋', pt: 'Extintor', en: 'Fire extinguisher', level: 2 },
+        { emoji: '📋', pt: 'Kit de primeiros socorros', en: 'First aid kit', level: 1 },
+        { emoji: '🏥', pt: 'Estou machucado', en: 'I\'m hurt / I\'m injured', level: 1 },
+        { emoji: '📞', pt: 'Liga pro 911', en: 'Call 911', level: 1 }
+      ]
+    },
+
+  { id: 'emergency-911', title: 'EMERGENCY (911)', emoji: '🚨🆘', description: 'Emergência', module: 1, order: 19,    slides: [
+        { type: 'title', emoji: '🚨🆘', title: 'EMERGENCY (911)', subtitle: 'Emergência — pedir ajuda / ligar pro 911' },
+        { type: 'situation', emoji: '😰', cardClass: 'cyan', text: 'Você está em uma emergência. Precisa de ajuda AGORA. Muitos brasileiros tem medo de ligar pro 911. Não tenha. O 911 é gratuito, funciona sem chip, e tem intérprete de português. ■ IMPORTANTE O 911 é GRATUITO. Funciona de qualquer telefone, mesmo sem chip. Você pode pedir intérprete: "Portuguese, please" ou "I need an interpreter".' },
+        { type: 'sequence-step', stepNumber: 1, totalSteps: 5, emoji: '🚨', english: '911, what is your emergency?', portuguese: '911, qual é a emergência?', breakdown: '<strong>911, WHAT IS YOUR EMERGENCY</strong> = o que a operadora sempre fala primeiro.' },
+        { type: 'sequence-step', stepNumber: 2, totalSteps: 5, emoji: '🆘', english: 'I need an ambulance! Someone is hurt!', portuguese: 'Preciso de ambulância! Alguém se machucou!', breakdown: '<strong>I NEED</strong> + coisa = preciso de algo. Direto e claro.' },
+        { type: 'sequence-step', stepNumber: 3, totalSteps: 5, emoji: '📍', english: 'Where are you?', portuguese: 'Pra onde você vai?', breakdown: '<strong>WHERE ARE YOU</strong> = onde você está. A operadora SEMPRE pergunta isso.' },
+        { type: 'sequence-step', stepNumber: 4, totalSteps: 5, emoji: '🙏', english: 'I\'m at 123 Main Street.', portuguese: 'Estou na 123 Main Street.', breakdown: '<strong>I\'M AT</strong> + endereço. Diga o número e a rua. Se não souber, descreva o local.' },
+        { type: 'sequence-step', stepNumber: 5, totalSteps: 5, emoji: '🚨', english: 'OK, help is on the way. Stay on the line.', portuguese: 'OK, ajuda está a caminho. Fique na linha.', breakdown: '<strong>HELP IS ON THE WAY</strong> = ajuda está a caminho. Frase de alívio.' },
+        { type: 'rule', cardClass: 'purple', text: 'Aprender a pedir ajuda em emergência e se comunicar ao ligar pro 911.', keyword: 'EMERGENCY' },
+        { type: 'examples', cardClass: 'green', title: '📋 LIGANDO PRO 911', revealOnHover: true, items: [
+          { emoji: '📋', en: 'I need help!', pt: 'Preciso de ajuda!' },
+          { emoji: '💬', en: 'There\'s an emergency.', pt: 'Tem uma emergência.' },
+          { emoji: '🔑', en: 'I need an ambulance.', pt: 'Preciso de uma ambulância.' },
+          { emoji: '⚡', en: 'I need the police.', pt: 'Preciso da polícia.' },
+          { emoji: '🎯', en: 'There\'s a fire.', pt: 'Tem um incêndio.' }
+        ]},
+        { type: 'examples', cardClass: 'orange', title: '❓ O QUE O 911 VAI PERGUNTAR', revealOnHover: true, items: [
+          { emoji: '📋', en: 'What is your emergency?', pt: 'Qual é sua emergência?' },
+          { emoji: '💬', en: 'Where are you?', pt: 'Onde você está?' },
+          { emoji: '🔑', en: 'What is your address?', pt: 'Qual é seu endereço?' },
+          { emoji: '⚡', en: 'What happened?', pt: 'O que aconteceu?' },
+          { emoji: '🎯', en: 'Is anyone hurt?', pt: 'Alguém está machucado?' }
+        ]},
+        { type: 'examples', cardClass: 'gold', title: '💬 TIPOS DE EMERGENCIA', revealOnHover: true, items: [
+          { emoji: '📋', en: 'Someone is hurt.', pt: 'Alguém está machucado.' },
+          { emoji: '💬', en: 'There was an accident.', pt: 'Houve um acidente.' },
+          { emoji: '🔑', en: 'I need a doctor.', pt: 'Preciso de um médico.' },
+          { emoji: '⚡', en: 'He\'s not breathing.', pt: 'Ele não está respirando.' },
+          { emoji: '🎯', en: 'She fell.', pt: 'Ela caiu.' }
+        ]},
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 Como se diz "Preciso de ajuda!" em inglês?', options: ['I need help!', 'I need the police', 'I need an ambulance'], correct: 0 },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 O que significa "There\'s a fire"?', options: ['Meu endereço e...', 'Onde você está?', 'Tem um incêndio'], correct: 2 },
+        { type: 'tip', cardClass: 'green', icon: '🚨', title: 'DICA DE OURO', text: 'Ao ligar pro <strong>911</strong>, fale 3 coisas:<br><br>1. <strong>O que aconteceu</strong>: Someone is hurt<br>2. <strong>Onde você está</strong>: I\'m at [endereço]<br>3. <strong>Fique na linha</strong>: a operadora te guia<br><br>Essas 3 informações salvam vidas.' },
+        { type: 'comparison', cardClass: 'red', title: '⚠️ ERRO COMUM', leftClass: 'wrong', rightClass: 'right', leftIcon: '❌', rightIcon: '✅', leftLabel: 'ERRADO', rightLabel: 'CERTO', left: 'I need help 911', leftNote: '', right: 'Call 911!', rightNote: 'Diga "Call 911" ou ligue direto.', explanation: '' },
+        { type: 'fill-blank', cardClass: 'cyan', prompt: '✍️ Complete a frase:', sentence: '_____ is your emergency?', correctWord: 'What' },
+        { type: 'fill-blank', cardClass: 'cyan', prompt: '✍️ Complete a frase:', sentence: 'Help is on the _____.', correctWord: 'way' },
+        { type: 'list', cardClass: 'gold', title: '📝 RESUMO - EMERGENCY (911)', items: [
+          { emoji: '✅', text: 'Ligar pro 911' },
+          { emoji: '✅', text: 'Dizer o que aconteceu' },
+          { emoji: '✅', text: 'Informar localização' },
+          { emoji: '✅', text: 'Ficar na linha' }
+        ]},
+        { type: 'end' }
+      ],
+      vocabulary: [
+        { emoji: '🆘', pt: 'Preciso de ajuda!', en: 'I need help!', level: 1 },
+        { emoji: '💡', pt: 'Preciso de ambulância', en: 'I need an ambulance', level: 1 },
+        { emoji: '💡', pt: 'Preciso da polícia', en: 'I need the police', level: 1 },
+        { emoji: '📋', pt: 'Tem um incêndio', en: 'There\'s a fire', level: 1 },
+        { emoji: '📍', pt: 'Onde você está?', en: 'Where are you?', level: 1 },
+        { emoji: '📋', pt: 'Meu endereço e...', en: 'My address is...', level: 1 },
+        { emoji: '🏥', pt: 'Alguém está machucado', en: 'Someone is hurt', level: 1 },
+        { emoji: '📋', pt: 'Houve um acidente', en: 'There was an accident', level: 1 },
+        { emoji: '💡', pt: 'Preciso de um médico', en: 'I need a doctor', level: 1 },
+        { emoji: '🍽️', pt: 'Não está respirando', en: 'He/She is not breathing', level: 1 },
+        { emoji: '📋', pt: 'Fica na linha', en: 'Stay on the line', level: 1 },
+        { emoji: '📋', pt: 'Emergência', en: 'Emergency', level: 1 },
+        { emoji: '💡', pt: 'Preciso de intérprete', en: 'I need an interpreter', level: 1 },
+        { emoji: '🤝', pt: 'Portugues, por favor', en: 'Portuguese, please', level: 1 },
+        { emoji: '📋', pt: 'Ta sangrando', en: 'He/She is bleeding', level: 1 },
+        { emoji: '📋', pt: 'Caiu', en: 'He/She fell', level: 1 },
+        { emoji: '💡', pt: 'Preciso de remedio', en: 'I need medicine', level: 1 },
+        { emoji: '🍽️', pt: 'Não consigo respirar', en: 'I can\'t breathe', level: 1 },
+        { emoji: '📋', pt: 'Dor no peito', en: 'Chest pain', level: 2 },
+        { emoji: '📋', pt: 'Passando mal', en: 'Feeling sick / Not feeling well', level: 1 },
+        { emoji: '📋', pt: 'Rápido!', en: 'Hurry! / Quick!', level: 1 },
+        { emoji: '🤝', pt: 'Por favor, venha rápido', en: 'Please come quickly', level: 1 },
+        { emoji: '📋', pt: 'Estou na esquina de...', en: 'I\'m at the corner of...', level: 2 },
+        { emoji: '💼', pt: 'Acidente de trabalho', en: 'Work accident / Workplace injury', level: 2 },
+        { emoji: '📞', pt: 'Liga pro 911', en: 'Call 911', level: 1 }
+      ]
+    },
+
+  { id: 'asking-for-help', title: 'ASKING FOR HELP', emoji: '🙋❓', description: 'Pedindo ajuda', module: 1, order: 20,    slides: [
+        { type: 'title', emoji: '🙋❓', title: 'ASKING FOR HELP', subtitle: 'Pedindo ajuda — em qualquer situação' },
+        { type: 'situation', emoji: '😰', cardClass: 'cyan', text: 'Você está perdido, precisa de informação, quer usar o Wi-Fi, precisa de um ATM... Pedir ajuda em inglês é mais fácil do que parece!' },
+        { type: 'sequence-step', stepNumber: 1, totalSteps: 5, emoji: '😰', english: 'Excuse me, I\'m lost.', portuguese: 'Com licença, estou perdido.', breakdown: '<strong>I\'M LOST</strong> = estou perdido. Primeira coisa a dizer quando pedir direções.' },
+        { type: 'sequence-step', stepNumber: 2, totalSteps: 5, emoji: '❓', english: 'Where are you going?', portuguese: 'Onde você está?', breakdown: '<strong>WHERE ARE YOU</strong> = onde você está. A operadora SEMPRE pergunta isso.' },
+        { type: 'sequence-step', stepNumber: 3, totalSteps: 5, emoji: '👉', english: 'I\'m looking for Main Street.', portuguese: 'Estou procurando a Main Street.', breakdown: '<strong>I\'M LOOKING FOR</strong> = estou procurando. Use com lugar, pessoa, ou coisa.' },
+        { type: 'sequence-step', stepNumber: 4, totalSteps: 5, emoji: '🙏', english: 'Go straight, turn right. It\'s right there.', portuguese: 'Vai reto, vira à direita. Fica ali.', breakdown: '<strong>GO STRAIGHT, TURN RIGHT</strong> = vai reto, vira à direita. Direções básicas!' },
+        { type: 'sequence-step', stepNumber: 5, totalSteps: 5, emoji: '😰', english: 'Thank you so much!', portuguese: 'Muito obrigado!', breakdown: '<strong>THANK YOU SO MUCH</strong> = muito obrigado. Mais forte que "thanks".' },
+        { type: 'examples', cardClass: 'purple', title: '📋 FORMAS DE PEDIR AJUDA', revealOnHover: true, items: [
+          { emoji: '📋', en: 'Excuse me, can you help me?', pt: 'Com licenca, pode me ajudar?' },
+          { emoji: '💬', en: 'I need help, please.', pt: 'Preciso de ajuda, por favor.' },
+          { emoji: '🔑', en: 'Can you show me?', pt: 'Pode me mostrar?' },
+          { emoji: '⚡', en: 'Can you explain this?', pt: 'Pode me explicar isso?' }
+        ]},
+        { type: 'examples', cardClass: 'green', title: '🔧 SITUACOES COMUNS', revealOnHover: true, items: [
+          { emoji: '📋', en: 'Where is the ATM?', pt: 'Onde tem caixa eletronico?' },
+          { emoji: '💬', en: 'Do you have Wi-Fi?', pt: 'Tem Wi-Fi?' },
+          { emoji: '🔑', en: 'What\'s the password?', pt: 'Qual a senha?' },
+          { emoji: '⚡', en: 'I\'m lost. Can you help me?', pt: 'Estou perdido. Pode me ajudar?' },
+          { emoji: '🎯', en: 'Do you speak Portuguese?', pt: 'Você fala português?' }
+        ]},
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 Como se diz "Pode me ajudar?" em inglês?', options: ['Can you help me?', 'Can you show me?', 'Excuse me'], correct: 0 },
+        { type: 'quiz', cardClass: 'cyan', question: '🎯 O que significa "I\'m lost"?', options: ['Tem Wi-Fi?', 'Estou perdido', 'Onde tem ATM?'], correct: 1 },
+        { type: 'tip', cardClass: 'green', icon: '💡', title: 'DICA DE OURO', text: 'Comece SEMPRE com <strong>Excuse me</strong>:<br><br>✅ Excuse me, can you help me?<br>✅ Excuse me, where is...?<br>✅ Excuse me, I\'m lost.<br><br>"Excuse me" abre portas.' },
+        { type: 'comparison', cardClass: 'red', title: '⚠️ ERRO COMUM', leftClass: 'wrong', rightClass: 'right', leftIcon: '❌', rightIcon: '✅', leftLabel: 'ERRADO', rightLabel: 'CERTO', left: 'Help me please', leftNote: '', right: 'Excuse me, can you help me?', rightNote: 'Comece com Excuse me + Can you.', explanation: '' },
+        { type: 'comparison', cardClass: 'red', title: '⚠️ ERRO COMUM', leftClass: 'wrong', rightClass: 'right', leftIcon: '❌', rightIcon: '✅', leftLabel: 'ERRADO', rightLabel: 'CERTO', left: 'Where is go Main Street?', leftNote: '', right: 'How do I get to Main Street?', rightNote: 'Direções: How do I get to + lugar.', explanation: '' },
+        { type: 'fill-blank', cardClass: 'cyan', prompt: '✍️ Complete a frase:', sentence: 'Excuse me, _____ you help me?', correctWord: 'can' },
+        { type: 'fill-blank', cardClass: 'cyan', prompt: '✍️ Complete a frase:', sentence: 'I\'m _____. Can you help?', correctWord: 'lost' },
+        { type: 'list', cardClass: 'gold', title: '📝 RESUMO - ASKING FOR HELP', items: [
+          { emoji: '✅', text: 'Pedir ajuda educadamente' },
+          { emoji: '✅', text: 'Dizer que está perdido' },
+          { emoji: '✅', text: 'Pedir direções' },
+          { emoji: '✅', text: 'Sempre começar com Excuse me' }
+        ]},
+        { type: 'end' }
+      ],
+      vocabulary: [
+        { emoji: '🆘', pt: 'Pode me ajudar?', en: 'Can you help me?', level: 1 },
+        { emoji: '📋', pt: 'Com licenca', en: 'Excuse me', level: 1 },
+        { emoji: '❓', pt: 'Pode me mostrar?', en: 'Can you show me?', level: 1 },
+        { emoji: '📋', pt: 'Estou perdido', en: 'I\'m lost', level: 1 },
+        { emoji: '📍', pt: 'Onde tem ATM?', en: 'Where is the ATM?', level: 1 },
+        { emoji: '❓', pt: 'Tem Wi-Fi?', en: 'Do you have Wi-Fi?', level: 1 },
+        { emoji: '❓', pt: 'Qual a senha?', en: 'What\'s the password?', level: 1 },
+        { emoji: '❓', pt: 'Fala português?', en: 'Do you speak Portuguese?', level: 1 },
+        { emoji: '📋', pt: 'Estou procurando...', en: 'I\'m looking for...', level: 1 },
+        { emoji: '📋', pt: 'Segue reto', en: 'Go straight', level: 1 },
+        { emoji: '📋', pt: 'Vira a direita', en: 'Turn right', level: 1 },
+        { emoji: '💭', pt: 'Vira a esquerda', en: 'Turn left', level: 1 },
+        { emoji: '🙏', pt: 'Muito obrigado!', en: 'Thank you so much!', level: 1 },
+        { emoji: '📋', pt: 'De nada', en: 'You\'re welcome', level: 1 },
+        { emoji: '❓', pt: 'Pode escrever?', en: 'Can you write it down?', level: 1 },
+        { emoji: '🤝', pt: 'Mais devagar', en: 'Slower, please', level: 1 },
+        { emoji: '📞', pt: 'Pode ligar pra mim?', en: 'Can you call for me?', level: 2 },
+        { emoji: '❓', pt: 'Posso usar seu telefone?', en: 'Can I use your phone?', level: 1 },
+        { emoji: '📍', pt: 'Onde pego táxi?', en: 'Where can I get a táxi?', level: 1 },
+        { emoji: '📍', pt: 'Onde é o ponto?', en: 'Where is the bus stop?', level: 1 },
+        { emoji: '📋', pt: 'Uma pergunta', en: 'One question / Quick question', level: 1 },
+        { emoji: '📋', pt: 'Estou procurando', en: 'I\'m looking for...', level: 1 },
+        { emoji: '❓', pt: 'E perto daqui?', en: 'Is it close? / Is it nearby?', level: 1 },
+        { emoji: '❓', pt: 'Da pra ir a pe?', en: 'Can I walk there?', level: 1 },
+        { emoji: '🆘', pt: 'Agradeço a ajuda', en: 'I appreciate your help', level: 2 }
+      ]
+    }
+] as Lesson[];

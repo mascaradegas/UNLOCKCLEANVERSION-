@@ -52,6 +52,36 @@ function getWordMastery(word: WordStats): number {
   return Math.round(Math.max(0, Math.min(100, mastery)));
 }
 
+function enrichWord(word: WordStats) {
+  const mastery = getWordMastery(word);
+  const errorRate = word.attempts > 0 ? 1 - (word.correct / word.attempts) : 0;
+  const avgResponseMs = word.attempts > 0 ? Math.round(word.totalResponseMs / word.attempts) : 0;
+  const isDue = new Date(word.nextReview) <= new Date();
+
+  return {
+    ...word,
+    mastery,
+    errorRate,
+    avgResponseMs,
+    isDue,
+  };
+}
+
+function getPriorityScore(word: ReturnType<typeof enrichWord>): number {
+  let score = 0;
+
+  if (word.isDue) score += 35;
+  score += Math.max(0, 100 - word.mastery);
+  score += word.errorRate * 35;
+  score += Math.min(20, word.avgResponseMs / 350);
+
+  const lastAttempt = word.history[0];
+  if (lastAttempt && !lastAttempt.correct) score += 15;
+  if (word.attempts <= 2) score += 8;
+
+  return score;
+}
+
 // ═══════════════════════════════════════════════════════════════════════════
 // Default Progress
 // ═══════════════════════════════════════════════════════════════════════════
@@ -92,11 +122,43 @@ function createDefaultProgress(): UserProgress {
   };
 }
 
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return typeof value === 'object' && value !== null && !Array.isArray(value);
+}
+
+function sanitizePersistedProgress(input: Partial<UserProgress> | null | undefined): UserProgress {
+  const base = createDefaultProgress();
+  if (!input) return base;
+
+  return {
+    ...base,
+    ...input,
+    lessonsCompleted: Array.isArray(input.lessonsCompleted) ? input.lessonsCompleted : base.lessonsCompleted,
+    lessonsInProgress: isRecord(input.lessonsInProgress) ? input.lessonsInProgress as UserProgress['lessonsInProgress'] : base.lessonsInProgress,
+    favorites: Array.isArray(input.favorites) ? input.favorites : base.favorites,
+    gamesCompleted: Array.isArray(input.gamesCompleted) ? input.gamesCompleted : base.gamesCompleted,
+    gamesBestScores: isRecord(input.gamesBestScores) ? input.gamesBestScores as UserProgress['gamesBestScores'] : base.gamesBestScores,
+    wordStats: isRecord(input.wordStats) ? input.wordStats as UserProgress['wordStats'] : base.wordStats,
+    achievements: Array.isArray(input.achievements) ? input.achievements : base.achievements,
+    sessions: Array.isArray(input.sessions) ? input.sessions : base.sessions,
+    tutorialsSeen: Array.isArray(input.tutorialsSeen) ? input.tutorialsSeen : base.tutorialsSeen,
+    settings: {
+      ...base.settings,
+      ...(isRecord(input.settings) ? input.settings : {}),
+    },
+    drillProgress: isRecord(input.drillProgress) ? input.drillProgress as UserProgress['drillProgress'] : base.drillProgress,
+  };
+}
+
 // ═══════════════════════════════════════════════════════════════════════════
 // Store Interface
 // ═══════════════════════════════════════════════════════════════════════════
 
 interface ProgressActions {
+  // Profile
+  setProfile: (patch: { name?: string; avatar?: string }) => void;
+  updateSettings: (patch: Partial<UserProgress['settings']>) => void;
+
   // XP
   addXP: (amount: number) => { xp: number; level: number; leveledUp: boolean };
 
@@ -117,6 +179,10 @@ interface ProgressActions {
     mode: GameMode,
     score: number,
     maxScore: number,
+    options?: {
+      percent?: number;
+      isPerfect?: boolean;
+    },
   ) => { percent: number; isPerfect: boolean; isNewBest: boolean };
   getBestScore: (lessonId: string, mode: GameMode) => number;
 
@@ -146,6 +212,24 @@ interface ProgressActions {
     mastered: number;
     forReview: number;
   };
+  getPriorityWords: (limit?: number) => Array<
+    WordStats & { mastery: number; errorRate: number; avgResponseMs: number; isDue: boolean }
+  >;
+  getDailyGoalStatus: () => {
+    minutesToday: number;
+    goalMinutes: number;
+    remainingMinutes: number;
+    progress: number;
+    completed: boolean;
+  };
+  getGamePerformance: () => Array<{
+    mode: GameMode;
+    plays: number;
+    avgAccuracy: number;
+    avgScore: number;
+    bestScore: number;
+    lastPlayed: string | null;
+  }>;
 
   // Sessions
   logSession: (params: {
@@ -186,6 +270,28 @@ export const useProgressStore = create<ProgressStore>()(
   persist(
     (set, get) => ({
       ...createDefaultProgress(),
+
+      // ─── Profile ─────────────────────────────────────────────────
+
+      setProfile(patch) {
+        set((state) => ({
+          name: patch.name ?? state.name,
+          avatar: patch.avatar ?? state.avatar,
+          updatedAt: new Date().toISOString(),
+          pendingSync: true,
+        }));
+      },
+
+      updateSettings(patch) {
+        set((state) => ({
+          settings: {
+            ...state.settings,
+            ...patch,
+          },
+          updatedAt: new Date().toISOString(),
+          pendingSync: true,
+        }));
+      },
 
       // ─── XP ──────────────────────────────────────────────────────
 
@@ -305,10 +411,14 @@ export const useProgressStore = create<ProgressStore>()(
 
       // ─── Games ───────────────────────────────────────────────────
 
-      completeGame(lessonId, mode, score, maxScore) {
+      completeGame(lessonId, mode, score, maxScore, options) {
         const state = get();
-        const percent = Math.round((score / maxScore) * 100);
-        const isPerfect = percent === 100;
+        const computedPercent = maxScore > 0 ? Math.round((score / maxScore) * 100) : 0;
+        const percent = Math.max(
+          0,
+          Math.min(100, options?.isPerfect ? 100 : (options?.percent ?? computedPercent)),
+        );
+        const isPerfect = options?.isPerfect ?? percent === 100;
         const key = `${lessonId}_${mode}`;
 
         const result: GameResult = {
@@ -473,6 +583,68 @@ export const useProgressStore = create<ProgressStore>()(
         };
       },
 
+      getPriorityWords(limit = 8) {
+        return Object.values(get().wordStats)
+          .filter((word) => word.attempts > 0)
+          .map((word) => enrichWord(word))
+          .sort((a, b) => getPriorityScore(b) - getPriorityScore(a))
+          .slice(0, limit);
+      },
+
+      getDailyGoalStatus() {
+        const state = get();
+        const today = new Date().toISOString().split('T')[0];
+        const secondsToday = state.sessions
+          .filter((session) => session.date.startsWith(today))
+          .reduce((sum, session) => sum + (session.duration ?? 0), 0);
+
+        const minutesToday = Math.round(secondsToday / 60);
+        const goalMinutes = state.settings.dailyGoal;
+        const remainingMinutes = Math.max(0, goalMinutes - minutesToday);
+        const progress = goalMinutes > 0
+          ? Math.min(100, Math.round((minutesToday / goalMinutes) * 100))
+          : 100;
+
+        return {
+          minutesToday,
+          goalMinutes,
+          remainingMinutes,
+          progress,
+          completed: remainingMinutes === 0,
+        };
+      },
+
+      getGamePerformance() {
+        const state = get();
+        const modes: GameMode[] = ['word-drop', 'word-match', 'word-stack'];
+
+        return modes.map((mode) => {
+          const sessions = state.sessions.filter((session) => session.type === mode);
+          const plays = sessions.length;
+          const avgAccuracy = plays > 0
+            ? Math.round(sessions.reduce((sum, session) => sum + (session.accuracy ?? 0), 0) / plays)
+            : 0;
+          const avgScore = plays > 0
+            ? Math.round(sessions.reduce((sum, session) => sum + (session.score ?? 0), 0) / plays)
+            : 0;
+          const bestScore = Math.max(
+            0,
+            ...state.gamesCompleted
+              .filter((result) => result.mode === mode)
+              .map((result) => result.score),
+          );
+
+          return {
+            mode,
+            plays,
+            avgAccuracy,
+            avgScore,
+            bestScore,
+            lastPlayed: sessions[0]?.date ?? null,
+          };
+        });
+      },
+
       // ─── Sessions ────────────────────────────────────────────────
 
       logSession(params) {
@@ -616,7 +788,12 @@ export const useProgressStore = create<ProgressStore>()(
     }),
     {
       name: 'unlock2026_progress',
-      version: 1,
+      version: 2,
+      migrate: (persistedState) => sanitizePersistedProgress(persistedState as Partial<UserProgress>),
+      merge: (persistedState, currentState) => ({
+        ...currentState,
+        ...sanitizePersistedProgress(persistedState as Partial<UserProgress>),
+      }),
     },
   ),
 );

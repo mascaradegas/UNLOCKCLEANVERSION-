@@ -1,0 +1,3 @@
+import{u as r,j as e}from"./index-CvVzQGcP.js";function c({title:l,showBack:s=!0,backTo:t,rightContent:n}){const o=r(),a=()=>{o(t||-1)};return e.jsxs("header",{className:"relative z-10 flex items-center gap-4 p-5",children:[s&&e.jsx("button",{onClick:a,className:`inline-flex items-center gap-2 px-4 py-2.5 rounded-full
+                     bg-white/[0.08] border-2 border-unlock-gold text-unlock-gold
+                     font-semibold text-sm transition-all hover:bg-unlock-gold hover:text-black`,children:"← Voltar"}),l&&e.jsx("h1",{className:"font-title font-bold text-xl text-unlock-gold",children:l}),n&&e.jsx("div",{className:"ml-auto",children:n})]})}export{c as H};

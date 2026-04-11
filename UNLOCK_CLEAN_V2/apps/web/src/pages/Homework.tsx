@@ -1,10 +1,11 @@
 import { useState, useEffect, useMemo, useRef, useCallback } from 'react';
 import { useParams, useNavigate, Link, useSearchParams } from 'react-router-dom';
-import { getLessonById, LESSONS } from '@/data/lessons';
+import { loadAllLessons, loadLessonById } from '@/data/lessons';
 import { useProgressStore } from '@/stores/progressStore';
 import { SFX } from '@/utils/sounds';
 import { matchAnswer, getDisplayAnswer, stripHtml } from '@/utils/matchAnswer';
 import { SpeakButton } from '@/components/SpeakButton';
+import type { Lesson } from '@unlock2026/shared';
 
 function shuffle<T>(a: T[]): T[] { const b=[...a]; for(let i=b.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[b[i],b[j]]=[b[j],b[i]];} return b; }
 
@@ -70,19 +71,48 @@ export function Homework() {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
   const store = useProgressStore();
-  const lesson = id ? getLessonById(id) : undefined;
   const returnTo = searchParams.get('returnTo') || '/';
   const stepComplete = searchParams.get('stepComplete');
+  const [lesson, setLesson] = useState<Lesson | null>(null);
+  const [allLessons, setAllLessons] = useState<Lesson[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => { if (!lesson) navigate('/', { replace: true }); }, [lesson, navigate]);
-  if (!lesson) return null;
+  useEffect(() => {
+    let active = true;
+    if (!id) {
+      setLesson(null);
+      setAllLessons([]);
+      setIsLoading(false);
+      return () => {
+        active = false;
+      };
+    }
 
-  const vocab = lesson.vocabulary || [];
+    setIsLoading(true);
+    Promise.all([loadLessonById(id), loadAllLessons()]).then(([loadedLesson, loadedLessons]) => {
+      if (!active) return;
+      setLesson(loadedLesson ?? null);
+      setAllLessons(loadedLessons);
+      setIsLoading(false);
+    });
+
+    return () => {
+      active = false;
+    };
+  }, [id]);
+
+  useEffect(() => {
+    if (!isLoading && !lesson) {
+      navigate('/', { replace: true });
+    }
+  }, [isLoading, lesson, navigate]);
+
+  const vocab = lesson?.vocabulary || [];
 
   // Build all vocab pool for distractors
   const allVocab = useMemo(() => 
-    LESSONS.flatMap(l => (l.vocabulary || []).map(w => ({ en: w.en, pt: w.pt }))),
-    []
+    allLessons.flatMap(l => (l.vocabulary || []).map(w => ({ en: w.en, pt: w.pt }))),
+    [allLessons]
   );
 
   // Build 10 questions with 3 options each
@@ -131,6 +161,7 @@ export function Homework() {
 
   // ─── Finish ─────────────────────────────────────────────────────
   const finishHomework = useCallback(() => {
+    if (!lesson) return;
     const duration = Math.round((Date.now() - startTime.current) / 1000);
     const totalAttempts = correctCount + wrongCount;
     const acc = totalAttempts > 0 ? Math.round((correctCount / totalAttempts) * 100) : 0;
@@ -146,7 +177,7 @@ export function Homework() {
 
   // ─── Step 1: Choose option ──────────────────────────────────────
   const handleChoose = useCallback((optionIdx: number) => {
-    if (phase !== 'choose' || !question) return;
+    if (phase !== 'choose' || !question || !lesson) return;
 
     const isCorrect = optionIdx === question.correctIndex;
     const responseTime = Date.now() - questionStart.current;
@@ -207,6 +238,16 @@ export function Homework() {
       SFX.wrong();
     }
   }, [phase, question, typeInput, idx, total, finishHomework]);
+
+  if (isLoading) {
+    return (
+      <div className="relative z-10 min-h-screen flex items-center justify-center">
+        <div className="game-back-btn">Carregando homework...</div>
+      </div>
+    );
+  }
+
+  if (!lesson) return null;
 
   // ─── Intro screen ───────────────────────────────────────────────
   if (showIntro) {

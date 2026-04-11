@@ -1,11 +1,12 @@
 import { useState, useEffect, useCallback } from 'react';
 import { useParams, useNavigate, Link, useSearchParams } from 'react-router-dom';
-import { getLessonById, getNextLesson } from '@/data/lessons';
+import { loadLessonById, loadNextLesson } from '@/data/lessons';
 import { useProgressStore } from '@/stores/progressStore';
 import { SlideRenderer } from '@/components/lessons/SlideRenderer';
 import { SpeedControl } from '@/components/SpeedControl';
 import { XP } from '@unlock2026/shared';
 import { SFX } from '@/utils/sounds';
+import type { Lesson } from '@unlock2026/shared';
 
 export function LessonPlayer() {
   const { id } = useParams<{ id: string }>();
@@ -13,8 +14,10 @@ export function LessonPlayer() {
   const [searchParams] = useSearchParams();
   const returnTo = searchParams.get('returnTo');
   const nextStep = searchParams.get('nextStep');
-  const lesson = id ? getLessonById(id) : undefined;
   const store = useProgressStore();
+  const [lesson, setLesson] = useState<Lesson | null>(null);
+  const [nextLesson, setNextLesson] = useState<Lesson | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
 
   const savedIndex = id ? store.getSlideProgress(id) : 0;
   const [currentSlide, setCurrentSlide] = useState(savedIndex);
@@ -24,18 +27,44 @@ export function LessonPlayer() {
   const [showIntro, setShowIntro] = useState(savedIndex === 0);
   const [showExitConfirm, setShowExitConfirm] = useState(false);
 
-  useEffect(() => { if (!lesson) navigate('/', { replace: true }); }, [lesson, navigate]);
-  if (!lesson) return null;
+  useEffect(() => {
+    let active = true;
+    if (!id) {
+      setLesson(null);
+      setNextLesson(null);
+      setIsLoading(false);
+      return () => {
+        active = false;
+      };
+    }
 
-  const slides = lesson.slides;
+    setIsLoading(true);
+    Promise.all([loadLessonById(id), loadNextLesson(id)]).then(([loadedLesson, loadedNextLesson]) => {
+      if (!active) return;
+      setLesson(loadedLesson ?? null);
+      setNextLesson(loadedNextLesson ?? null);
+      setIsLoading(false);
+    });
+
+    return () => {
+      active = false;
+    };
+  }, [id]);
+
+  useEffect(() => {
+    if (!isLoading && !lesson) {
+      navigate('/', { replace: true });
+    }
+  }, [isLoading, lesson, navigate]);
+
+  const slides = lesson?.slides ?? [];
   const total = slides.length;
   const slide = slides[currentSlide];
-  const isFav = store.favorites.includes(lesson.id);
+  const isFav = lesson ? store.favorites.includes(lesson.id) : false;
   const progress = total > 1 ? Math.round((currentSlide / (total - 1)) * 100) : 0;
-  const nextLesson = getNextLesson(lesson.id);
 
   const handleComplete = useCallback(() => {
-    if (showComplete) return;
+    if (!lesson || showComplete) return;
     const wasAlreadyComplete = store.isLessonComplete(lesson.id);
     setAlreadyDone(wasAlreadyComplete);
 
@@ -69,6 +98,7 @@ export function LessonPlayer() {
   }, [showComplete, store, lesson]);
 
   const goNext = useCallback(() => {
+    if (!lesson) return;
     if (currentSlide < total - 1) {
       const n = currentSlide + 1;
       setCurrentSlide(n);
@@ -79,7 +109,7 @@ export function LessonPlayer() {
       // Last slide — trigger completion
       handleComplete();
     }
-  }, [currentSlide, total, lesson.id, store, handleComplete]);
+  }, [currentSlide, total, lesson, store, handleComplete]);
 
   const goPrev = useCallback(() => {
     if (currentSlide > 0) setCurrentSlide(currentSlide - 1);
@@ -94,6 +124,16 @@ export function LessonPlayer() {
     window.addEventListener('keydown', h);
     return () => window.removeEventListener('keydown', h);
   }, [goNext, goPrev, showComplete]);
+
+  if (isLoading) {
+    return (
+      <div className="relative z-10 min-h-screen flex items-center justify-center">
+        <div className="game-back-btn">Carregando aula...</div>
+      </div>
+    );
+  }
+
+  if (!lesson) return null;
 
   // Intro screen
   if (showIntro) {

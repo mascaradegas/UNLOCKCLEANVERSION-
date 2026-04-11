@@ -1,16 +1,64 @@
-import { useParams, Link } from 'react-router-dom';
-import { getLessonById } from '@/data/lessons';
+import { useMemo } from 'react';
+import { useParams, Link, useLocation, useSearchParams } from 'react-router-dom';
+import { getLessonSummaryById } from '@/data/lessons';
+import type { Lesson } from '@unlock2026/shared';
+
+interface SelectModeState {
+  lesson?: Lesson;
+  returnTo?: string;
+}
+
+function withQuery(path: string, params: URLSearchParams) {
+  const query = params.toString();
+  return query ? `${path}?${query}` : path;
+}
 
 export function SelectMode() {
   const { lessonId } = useParams<{ lessonId: string }>();
-  const lesson = lessonId ? getLessonById(lessonId) : undefined;
+  const location = useLocation();
+  const [searchParams] = useSearchParams();
+  const routeState = (location.state as SelectModeState | null) ?? null;
+  const returnTo = routeState?.returnTo || searchParams.get('returnTo') || undefined;
+  const selectedLessonId = searchParams.get('lessonId') || lessonId || '';
+  const lesson = lessonId === 'quickplay'
+    ? routeState?.lesson
+    : (lessonId ? getLessonSummaryById(lessonId) : undefined);
+
+  const backPath = useMemo(() => {
+    if (!returnTo) return '/';
+
+    const params = new URLSearchParams();
+    if (returnTo === '/daily-drill' && selectedLessonId) {
+      params.set('lessonId', selectedLessonId);
+    }
+
+    return withQuery(returnTo, params);
+  }, [returnTo, selectedLessonId]);
+
+  const buildGamePath = (mode: string) => {
+    const params = new URLSearchParams();
+
+    if (returnTo) {
+      params.set('returnTo', returnTo);
+
+      if (selectedLessonId) {
+        params.set('lessonId', selectedLessonId);
+      }
+
+      if (returnTo === '/daily-drill') {
+        params.set('stepComplete', mode);
+      }
+    }
+
+    return withQuery(`/game/${mode}/${lessonId}`, params);
+  };
 
   return (
     <div className="relative z-10 min-h-screen" style={{ paddingTop: 20 }}>
       {/* Header */}
       <div style={{ padding: '0 20px', marginBottom: 20 }}>
         <Link
-          to="/"
+          to={backPath}
           style={{
             display: 'inline-flex', alignItems: 'center', gap: 8, padding: '8px 16px',
             borderRadius: 10, border: '2px solid var(--green)', color: 'var(--green)',
@@ -37,7 +85,12 @@ export function SelectMode() {
 
       {/* Game cards */}
       <div style={{ maxWidth: 700, margin: '0 auto', padding: '0 20px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 20 }}>
-        <Link to={`/game/word-drop/${lessonId}`} className="game-card purple" style={{ textDecoration: 'none' }}>
+        <Link
+          to={buildGamePath('word-drop')}
+          state={routeState?.lesson ? { lesson: routeState.lesson, returnTo } : undefined}
+          className="game-card purple"
+          style={{ textDecoration: 'none' }}
+        >
           <div className="game-icon">⬇️</div>
           <div className="game-title">WORD DROP</div>
           <div className="game-subtitle">palavras caindo</div>
@@ -45,7 +98,12 @@ export function SelectMode() {
           <div className="game-tag">💪 Treina: <strong>Velocidade</strong></div>
         </Link>
 
-        <Link to={`/game/word-match/${lessonId}`} className="game-card green" style={{ textDecoration: 'none' }}>
+        <Link
+          to={buildGamePath('word-match')}
+          state={routeState?.lesson ? { lesson: routeState.lesson, returnTo } : undefined}
+          className="game-card green"
+          style={{ textDecoration: 'none' }}
+        >
           <div className="game-icon">🔗</div>
           <div className="game-title">WORD MATCH</div>
           <div className="game-subtitle">conectar pares</div>
@@ -53,7 +111,12 @@ export function SelectMode() {
           <div className="game-tag">💪 Treina: <strong>Memória</strong></div>
         </Link>
 
-        <Link to={`/game/word-stack/${lessonId}`} className="game-card orange" style={{ textDecoration: 'none' }}>
+        <Link
+          to={buildGamePath('word-stack')}
+          state={routeState?.lesson ? { lesson: routeState.lesson, returnTo } : undefined}
+          className="game-card orange"
+          style={{ textDecoration: 'none' }}
+        >
           <div className="game-icon">📚</div>
           <div className="game-title">WORD STACK</div>
           <div className="game-subtitle">empilhar cartas</div>

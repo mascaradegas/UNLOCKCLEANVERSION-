@@ -1,11 +1,11 @@
 import { useState, useRef, useEffect, useMemo, useCallback } from 'react';
 import { useParams, useNavigate, useSearchParams } from 'react-router-dom';
 import { useProgressStore } from '@/stores/progressStore';
-import { LESSONS } from '@/data/lessons';
+import { loadAllLessons } from '@/data/lessons';
 import { SFX } from '@/utils/sounds';
 import { getDisplayAnswer } from '@/utils/matchAnswer';
 import { SpeakButton } from '@/components/SpeakButton';
-import type { VocabularyItem } from '@unlock2026/shared';
+import type { Lesson } from '@unlock2026/shared';
 
 // ═══════════════════════════════════════════════════════════════════════════
 // Types
@@ -105,9 +105,25 @@ export function WarmUp() {
   const stepComplete = searchParams.get('stepComplete');
 
   const { trackWord, addXP, getWeakWords, getWordsForReview, logSession } = useProgressStore();
+  const [allLessons, setAllLessons] = useState<Lesson[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    let active = true;
+    setIsLoading(true);
+    loadAllLessons().then((loadedLessons) => {
+      if (!active) return;
+      setAllLessons(loadedLessons);
+      setIsLoading(false);
+    });
+    return () => {
+      active = false;
+    };
+  }, []);
 
   // ─── Build items ──────────────────────────────────────────────────
   const items = useMemo<DrillItem[]>(() => {
+    if (allLessons.length === 0) return [];
     if (mode === 'review') {
       // REVIEW: If lessonId is specified, ONLY show words from that lesson
       // Otherwise pull from tracking — prioritize weak/due words from all lessons
@@ -115,7 +131,7 @@ export function WarmUp() {
 
       if (lessonId) {
         // LESSON-SPECIFIC REVIEW: Only words from this lesson
-        const lesson = LESSONS.find(l => l.id === lessonId);
+        const lesson = allLessons.find(l => l.id === lessonId);
         if (lesson && lesson.vocabulary) {
           const lessonVocab: DrillItem[] = (lesson.vocabulary || []).map(w => ({
             en: w.en, pt: w.pt, emoji: w.emoji || lesson.emoji,
@@ -152,7 +168,7 @@ export function WarmUp() {
 
         // Fill remaining from random lessons
         if (combined.length < TOTAL_ITEMS_REVIEW) {
-          const allVocab: DrillItem[] = LESSONS.flatMap(l =>
+          const allVocab: DrillItem[] = allLessons.flatMap(l =>
             (l.vocabulary || []).map(w => ({
               en: w.en, pt: w.pt, emoji: w.emoji || l.emoji,
               lessonId: l.id, lessonTitle: l.title, module: l.module, order: l.order,
@@ -169,8 +185,8 @@ export function WarmUp() {
       return combined;
     } else {
       // WARMUP: Pull from specific lesson
-      let lesson = lessonId ? LESSONS.find(l => l.id === lessonId) : null;
-      if (!lesson) lesson = LESSONS[0];
+      let lesson = lessonId ? allLessons.find(l => l.id === lessonId) : null;
+      if (!lesson) lesson = allLessons[0];
 
       const vocab = lesson?.vocabulary || [];
       return pickRandom(vocab, TOTAL_ITEMS_WARMUP).map(w => ({
@@ -182,7 +198,7 @@ export function WarmUp() {
         order: lesson?.order,
       }));
     }
-  }, [mode, lessonId]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [allLessons, getWeakWords, getWordsForReview, lessonId, mode]);
 
   // ─── State ────────────────────────────────────────────────────────
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -423,6 +439,14 @@ export function WarmUp() {
     : 0;
 
   // ─── Render ───────────────────────────────────────────────────────
+
+  if (isLoading) {
+    return (
+      <div className="relative z-10 min-h-screen flex items-center justify-center">
+        <div className="game-back-btn">Carregando treino...</div>
+      </div>
+    );
+  }
 
   return (
     <div className="relative z-10 min-h-screen">

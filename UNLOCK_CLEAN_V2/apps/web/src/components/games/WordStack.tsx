@@ -1,16 +1,24 @@
 import { useState, useMemo, useCallback, useEffect, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
 import type { Lesson } from '@unlock2026/shared';
 import { useProgressStore } from '@/stores/progressStore';
 import { SFX } from '@/utils/sounds';
 import { getDisplayAnswer } from '@/utils/matchAnswer';
 
-interface Props { lesson: Lesson; onFinish: () => void; }
+interface Props {
+  lesson: Lesson;
+  onFinish: () => void;
+  onSelectMode: () => void;
+  backLabel: string;
+}
 
 function shuffle<T>(a: T[]): T[] { const b=[...a]; for(let i=b.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[b[i],b[j]]=[b[j],b[i]];} return b; }
 
-export function WordStackGame({ lesson, onFinish }: Props) {
-  const navigate = useNavigate();
+function getWordStackMaxScore(total: number) {
+  if (total <= 0) return 0;
+  return (total * 15) + ((total * (total - 1)) / 2) * 5;
+}
+
+export function WordStackGame({ lesson, onFinish, onSelectMode, backLabel }: Props) {
   const store = useProgressStore();
   const vocab = lesson.vocabulary || [];
   const [gameKey, setGameKey] = useState(0);
@@ -36,6 +44,16 @@ export function WordStackGame({ lesson, onFinish }: Props) {
   const [xpGained, setXpGained] = useState(0);
   const [recordBeat, setRecordBeat] = useState(false);
   const [selectedWordIndex, setSelectedWordIndex] = useState<number | null>(null);
+  const [screenShaking, setScreenShaking] = useState(false);
+  const [comboMilestone, setComboMilestone] = useState<number | null>(null);
+  const [feedbackAnnouncement, setFeedbackAnnouncement] = useState<'correct' | 'wrong' | 'timeout' | null>(null);
+
+  interface Particle { id: number; emoji: string; x: number; y: number; tx: number; ty: number; color: string; }
+  interface ScorePopup { id: number; text: string; x: number; y: number; color: string; }
+  const [particles, setParticles] = useState<Particle[]>([]);
+  const [scorePopups, setScorePopups] = useState<ScorePopup[]>([]);
+  const particleIdRef = useRef(0);
+  const popupIdRef = useRef(0);
 
   // Use ref to avoid stale closure in timer callback
   const handleSubmitRef = useRef<(timeout?: boolean) => void>(() => {});
@@ -44,6 +62,43 @@ export function WordStackGame({ lesson, onFinish }: Props) {
   const total = words.length;
 
   useEffect(() => { if (!store.hasTutorialSeen('word-stack')) setShowTutorial(true); }, []);
+
+  const spawnParticles = useCallback((x: number, y: number, emoji: string, color: string) => {
+    const newParticles: Particle[] = [];
+    for (let i = 0; i < 6; i++) {
+      const angle = (i / 6) * Math.PI * 2;
+      const distance = 60 + Math.random() * 40;
+      const tx = Math.cos(angle) * distance;
+      const ty = Math.sin(angle) * distance + Math.random() * 40;
+      newParticles.push({
+        id: particleIdRef.current++,
+        emoji: emoji || '✨',
+        x,
+        y,
+        tx,
+        ty,
+        color,
+      });
+    }
+    setParticles(current => [...current, ...newParticles]);
+    setTimeout(() => {
+      setParticles(current => current.filter(particle => !newParticles.some(next => next.id === particle.id)));
+    }, 800);
+  }, []);
+
+  const spawnScorePopup = useCallback((x: number, y: number, text: string, color: string) => {
+    const popup: ScorePopup = {
+      id: popupIdRef.current++,
+      text,
+      x,
+      y,
+      color,
+    };
+    setScorePopups(current => [...current, popup]);
+    setTimeout(() => {
+      setScorePopups(current => current.filter(next => next.id !== popup.id));
+    }, 1000);
+  }, []);
 
   useEffect(() => {
     if (!word || gameOver) return;
@@ -55,6 +110,8 @@ export function WordStackGame({ lesson, onFinish }: Props) {
     setTimer(15);
     setFb(null);
     setShowCorrect(null);
+    setSelectedWordIndex(null);
+    setFeedbackAnnouncement(null);
     answerStart.current = Date.now();
   }, [idx, word, gameOver, vocab]);
 
@@ -87,8 +144,12 @@ export function WordStackGame({ lesson, onFinish }: Props) {
     const duration = Math.round((Date.now() - startTime.current) / 1000);
     const totalAttempts = totalCorrect + totalWrong;
     const acc = totalAttempts > 0 ? Math.round((totalCorrect / totalAttempts) * 100) : 0;
+    const maxScore = getWordStackMaxScore(total);
     // completeGame already calls addXP, updateStreak, checkAchievements internally
-    const result = store.completeGame(lesson.id, 'word-stack', finalScore, total * 15);
+    const result = store.completeGame(lesson.id, 'word-stack', finalScore, maxScore, {
+      percent: maxScore > 0 ? Math.round((finalScore / maxScore) * 100) : 0,
+      isPerfect: totalWrong === 0 && totalCorrect === total,
+    });
     store.logSession({ type: 'word-stack', lessonId: lesson.id, score: finalScore, accuracy: acc, duration, wordsAttempted: totalAttempts });
     setXpGained(50 + (result.isPerfect ? 100 : 0));
     setRecordBeat(result.isNewBest);
@@ -115,10 +176,20 @@ export function WordStackGame({ lesson, onFinish }: Props) {
       const newCombo = combo + 1;
       const pts = 15 + combo * 5;
       const newScore = score + pts;
+      const effectX = window.innerWidth / 2;
+      const effectY = window.innerHeight / 2;
       setScore(newScore); setCombo(newCombo);
       const newCorrect = correctCount + 1;
       setCorrectCount(newCorrect);
+      spawnParticles(effectX, effectY, word.emoji || '✨', 'var(--green)');
+      spawnScorePopup(effectX, effectY + 50, `+${pts}`, 'var(--green)');
+      setFeedbackAnnouncement('correct');
+      setTimeout(() => setFeedbackAnnouncement(null), 600);
       if (newCombo > 0 && newCombo % 3 === 0) SFX.combo();
+      if (newCombo > 0 && newCombo % 3 === 0) {
+        setComboMilestone(newCombo);
+        setTimeout(() => setComboMilestone(null), 600);
+      }
       setTimeout(() => {
         setFb(null);
         if (idx >= total - 1) { finishGame(newScore, newCorrect, wrongCount); } else { setIdx(i => i + 1); }
@@ -127,16 +198,24 @@ export function WordStackGame({ lesson, onFinish }: Props) {
       setFb('wrong'); SFX.wrong();
       setShowCorrect(getDisplayAnswer(word.en));
       const newLives = lives - 1;
+      const effectX = window.innerWidth / 2;
+      const effectY = window.innerHeight / 2;
       setLives(newLives); setCombo(0);
       const newWrong = wrongCount + 1;
       setWrongCount(newWrong);
+      spawnParticles(effectX, effectY, timeout ? '⏰' : '💥', 'var(--red)');
+      spawnScorePopup(effectX, effectY + 50, timeout ? 'TIME UP!' : 'MISS', 'var(--red)');
+      setFeedbackAnnouncement(timeout ? 'timeout' : 'wrong');
+      setTimeout(() => setFeedbackAnnouncement(null), 600);
+      setScreenShaking(true);
+      setTimeout(() => setScreenShaking(false), 400);
       setTimeout(() => {
         setFb(null); setShowCorrect(null);
         if (newLives <= 0) { finishGame(score, correctCount, newWrong); return; }
         if (idx >= total - 1) { finishGame(score, correctCount, newWrong); } else { setIdx(i => i + 1); }
       }, 1500);
     }
-  }, [fb, word, placed, combo, score, lives, idx, total, correctCount, wrongCount, store, lesson, finishGame]);
+  }, [fb, word, placed, combo, score, lives, idx, total, correctCount, wrongCount, store, lesson, finishGame, spawnParticles, spawnScorePopup]);
 
   // Keep ref in sync so the timer always calls the latest handleSubmit
   useEffect(() => { handleSubmitRef.current = handleSubmit; }, [handleSubmit]);
@@ -146,6 +225,8 @@ export function WordStackGame({ lesson, onFinish }: Props) {
     setCorrectCount(0); setWrongCount(0); setGameOver(false);
     setFb(null); setShowCorrect(null); setPlaced([]); setPool([]);
     setXpGained(0); setRecordBeat(false);
+    setSelectedWordIndex(null);
+    setParticles([]); setScorePopups([]); setScreenShaking(false); setComboMilestone(null); setFeedbackAnnouncement(null);
     startTime.current = Date.now();
     setGameKey(k => k + 1);
   }, []);
@@ -218,7 +299,7 @@ export function WordStackGame({ lesson, onFinish }: Props) {
         <div style={{ textAlign:'left', padding:'0 10px', lineHeight:1.8, fontSize:'0.9rem' }}>
           <p>1️⃣ Leia a frase em <b style={{color:'var(--gold)'}}>português</b></p>
           <p>2️⃣ Toque nas palavras para montar a tradução em <b style={{color:'var(--green)'}}>inglês</b></p>
-          <p>3️⃣ Cuidado com as palavras <b style={{color:'var(--red)'}}>falsas</b>! 🚫</p>
+          <p>3️⃣ Monte a frase na <b style={{color:'var(--red)'}}>ordem certa</b> antes do tempo acabar.</p>
           <p style={{ marginTop:8, color:'var(--gray)', fontSize:'0.8rem' }}>Toque numa palavra colocada para removê-la</p>
         </div>
         <button className="game-modal-btn primary" onClick={() => { setShowTutorial(false); store.markTutorialSeen('word-stack'); }}>COMEÇAR! 🚀</button>
@@ -242,17 +323,16 @@ export function WordStackGame({ lesson, onFinish }: Props) {
         </div>
         <div className="game-xp-gained">+{xpGained} XP ⚡</div>
         <button className="game-modal-btn primary" onClick={resetGame}>🔄 Jogar de Novo</button>
-        <button className="game-modal-btn secondary" onClick={() => navigate(`/game/select/${lesson.id}`)}>🎯 Outros Jogos</button>
-        <button className="game-modal-btn secondary" onClick={() => navigate('/')}>📚 Menu</button>
+        <button className="game-modal-btn secondary" onClick={onSelectMode}>🎯 Outros Jogos</button>
+        <button className="game-modal-btn secondary" onClick={onFinish}>↩ {backLabel}</button>
       </div></div>
     );
   }
 
-  const fuseW = (timer / 15) * 100;
   const recordPct = bestScore > 0 ? Math.min((score / bestScore) * 100, 100) : 0;
 
   return (
-    <div className="game-page">
+    <div className={`game-page ${screenShaking ? 'ws-screen-shake' : ''}`}>
       <button className="game-pause-btn" onClick={() => setPaused(!paused)}>{paused ? '▶️' : '⏸️'}</button>
       <div className="game-title-bar"><h1>📚 WORD STACK</h1></div>
       <div className="game-hud">
@@ -260,11 +340,7 @@ export function WordStackGame({ lesson, onFinish }: Props) {
           <div className="hud-item" key={h.l}><div className="hud-label">{h.l}</div><div className="hud-value">{h.v}</div></div>
         ))}
       </div>
-      <div className="timer-bomb">
-        <div className="bomb-icon">💣</div>
-        <div className="bomb-fuse"><div className="bomb-fuse-fill" style={{width:`${fuseW}%`}}/></div>
-        <div className="bomb-time">{Math.ceil(timer)}</div>
-      </div>
+      <div className={`timer-neon ${timer <= 10 ? 'timer-warning' : ''}`} style={timer <= 10 ? { color: 'var(--red)', borderColor: 'var(--red)', boxShadow: '0 0 20px rgba(255,68,68,0.6)' } : undefined}>{Math.ceil(timer)}{timer <= 10 && timer > 0 ? ' ⚠️' : ''}</div>
       {bestScore > 0 && (
         <div className="game-record-bar"><div className="game-record-fill" style={{width:`${recordPct}%`}}/><div className="game-record-text">Recorde: {bestScore}</div></div>
       )}
@@ -273,9 +349,7 @@ export function WordStackGame({ lesson, onFinish }: Props) {
         <div className="ws-target-emoji">{word?.emoji||'🎯'}</div>
         <div className="ws-target-text">{word?.pt}</div>
       </div>
-      <div className={`ws-answer ${fb === 'correct' ? 'correct-glow' : fb === 'wrong' ? 'wrong-glow' : ''}`}
-           style={{ borderColor: fb==='correct' ? 'var(--green)' : fb==='wrong' ? 'var(--red)' : undefined,
-                    boxShadow: fb==='correct' ? '0 0 20px rgba(0,255,136,0.5)' : fb==='wrong' ? '0 0 20px rgba(255,68,68,0.5)' : undefined }}>
+      <div className={`ws-answer ${fb === 'correct' ? 'correct' : ''} ${fb === 'wrong' ? 'wrong' : ''}`}>
         {placed.length===0 && !showCorrect && <span style={{color:'var(--gray)',fontStyle:'italic'}}>Toque nas palavras abaixo...</span>}
         {showCorrect ? (
           <span style={{color:'var(--green)',fontFamily:'Orbitron',fontWeight:700}}>{showCorrect}</span>
@@ -287,13 +361,57 @@ export function WordStackGame({ lesson, onFinish }: Props) {
       </div>
       <div className="ws-words-pool">
         {pool.map((w,i) => (
-          <button key={`${w}-${i}`} className="ws-word-tag" onClick={() => addWord(w,i)} disabled={!!fb||paused}>{w}</button>
+          <button key={`${w}-${i}`} className={`ws-word-tag ${selectedWordIndex === i ? 'highlighted' : ''}`} onClick={() => addWord(w,i)} disabled={!!fb||paused}>{w}</button>
         ))}
       </div>
       <div className="ws-controls">
         <button className="ws-ctrl-btn undo" onClick={undoWord} disabled={placed.length===0||!!fb}>↩ DESFAZER</button>
         <button className="ws-ctrl-btn submit" onClick={() => handleSubmit(false)} disabled={placed.length===0||!!fb}>ENVIAR ✓</button>
       </div>
+
+      {particles.map(p => (
+        <div
+          key={p.id}
+          className="ws-particle"
+          style={{
+            left: `${p.x}px`,
+            top: `${p.y}px`,
+            '--tx': `${p.tx}px`,
+            '--ty': `${p.ty}px`,
+            color: p.color,
+          } as any}
+        >
+          {p.emoji}
+        </div>
+      ))}
+
+      {scorePopups.map(p => (
+        <div
+          key={p.id}
+          className="ws-score-popup"
+          style={{
+            left: `${p.x}px`,
+            top: `${p.y}px`,
+            color: p.color,
+          }}
+        >
+          {p.text}
+        </div>
+      ))}
+
+      {comboMilestone !== null && (
+        <div className="ws-combo-milestone">
+          <div className="ws-combo-text">{comboMilestone}x COMBO! 🔥</div>
+        </div>
+      )}
+
+      {feedbackAnnouncement && (
+        <div className={`ws-feedback-announcement ${feedbackAnnouncement}`}>
+          <div className="ws-feedback-text">
+            {feedbackAnnouncement === 'correct' ? 'NICE STACK!' : feedbackAnnouncement === 'timeout' ? 'TIME UP!' : 'WRONG ORDER!'}
+          </div>
+        </div>
+      )}
     </div>
   );
 }
