@@ -8,7 +8,7 @@ Guia de referência do codebase para o assistente. Leia antes de qualquer modifi
 
 O código vive em `UNLOCK_CLEAN_V2/`. É um monorepo npm com dois workspaces:
 
-- `apps/web` — aplicação React principal (Vite + React 19 + TypeScript)
+- `apps` — aplicação React principal (Vite + React 19 + TypeScript)
 - `packages/shared` — tipos e constantes compartilhados
 
 Dev server roda na porta **3000** (vite.config.js). Os scripts do monorepo ficam no `UNLOCK_CLEAN_V2/package.json`.
@@ -20,11 +20,11 @@ Dev server roda na porta **3000** (vite.config.js). Os scripts do monorepo ficam
 ### Pontos de entrada
 | Arquivo | Função |
 |---------|--------|
-| `apps/web/index.html` | HTML raiz |
-| `apps/web/src/main.tsx` | Bootstrap do React |
-| `apps/web/src/App.tsx` | Todas as rotas (lazy-loaded com Suspense) |
+| `apps/index.html` | HTML raiz |
+| `apps/src/main.tsx` | Bootstrap do React |
+| `apps/src/App.tsx` | Todas as rotas (lazy-loaded com Suspense) |
 
-### Páginas (`apps/web/src/pages/`)
+### Páginas (`apps/src/pages/`)
 | Arquivo | Rota | Descrição |
 |---------|------|-----------|
 | `Home.tsx` | `/` | Missão do dia + acesso rápido a jogos; lesson determinística por data |
@@ -39,7 +39,7 @@ Dev server roda na porta **3000** (vite.config.js). Os scripts do monorepo ficam
 | `Dashboard.tsx` | `/dashboard` | Stats completas: foco do dia, meta, nível, palavras prioritárias |
 | `Profile.tsx` | `/profile` | Perfil e configurações do usuário |
 
-### Componentes (`apps/web/src/components/`)
+### Componentes (`apps/src/components/`)
 | Arquivo | Descrição |
 |---------|-----------|
 | `lessons/SlideRenderer.tsx` | Switch por tipo de slide; renderiza todos os 12 tipos |
@@ -56,16 +56,16 @@ Dev server roda na porta **3000** (vite.config.js). Os scripts do monorepo ficam
 ### Dados
 | Arquivo | Descrição |
 |---------|-----------|
-| `apps/web/src/data/lessons.ts` | Funções de carga e cache de lições (async, por módulo) |
-| `apps/web/src/data/lessonSummaries.ts` | Array `LESSON_SUMMARIES` com metadados leves |
-| `apps/web/src/data/lessonModules/module{1-9}.ts` | Conteúdo completo (slides + vocab) de cada módulo |
+| `apps/src/data/lessons.ts` | Funções de carga e cache de lições (async, por módulo) |
+| `apps/src/data/lessonSummaries.ts` | Array `LESSON_SUMMARIES` com metadados leves |
+| `apps/src/data/lessonModules/module{1-9}.ts` | Conteúdo completo (slides + vocab) de cada módulo |
 
 ### Estado
 | Arquivo | Descrição |
 |---------|-----------|
-| `apps/web/src/stores/progressStore.ts` | Único store global (Zustand + persist → localStorage) |
+| `apps/src/stores/progressStore.ts` | Único store global (Zustand + persist → localStorage) |
 
-### Utilitários (`apps/web/src/utils/`)
+### Utilitários (`apps/src/utils/`)
 | Arquivo | Descrição |
 |---------|-----------|
 | `tts.ts` | TTS dual-layer: MP3 (500ms timeout) → fallback Web Speech API |
@@ -83,9 +83,9 @@ Dev server roda na porta **3000** (vite.config.js). Os scripts do monorepo ficam
 | Arquivo | Descrição |
 |---------|-----------|
 | `UNLOCK_CLEAN_V2/package.json` | Scripts do monorepo |
-| `apps/web/vite.config.js` | Porta 3000, aliases `@` e `@unlock2026/shared` |
-| `apps/web/tailwind.config.ts` | Design tokens: cores `unlock.*`, fontes Orbitron/Inter |
-| `apps/web/tsconfig.json` | Strict mode, ES2020, paths `@/*` e `@unlock2026/shared` |
+| `apps/vite.config.js` | Porta 3000, aliases `@` e `@unlock2026/shared` |
+| `apps/tailwind.config.ts` | Design tokens: cores `unlock.*`, fontes Orbitron/Inter |
+| `apps/tsconfig.json` | Strict mode, ES2020, paths `@/*` e `@unlock2026/shared` |
 
 ---
 
@@ -231,7 +231,7 @@ stop()
 isTTSAvailable()                  // → boolean
 ```
 
-Para áudios pré-gravados: ver `apps/web/public/audio/en/README.md`.
+Para áudios pré-gravados: ver `apps/public/audio/en/README.md`.
 
 ---
 
@@ -287,10 +287,29 @@ npm run organize:manual
 
 ---
 
+## Arquivos gerados pelo assistente
+
+Todo arquivo `.md` gerado pelo assistente (guias, pesquisas, sugestões de implementação, mapeamentos, decisões de arquitetura, etc.) deve ser criado em `claude-guidelines/`, **não na raiz do projeto**.
+
+**Exceções** — ficam onde o ecossistema espera:
+- `README.md` — raiz do projeto
+- `CLAUDE.md` — raiz do projeto
+- Arquivos dentro de `.claude/` (skills, agentes, hooks)
+
+**Exemplos corretos:**
+```
+claude-guidelines/REFACTOR_RESEARCH.md   ✅
+claude-guidelines/api-design.md          ✅
+claude-guidelines/migration-plan.md      ✅
+REFACTOR_RESEARCH.md                     ❌ (raiz)
+```
+
+---
+
 ## Convenções e cuidados
 
 - **Sem backend** — dados novos vão para `progressStore` ou `lessonModules/`
-- **Tipos globais em `packages/shared/src/types.ts`** — nunca duplicar em `apps/web`
+- **Tipos globais em `packages/shared/src/types.ts`** — nunca duplicar em `apps/`
 - **Lições são carregadas async** — use `loadLessonById()`, não acesse `module*.ts` direto
 - **Tailwind com design tokens** — cores `unlock-gold`, `unlock-green` etc.; nunca hardcode
 - **Rotas só em `App.tsx`** — não criar roteamento paralelo
