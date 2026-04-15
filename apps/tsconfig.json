@@ -17,9 +17,9 @@
     "noFallthroughCasesInSwitch": true,
     "paths": {
       "@/*": ["./src/*"],
-      "@shared/*": ["../../packages/shared/src/*"],
-      "@unlock2026/shared": ["../../packages/shared/src"]
+      "@shared/*": ["../packages/shared/src/*"],
+      "@unlock2026/shared": ["../packages/shared/src"]
     }
   },
-  "include": ["src", "../../packages/shared/src"]
+  "include": ["src", "../packages/shared/src"]
 }

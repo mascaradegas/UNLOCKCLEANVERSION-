@@ -5,12 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "validate:content": "node ../../scripts/validate-lessons.mjs",
+    "validate:content": "node ../scripts/validate-lessons.mjs",
     "build": "npm run validate:content && tsc -b && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
-    "@unlock2026/shared": "file:../../packages/shared",
+    "@unlock2026/shared": "file:../packages/shared",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.1.0",
