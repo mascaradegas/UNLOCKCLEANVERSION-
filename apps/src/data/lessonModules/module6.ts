@@ -261,7 +261,7 @@ export const module6Lessons = [
       { emoji: '💪', pt: 'Tem que ser forte pra esse trabalho', en: "You must be strong for this job", level: 1 }
     ] },
 
-  { id: 'would-should-could', title: 'WOULD / SHOULD / COULD', emoji: '🤔💬', description: 'Condicional básico', module: 6, order: 5,    slides: [
+  { id: 'would-should-could', title: 'WOULD / SHOULD / COULD', emoji: '🤔💬', description: 'Condicional básico', module: 6, order: 7,    slides: [
         { type: 'title', emoji: '🤔💬', title: 'WOULD / SHOULD / COULD', subtitle: 'Os 3 modais mais educados' },
         { type: 'situation', emoji: '🤵', cardClass: 'purple', text: 'Você está num restaurante chique.<br>Quer pedir café de forma <strong>EDUCADA</strong>.<br><br>Não diga "I want coffee!" 😬' },
         { type: 'rule', cardClass: 'cyan', text: '<strong>WOULD</strong> = gostaria (desejo educado)', keyword: 'WOULD', keywordAfter: 'Would you like...? / I would like...' },
@@ -313,7 +313,7 @@ export const module6Lessons = [
       ]
     },
 
-  { id: 'conditional-type-1', title: 'CONDITIONAL TYPE 1', emoji: '🔮✅', description: 'Se... vai acontecer', module: 6, order: 6, slides: [    { type: 'title', emoji: '🔮✅', title: 'IF... WILL (Condicional 1)', subtitle: 'Se... então vai...' },
+  { id: 'conditional-type-1', title: 'CONDITIONAL TYPE 1', emoji: '🔮✅', description: 'Se... vai acontecer', module: 6, order: 8, slides: [    { type: 'title', emoji: '🔮✅', title: 'IF... WILL (Condicional 1)', subtitle: 'Se... então vai...' },
       { type: 'situation', emoji: '🌧️', cardClass: 'purple', text: 'Olha pro céu. Vai chover.<br><br><strong>"If it rains, we won\'t work outside."</strong><br>(Se chover, não vamos trabalhar lá fora.)' },
       { type: 'rule', cardClass: 'cyan', text: 'Para situações <strong>reais/prováveis</strong>:<br><strong>IF</strong> + presente, <strong>WILL</strong> + verbo', keyword: 'IF + PRESENT, WILL', keywordAfter: 'Se chover, vou... = possibilidade real' },
       { type: 'tip', cardClass: 'orange', icon: '🗣️', title: 'ESTRUTURA', text: '<strong>IF</strong> + verbo no presente → resultado com <strong>WILL</strong><br><br>IF it rains → we\'ll stay inside<br>IF you work hard → you\'ll get paid more' },
@@ -414,7 +414,7 @@ export const module6Lessons = [
       { emoji: '📝', pt: 'Deveria anotar isso', en: "You should write that down", level: 1 }
     ] },
 
-  { id: 'at-the-bank', title: 'At the Bank', emoji: '🏦💳', description: 'No banco', module: 6, order: 7,    slides: [
+  { id: 'at-the-bank', title: 'At the Bank', emoji: '🏦💳', description: 'No banco', module: 6, order: 9,    slides: [
         { type: 'title', emoji: '🏦💳', title: 'AT THE BANK', subtitle: 'No banco' },
         { type: 'situation', emoji: '🏦', cardClass: 'purple', text: 'Você precisa abrir uma conta bancária.<br>Ou fazer transações básicas.<br><br>O que falar no banco?' },
         { type: 'rule', cardClass: 'cyan', text: 'Para abrir conta:', keyword: "I'D LIKE TO OPEN AN ACCOUNT", keywordAfter: 'Gostaria de abrir uma conta' },
@@ -464,7 +464,7 @@ export const module6Lessons = [
       ]
     },
 
-  { id: 'pharmacy-pickup', title: 'Pharmacy Pickup', emoji: '💊🏪', description: 'Retirar na farmácia', module: 6, order: 8,    slides: [
+  { id: 'pharmacy-pickup', title: 'Pharmacy Pickup', emoji: '💊🏪', description: 'Retirar na farmácia', module: 6, order: 10,    slides: [
         { type: 'title', emoji: '💊🏪', title: 'PHARMACY PICKUP', subtitle: 'Retirar remédio na farmácia' },
         { type: 'situation', emoji: '💊', cardClass: 'purple', text: 'Você precisa retirar um remédio que o médico receitou.<br><br>Como funciona nos EUA?' },
         { type: 'rule', cardClass: 'cyan', text: 'Para retirar remédio com receita:', keyword: "I'M HERE TO PICK UP A PRESCRIPTION", keywordAfter: 'Vim retirar uma receita' },
@@ -514,7 +514,7 @@ export const module6Lessons = [
       ]
     },
 
-  { id: 'renting', title: 'Renting an Apartment', emoji: '🏠📝', description: 'Alugar apartamento', module: 6, order: 9,    slides: [
+  { id: 'renting', title: 'Renting an Apartment', emoji: '🏠📝', description: 'Alugar apartamento', module: 6, order: 11,    slides: [
         { type: 'title', emoji: '🏠📝', title: 'RENTING AN APARTMENT', subtitle: 'Alugar um apartamento' },
         { type: 'situation', emoji: '🏠', cardClass: 'purple', text: 'Você está procurando apartamento pra alugar.<br><br>Vocabulário essencial de aluguel!' },
         { type: 'rule', cardClass: 'cyan', text: 'Para perguntar sobre aluguel:', keyword: "IS THIS APARTMENT AVAILABLE?", keywordAfter: 'Este apartamento está disponível?' },
@@ -564,7 +564,7 @@ export const module6Lessons = [
       ]
     },
 
-  { id: 'bills-utilities', title: 'Bills & Utilities', emoji: '📄💡', description: 'Contas e serviços', module: 6, order: 10,    slides: [
+  { id: 'bills-utilities', title: 'Bills & Utilities', emoji: '📄💡', description: 'Contas e serviços', module: 6, order: 12,    slides: [
         { type: 'title', emoji: '📄💡', title: 'BILLS & UTILITIES', subtitle: 'Contas e serviços básicos' },
         { type: 'situation', emoji: '📄', cardClass: 'purple', text: 'Você precisa pagar suas contas.<br>Luz, água, internet...<br><br>Como lidar com isso nos EUA?' },
         { type: 'rule', cardClass: 'cyan', text: 'Para pagar uma conta:', keyword: "I'D LIKE TO PAY MY BILL", keywordAfter: 'Gostaria de pagar minha conta' },
@@ -614,7 +614,7 @@ export const module6Lessons = [
       ]
     },
 
-  { id: 'usps-mail', title: 'USPS / Mail', emoji: '📬📦', description: 'Correios e envios', module: 6, order: 11,    slides: [
+  { id: 'usps-mail', title: 'USPS / Mail', emoji: '📬📦', description: 'Correios e envios', module: 6, order: 13,    slides: [
         { type: 'title', emoji: '📬📦', title: 'USPS / MAIL', subtitle: 'Correios e envios' },
         { type: 'situation', emoji: '📦', cardClass: 'purple', text: 'Você precisa enviar um pacote pro Brasil.<br>Ou pegar uma encomenda nos correios.<br><br>Vocabulário dos correios!' },
         { type: 'rule', cardClass: 'cyan', text: 'Para enviar algo:', keyword: "I'D LIKE TO SEND THIS TO...", keywordAfter: 'Gostaria de enviar isso para...' },
@@ -664,7 +664,7 @@ export const module6Lessons = [
       ]
     },
 
-  { id: 'customer-service', title: 'Customer Service Complaints', emoji: '📞😤', description: 'Reclamações / Atendimento', module: 6, order: 12,    slides: [
+  { id: 'customer-service', title: 'Customer Service Complaints', emoji: '📞😤', description: 'Reclamações / Atendimento', module: 6, order: 14,    slides: [
         { type: 'title', emoji: '📞😤', title: 'CUSTOMER SERVICE', subtitle: 'Reclamações e atendimento' },
         { type: 'situation', emoji: '😤', cardClass: 'purple', text: 'Você comprou algo com defeito.<br>Ou o serviço foi ruim.<br><br>Como reclamar de forma educada?' },
         { type: 'rule', cardClass: 'cyan', text: 'Para fazer uma reclamação educada:', keyword: "I HAVE A PROBLEM WITH... / I'D LIKE TO MAKE A COMPLAINT", keywordAfter: 'Tenho um problema com... / Gostaria de fazer uma reclamação' },
@@ -714,7 +714,7 @@ export const module6Lessons = [
       ]
     },
 
-  { id: 'returning-items', title: 'Returning Items', emoji: '🔄📦', description: 'Devolver itens', module: 6, order: 13,    slides: [
+  { id: 'returning-items', title: 'Returning Items', emoji: '🔄📦', description: 'Devolver itens', module: 6, order: 15,    slides: [
         { type: 'title', emoji: '🔄📦', title: 'RETURNING ITEMS', subtitle: 'Devolver itens' },
         { type: 'situation', emoji: '❌', cardClass: 'purple', text: 'Você comprou uma camisa errada.<br>Precisa devolver ou trocar.<br><br>Como resolver?' },
         { type: 'rule', cardClass: 'cyan', text: 'Opções para problemas:', keyword: 'RETURN | EXCHANGE | REFUND', keywordAfter: 'Devolver, Trocar, Reembolso' },
@@ -755,7 +755,7 @@ export const module6Lessons = [
       ]
     },
 
-  { id: 'phone-internet', title: 'Phone & Internet', emoji: '📱📶', description: 'Celular e internet', module: 6, order: 14,    slides: [
+  { id: 'phone-internet', title: 'Phone & Internet', emoji: '📱📶', description: 'Celular e internet', module: 6, order: 16,    slides: [
         { type: 'title', emoji: '📱📶', title: 'PHONE & INTERNET', subtitle: 'Celular e internet — Essencial nos EUA!' },
         { type: 'situation', emoji: '📱', cardClass: 'orange', text: 'Sua internet caiu, seu celular quebrou,<br>precisa de um plano mais barato...<br><br>Sem celular nos EUA = sem trabalho!' },
         { type: 'tip', cardClass: 'gold', icon: '🇺🇸', title: 'CELULAR NOS EUA', text: '<strong>Planos baratos:</strong><br><br>• <strong>Mint Mobile</strong> = ~$15/mês<br>• <strong>T-Mobile Prepaid</strong> = ~$25/mês<br>• <strong>Cricket</strong> = ~$30/mês<br><br>Precisa de: número americano + chip<br>Walmart e Best Buy vendem chips!<br><br>"Prepaid" = pré-pago (sem contrato)' },
@@ -801,7 +801,7 @@ export const module6Lessons = [
       ]
     },
 
-  { id: 'shopping-clothing', title: 'Shopping & Clothing', emoji: '🛍️👕', description: 'Compras e roupas', module: 6, order: 15,    slides: [
+  { id: 'shopping-clothing', title: 'Shopping & Clothing', emoji: '🛍️👕', description: 'Compras e roupas', module: 6, order: 17,    slides: [
         { type: 'title', emoji: '🛍️👕', title: 'SHOPPING & CLOTHING', subtitle: 'Compras e roupas' },
         { type: 'situation', emoji: '🛍️', cardClass: 'purple', text: 'Você está na loja. Precisa achar o tamanho,<br>provar, pedir desconto, devolver...<br><br>Comprar nos EUA é FÁCIL com as frases certas!' },
         { type: 'tip', cardClass: 'gold', icon: '🇺🇸', title: 'COMPRAS NOS EUA', text: '<strong>Coisas que brasileiros não sabem:</strong><br><br>• <strong>Tamanhos diferentes!</strong> S, M, L, XL<br>  (não é P, M, G, GG)<br>• Pode <strong>devolver</strong> quase TUDO em 30 dias!<br>  (guarde o recibo!)<br>• <strong>Tax</strong> não está incluso no preço!<br>  O preço na etiqueta + ~6% de imposto<br>• "Sales" = promoções (Black Friday, etc.)' },
@@ -852,7 +852,7 @@ export const module6Lessons = [
       ]
     },
 
-  { id: 'compliments', title: 'COMPLIMENTS', emoji: '👍💕', description: 'Elogios', module: 6, order: 16, slides: [    { type: 'title', emoji: '👍💕', title: 'COMPLIMENTS', subtitle: 'Elogios' },
+  { id: 'compliments', title: 'COMPLIMENTS', emoji: '👍💕', description: 'Elogios', module: 6, order: 18, slides: [    { type: 'title', emoji: '👍💕', title: 'COMPLIMENTS', subtitle: 'Elogios' },
       { type: 'situation', emoji: '💭', cardClass: 'purple', text: 'Situação: Elogios<br><br>Como você expressa isso em inglês?' },
       { type: 'rule', cardClass: 'cyan', text: 'Regra gramatical para COMPLIMENTS:', keyword: 'COMPLIMENTS', keywordAfter: 'Padrão essencial' },
       { type: 'tip', cardClass: 'orange', icon: '🗣️', title: 'PRONÚNCIA', text: 'Dica de pronúncia para esta lição' },
@@ -879,7 +879,7 @@ export const module6Lessons = [
       { type: 'end' }
     ], vocabulary: [{ emoji: '📚', pt: 'Termo 1', en: 'Term 1', level: 1 }, { emoji: '🎯', pt: 'Termo 2', en: 'Term 2', level: 1 }, { emoji: '✨', pt: 'Termo 3', en: 'Term 3', level: 1 }, { emoji: '🔥', pt: 'Termo 4', en: 'Term 4', level: 1 }, { emoji: '⭐', pt: 'Termo 5', en: 'Term 5', level: 1 }, { emoji: '💡', pt: 'Termo 6', en: 'Term 6', level: 2 }, { emoji: '🎨', pt: 'Termo 7', en: 'Term 7', level: 2 }, { emoji: '🎭', pt: 'Termo 8', en: 'Term 8', level: 1 }, { emoji: '🎪', pt: 'Termo 9', en: 'Term 9', level: 1 }, { emoji: '🎬', pt: 'Termo 10', en: 'Term 10', level: 2 }, { emoji: '🎤', pt: 'Termo 11', en: 'Term 11', level: 1 }, { emoji: '🎮', pt: 'Termo 12', en: 'Term 12', level: 1 }, { emoji: '🎲', pt: 'Termo 13', en: 'Term 13', level: 1 }, { emoji: '🎯', pt: 'Termo 14', en: 'Term 14', level: 2 }, { emoji: '🎳', pt: 'Termo 15', en: 'Term 15', level: 1 }, { emoji: '🎸', pt: 'Termo 16', en: 'Term 16', level: 1 }, { emoji: '🎺', pt: 'Termo 17', en: 'Term 17', level: 2 }, { emoji: '🎻', pt: 'Termo 18', en: 'Term 18', level: 1 }, { emoji: '🥁', pt: 'Termo 19', en: 'Term 19', level: 1 }, { emoji: '🎼', pt: 'Termo 20', en: 'Term 20', level: 2 }, { emoji: '🎵', pt: 'Termo 21', en: 'Term 21', level: 1 }, { emoji: '🎶', pt: 'Termo 22', en: 'Term 22', level: 1 }, { emoji: '📚', pt: 'Termo 23', en: 'Term 23', level: 1 }, { emoji: '📖', pt: 'Termo 24', en: 'Term 24', level: 2 }, { emoji: '📝', pt: 'Termo 25', en: 'Term 25', level: 1 }, { emoji: '✏️', pt: 'Termo 26', en: 'Term 26', level: 1 }, { emoji: '🖊️', pt: 'Termo 27', en: 'Term 27', level: 2 }] },
 
-  { id: 'requests-formal', title: 'REQUESTS FORMAL', emoji: '🙏📋', description: 'Pedidos formais', module: 6, order: 17, slides: [    { type: 'title', emoji: '🙏📋', title: 'REQUESTS FORMAL', subtitle: 'Pedidos formais' },
+  { id: 'requests-formal', title: 'REQUESTS FORMAL', emoji: '🙏📋', description: 'Pedidos formais', module: 6, order: 19, slides: [    { type: 'title', emoji: '🙏📋', title: 'REQUESTS FORMAL', subtitle: 'Pedidos formais' },
       { type: 'situation', emoji: '💭', cardClass: 'purple', text: 'Situação: Pedidos formais<br><br>Como você expressa isso em inglês?' },
       { type: 'rule', cardClass: 'cyan', text: 'Regra gramatical para REQUESTS FORMAL:', keyword: 'REQUESTS FORMAL', keywordAfter: 'Padrão essencial' },
       { type: 'tip', cardClass: 'orange', icon: '🗣️', title: 'PRONÚNCIA', text: 'Dica de pronúncia para esta lição' },
@@ -906,7 +906,7 @@ export const module6Lessons = [
       { type: 'end' }
     ], vocabulary: [{ emoji: '📚', pt: 'Termo 1', en: 'Term 1', level: 1 }, { emoji: '🎯', pt: 'Termo 2', en: 'Term 2', level: 1 }, { emoji: '✨', pt: 'Termo 3', en: 'Term 3', level: 1 }, { emoji: '🔥', pt: 'Termo 4', en: 'Term 4', level: 1 }, { emoji: '⭐', pt: 'Termo 5', en: 'Term 5', level: 1 }, { emoji: '💡', pt: 'Termo 6', en: 'Term 6', level: 2 }, { emoji: '🎨', pt: 'Termo 7', en: 'Term 7', level: 2 }, { emoji: '🎭', pt: 'Termo 8', en: 'Term 8', level: 1 }, { emoji: '🎪', pt: 'Termo 9', en: 'Term 9', level: 1 }, { emoji: '🎬', pt: 'Termo 10', en: 'Term 10', level: 2 }, { emoji: '🎤', pt: 'Termo 11', en: 'Term 11', level: 1 }, { emoji: '🎮', pt: 'Termo 12', en: 'Term 12', level: 1 }, { emoji: '🎲', pt: 'Termo 13', en: 'Term 13', level: 1 }, { emoji: '🎯', pt: 'Termo 14', en: 'Term 14', level: 2 }, { emoji: '🎳', pt: 'Termo 15', en: 'Term 15', level: 1 }, { emoji: '🎸', pt: 'Termo 16', en: 'Term 16', level: 1 }, { emoji: '🎺', pt: 'Termo 17', en: 'Term 17', level: 2 }, { emoji: '🎻', pt: 'Termo 18', en: 'Term 18', level: 1 }, { emoji: '🥁', pt: 'Termo 19', en: 'Term 19', level: 1 }, { emoji: '🎼', pt: 'Termo 20', en: 'Term 20', level: 2 }, { emoji: '🎵', pt: 'Termo 21', en: 'Term 21', level: 1 }, { emoji: '🎶', pt: 'Termo 22', en: 'Term 22', level: 1 }, { emoji: '📚', pt: 'Termo 23', en: 'Term 23', level: 1 }, { emoji: '📖', pt: 'Termo 24', en: 'Term 24', level: 2 }, { emoji: '📝', pt: 'Termo 25', en: 'Term 25', level: 1 }, { emoji: '✏️', pt: 'Termo 26', en: 'Term 26', level: 1 }, { emoji: '🖊️', pt: 'Termo 27', en: 'Term 27', level: 2 }] },
 
-  { id: 'permission-asking', title: 'PERMISSION ASKING', emoji: '❓✋', description: 'Pedindo permissão', module: 6, order: 18, slides: [    { type: 'title', emoji: '❓✋', title: 'PERMISSION ASKING', subtitle: 'Pedindo permissão' },
+  { id: 'permission-asking', title: 'PERMISSION ASKING', emoji: '❓✋', description: 'Pedindo permissão', module: 6, order: 20, slides: [    { type: 'title', emoji: '❓✋', title: 'PERMISSION ASKING', subtitle: 'Pedindo permissão' },
       { type: 'situation', emoji: '💭', cardClass: 'purple', text: 'Situação: Pedindo permissão<br><br>Como você expressa isso em inglês?' },
       { type: 'rule', cardClass: 'cyan', text: 'Regra gramatical para PERMISSION ASKING:', keyword: 'PERMISSION ASKING', keywordAfter: 'Padrão essencial' },
       { type: 'tip', cardClass: 'orange', icon: '🗣️', title: 'PRONÚNCIA', text: 'Dica de pronúncia para esta lição' },
@@ -933,7 +933,7 @@ export const module6Lessons = [
       { type: 'end' }
     ], vocabulary: [{ emoji: '📚', pt: 'Termo 1', en: 'Term 1', level: 1 }, { emoji: '🎯', pt: 'Termo 2', en: 'Term 2', level: 1 }, { emoji: '✨', pt: 'Termo 3', en: 'Term 3', level: 1 }, { emoji: '🔥', pt: 'Termo 4', en: 'Term 4', level: 1 }, { emoji: '⭐', pt: 'Termo 5', en: 'Term 5', level: 1 }, { emoji: '💡', pt: 'Termo 6', en: 'Term 6', level: 2 }, { emoji: '🎨', pt: 'Termo 7', en: 'Term 7', level: 2 }, { emoji: '🎭', pt: 'Termo 8', en: 'Term 8', level: 1 }, { emoji: '🎪', pt: 'Termo 9', en: 'Term 9', level: 1 }, { emoji: '🎬', pt: 'Termo 10', en: 'Term 10', level: 2 }, { emoji: '🎤', pt: 'Termo 11', en: 'Term 11', level: 1 }, { emoji: '🎮', pt: 'Termo 12', en: 'Term 12', level: 1 }, { emoji: '🎲', pt: 'Termo 13', en: 'Term 13', level: 1 }, { emoji: '🎯', pt: 'Termo 14', en: 'Term 14', level: 2 }, { emoji: '🎳', pt: 'Termo 15', en: 'Term 15', level: 1 }, { emoji: '🎸', pt: 'Termo 16', en: 'Term 16', level: 1 }, { emoji: '🎺', pt: 'Termo 17', en: 'Term 17', level: 2 }, { emoji: '🎻', pt: 'Termo 18', en: 'Term 18', level: 1 }, { emoji: '🥁', pt: 'Termo 19', en: 'Term 19', level: 1 }, { emoji: '🎼', pt: 'Termo 20', en: 'Term 20', level: 2 }, { emoji: '🎵', pt: 'Termo 21', en: 'Term 21', level: 1 }, { emoji: '🎶', pt: 'Termo 22', en: 'Term 22', level: 1 }, { emoji: '📚', pt: 'Termo 23', en: 'Term 23', level: 1 }, { emoji: '📖', pt: 'Termo 24', en: 'Term 24', level: 2 }, { emoji: '📝', pt: 'Termo 25', en: 'Term 25', level: 1 }, { emoji: '✏️', pt: 'Termo 26', en: 'Term 26', level: 1 }, { emoji: '🖊️', pt: 'Termo 27', en: 'Term 27', level: 2 }] },
 
-  { id: 'invitations', title: 'INVITATIONS', emoji: '🎉📧', description: 'Convites', module: 6, order: 19, slides: [    { type: 'title', emoji: '🎉📧', title: 'INVITATIONS', subtitle: 'Convites' },
+  { id: 'invitations', title: 'INVITATIONS', emoji: '🎉📧', description: 'Convites', module: 6, order: 21, slides: [    { type: 'title', emoji: '🎉📧', title: 'INVITATIONS', subtitle: 'Convites' },
       { type: 'situation', emoji: '💭', cardClass: 'purple', text: 'Situação: Convites<br><br>Como você expressa isso em inglês?' },
       { type: 'rule', cardClass: 'cyan', text: 'Regra gramatical para INVITATIONS:', keyword: 'INVITATIONS', keywordAfter: 'Padrão essencial' },
       { type: 'tip', cardClass: 'orange', icon: '🗣️', title: 'PRONÚNCIA', text: 'Dica de pronúncia para esta lição' },
@@ -960,7 +960,7 @@ export const module6Lessons = [
       { type: 'end' }
     ], vocabulary: [{ emoji: '📚', pt: 'Termo 1', en: 'Term 1', level: 1 }, { emoji: '🎯', pt: 'Termo 2', en: 'Term 2', level: 1 }, { emoji: '✨', pt: 'Termo 3', en: 'Term 3', level: 1 }, { emoji: '🔥', pt: 'Termo 4', en: 'Term 4', level: 1 }, { emoji: '⭐', pt: 'Termo 5', en: 'Term 5', level: 1 }, { emoji: '💡', pt: 'Termo 6', en: 'Term 6', level: 2 }, { emoji: '🎨', pt: 'Termo 7', en: 'Term 7', level: 2 }, { emoji: '🎭', pt: 'Termo 8', en: 'Term 8', level: 1 }, { emoji: '🎪', pt: 'Termo 9', en: 'Term 9', level: 1 }, { emoji: '🎬', pt: 'Termo 10', en: 'Term 10', level: 2 }, { emoji: '🎤', pt: 'Termo 11', en: 'Term 11', level: 1 }, { emoji: '🎮', pt: 'Termo 12', en: 'Term 12', level: 1 }, { emoji: '🎲', pt: 'Termo 13', en: 'Term 13', level: 1 }, { emoji: '🎯', pt: 'Termo 14', en: 'Term 14', level: 2 }, { emoji: '🎳', pt: 'Termo 15', en: 'Term 15', level: 1 }, { emoji: '🎸', pt: 'Termo 16', en: 'Term 16', level: 1 }, { emoji: '🎺', pt: 'Termo 17', en: 'Term 17', level: 2 }, { emoji: '🎻', pt: 'Termo 18', en: 'Term 18', level: 1 }, { emoji: '🥁', pt: 'Termo 19', en: 'Term 19', level: 1 }, { emoji: '🎼', pt: 'Termo 20', en: 'Term 20', level: 2 }, { emoji: '🎵', pt: 'Termo 21', en: 'Term 21', level: 1 }, { emoji: '🎶', pt: 'Termo 22', en: 'Term 22', level: 1 }, { emoji: '📚', pt: 'Termo 23', en: 'Term 23', level: 1 }, { emoji: '📖', pt: 'Termo 24', en: 'Term 24', level: 2 }, { emoji: '📝', pt: 'Termo 25', en: 'Term 25', level: 1 }, { emoji: '✏️', pt: 'Termo 26', en: 'Term 26', level: 1 }, { emoji: '🖊️', pt: 'Termo 27', en: 'Term 27', level: 2 }] },
 
-  { id: 'declining-politely', title: 'DECLINING POLITELY', emoji: '🙅💬', description: 'Recusando cortesmente', module: 6, order: 20, slides: [    { type: 'title', emoji: '🙅💬', title: 'DECLINING POLITELY', subtitle: 'Recusando cortesmente' },
+  { id: 'declining-politely', title: 'DECLINING POLITELY', emoji: '🙅💬', description: 'Recusando cortesmente', module: 6, order: 22, slides: [    { type: 'title', emoji: '🙅💬', title: 'DECLINING POLITELY', subtitle: 'Recusando cortesmente' },
       { type: 'situation', emoji: '💭', cardClass: 'purple', text: 'Situação: Recusando cortesmente<br><br>Como você expressa isso em inglês?' },
       { type: 'rule', cardClass: 'cyan', text: 'Regra gramatical para DECLINING POLITELY:', keyword: 'DECLINING POLITELY', keywordAfter: 'Padrão essencial' },
       { type: 'tip', cardClass: 'orange', icon: '🗣️', title: 'PRONÚNCIA', text: 'Dica de pronúncia para esta lição' },
@@ -987,7 +987,7 @@ export const module6Lessons = [
       { type: 'end' }
     ], vocabulary: [{ emoji: '📚', pt: 'Termo 1', en: 'Term 1', level: 1 }, { emoji: '🎯', pt: 'Termo 2', en: 'Term 2', level: 1 }, { emoji: '✨', pt: 'Termo 3', en: 'Term 3', level: 1 }, { emoji: '🔥', pt: 'Termo 4', en: 'Term 4', level: 1 }, { emoji: '⭐', pt: 'Termo 5', en: 'Term 5', level: 1 }, { emoji: '💡', pt: 'Termo 6', en: 'Term 6', level: 2 }, { emoji: '🎨', pt: 'Termo 7', en: 'Term 7', level: 2 }, { emoji: '🎭', pt: 'Termo 8', en: 'Term 8', level: 1 }, { emoji: '🎪', pt: 'Termo 9', en: 'Term 9', level: 1 }, { emoji: '🎬', pt: 'Termo 10', en: 'Term 10', level: 2 }, { emoji: '🎤', pt: 'Termo 11', en: 'Term 11', level: 1 }, { emoji: '🎮', pt: 'Termo 12', en: 'Term 12', level: 1 }, { emoji: '🎲', pt: 'Termo 13', en: 'Term 13', level: 1 }, { emoji: '🎯', pt: 'Termo 14', en: 'Termo 14', level: 2 }, { emoji: '🎳', pt: 'Termo 15', en: 'Term 15', level: 1 }, { emoji: '🎸', pt: 'Termo 16', en: 'Term 16', level: 1 }, { emoji: '🎺', pt: 'Termo 17', en: 'Term 17', level: 2 }, { emoji: '🎻', pt: 'Termo 18', en: 'Term 18', level: 1 }, { emoji: '🥁', pt: 'Termo 19', en: 'Term 19', level: 1 }, { emoji: '🎼', pt: 'Termo 20', en: 'Term 20', level: 2 }, { emoji: '🎵', pt: 'Termo 21', en: 'Term 21', level: 1 }, { emoji: '🎶', pt: 'Termo 22', en: 'Term 22', level: 1 }, { emoji: '📚', pt: 'Termo 23', en: 'Term 23', level: 1 }, { emoji: '📖', pt: 'Termo 24', en: 'Term 24', level: 2 }, { emoji: '📝', pt: 'Termo 25', en: 'Term 25', level: 1 }, { emoji: '✏️', pt: 'Termo 26', en: 'Term 26', level: 1 }, { emoji: '🖊️', pt: 'Termo 27', en: 'Term 27', level: 2 }] },
 
-  { id: 'standing-up', title: 'Standing Up for Yourself', emoji: '✊💪', description: 'Se defender', module: 6, order: 21,    slides: [
+  { id: 'standing-up', title: 'Standing Up for Yourself', emoji: '✊💪', description: 'Se defender', module: 6, order: 23,    slides: [
         { type: 'title', emoji: '✊💪', title: 'STANDING UP', subtitle: 'Se defender — Com inglês e com respeito!' },
         { type: 'situation', emoji: '✊', cardClass: 'red', text: 'Te cobraram a mais, fizeram o serviço errado,<br>não cumpriram o combinado...<br><br>Ser educado NÃO é ser trouxa!<br>Saiba se defender em inglês!' },
         { type: 'tip', cardClass: 'gold', icon: '⭐', title: '🇺🇸 COMO SE DEFENDER NOS EUA', text: '<strong>Americanos respeitam quem reclama com educação:</strong><br><br>1. Fale calmo e firme<br>2. Peça o <strong>manager</strong> se precisar<br>3. Diga especificamente o que tá errado<br>4. Peça <strong>solução</strong>, não briga<br>5. Ameace com <strong>review</strong> (avaliação online)<br><br>Google Review = arma poderosa!' },
@@ -1038,7 +1038,7 @@ export const module6Lessons = [
       ]
     },
 
-  { id: 'kids-school', title: 'Kids & School', emoji: '👧🏫', description: 'Filhos e escola', module: 6, order: 22,    slides: [
+  { id: 'kids-school', title: 'Kids & School', emoji: '👧🏫', description: 'Filhos e escola', module: 6, order: 24,    slides: [
         { type: 'title', emoji: '👧🏫', title: 'KIDS & SCHOOL', subtitle: 'Filhos e escola — Por eles, você aprende!' },
         { type: 'situation', emoji: '👧', cardClass: 'purple', text: 'Seu filho está na escola americana.<br>A professora manda bilhete, tem reunião...<br>Tudo em inglês. Você PRECISA participar.<br><br>Pelos seus filhos!' },
         { type: 'tip', cardClass: 'gold', icon: '🇺🇸', title: 'ESCOLA NOS EUA', text: '<strong>Coisas que brasileiros não sabem:</strong><br><br>• Escola pública é <strong>grátis</strong> pra TODOS os filhos<br>• Independente de status dos pais<br>• Muitas escolas têm programa <strong>ESL</strong><br>  (English as Second Language) pro seu filho<br>• Reunião de pais = <strong>parent-teacher conference</strong><br>• O ônibus escolar é GRÁTIS!' },
@@ -1088,7 +1088,7 @@ export const module6Lessons = [
       ]
     },
 
-  { id: 'laundromat', title: 'Laundromat', emoji: '🧺🧼', description: 'Lavanderia', module: 6, order: 23,    slides: [
+  { id: 'laundromat', title: 'Laundromat', emoji: '🧺🧼', description: 'Lavanderia', module: 6, order: 25,    slides: [
         { type: 'title', emoji: '🧺🧼', title: 'LAUNDROMAT', subtitle: 'Na lavanderia — Roupas limpas sem stress!' },
         { type: 'situation', emoji: '🧺', cardClass: 'cyan', text: 'Você precisa lavar roupa na laundromat.<br>As máquinas pedem moedas (quarters),<br>tem opções de temperatura...<br><br>É simples quando você sabe o vocabulário!' },
         { type: 'tip', cardClass: 'gold', icon: '🇺🇸', title: 'LAVANDERIA NOS EUA', text: '<strong>Self-service!</strong> Você mesmo lava.<br><br>• Precisa de <strong>quarters</strong> (moedas de 25 cents)<br>  Muitas têm máquina de troco<br>• <strong>Hot / Warm / Cold</strong> = Quente / Morno / Frio<br>• Não deixe roupa na máquina!<br>  (alguém pode tirar pra usar)' },
@@ -1126,7 +1126,7 @@ export const module6Lessons = [
       ]
     },
 
-  { id: 'getting-haircut', title: 'Getting a Haircut', emoji: '💇✂️', description: 'Cortando o cabelo', module: 6, order: 24,    slides: [
+  { id: 'getting-haircut', title: 'Getting a Haircut', emoji: '💇✂️', description: 'Cortando o cabelo', module: 6, order: 26,    slides: [
         { type: 'title', emoji: '💇✂️', title: 'GETTING A HAIRCUT', subtitle: 'Na barbearia — Sem perrengue no cabelo!' },
         { type: 'situation', emoji: '💇', cardClass: 'purple', text: 'Você entrou na barbearia americana.<br>O barbeiro pergunta o que você quer...<br>"What are we doing today?"<br><br>Não saia com corte errado!' },
         { type: 'tip', cardClass: 'gold', icon: '🇺🇸', title: 'BARBEARIA NOS EUA', text: 'Diferenças importantes:<br><br>• Gorjeta é <strong>esperada</strong> (15-20%)<br>• Máquina usa <strong>números</strong>: #1, #2, #3...<br>  (quanto menor, mais curto)<br>• "Fade" = degradê<br>• Muitas pedem <strong>appointment</strong> (agendamento)<br>• Walk-in = sem agendamento' },
@@ -1173,7 +1173,7 @@ export const module6Lessons = [
       ]
     },
 
-  { id: 'coffee-shop', title: 'Coffee Shop', emoji: '☕🏪', description: 'Cafeteria', module: 6, order: 25,    slides: [
+  { id: 'coffee-shop', title: 'Coffee Shop', emoji: '☕🏪', description: 'Cafeteria', module: 6, order: 27,    slides: [
         { type: 'title', emoji: '☕🏪', title: 'COFFEE SHOP', subtitle: 'Na cafeteria — Dunkin\' e Starbucks' },
         { type: 'situation', emoji: '☕', cardClass: 'green', text: 'Você está no Dunkin\' ou Starbucks.<br>"What size?" "What\'s the name?"<br>O menu é confuso, a fila é grande...<br><br>Vamos simplificar!' },
         { type: 'tip', cardClass: 'gold', icon: '🇺🇸', title: 'TAMANHOS NOS EUA', text: '<strong>Starbucks:</strong> Tall / Grande / Venti<br>(sim, "Grande" existe! mas é o médio 😅)<br><br><strong>Dunkin\' / outros:</strong> Small / Medium / Large<br><br><strong>Dica:</strong> Se não lembra, aponte e diga:<br>"This size" = Esse tamanho' },
@@ -1215,7 +1215,7 @@ export const module6Lessons = [
       ]
     },
 
-  { id: 'at-the-gym', title: 'At the Gym', emoji: '💪🏋️', description: 'Na academia', module: 6, order: 26,    slides: [
+  { id: 'at-the-gym', title: 'At the Gym', emoji: '💪🏋️', description: 'Na academia', module: 6, order: 28,    slides: [
         { type: 'title', emoji: '💪🏋️', title: 'AT THE GYM', subtitle: 'Na academia' },
         { type: 'situation', emoji: '💪', cardClass: 'green', text: 'Você quer treinar, mas a academia<br>é toda em inglês. Inscrição, máquinas,<br>vestiário, regras...<br><br>Fique em forma E no inglês!' },
         { type: 'tip', cardClass: 'gold', icon: '🇺🇸', title: 'ACADEMIA NOS EUA', text: '<strong>Cuidado com contratos!</strong><br><br>• Planet Fitness = mais barato (~$10/mês)<br>• Muitas pedem <strong>contrato anual</strong><br>• Pergunte: "Can I do <strong>month to month</strong>?"<br>  = Posso pagar mês a mês?<br>• "Cancel anytime" = cancela quando quiser<br>• LEIA o contrato antes de assinar!' },
@@ -1253,7 +1253,7 @@ export const module6Lessons = [
       ]
     },
 
-  { id: 'weather-dressed', title: 'Weather & Getting Dressed', emoji: '🌤️🧥', description: 'Clima e roupas', module: 6, order: 27,    slides: [
+  { id: 'weather-dressed', title: 'Weather & Getting Dressed', emoji: '🌤️🧥', description: 'Clima e roupas', module: 6, order: 29,    slides: [
         { type: 'title', emoji: '🌤️🧥', title: 'WEATHER & DRESSED', subtitle: 'Clima e como se vestir' },
         { type: 'situation', emoji: '🌤️', cardClass: 'cyan', text: 'Massachusetts tem INVERNO de verdade. ❄️<br>Neve, gelo, temperaturas negativas...<br><br>Saber falar sobre clima é essencial<br>pro trabalho e pro dia a dia!' },
         { type: 'tip', cardClass: 'gold', icon: '🇺🇸', title: 'CLIMA EM MASSACHUSETTS', text: '<strong>Inverno (Dec-Mar):</strong> Neve, frio intenso 🥶<br>"Bundle up!" = Se agasalhe!<br><br><strong>Verão (Jun-Aug):</strong> Quente e úmido 🥵<br><br><strong>Temperatura nos EUA = Fahrenheit!</strong><br>32°F = 0°C (congela)<br>70°F = 21°C (agradável)<br>90°F = 32°C (quente!)' },
@@ -1298,7 +1298,7 @@ export const module6Lessons = [
       ]
     },
 
-  { id: 'contractions-informal', title: 'CONTRACTIONS (INFORMAL)', emoji: '🔤✂️', description: 'Gonna, wanna, gotta...', module: 6, order: 28, slides: [    { type: 'title', emoji: '🔤✂️', title: 'CONTRACTIONS', subtitle: 'Gonna, Wanna, Gotta...' },
+  { id: 'contractions-informal', title: 'CONTRACTIONS (INFORMAL)', emoji: '🔤✂️', description: 'Gonna, wanna, gotta...', module: 6, order: 30, slides: [    { type: 'title', emoji: '🔤✂️', title: 'CONTRACTIONS', subtitle: 'Gonna, Wanna, Gotta...' },
       { type: 'situation', emoji: '🏃', cardClass: 'purple', text: 'Seu amigo fala rápido:<br><br><strong>"I gotta go. I\'m gonna be late!"</strong><br>(Tenho que ir. Vou atrasar!)' },
       { type: 'rule', cardClass: 'cyan', text: 'Na fala rápida, americanos contraem tudo:<br><strong>GONNA</strong> = going to<br><strong>WANNA</strong> = want to<br><strong>GOTTA</strong> = got to / have to', keyword: 'GONNA / WANNA / GOTTA', keywordAfter: 'Contrações da fala do dia a dia' },
       { type: 'tip', cardClass: 'orange', icon: '🗣️', title: 'AS PRINCIPAIS', text: '<strong>GONNA</strong> (gâna) = going to → vou<br><strong>WANNA</strong> (uâna) = want to → quero<br><strong>GOTTA</strong> (gâra) = got to → tenho que<br><strong>KINDA</strong> (kainda) = kind of → meio que<br><strong>LEMME</strong> (lêmi) = let me → deixa eu' },
@@ -1351,7 +1351,7 @@ export const module6Lessons = [
       { emoji: '🚗', pt: 'Tenho que ir embora', en: "I gotta leave", level: 1 }
     ] },
 
-  { id: 'slang-words', title: 'SLANG WORDS', emoji: '🤙💬', description: 'Gírias americanas', module: 6, order: 29, slides: [    { type: 'title', emoji: '🤙💬', title: 'SLANG', subtitle: 'Gírias que americanos usam todo dia' },
+  { id: 'slang-words', title: 'SLANG WORDS', emoji: '🤙💬', description: 'Gírias americanas', module: 6, order: 31, slides: [    { type: 'title', emoji: '🤙💬', title: 'SLANG', subtitle: 'Gírias que americanos usam todo dia' },
       { type: 'situation', emoji: '👷', cardClass: 'purple', text: 'Seu colega americano fala:<br><br><strong>"Dude, that\'s awesome!"</strong><br>(Cara, isso é demais!)' },
       { type: 'rule', cardClass: 'cyan', text: 'Gírias essenciais que você vai ouvir <strong>todo dia</strong>:', keyword: 'EVERYDAY SLANG', keywordAfter: 'Dude, cool, awesome, chill...' },
       { type: 'tip', cardClass: 'orange', icon: '🗣️', title: 'TOP 10 GÍRIAS', text: '<strong>Dude</strong> = Cara<br><strong>Cool</strong> = Legal<br><strong>Awesome</strong> = Demais/Incrível<br><strong>Chill</strong> = Relaxar/Tranquilo<br><strong>Hang out</strong> = Sair/Ficar junto' },
@@ -1401,7 +1401,7 @@ export const module6Lessons = [
       { emoji: '👊', pt: 'Valeu, cara', en: "Thanks, dude", level: 1 }
     ] },
 
-  { id: 'exclamations', title: 'EXCLAMATIONS', emoji: '😲❗', description: 'Expressões de surpresa e reação', module: 6, order: 30, slides: [    { type: 'title', emoji: '😲❗', title: 'EXCLAMATIONS', subtitle: 'Expressões de reação' },
+  { id: 'exclamations', title: 'EXCLAMATIONS', emoji: '😲❗', description: 'Expressões de surpresa e reação', module: 6, order: 32, slides: [    { type: 'title', emoji: '😲❗', title: 'EXCLAMATIONS', subtitle: 'Expressões de reação' },
       { type: 'situation', emoji: '😲', cardClass: 'purple', text: 'Você vê algo incrível e reage:<br><br><strong>"Oh my God! No way!"</strong><br>(Meu Deus! Não acredito!)' },
       { type: 'rule', cardClass: 'cyan', text: 'Exclamações são reações automáticas a situações:', keyword: 'REACTIONS', keywordAfter: 'Wow! Oh no! Really? Come on!' },
       { type: 'tip', cardClass: 'orange', icon: '🗣️', title: 'REAÇÕES POSITIVAS', text: '<strong>Wow!</strong> = Uau!<br><strong>Awesome!</strong> = Demais!<br><strong>No way!</strong> = Não acredito!<br><strong>Really?!</strong> = Sério?!<br><strong>That\'s amazing!</strong> = Incrível!' },

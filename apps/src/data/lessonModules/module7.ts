@@ -104,7 +104,7 @@ export const module7Lessons = [
       ]
     },
 
-  { id: 'possessive-s', title: "Possessive 'S", emoji: '👤✨', description: "John's car", module: 7, order: 2,
+  { id: 'possessive-s', title: "Possessive 'S", emoji: '👤✨', description: "John's car", module: 7, order: 4,
       slides: [
         { type: 'title', emoji: '👤✨', title: "POSSESSIVE 'S", subtitle: 'O carro do John' },
         { type: 'situation', emoji: '🚗', cardClass: 'purple', text: 'Você quer dizer de quem é o carro:<br>"O carro <strong>DO JOHN</strong> é novo."<br><br>Como indicar posse com nomes?' },
@@ -183,7 +183,7 @@ export const module7Lessons = [
       ]
     },
 
-  { id: 'present-perfect', title: 'PRESENT PERFECT', emoji: '✅📋', description: 'Experiência e resultado', module: 7, order: 4, slides: [    { type: 'title', emoji: '✅📋', title: 'PRESENT PERFECT', subtitle: 'O que você JÁ fez / já aconteceu' },
+  { id: 'present-perfect', title: 'PRESENT PERFECT', emoji: '✅📋', description: 'Experiência e resultado', module: 7, order: 5, slides: [    { type: 'title', emoji: '✅📋', title: 'PRESENT PERFECT', subtitle: 'O que você JÁ fez / já aconteceu' },
       { type: 'situation', emoji: '💼', cardClass: 'purple', text: 'Entrevista de emprego. O chefe pergunta:<br><strong>"Have you done this before?"</strong><br>(Você já fez isso antes?)<br><br>Como responder?' },
       { type: 'rule', cardClass: 'cyan', text: 'Para falar sobre experiência ou algo que <strong>JÁ</strong> aconteceu:', keyword: 'HAVE + PAST PARTICIPLE', keywordAfter: 'I have worked = Eu já trabalhei / Tenho trabalhado' },
       { type: 'tip', cardClass: 'orange', icon: '🗣️', title: 'PRONÚNCIA', text: '<strong>HAVE</strong> vira <strong>\'VE</strong> na fala:<br><br>\"I\'ve worked\" → \"ÁIV UÔRKT\"<br>\"I\'ve done\" → \"ÁIV DÃN\"<br><br><strong>HAS</strong> vira <strong>\'S</strong>:<br>\"He\'s finished\" → \"RÍZ FÍNISHT\"' },
@@ -235,7 +235,7 @@ export const module7Lessons = [
       { emoji: '🏢', pt: 'Trabalhei em vários lugares', en: "I've worked at many places", level: 1 }
     ] },
 
-  { id: 'present-perfect-continuous', title: 'PRESENT PERFECT CONTINUOUS', emoji: '🔄✅', description: 'Ação contínua até agora', module: 7, order: 5, slides: [    { type: 'title', emoji: '🔄✅', title: 'PRESENT PERFECT CONTINUOUS', subtitle: 'Fazendo algo HÁ um tempo' },
+  { id: 'present-perfect-continuous', title: 'PRESENT PERFECT CONTINUOUS', emoji: '🔄✅', description: 'Ação contínua até agora', module: 7, order: 6, slides: [    { type: 'title', emoji: '🔄✅', title: 'PRESENT PERFECT CONTINUOUS', subtitle: 'Fazendo algo HÁ um tempo' },
       { type: 'situation', emoji: '😓', cardClass: 'purple', text: 'Você está cansado. Trabalhou o dia inteiro.<br>Quer explicar:<br><strong>"Estou trabalhando desde as 6 da manhã!"</strong><br><br>Como falar?' },
       { type: 'rule', cardClass: 'cyan', text: 'Para dizer que está fazendo algo <strong>HÁ ALGUM TEMPO</strong>:', keyword: "HAVE BEEN + VERB-ING", keywordAfter: "I've been working = Estou trabalhando (há um tempo)" },
       { type: 'tip', cardClass: 'orange', icon: '🗣️', title: 'PRONÚNCIA', text: '<strong>I\'ve been</strong> → \"ÁIV BIN\"<br><br>É rápido! Quase soa como uma palavra só.<br>\"I\'ve been working\" → \"ÁIV BIN UÔRKIN\"' },
@@ -283,7 +283,7 @@ export const module7Lessons = [
       { emoji: '📖', pt: 'Estou aprendendo muito', en: "I've been learning a lot", level: 1 }
     ] },
 
-  { id: 'comparatives', title: 'COMPARATIVES', emoji: '⚖️📊', description: 'Comparando coisas', module: 7, order: 6, slides: [    { type: 'title', emoji: '⚖️📊', title: 'COMPARATIVES', subtitle: 'Mais... que / Melhor que' },
+  { id: 'comparatives', title: 'COMPARATIVES', emoji: '⚖️📊', description: 'Comparando coisas', module: 7, order: 7, slides: [    { type: 'title', emoji: '⚖️📊', title: 'COMPARATIVES', subtitle: 'Mais... que / Melhor que' },
       { type: 'situation', emoji: '🏠', cardClass: 'purple', text: 'Você está vendo dois apartamentos pra alugar.<br>Um é maior e mais barato que o outro.<br><br><strong>"This one is bigger and cheaper."</strong><br>Como comparar?' },
       { type: 'rule', cardClass: 'cyan', text: 'Para comparar duas coisas:<br>Palavra curta → adicione <strong>-ER</strong><br>Palavra longa → use <strong>MORE</strong>', keyword: '-ER / MORE', keywordAfter: 'bigger = maior | more expensive = mais caro' },
       { type: 'tip', cardClass: 'orange', icon: '🗣️', title: 'REGRA FÁCIL', text: 'Palavra <strong>curta</strong> (1-2 sílabas): + ER<br>big → bigg<strong>er</strong>, cheap → cheap<strong>er</strong><br><br>Palavra <strong>longa</strong> (3+ sílabas): MORE +<br>expensive → <strong>more</strong> expensive<br>comfortable → <strong>more</strong> comfortable' },
@@ -336,7 +336,7 @@ export const module7Lessons = [
       { emoji: '😊', pt: 'Isso é muito melhor', en: "This is much better", level: 1 }
     ] },
 
-  { id: 'superlatives', title: 'SUPERLATIVES', emoji: '🏆👑', description: 'O mais... de todos', module: 7, order: 7, slides: [    { type: 'title', emoji: '🏆👑', title: 'SUPERLATIVES', subtitle: 'O mais... / O melhor / O pior' },
+  { id: 'superlatives', title: 'SUPERLATIVES', emoji: '🏆👑', description: 'O mais... de todos', module: 7, order: 8, slides: [    { type: 'title', emoji: '🏆👑', title: 'SUPERLATIVES', subtitle: 'O mais... / O melhor / O pior' },
       { type: 'situation', emoji: '🏠', cardClass: 'purple', text: 'Você visitou 5 apartamentos.<br>Esse foi o melhor de todos:<br><br><strong>"This is the best apartment!"</strong><br>Como dizer "o mais" de todos?' },
       { type: 'rule', cardClass: 'cyan', text: 'Para dizer "o mais" (de todos):<br>Curta → THE + <strong>-EST</strong><br>Longa → THE <strong>MOST</strong>', keyword: 'THE -EST / THE MOST', keywordAfter: 'the biggest = o maior | the most expensive = o mais caro' },
       { type: 'tip', cardClass: 'orange', icon: '🗣️', title: 'SEMPRE COM THE', text: 'Superlativo <strong>sempre</strong> tem <strong>THE</strong> na frente:<br><br><strong>the</strong> biggest = o maior<br><strong>the</strong> cheapest = o mais barato<br><strong>the</strong> best = o melhor' },
@@ -389,7 +389,7 @@ export const module7Lessons = [
       { emoji: '⏳', pt: 'O dia mais longo', en: "The longest day", level: 1 }
     ] },
 
-  { id: 'verb-plus-ing', title: 'VERB + ING', emoji: '🔤🔄', description: 'Verbos seguidos de -ING', module: 7, order: 8, slides: [    { type: 'title', emoji: '🔤🔄', title: 'VERB + ING', subtitle: 'Verbos que pedem -ING depois' },
+  { id: 'verb-plus-ing', title: 'VERB + ING', emoji: '🔤🔄', description: 'Verbos seguidos de -ING', module: 7, order: 9, slides: [    { type: 'title', emoji: '🔤🔄', title: 'VERB + ING', subtitle: 'Verbos que pedem -ING depois' },
       { type: 'situation', emoji: '😊', cardClass: 'purple', text: 'Você gosta de trabalhar com as mãos:<br><br><strong>"I enjoy working with my hands."</strong><br>(Eu gosto de trabalhar com as mãos.)<br><br>Depois de ENJOY, sempre vem -ING!' },
       { type: 'rule', cardClass: 'cyan', text: 'Alguns verbos pedem <strong>-ING</strong> depois:<br>enjoy, like, love, hate, finish, stop, keep, avoid, mind', keyword: 'VERB + ING', keywordAfter: 'enjoy working = gostar de trabalhar' },
       { type: 'tip', cardClass: 'orange', icon: '🗣️', title: 'OS MAIS COMUNS', text: '<strong>ENJOY</strong> doing = gostar de fazer<br><strong>FINISH</strong> doing = terminar de fazer<br><strong>KEEP</strong> doing = continuar fazendo<br><strong>STOP</strong> doing = parar de fazer<br><strong>AVOID</strong> doing = evitar fazer' },
@@ -437,7 +437,7 @@ export const module7Lessons = [
       { emoji: '🔧', pt: 'Continue consertando', en: "Keep fixing it", level: 1 }
     ] },
 
-  { id: 'verb-plus-infinitive', title: 'VERB + TO + INFINITIVE', emoji: '🔤➡️', description: 'Verbos seguidos de TO', module: 7, order: 9, slides: [    { type: 'title', emoji: '🔤➡️', title: 'VERB + TO', subtitle: 'Verbos que pedem TO depois' },
+  { id: 'verb-plus-infinitive', title: 'VERB + TO + INFINITIVE', emoji: '🔤➡️', description: 'Verbos seguidos de TO', module: 7, order: 10, slides: [    { type: 'title', emoji: '🔤➡️', title: 'VERB + TO', subtitle: 'Verbos que pedem TO depois' },
       { type: 'situation', emoji: '💼', cardClass: 'purple', text: 'Você quer aprender inglês:<br><br><strong>"I want to learn English."</strong><br>(Eu quero aprender inglês.)<br><br>Depois de WANT, sempre vem TO!' },
       { type: 'rule', cardClass: 'cyan', text: 'Alguns verbos pedem <strong>TO + verbo</strong> depois:<br>want, need, try, decide, plan, hope, learn, promise, agree', keyword: 'VERB + TO + VERB', keywordAfter: 'want to learn = querer aprender' },
       { type: 'tip', cardClass: 'orange', icon: '🗣️', title: 'OS MAIS COMUNS', text: '<strong>WANT</strong> to = querer<br><strong>NEED</strong> to = precisar<br><strong>TRY</strong> to = tentar<br><strong>DECIDE</strong> to = decidir<br><strong>PLAN</strong> to = planejar<br><strong>LEARN</strong> to = aprender a' },
@@ -485,7 +485,7 @@ export const module7Lessons = [
       { emoji: '📱', pt: 'Lembrei de ligar', en: "I remembered to call", level: 1 }
     ] },
 
-  { id: 'verb-object-infinitive', title: 'VERB + OBJECT + TO', emoji: '🔤👤➡️', description: 'Pedir alguém pra fazer algo', module: 7, order: 10, slides: [    { type: 'title', emoji: '🔤👤➡️', title: 'VERB + SOMEONE + TO', subtitle: 'Pedir/Mandar alguém fazer algo' },
+  { id: 'verb-object-infinitive', title: 'VERB + OBJECT + TO', emoji: '🔤👤➡️', description: 'Pedir alguém pra fazer algo', module: 7, order: 11, slides: [    { type: 'title', emoji: '🔤👤➡️', title: 'VERB + SOMEONE + TO', subtitle: 'Pedir/Mandar alguém fazer algo' },
       { type: 'situation', emoji: '👷', cardClass: 'purple', text: 'O chefe te mandou pintar a parede:<br><br><strong>"He told me to paint the wall."</strong><br>(Ele me mandou pintar a parede.)<br><br>TOLD + pessoa + TO + verbo' },
       { type: 'rule', cardClass: 'cyan', text: 'Para pedir/mandar alguém fazer algo:<br><strong>VERBO + pessoa + TO + verbo</strong>', keyword: 'TELL/ASK + SOMEONE + TO', keywordAfter: 'He asked me to help = Ele me pediu pra ajudar' },
       { type: 'tip', cardClass: 'orange', icon: '🗣️', title: 'OS MAIS COMUNS', text: '<strong>TELL</strong> someone to = mandar<br><strong>ASK</strong> someone to = pedir<br><strong>WANT</strong> someone to = querer que<br><strong>ALLOW</strong> someone to = permitir<br><strong>EXPECT</strong> someone to = esperar que' },
@@ -533,7 +533,7 @@ export const module7Lessons = [
       { emoji: '🚪', pt: 'Me pediram pra fechar a porta', en: "They asked me to close the door", level: 1 }
     ] },
 
-  { id: 'phrasal-get', title: 'PHRASAL GET', emoji: '🔄📦', description: 'GET UP / GET IN / GET OUT', module: 7, order: 11, slides: [    { type: 'title', emoji: '🔄📦', title: 'PHRASAL VERBS: GET', subtitle: 'Get up, get in, get out, get off...' },
+  { id: 'phrasal-get', title: 'PHRASAL GET', emoji: '🔄📦', description: 'GET UP / GET IN / GET OUT', module: 7, order: 12, slides: [    { type: 'title', emoji: '🔄📦', title: 'PHRASAL VERBS: GET', subtitle: 'Get up, get in, get out, get off...' },
       { type: 'situation', emoji: '⏰', cardClass: 'purple', text: 'Todo dia de manhã:<br><br><strong>"I get up at 5 AM."</strong><br>(Eu levanto às 5 da manhã.)<br><br>GET muda de sentido com cada preposição!' },
       { type: 'rule', cardClass: 'cyan', text: '<strong>GET</strong> + preposição = significado novo!<br>GET é o verbo mais versátil do inglês.', keyword: 'GET + UP/IN/OUT/OFF', keywordAfter: 'Cada combo = significado diferente' },
       { type: 'tip', cardClass: 'orange', icon: '🗣️', title: 'OS ESSENCIAIS', text: '<strong>GET UP</strong> = levantar<br><strong>GET IN</strong> = entrar (carro)<br><strong>GET OUT</strong> = sair<br><strong>GET OFF</strong> = descer (ônibus)<br><strong>GET ON</strong> = subir (ônibus)<br><strong>GET BACK</strong> = voltar' },
@@ -585,7 +585,7 @@ export const module7Lessons = [
       { emoji: '❄️', pt: 'Está ficando frio', en: "It\'s getting cold", level: 1 }
     ] },
 
-  { id: 'phrasal-put', title: 'PHRASAL PUT', emoji: '📥🔄', description: 'PUT ON / PUT DOWN / PUT AWAY', module: 7, order: 12, slides: [    { type: 'title', emoji: '📥🔄', title: 'PHRASAL VERBS: PUT', subtitle: 'Put on, put down, put away...' },
+  { id: 'phrasal-put', title: 'PHRASAL PUT', emoji: '📥🔄', description: 'PUT ON / PUT DOWN / PUT AWAY', module: 7, order: 13, slides: [    { type: 'title', emoji: '📥🔄', title: 'PHRASAL VERBS: PUT', subtitle: 'Put on, put down, put away...' },
       { type: 'situation', emoji: '⛑️', cardClass: 'purple', text: 'Na obra, o chefe manda:<br><br><strong>"Put on your helmet!"</strong><br>(Coloca o capacete!)<br><br>PUT + preposição = ação diferente.' },
       { type: 'rule', cardClass: 'cyan', text: '<strong>PUT ON</strong> = colocar/vestir<br><strong>PUT DOWN</strong> = colocar no chão/abaixar<br><strong>PUT AWAY</strong> = guardar<br><strong>PUT OFF</strong> = adiar', keyword: 'PUT + ON/DOWN/AWAY/OFF', keywordAfter: 'Cada combo = ação diferente' },
       { type: 'example', cardClass: 'cyan', emoji: '⛑️', question: "<span class='hl-cyan'>Put on</span> your helmet.", questionTr: 'Coloca o capacete.', answer: "PUT ON = vestir/colocar", answerTr: 'Em cima do corpo' },
@@ -631,7 +631,7 @@ export const module7Lessons = [
       { emoji: '☂️', pt: 'Coloca o guarda-chuva ali', en: "Put the umbrella over there", level: 1 }
     ] },
 
-  { id: 'phrasal-look', title: 'PHRASAL LOOK', emoji: '👀🔄', description: 'LOOK FOR / LOOK UP / LOOK OUT', module: 7, order: 13, slides: [    { type: 'title', emoji: '👀🔄', title: 'PHRASAL VERBS: LOOK', subtitle: 'Look for, look up, look out...' },
+  { id: 'phrasal-look', title: 'PHRASAL LOOK', emoji: '👀🔄', description: 'LOOK FOR / LOOK UP / LOOK OUT', module: 7, order: 14, slides: [    { type: 'title', emoji: '👀🔄', title: 'PHRASAL VERBS: LOOK', subtitle: 'Look for, look up, look out...' },
       { type: 'situation', emoji: '🔑', cardClass: 'purple', text: 'Cadê a chave? Você está procurando:<br><br><strong>"I\'m looking for the key."</strong><br>(Estou procurando a chave.)' },
       { type: 'rule', cardClass: 'cyan', text: '<strong>LOOK FOR</strong> = procurar<br><strong>LOOK UP</strong> = pesquisar/procurar<br><strong>LOOK OUT</strong> = cuidado!<br><strong>LOOK AFTER</strong> = cuidar de', keyword: 'LOOK + FOR/UP/OUT/AFTER', keywordAfter: 'Cada combo = ação diferente' },
       { type: 'example', cardClass: 'cyan', emoji: '🔑', question: "I'm <span class='hl-cyan'>looking for</span> the key.", questionTr: 'Estou procurando a chave.', answer: "LOOK FOR = procurar", answerTr: 'Buscando algo' },
@@ -677,7 +677,7 @@ export const module7Lessons = [
       { emoji: '🔧', pt: 'Estou procurando a ferramenta', en: "I'm looking for the tool", level: 1 }
     ] },
 
-  { id: 'phrasal-give', title: 'PHRASAL GIVE', emoji: '🤲🔄', description: 'GIVE UP / GIVE BACK / GIVE AWAY', module: 7, order: 14, slides: [    { type: 'title', emoji: '🤲🔄', title: 'PHRASAL VERBS: GIVE', subtitle: 'Give up, give back, give away...' },
+  { id: 'phrasal-give', title: 'PHRASAL GIVE', emoji: '🤲🔄', description: 'GIVE UP / GIVE BACK / GIVE AWAY', module: 7, order: 15, slides: [    { type: 'title', emoji: '🤲🔄', title: 'PHRASAL VERBS: GIVE', subtitle: 'Give up, give back, give away...' },
       { type: 'situation', emoji: '💪', cardClass: 'purple', text: 'Aprender inglês é difícil, mas:<br><br><strong>"Don\'t give up!"</strong><br>(Não desiste!)' },
       { type: 'rule', cardClass: 'cyan', text: '<strong>GIVE UP</strong> = desistir<br><strong>GIVE BACK</strong> = devolver<br><strong>GIVE AWAY</strong> = dar de graça<br><strong>GIVE IN</strong> = ceder', keyword: 'GIVE + UP/BACK/AWAY/IN', keywordAfter: 'Cada combo = ação diferente' },
       { type: 'example', cardClass: 'cyan', emoji: '💪', question: "Don't <span class='hl-cyan'>give up</span>!", questionTr: 'Não desiste!', answer: "GIVE UP = desistir", answerTr: 'Parar de tentar' },
@@ -723,7 +723,7 @@ export const module7Lessons = [
       { emoji: '⏰', pt: 'Me dá mais tempo', en: "Give me more time", level: 1 }
     ] },
 
-  { id: 'phrasal-run', title: 'PHRASAL RUN', emoji: '🏃🔄', description: 'RUN OUT / RUN INTO / RUN OVER', module: 7, order: 15, slides: [    { type: 'title', emoji: '🏃🔄', title: 'PHRASAL VERBS: RUN', subtitle: 'Run out, run into, run over...' },
+  { id: 'phrasal-run', title: 'PHRASAL RUN', emoji: '🏃🔄', description: 'RUN OUT / RUN INTO / RUN OVER', module: 7, order: 16, slides: [    { type: 'title', emoji: '🏃🔄', title: 'PHRASAL VERBS: RUN', subtitle: 'Run out, run into, run over...' },
       { type: 'situation', emoji: '🎨', cardClass: 'purple', text: 'No meio do trabalho, a tinta acabou:<br><br><strong>"We ran out of paint."</strong><br>(A tinta acabou.)<br><br>RUN OUT = acabar!' },
       { type: 'rule', cardClass: 'cyan', text: '<strong>RUN OUT (OF)</strong> = acabar<br><strong>RUN INTO</strong> = encontrar por acaso<br><strong>RUN OVER</strong> = atropelar<br><strong>RUN LATE</strong> = estar atrasado', keyword: 'RUN + OUT/INTO/OVER', keywordAfter: 'Cada combo = significado diferente' },
       { type: 'example', cardClass: 'cyan', emoji: '🎨', question: "We <span class='hl-cyan'>ran out of</span> paint.", questionTr: 'A tinta acabou.', answer: "RUN OUT OF = acabar", answerTr: 'Não tem mais' },
@@ -769,7 +769,7 @@ export const module7Lessons = [
       { emoji: '📦', pt: 'Acabou o estoque', en: "We ran out of stock", level: 2 }
     ] },
 
-  { id: 'phrasal-break', title: 'PHRASAL BREAK', emoji: '💥🔄', description: 'BREAK DOWN / BREAK UP / BREAK IN', module: 7, order: 16, slides: [    { type: 'title', emoji: '💥🔄', title: 'PHRASAL VERBS: BREAK', subtitle: 'Break down, break up, break in...' },
+  { id: 'phrasal-break', title: 'PHRASAL BREAK', emoji: '💥🔄', description: 'BREAK DOWN / BREAK UP / BREAK IN', module: 7, order: 17, slides: [    { type: 'title', emoji: '💥🔄', title: 'PHRASAL VERBS: BREAK', subtitle: 'Break down, break up, break in...' },
       { type: 'situation', emoji: '🚗', cardClass: 'purple', text: 'Seu carro parou no meio da estrada:<br><br><strong>"My car broke down."</strong><br>(Meu carro quebrou.)' },
       { type: 'rule', cardClass: 'cyan', text: '<strong>BREAK DOWN</strong> = quebrar (máquina/carro)<br><strong>BREAK UP</strong> = terminar (relacionamento)<br><strong>BREAK IN</strong> = invadir/arrombar<br><strong>BREAK OUT</strong> = estourar/surgir', keyword: 'BREAK + DOWN/UP/IN/OUT', keywordAfter: 'Cada combo = significado diferente' },
       { type: 'example', cardClass: 'cyan', emoji: '🚗', question: "My car <span class='hl-cyan'>broke down</span>.", questionTr: 'Meu carro quebrou.', answer: "BREAK DOWN = pifar", answerTr: 'Parou de funcionar' },
@@ -815,7 +815,7 @@ export const module7Lessons = [
       { emoji: '🏚️', pt: 'A porta foi arrombada', en: "The door was broken into", level: 2 }
     ] },
 
-  { id: 'however-but', title: 'HOWEVER / BUT', emoji: '🔀❌', description: 'Mas / Porém / Entretanto', module: 7, order: 17, slides: [    { type: 'title', emoji: '🔀❌', title: 'HOWEVER / BUT', subtitle: 'Mas / Porém' },
+  { id: 'however-but', title: 'HOWEVER / BUT', emoji: '🔀❌', description: 'Mas / Porém / Entretanto', module: 7, order: 18, slides: [    { type: 'title', emoji: '🔀❌', title: 'HOWEVER / BUT', subtitle: 'Mas / Porém' },
       { type: 'situation', emoji: '💼', cardClass: 'purple', text: 'O trabalho paga bem, <strong>MAS</strong> é longe:<br><br><strong>"The job pays well, but it\'s far."</strong><br>(O trabalho paga bem, mas é longe.)' },
       { type: 'rule', cardClass: 'cyan', text: '<strong>BUT</strong> = mas (informal, dia a dia)<br><strong>HOWEVER</strong> = porém/entretanto (formal)', keyword: 'BUT / HOWEVER', keywordAfter: 'Indicam contraste ou oposição' },
       { type: 'tip', cardClass: 'orange', icon: '🗣️', title: 'DICA PRÁTICA', text: '<strong>BUT</strong> → use SEMPRE na fala<br><strong>HOWEVER</strong> → use em e-mails, documentos<br><br>\"I like it, <strong>but</strong> it\'s expensive\" (fala)<br>\"The plan is good. <strong>However</strong>, it\'s costly.\" (escrita)' },
@@ -861,7 +861,7 @@ export const module7Lessons = [
       { emoji: '❄️', pt: 'O inverno é frio, mas a gente se acostuma', en: "Winter is cold, but you get used to it", level: 1 }
     ] },
 
-  { id: 'although-though', title: 'ALTHOUGH / THOUGH', emoji: '🤷‍♂️🔄', description: 'Embora / Apesar de', module: 7, order: 18, slides: [    { type: 'title', emoji: '🤷‍♂️🔄', title: 'ALTHOUGH / THOUGH', subtitle: 'Embora / Apesar de / Mesmo que' },
+  { id: 'although-though', title: 'ALTHOUGH / THOUGH', emoji: '🤷‍♂️🔄', description: 'Embora / Apesar de', module: 7, order: 19, slides: [    { type: 'title', emoji: '🤷‍♂️🔄', title: 'ALTHOUGH / THOUGH', subtitle: 'Embora / Apesar de / Mesmo que' },
       { type: 'situation', emoji: '🌧️', cardClass: 'purple', text: '<strong>Mesmo que</strong> estivesse chovendo, fomos trabalhar:<br><br><strong>"Although it was raining, we went to work."</strong>' },
       { type: 'rule', cardClass: 'cyan', text: '<strong>ALTHOUGH / THOUGH</strong> = embora, apesar de, mesmo que<br>Mostra que algo aconteceu <strong>apesar de</strong> outra coisa', keyword: 'ALTHOUGH / THOUGH', keywordAfter: 'Although = embora (mais formal) | Though = embora (informal)' },
       { type: 'tip', cardClass: 'orange', icon: '🗣️', title: 'THOUGH vs ALTHOUGH', text: '<strong>ALTHOUGH</strong> → mais formal (começo da frase)<br><strong>THOUGH</strong> → mais informal (pode ir no final!)<br><br>\"<strong>Although</strong> it\'s cold, I like Boston.\"<br>\"I like Boston, <strong>though</strong>.\" (no final!)' },
@@ -908,7 +908,7 @@ export const module7Lessons = [
       { emoji: '🗣️', pt: 'Mas eu entendi', en: "I understood, though", level: 1 }
     ] },
 
-  { id: 'unless-otherwise', title: 'UNLESS / OTHERWISE', emoji: '⚠️🔄', description: 'A menos que / Senão', module: 7, order: 19, slides: [    { type: 'title', emoji: '⚠️🔄', title: 'UNLESS / OTHERWISE', subtitle: 'A menos que / Senão' },
+  { id: 'unless-otherwise', title: 'UNLESS / OTHERWISE', emoji: '⚠️🔄', description: 'A menos que / Senão', module: 7, order: 20, slides: [    { type: 'title', emoji: '⚠️🔄', title: 'UNLESS / OTHERWISE', subtitle: 'A menos que / Senão' },
       { type: 'situation', emoji: '👷', cardClass: 'purple', text: 'O chefe avisa:<br><br><strong>"You\'ll be fired unless you come on time."</strong><br>(Vai ser demitido a menos que chegue no horário.)' },
       { type: 'rule', cardClass: 'cyan', text: '<strong>UNLESS</strong> = a menos que / se não<br><strong>OTHERWISE</strong> = senão / caso contrário', keyword: 'UNLESS / OTHERWISE', keywordAfter: 'Unless = IF NOT | Otherwise = or else' },
       { type: 'tip', cardClass: 'orange', icon: '🗣️', title: 'UNLESS = IF NOT', text: 'UNLESS = IF + NOT (se não):<br><br>\"Unless you hurry\" = \"If you <strong>don\'t</strong> hurry\"<br>\"Unless it rains\" = \"If it <strong>doesn\'t</strong> rain\"<br><br>É um atalho pra IF NOT!' },
@@ -954,7 +954,7 @@ export const module7Lessons = [
       { emoji: '🔧', pt: 'A menos que esteja quebrado', en: "Unless it's broken", level: 1 }
     ] },
 
-  { id: 'meanwhile-then', title: 'MEANWHILE / THEN', emoji: '⏰➡️', description: 'Enquanto isso / Então', module: 7, order: 20, slides: [    { type: 'title', emoji: '⏰➡️', title: 'MEANWHILE / THEN', subtitle: 'Enquanto isso / Então / Depois' },
+  { id: 'meanwhile-then', title: 'MEANWHILE / THEN', emoji: '⏰➡️', description: 'Enquanto isso / Então', module: 7, order: 21, slides: [    { type: 'title', emoji: '⏰➡️', title: 'MEANWHILE / THEN', subtitle: 'Enquanto isso / Então / Depois' },
       { type: 'situation', emoji: '🏗️', cardClass: 'purple', text: 'Contando como foi o dia:<br><br><strong>"First I painted. Then I cleaned up."</strong><br>(Primeiro pintei. Depois limpei.)' },
       { type: 'rule', cardClass: 'cyan', text: '<strong>THEN</strong> = então / depois<br><strong>MEANWHILE</strong> = enquanto isso<br><strong>FIRST...THEN</strong> = primeiro...depois', keyword: 'THEN / MEANWHILE', keywordAfter: 'Sequência e tempo' },
       { type: 'tip', cardClass: 'orange', icon: '🗣️', title: 'SEQUÊNCIA', text: '<strong>FIRST</strong> → primeiro<br><strong>THEN</strong> → então/depois<br><strong>AFTER THAT</strong> → depois disso<br><strong>FINALLY</strong> → finalmente<br><br>Ótimo pra contar histórias e explicar processos!' },
@@ -1000,7 +1000,7 @@ export const module7Lessons = [
       { emoji: '📝', pt: 'Primeiro assine, depois pode começar', en: "First sign, then you can start", level: 1 }
     ] },
 
-  { id: 'conditional-type-2', title: 'CONDITIONAL TYPE 2', emoji: '💭🤔', description: 'Se eu pudesse / Se eu fosse', module: 7, order: 21, slides: [    { type: 'title', emoji: '💭🤔', title: 'IF... WOULD (Condicional 2)', subtitle: 'Se eu pudesse... / Se eu fosse...' },
+  { id: 'conditional-type-2', title: 'CONDITIONAL TYPE 2', emoji: '💭🤔', description: 'Se eu pudesse / Se eu fosse', module: 7, order: 22, slides: [    { type: 'title', emoji: '💭🤔', title: 'IF... WOULD (Condicional 2)', subtitle: 'Se eu pudesse... / Se eu fosse...' },
       { type: 'situation', emoji: '💭', cardClass: 'purple', text: 'Você gostaria de ganhar mais dinheiro:<br><br><strong>"If I spoke better English, I would get a better job."</strong><br>(Se eu falasse inglês melhor, conseguiria um emprego melhor.)' },
       { type: 'rule', cardClass: 'cyan', text: 'Para situações <strong>imaginárias/hipotéticas</strong>:<br><strong>IF</strong> + passado, <strong>WOULD</strong> + verbo', keyword: 'IF + PAST, WOULD', keywordAfter: "Se eu fosse... eu faria..." },
       { type: 'tip', cardClass: 'orange', icon: '🗣️', title: 'ATENÇÃO', text: 'Usa o <strong>PASSADO</strong> depois de IF, mas <strong>não é sobre o passado</strong>!<br>É sobre algo <strong>imaginário</strong> agora.<br><br>\"If I <strong>had</strong> money\" = Se eu tivesse (mas não tenho)<br>\"If I <strong>were</strong> you\" = Se eu fosse você' },
@@ -1047,7 +1047,7 @@ export const module7Lessons = [
       { emoji: '💡', pt: 'Eu não faria isso', en: "I wouldn't do that", level: 1 }
     ] },
 
-  { id: 'question-tags', title: 'QUESTION TAGS', emoji: '❓🏷️', description: 'Né? / Não é?', module: 7, order: 22, slides: [    { type: 'title', emoji: '❓🏷️', title: 'QUESTION TAGS', subtitle: 'Né? / Não é?' },
+  { id: 'question-tags', title: 'QUESTION TAGS', emoji: '❓🏷️', description: 'Né? / Não é?', module: 7, order: 23, slides: [    { type: 'title', emoji: '❓🏷️', title: 'QUESTION TAGS', subtitle: 'Né? / Não é?' },
       { type: 'situation', emoji: '🏗️', cardClass: 'purple', text: 'Você acha que o trabalho termina às 5.<br>Quer confirmar:<br><br><strong>"We finish at 5, don\'t we?"</strong><br>(A gente termina às 5, né?)' },
       { type: 'rule', cardClass: 'cyan', text: 'Para confirmar algo que você acha que sabe:<br>Frase <strong>positiva</strong> → tag <strong>negativa</strong><br>Frase <strong>negativa</strong> → tag <strong>positiva</strong>', keyword: "..., DON'T WE? / ..., IS IT?", keywordAfter: 'Né? / Não é?' },
       { type: 'tip', cardClass: 'orange', icon: '🗣️', title: 'ATALHO PRÁTICO', text: 'Na fala do dia a dia, muita gente usa:<br><br><strong>\"...right?\"</strong> = né?<br>\"We finish at 5, <strong>right?</strong>\" ✅<br><br>É mais fácil e todo mundo entende!' },
@@ -1094,7 +1094,7 @@ export const module7Lessons = [
       { emoji: '🏗️', pt: 'Amanhã é folga, né?', en: "Tomorrow is off, right?", level: 1 }
     ] },
 
-  { id: 'negative-questions', title: 'NEGATIVE QUESTIONS', emoji: '❓🚫', description: 'Você não...? / Não é...?', module: 7, order: 23, slides: [    { type: 'title', emoji: '❓🚫', title: 'NEGATIVE QUESTIONS', subtitle: 'Você não...? / Por que não...?' },
+  { id: 'negative-questions', title: 'NEGATIVE QUESTIONS', emoji: '❓🚫', description: 'Você não...? / Não é...?', module: 7, order: 24, slides: [    { type: 'title', emoji: '❓🚫', title: 'NEGATIVE QUESTIONS', subtitle: 'Você não...? / Por que não...?' },
       { type: 'situation', emoji: '😲', cardClass: 'purple', text: 'Seu colega não trouxe almoço. Você estranha:<br><br><strong>"Didn\'t you bring lunch?"</strong><br>(Você não trouxe almoço?)<br><br>Perguntas negativas mostram surpresa!' },
       { type: 'rule', cardClass: 'cyan', text: 'Perguntas negativas expressam <strong>surpresa</strong> ou <strong>expectativa</strong>:<br><strong>DON\'T/DOESN\'T/DIDN\'T/ISN\'T</strong> + sujeito + verbo?', keyword: "DON'T YOU...?", keywordAfter: 'Você não...? (surpresa/confirmação)' },
       { type: 'tip', cardClass: 'orange', icon: '🗣️', title: 'QUANDO USAR', text: 'Use quando você <strong>esperava algo diferente</strong>:<br><br>\"Didn\'t you sleep?\" = Você não dormiu? (parece cansado)<br>\"Don\'t you like it?\" = Não gostou? (esperava que sim)' },

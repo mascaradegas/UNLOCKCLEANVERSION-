@@ -1172,7 +1172,7 @@ export const LESSON_SUMMARIES: LessonSummary[] = [
     "emoji": "🤔💬",
     "description": "Condicional básico",
     "module": 6,
-    "order": 5,
+    "order": 7,
     "vocabularyCount": 10
   },
   {
@@ -1181,7 +1181,7 @@ export const LESSON_SUMMARIES: LessonSummary[] = [
     "emoji": "🔮✅",
     "description": "Se... vai acontecer",
     "module": 6,
-    "order": 6,
+    "order": 8,
     "vocabularyCount": 20
   },
   {
@@ -1199,7 +1199,7 @@ export const LESSON_SUMMARIES: LessonSummary[] = [
     "emoji": "🏦💳",
     "description": "No banco",
     "module": 6,
-    "order": 7,
+    "order": 9,
     "vocabularyCount": 10
   },
   {
@@ -1208,7 +1208,7 @@ export const LESSON_SUMMARIES: LessonSummary[] = [
     "emoji": "💊🏪",
     "description": "Retirar na farmácia",
     "module": 6,
-    "order": 8,
+    "order": 10,
     "vocabularyCount": 10
   },
   {
@@ -1217,7 +1217,7 @@ export const LESSON_SUMMARIES: LessonSummary[] = [
     "emoji": "🏠📝",
     "description": "Alugar apartamento",
     "module": 6,
-    "order": 9,
+    "order": 11,
     "vocabularyCount": 10
   },
   {
@@ -1226,7 +1226,7 @@ export const LESSON_SUMMARIES: LessonSummary[] = [
     "emoji": "📄💡",
     "description": "Contas e serviços",
     "module": 6,
-    "order": 10,
+    "order": 12,
     "vocabularyCount": 10
   },
   {
@@ -1235,7 +1235,7 @@ export const LESSON_SUMMARIES: LessonSummary[] = [
     "emoji": "📬📦",
     "description": "Correios e envios",
     "module": 6,
-    "order": 11,
+    "order": 13,
     "vocabularyCount": 10
   },
   {
@@ -1244,7 +1244,7 @@ export const LESSON_SUMMARIES: LessonSummary[] = [
     "emoji": "📞😤",
     "description": "Reclamações / Atendimento",
     "module": 6,
-    "order": 12,
+    "order": 14,
     "vocabularyCount": 10
   },
   {
@@ -1253,7 +1253,7 @@ export const LESSON_SUMMARIES: LessonSummary[] = [
     "emoji": "🔄📦",
     "description": "Devolver itens",
     "module": 6,
-    "order": 13,
+    "order": 15,
     "vocabularyCount": 10
   },
   {
@@ -1262,7 +1262,7 @@ export const LESSON_SUMMARIES: LessonSummary[] = [
     "emoji": "📱📶",
     "description": "Celular e internet",
     "module": 6,
-    "order": 14,
+    "order": 16,
     "vocabularyCount": 12
   },
   {
@@ -1271,7 +1271,7 @@ export const LESSON_SUMMARIES: LessonSummary[] = [
     "emoji": "🛍️👕",
     "description": "Compras e roupas",
     "module": 6,
-    "order": 15,
+    "order": 17,
     "vocabularyCount": 15
   },
   {
@@ -1280,7 +1280,7 @@ export const LESSON_SUMMARIES: LessonSummary[] = [
     "emoji": "👍💕",
     "description": "Elogios",
     "module": 6,
-    "order": 16,
+    "order": 18,
     "vocabularyCount": 27
   },
   {
@@ -1289,7 +1289,7 @@ export const LESSON_SUMMARIES: LessonSummary[] = [
     "emoji": "🙏📋",
     "description": "Pedidos formais",
     "module": 6,
-    "order": 17,
+    "order": 19,
     "vocabularyCount": 27
   },
   {
@@ -1298,7 +1298,7 @@ export const LESSON_SUMMARIES: LessonSummary[] = [
     "emoji": "❓✋",
     "description": "Pedindo permissão",
     "module": 6,
-    "order": 18,
+    "order": 20,
     "vocabularyCount": 27
   },
   {
@@ -1307,7 +1307,7 @@ export const LESSON_SUMMARIES: LessonSummary[] = [
     "emoji": "🎉📧",
     "description": "Convites",
     "module": 6,
-    "order": 19,
+    "order": 21,
     "vocabularyCount": 27
   },
   {
@@ -1316,7 +1316,7 @@ export const LESSON_SUMMARIES: LessonSummary[] = [
     "emoji": "🙅💬",
     "description": "Recusando cortesmente",
     "module": 6,
-    "order": 20,
+    "order": 22,
     "vocabularyCount": 27
   },
   {
@@ -1325,7 +1325,7 @@ export const LESSON_SUMMARIES: LessonSummary[] = [
     "emoji": "✊💪",
     "description": "Se defender",
     "module": 6,
-    "order": 21,
+    "order": 23,
     "vocabularyCount": 15
   },
   {
@@ -1334,7 +1334,7 @@ export const LESSON_SUMMARIES: LessonSummary[] = [
     "emoji": "👧🏫",
     "description": "Filhos e escola",
     "module": 6,
-    "order": 22,
+    "order": 24,
     "vocabularyCount": 15
   },
   {
@@ -1343,7 +1343,7 @@ export const LESSON_SUMMARIES: LessonSummary[] = [
     "emoji": "🧺🧼",
     "description": "Lavanderia",
     "module": 6,
-    "order": 23,
+    "order": 25,
     "vocabularyCount": 10
   },
   {
@@ -1352,7 +1352,7 @@ export const LESSON_SUMMARIES: LessonSummary[] = [
     "emoji": "💇✂️",
     "description": "Cortando o cabelo",
     "module": 6,
-    "order": 24,
+    "order": 26,
     "vocabularyCount": 12
   },
   {
@@ -1361,7 +1361,7 @@ export const LESSON_SUMMARIES: LessonSummary[] = [
     "emoji": "☕🏪",
     "description": "Cafeteria",
     "module": 6,
-    "order": 25,
+    "order": 27,
     "vocabularyCount": 10
   },
   {
@@ -1370,7 +1370,7 @@ export const LESSON_SUMMARIES: LessonSummary[] = [
     "emoji": "💪🏋️",
     "description": "Na academia",
     "module": 6,
-    "order": 26,
+    "order": 28,
     "vocabularyCount": 10
   },
   {
@@ -1379,7 +1379,7 @@ export const LESSON_SUMMARIES: LessonSummary[] = [
     "emoji": "🌤️🧥",
     "description": "Clima e roupas",
     "module": 6,
-    "order": 27,
+    "order": 29,
     "vocabularyCount": 10
   },
   {
@@ -1388,7 +1388,7 @@ export const LESSON_SUMMARIES: LessonSummary[] = [
     "emoji": "🔤✂️",
     "description": "Gonna, wanna, gotta...",
     "module": 6,
-    "order": 28,
+    "order": 30,
     "vocabularyCount": 20
   },
   {
@@ -1397,7 +1397,7 @@ export const LESSON_SUMMARIES: LessonSummary[] = [
     "emoji": "🤙💬",
     "description": "Gírias americanas",
     "module": 6,
-    "order": 29,
+    "order": 31,
     "vocabularyCount": 20
   },
   {
@@ -1406,7 +1406,7 @@ export const LESSON_SUMMARIES: LessonSummary[] = [
     "emoji": "😲❗",
     "description": "Expressões de surpresa e reação",
     "module": 6,
-    "order": 30,
+    "order": 32,
     "vocabularyCount": 20
   },
   {
@@ -1433,7 +1433,7 @@ export const LESSON_SUMMARIES: LessonSummary[] = [
     "emoji": "👤✨",
     "description": "John's car",
     "module": 7,
-    "order": 2,
+    "order": 4,
     "vocabularyCount": 10
   },
   {
@@ -1451,7 +1451,7 @@ export const LESSON_SUMMARIES: LessonSummary[] = [
     "emoji": "✅📋",
     "description": "Experiência e resultado",
     "module": 7,
-    "order": 4,
+    "order": 5,
     "vocabularyCount": 20
   },
   {
@@ -1460,7 +1460,7 @@ export const LESSON_SUMMARIES: LessonSummary[] = [
     "emoji": "🔄✅",
     "description": "Ação contínua até agora",
     "module": 7,
-    "order": 5,
+    "order": 6,
     "vocabularyCount": 20
   },
   {
@@ -1469,7 +1469,7 @@ export const LESSON_SUMMARIES: LessonSummary[] = [
     "emoji": "⚖️📊",
     "description": "Comparando coisas",
     "module": 7,
-    "order": 6,
+    "order": 7,
     "vocabularyCount": 20
   },
   {
@@ -1478,7 +1478,7 @@ export const LESSON_SUMMARIES: LessonSummary[] = [
     "emoji": "🏆👑",
     "description": "O mais... de todos",
     "module": 7,
-    "order": 7,
+    "order": 8,
     "vocabularyCount": 20
   },
   {
@@ -1487,7 +1487,7 @@ export const LESSON_SUMMARIES: LessonSummary[] = [
     "emoji": "🔤🔄",
     "description": "Verbos seguidos de -ING",
     "module": 7,
-    "order": 8,
+    "order": 9,
     "vocabularyCount": 20
   },
   {
@@ -1496,7 +1496,7 @@ export const LESSON_SUMMARIES: LessonSummary[] = [
     "emoji": "🔤➡️",
     "description": "Verbos seguidos de TO",
     "module": 7,
-    "order": 9,
+    "order": 10,
     "vocabularyCount": 20
   },
   {
@@ -1505,7 +1505,7 @@ export const LESSON_SUMMARIES: LessonSummary[] = [
     "emoji": "🔤👤➡️",
     "description": "Pedir alguém pra fazer algo",
     "module": 7,
-    "order": 10,
+    "order": 11,
     "vocabularyCount": 20
   },
   {
@@ -1514,7 +1514,7 @@ export const LESSON_SUMMARIES: LessonSummary[] = [
     "emoji": "🔄📦",
     "description": "GET UP / GET IN / GET OUT",
     "module": 7,
-    "order": 11,
+    "order": 12,
     "vocabularyCount": 20
   },
   {
@@ -1523,7 +1523,7 @@ export const LESSON_SUMMARIES: LessonSummary[] = [
     "emoji": "📥🔄",
     "description": "PUT ON / PUT DOWN / PUT AWAY",
     "module": 7,
-    "order": 12,
+    "order": 13,
     "vocabularyCount": 20
   },
   {
@@ -1532,7 +1532,7 @@ export const LESSON_SUMMARIES: LessonSummary[] = [
     "emoji": "👀🔄",
     "description": "LOOK FOR / LOOK UP / LOOK OUT",
     "module": 7,
-    "order": 13,
+    "order": 14,
     "vocabularyCount": 20
   },
   {
@@ -1541,7 +1541,7 @@ export const LESSON_SUMMARIES: LessonSummary[] = [
     "emoji": "🤲🔄",
     "description": "GIVE UP / GIVE BACK / GIVE AWAY",
     "module": 7,
-    "order": 14,
+    "order": 15,
     "vocabularyCount": 20
   },
   {
@@ -1550,7 +1550,7 @@ export const LESSON_SUMMARIES: LessonSummary[] = [
     "emoji": "🏃🔄",
     "description": "RUN OUT / RUN INTO / RUN OVER",
     "module": 7,
-    "order": 15,
+    "order": 16,
     "vocabularyCount": 20
   },
   {
@@ -1559,7 +1559,7 @@ export const LESSON_SUMMARIES: LessonSummary[] = [
     "emoji": "💥🔄",
     "description": "BREAK DOWN / BREAK UP / BREAK IN",
     "module": 7,
-    "order": 16,
+    "order": 17,
     "vocabularyCount": 20
   },
   {
@@ -1568,7 +1568,7 @@ export const LESSON_SUMMARIES: LessonSummary[] = [
     "emoji": "🔀❌",
     "description": "Mas / Porém / Entretanto",
     "module": 7,
-    "order": 17,
+    "order": 18,
     "vocabularyCount": 20
   },
   {
@@ -1577,7 +1577,7 @@ export const LESSON_SUMMARIES: LessonSummary[] = [
     "emoji": "🤷‍♂️🔄",
     "description": "Embora / Apesar de",
     "module": 7,
-    "order": 18,
+    "order": 19,
     "vocabularyCount": 20
   },
   {
@@ -1586,7 +1586,7 @@ export const LESSON_SUMMARIES: LessonSummary[] = [
     "emoji": "⚠️🔄",
     "description": "A menos que / Senão",
     "module": 7,
-    "order": 19,
+    "order": 20,
     "vocabularyCount": 20
   },
   {
@@ -1595,7 +1595,7 @@ export const LESSON_SUMMARIES: LessonSummary[] = [
     "emoji": "⏰➡️",
     "description": "Enquanto isso / Então",
     "module": 7,
-    "order": 20,
+    "order": 21,
     "vocabularyCount": 20
   },
   {
@@ -1604,7 +1604,7 @@ export const LESSON_SUMMARIES: LessonSummary[] = [
     "emoji": "💭🤔",
     "description": "Se eu pudesse / Se eu fosse",
     "module": 7,
-    "order": 21,
+    "order": 22,
     "vocabularyCount": 20
   },
   {
@@ -1613,7 +1613,7 @@ export const LESSON_SUMMARIES: LessonSummary[] = [
     "emoji": "❓🏷️",
     "description": "Né? / Não é?",
     "module": 7,
-    "order": 22,
+    "order": 23,
     "vocabularyCount": 20
   },
   {
@@ -1622,7 +1622,7 @@ export const LESSON_SUMMARIES: LessonSummary[] = [
     "emoji": "❓🚫",
     "description": "Você não...? / Não é...?",
     "module": 7,
-    "order": 23,
+    "order": 24,
     "vocabularyCount": 20
   },
   {
