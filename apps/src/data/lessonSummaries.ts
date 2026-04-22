@@ -1976,4 +1976,572 @@ export const LESSON_SUMMARIES: LessonSummary[] = [
     "order": 10,
     "vocabularyCount": 16
   }
+  // ── CURSO: Mínimo para se Virar nos EUA (módulos 11-20) ──────────────────────
+  {
+    "id": "airport-arrival",
+    "title": "Airport & Arrival",
+    "emoji": "✈️🛬",
+    "description": "Chegando nos EUA",
+    "module": 11,
+    "order": 1,
+    "vocabularyCount": 0
+  },
+  {
+    "id": "hotel-arrival",
+    "title": "Hotel Check-In",
+    "emoji": "🏨🔑",
+    "description": "Check-in no hotel",
+    "module": 11,
+    "order": 2,
+    "vocabularyCount": 0
+  },
+  {
+    "id": "first-shopping",
+    "title": "First Shopping Trip",
+    "emoji": "🛒🇺🇸",
+    "description": "Primeiras compras nos EUA",
+    "module": 11,
+    "order": 3,
+    "vocabularyCount": 0
+  },
+  {
+    "id": "months-seasons",
+    "title": "Months & Seasons",
+    "emoji": "📅🌸",
+    "description": "Meses e estações",
+    "module": 11,
+    "order": 4,
+    "vocabularyCount": 0
+  },
+  {
+    "id": "job-search",
+    "title": "Job Search",
+    "emoji": "🔍💼",
+    "description": "Buscando emprego",
+    "module": 12,
+    "order": 1,
+    "vocabularyCount": 0
+  },
+  {
+    "id": "job-interview",
+    "title": "Job Interview",
+    "emoji": "🤝💼",
+    "description": "Entrevista de emprego",
+    "module": 12,
+    "order": 2,
+    "vocabularyCount": 0
+  },
+  {
+    "id": "work-schedule",
+    "title": "Work Schedule & Shifts",
+    "emoji": "🕒📋",
+    "description": "Horários e turnos",
+    "module": 12,
+    "order": 3,
+    "vocabularyCount": 0
+  },
+  {
+    "id": "reporting-tasks",
+    "title": "Reporting Tasks",
+    "emoji": "✅📋",
+    "description": "Relatando o que foi feito",
+    "module": 12,
+    "order": 4,
+    "vocabularyCount": 0
+  },
+  {
+    "id": "office-vocabulary",
+    "title": "Office Vocabulary",
+    "emoji": "🖥️📎",
+    "description": "Vocabulário de escritório",
+    "module": 12,
+    "order": 5,
+    "vocabularyCount": 0
+  },
+  {
+    "id": "meetings-presentations",
+    "title": "Meetings & Presentations",
+    "emoji": "📊👥",
+    "description": "Reuniões e apresentações",
+    "module": 12,
+    "order": 6,
+    "vocabularyCount": 0
+  },
+  {
+    "id": "cooking-at-home",
+    "title": "Cooking at Home",
+    "emoji": "🍳🏠",
+    "description": "Cozinhando em casa",
+    "module": 13,
+    "order": 1,
+    "vocabularyCount": 0
+  },
+  {
+    "id": "special-diets",
+    "title": "Special Diets & Allergies",
+    "emoji": "🥗⚠️",
+    "description": "Dietas e restrições",
+    "module": 13,
+    "order": 2,
+    "vocabularyCount": 0
+  },
+  {
+    "id": "local-markets",
+    "title": "Local Markets & Fairs",
+    "emoji": "🌽🛒",
+    "description": "Feira e mercado local",
+    "module": 13,
+    "order": 3,
+    "vocabularyCount": 0
+  },
+  {
+    "id": "at-the-bakery",
+    "title": "At the Bakery",
+    "emoji": "🍞🥐",
+    "description": "Na padaria",
+    "module": 13,
+    "order": 4,
+    "vocabularyCount": 0
+  },
+  {
+    "id": "at-the-butcher",
+    "title": "At the Butcher",
+    "emoji": "🥩🔪",
+    "description": "No açougue",
+    "module": 13,
+    "order": 5,
+    "vocabularyCount": 0
+  },
+  {
+    "id": "cooking-vocabulary",
+    "title": "Cooking Vocabulary",
+    "emoji": "🍳📚",
+    "description": "Vocabulário de cozinha",
+    "module": 13,
+    "order": 6,
+    "vocabularyCount": 0
+  },
+  {
+    "id": "household-chores",
+    "title": "Household Chores",
+    "emoji": "🧹🏠",
+    "description": "Tarefas domésticas",
+    "module": 14,
+    "order": 1,
+    "vocabularyCount": 0
+  },
+  {
+    "id": "home-repairs",
+    "title": "Home Repairs",
+    "emoji": "🔧🏠",
+    "description": "Reparos na casa",
+    "module": 14,
+    "order": 2,
+    "vocabularyCount": 0
+  },
+  {
+    "id": "moving-out",
+    "title": "Moving Out",
+    "emoji": "📦🚚",
+    "description": "Mudança de casa",
+    "module": 14,
+    "order": 3,
+    "vocabularyCount": 0
+  },
+  {
+    "id": "apartment-problems",
+    "title": "Apartment Problems",
+    "emoji": "🏠⚠️",
+    "description": "Problemas no apartamento",
+    "module": 14,
+    "order": 4,
+    "vocabularyCount": 0
+  },
+  {
+    "id": "house-furniture",
+    "title": "House Furniture",
+    "emoji": "🛋️🪑",
+    "description": "Móveis da casa",
+    "module": 14,
+    "order": 5,
+    "vocabularyCount": 0
+  },
+  {
+    "id": "household-appliances",
+    "title": "Household Appliances",
+    "emoji": "⚡🏠",
+    "description": "Eletrodomésticos",
+    "module": 14,
+    "order": 6,
+    "vocabularyCount": 0
+  },
+  {
+    "id": "talking-to-landlord",
+    "title": "Talking to Your Landlord",
+    "emoji": "🏠👤",
+    "description": "Falando com o proprietário",
+    "module": 14,
+    "order": 7,
+    "vocabularyCount": 0
+  },
+  {
+    "id": "paying-bills",
+    "title": "Paying Bills",
+    "emoji": "💳📄",
+    "description": "Pagando contas",
+    "module": 15,
+    "order": 1,
+    "vocabularyCount": 0
+  },
+  {
+    "id": "using-credit-debit",
+    "title": "Using Credit or Debit",
+    "emoji": "💳💵",
+    "description": "Usando cartão",
+    "module": 15,
+    "order": 2,
+    "vocabularyCount": 0
+  },
+  {
+    "id": "asking-for-change",
+    "title": "Asking for Change",
+    "emoji": "💵🔄",
+    "description": "Pedindo troco",
+    "module": 15,
+    "order": 3,
+    "vocabularyCount": 0
+  },
+  {
+    "id": "opening-bank-account",
+    "title": "Opening a Bank Account",
+    "emoji": "🏦📝",
+    "description": "Abrindo conta no banco",
+    "module": 15,
+    "order": 4,
+    "vocabularyCount": 0
+  },
+  {
+    "id": "at-the-mall",
+    "title": "At the Mall",
+    "emoji": "🛍️🏬",
+    "description": "No shopping",
+    "module": 15,
+    "order": 5,
+    "vocabularyCount": 0
+  },
+  {
+    "id": "electronics-shopping",
+    "title": "Electronics Shopping",
+    "emoji": "💻📱",
+    "description": "Comprando eletrônicos",
+    "module": 15,
+    "order": 6,
+    "vocabularyCount": 0
+  },
+  {
+    "id": "what-kind-type",
+    "title": "What Kind / What Type",
+    "emoji": "🔍❓",
+    "description": "Que tipo é esse?",
+    "module": 16,
+    "order": 1,
+    "vocabularyCount": 0
+  },
+  {
+    "id": "using-gps-maps",
+    "title": "Using GPS & Maps",
+    "emoji": "🗺️📍",
+    "description": "Usando GPS e mapas",
+    "module": 16,
+    "order": 2,
+    "vocabularyCount": 0
+  },
+  {
+    "id": "asking-for-nearest",
+    "title": "Asking for the Nearest...",
+    "emoji": "📍❓",
+    "description": "Onde fica o mais próximo",
+    "module": 16,
+    "order": 3,
+    "vocabularyCount": 0
+  },
+  {
+    "id": "lost-and-found",
+    "title": "Lost and Found",
+    "emoji": "🔍📦",
+    "description": "Achados e perdidos",
+    "module": 16,
+    "order": 4,
+    "vocabularyCount": 0
+  },
+  {
+    "id": "booking-flights",
+    "title": "Booking Flights",
+    "emoji": "✈️🎫",
+    "description": "Comprando passagens aéreas",
+    "module": 17,
+    "order": 1,
+    "vocabularyCount": 0
+  },
+  {
+    "id": "renting-cars",
+    "title": "Renting Cars",
+    "emoji": "🚗🔑",
+    "description": "Alugando um carro",
+    "module": 17,
+    "order": 2,
+    "vocabularyCount": 0
+  },
+  {
+    "id": "traveling-by-bus",
+    "title": "Traveling by Bus",
+    "emoji": "🚌🚦",
+    "description": "Viajando de ônibus",
+    "module": 17,
+    "order": 3,
+    "vocabularyCount": 0
+  },
+  {
+    "id": "at-the-subway",
+    "title": "At the Subway",
+    "emoji": "🚇🎫",
+    "description": "No metrô",
+    "module": 17,
+    "order": 4,
+    "vocabularyCount": 0
+  },
+  {
+    "id": "at-the-train-station",
+    "title": "At the Train Station",
+    "emoji": "🚆🎫",
+    "description": "Na estação de trem",
+    "module": 17,
+    "order": 5,
+    "vocabularyCount": 0
+  },
+  {
+    "id": "traffic-road-signs",
+    "title": "Traffic & Road Signs",
+    "emoji": "🚦⚠️",
+    "description": "Trânsito e placas",
+    "module": 17,
+    "order": 6,
+    "vocabularyCount": 0
+  },
+  {
+    "id": "traveling-abroad",
+    "title": "Traveling Abroad",
+    "emoji": "🌍✈️",
+    "description": "Viajando para fora",
+    "module": 17,
+    "order": 7,
+    "vocabularyCount": 0
+  },
+  {
+    "id": "airport-advanced",
+    "title": "Airport Advanced",
+    "emoji": "✈️🏃",
+    "description": "Situações avançadas no aeroporto",
+    "module": 17,
+    "order": 8,
+    "vocabularyCount": 0
+  },
+  {
+    "id": "how-to-describe",
+    "title": "How to Describe",
+    "emoji": "🗣️📝",
+    "description": "Como descrever pessoas e coisas",
+    "module": 18,
+    "order": 1,
+    "vocabularyCount": 0
+  },
+  {
+    "id": "asking-for-clarification",
+    "title": "Asking for Clarification",
+    "emoji": "🤔❓",
+    "description": "Pedindo explicações",
+    "module": 18,
+    "order": 2,
+    "vocabularyCount": 0
+  },
+  {
+    "id": "dating-relationships",
+    "title": "Dating & Relationships",
+    "emoji": "❤️💬",
+    "description": "Relacionamentos e namoro",
+    "module": 18,
+    "order": 3,
+    "vocabularyCount": 0
+  },
+  {
+    "id": "meeting-new-friends",
+    "title": "Meeting New Friends",
+    "emoji": "🤝😊",
+    "description": "Fazendo novos amigos",
+    "module": 18,
+    "order": 4,
+    "vocabularyCount": 0
+  },
+  {
+    "id": "talking-about-your-day",
+    "title": "Talking About Your Day",
+    "emoji": "☀️💬",
+    "description": "Falando sobre o seu dia",
+    "module": 18,
+    "order": 5,
+    "vocabularyCount": 0
+  },
+  {
+    "id": "meeting-americans",
+    "title": "Meeting Americans",
+    "emoji": "🇺🇸🤝",
+    "description": "Conhecendo americanos",
+    "module": 18,
+    "order": 6,
+    "vocabularyCount": 0
+  },
+  {
+    "id": "visiting-the-dentist",
+    "title": "Visiting the Dentist",
+    "emoji": "🦷😬",
+    "description": "No dentista",
+    "module": 19,
+    "order": 1,
+    "vocabularyCount": 0
+  },
+  {
+    "id": "calling-911-detailed",
+    "title": "Calling 911",
+    "emoji": "☎️🚨",
+    "description": "Ligando para emergência",
+    "module": 19,
+    "order": 2,
+    "vocabularyCount": 0
+  },
+  {
+    "id": "weather-disasters",
+    "title": "Weather Disasters",
+    "emoji": "🌪️⛈️",
+    "description": "Desastres climáticos",
+    "module": 19,
+    "order": 3,
+    "vocabularyCount": 0
+  },
+  {
+    "id": "attending-events",
+    "title": "Attending Events",
+    "emoji": "🎭🎫",
+    "description": "Indo a eventos",
+    "module": 20,
+    "order": 1,
+    "vocabularyCount": 0
+  },
+  {
+    "id": "discussing-age",
+    "title": "Discussing Age",
+    "emoji": "🎂❓",
+    "description": "Falando de idade",
+    "module": 20,
+    "order": 2,
+    "vocabularyCount": 0
+  },
+  {
+    "id": "booking-hotels",
+    "title": "Booking Hotels",
+    "emoji": "🏨📱",
+    "description": "Reservando hotel",
+    "module": 20,
+    "order": 3,
+    "vocabularyCount": 0
+  },
+  {
+    "id": "hotel-problems",
+    "title": "Hotel Problems & Services",
+    "emoji": "🏨⚠️",
+    "description": "Problemas no hotel",
+    "module": 20,
+    "order": 4,
+    "vocabularyCount": 0
+  },
+  {
+    "id": "tourist-attractions",
+    "title": "Tourist Attractions",
+    "emoji": "🗽🎡",
+    "description": "Atrações turísticas",
+    "module": 20,
+    "order": 5,
+    "vocabularyCount": 0
+  },
+  {
+    "id": "music-concerts",
+    "title": "Music & Concerts",
+    "emoji": "🎵🎤",
+    "description": "Música e shows",
+    "module": 20,
+    "order": 6,
+    "vocabularyCount": 0
+  },
+  {
+    "id": "movies-series",
+    "title": "Movies & Series",
+    "emoji": "🎬📺",
+    "description": "Filmes e séries",
+    "module": 20,
+    "order": 7,
+    "vocabularyCount": 0
+  },
+  {
+    "id": "at-the-stadium",
+    "title": "At the Stadium",
+    "emoji": "🏟️⚽",
+    "description": "No estádio",
+    "module": 20,
+    "order": 8,
+    "vocabularyCount": 0
+  },
+  {
+    "id": "parks-outdoors",
+    "title": "Parks & Outdoors",
+    "emoji": "🌳🏃",
+    "description": "Parques e atividades ao ar livre",
+    "module": 20,
+    "order": 9,
+    "vocabularyCount": 0
+  },
+  {
+    "id": "holidays-traditions",
+    "title": "Holidays & Traditions",
+    "emoji": "🎄🎉",
+    "description": "Feriados e tradições",
+    "module": 20,
+    "order": 10,
+    "vocabularyCount": 0
+  },
+  {
+    "id": "birthdays-celebrations",
+    "title": "Birthdays & Celebrations",
+    "emoji": "🎂🎉",
+    "description": "Aniversários e festas",
+    "module": 20,
+    "order": 11,
+    "vocabularyCount": 0
+  },
+  {
+    "id": "playing-instruments",
+    "title": "Playing Instruments",
+    "emoji": "🎸🎹",
+    "description": "Tocando instrumentos",
+    "module": 20,
+    "order": 12,
+    "vocabularyCount": 0
+  },
+  {
+    "id": "getting-drivers-license",
+    "title": "Getting a Driver's License",
+    "emoji": "🪪🚗",
+    "description": "Tirando a carteira de motorista",
+    "module": 20,
+    "order": 13,
+    "vocabularyCount": 0
+  },
 ];

@@ -18,6 +18,17 @@ const moduleLoaders: Record<number, () => Promise<Lesson[]>> = {
   7: () => import('./lessonModules/module7').then((module) => module.module7Lessons),
   8: () => import('./lessonModules/module8').then((module) => module.module8Lessons),
   9: () => import('./lessonModules/module9').then((module) => module.module9Lessons),
+  // Curso: Mínimo para se Virar nos EUA (módulos 11–20)
+  11: () => import('./virarEUA/stubLessons').then((m) => m.VIRAR_EUA_STUB_LESSONS.filter((l) => l.module === 11)),
+  12: () => import('./virarEUA/stubLessons').then((m) => m.VIRAR_EUA_STUB_LESSONS.filter((l) => l.module === 12)),
+  13: () => import('./virarEUA/stubLessons').then((m) => m.VIRAR_EUA_STUB_LESSONS.filter((l) => l.module === 13)),
+  14: () => import('./virarEUA/stubLessons').then((m) => m.VIRAR_EUA_STUB_LESSONS.filter((l) => l.module === 14)),
+  15: () => import('./virarEUA/stubLessons').then((m) => m.VIRAR_EUA_STUB_LESSONS.filter((l) => l.module === 15)),
+  16: () => import('./virarEUA/stubLessons').then((m) => m.VIRAR_EUA_STUB_LESSONS.filter((l) => l.module === 16)),
+  17: () => import('./virarEUA/stubLessons').then((m) => m.VIRAR_EUA_STUB_LESSONS.filter((l) => l.module === 17)),
+  18: () => import('./virarEUA/stubLessons').then((m) => m.VIRAR_EUA_STUB_LESSONS.filter((l) => l.module === 18)),
+  19: () => import('./virarEUA/stubLessons').then((m) => m.VIRAR_EUA_STUB_LESSONS.filter((l) => l.module === 19)),
+  20: () => import('./virarEUA/stubLessons').then((m) => m.VIRAR_EUA_STUB_LESSONS.filter((l) => l.module === 20)),
 };
 
 const moduleCache = new Map<number, Lesson[]>();

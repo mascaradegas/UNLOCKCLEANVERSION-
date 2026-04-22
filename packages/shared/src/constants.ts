@@ -143,6 +143,17 @@ export const MODULE_NAMES: Record<number, string> = {
   7: '🎓 Subindo de Nível',
   8: '🚀 Fluência',
   9: '🔧 Work Tracks',
+  // Curso: Mínimo para se Virar nos EUA
+  11: '🆘✈️ PRIMEIRAS 48 HORAS',
+  12: '💼🔧 TRABALHO',
+  13: '🍔🍳 COMIDA',
+  14: '🏠🛋️ CASA',
+  15: '💰💳 DINHEIRO',
+  16: '📍🗺️ LOCALIZAÇÃO',
+  17: '🚗✈️ TRANSPORTE',
+  18: '💬🤝 CONVERSAS',
+  19: '🚨🏥 EMERGÊNCIAS',
+  20: '🏛️📋 BUROCRACIA',
 };
 
 // ═══════════════════════════════════════════════════════════════════════════
